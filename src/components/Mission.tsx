@@ -1,4 +1,5 @@
 import { Target, Shield, Award, Lightbulb } from "lucide-react";
+import SectionCTA from "./SectionCTA";
 
 const pillars = [
   {
@@ -33,29 +34,28 @@ const pillars = [
 
 const Mission = () => {
   return (
-    <section className="py-24 relative overflow-hidden">
-      <div className="absolute inset-0 gradient-dark" />
-      <div className="absolute inset-0 gradient-mesh opacity-40" />
+    <section className="py-24 relative overflow-hidden bg-background">
+      <div className="absolute inset-0 gradient-mesh opacity-50" />
       
       {/* Decorative elements */}
-      <div className="absolute top-1/4 right-0 w-[500px] h-[500px] bg-primary/10 rounded-full blur-3xl" />
-      <div className="absolute bottom-1/4 left-0 w-[400px] h-[400px] bg-secondary/10 rounded-full blur-3xl" />
+      <div className="absolute top-1/4 right-0 w-[500px] h-[500px] bg-primary/5 rounded-full blur-3xl animate-float" />
+      <div className="absolute bottom-1/4 left-0 w-[400px] h-[400px] bg-secondary/5 rounded-full blur-3xl animate-float" style={{ animationDelay: "-3s" }} />
 
       <div className="container mx-auto px-4 relative z-10">
         {/* Section Header */}
         <div className="text-center max-w-4xl mx-auto mb-16">
-          <div className="inline-flex items-center gap-2 glass-card px-5 py-2.5 mb-6 border-gradient">
+          <div className="inline-flex items-center gap-2 glass-card px-5 py-2.5 mb-6 border-gradient animate-slide-up">
             <Target size={16} className="text-primary" />
             <span className="text-sm font-medium text-foreground/80">
               Notre mission
             </span>
           </div>
-          <h2 className="text-3xl sm:text-4xl lg:text-6xl font-bold text-foreground mb-6 tracking-tight">
+          <h2 className="text-3xl sm:text-4xl lg:text-6xl font-bold text-foreground mb-6 tracking-tight animate-slide-up" style={{ animationDelay: "0.1s" }}>
             La mission{" "}
             <span className="text-gradient">Agendac</span>
           </h2>
-          <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-            Nous aidons les entreprises de rénovation de l'habitat à se démarquer et à attirer des clients qualifiés.
+          <p className="text-muted-foreground text-lg max-w-2xl mx-auto animate-slide-up" style={{ animationDelay: "0.2s" }}>
+            Nous aidons les entreprises de rénovation de l'habitat à se démarquer et à attirer des partenaires qualifiés.
           </p>
         </div>
 
@@ -64,14 +64,15 @@ const Mission = () => {
           {pillars.map((pillar, index) => (
             <div
               key={index}
-              className="glass-card p-8 border-gradient group hover:glow-primary transition-all duration-500 relative overflow-hidden"
+              className="glass-card p-8 border-gradient group hover:glow-primary transition-all duration-500 relative overflow-hidden animate-slide-up hover:-translate-y-2"
+              style={{ animationDelay: `${0.1 * (index + 1)}s` }}
             >
               {/* Background gradient on hover */}
-              <div className={`absolute inset-0 bg-gradient-to-br ${pillar.color} opacity-0 group-hover:opacity-5 transition-opacity duration-500`} />
+              <div className={`absolute inset-0 bg-gradient-to-br ${pillar.color} opacity-0 group-hover:opacity-10 transition-opacity duration-500`} />
               
               <div className="relative z-10">
                 {/* Number badge */}
-                <div className={`inline-flex items-center justify-center w-12 h-12 rounded-2xl bg-gradient-to-br ${pillar.color} text-white font-bold text-xl mb-6`}>
+                <div className={`inline-flex items-center justify-center w-12 h-12 rounded-2xl bg-gradient-to-br ${pillar.color} text-white font-bold text-xl mb-6 group-hover:scale-110 transition-transform duration-300`}>
                   {pillar.number}
                 </div>
 
@@ -86,6 +87,8 @@ const Mission = () => {
             </div>
           ))}
         </div>
+
+        <SectionCTA className="mt-16" />
       </div>
     </section>
   );
