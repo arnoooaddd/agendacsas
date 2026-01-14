@@ -1,4 +1,5 @@
 import { Users } from "lucide-react";
+import SectionCTA from "./SectionCTA";
 
 const teamMembers = [
   {
@@ -50,25 +51,24 @@ const teamMembers = [
 
 const Team = () => {
   return (
-    <section id="equipe" className="py-24 relative overflow-hidden">
+    <section id="equipe" className="py-24 relative overflow-hidden bg-muted/30">
       {/* Background */}
-      <div className="absolute inset-0 bg-card/30" />
-      <div className="absolute inset-0 gradient-mesh opacity-20" />
+      <div className="absolute inset-0 gradient-mesh opacity-30" />
 
       <div className="container mx-auto px-4 relative z-10">
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <div className="inline-flex items-center gap-2 glass-card px-4 py-2 mb-6 border-gradient">
+          <div className="inline-flex items-center gap-2 glass-card px-4 py-2 mb-6 border-gradient animate-slide-up">
             <Users size={16} className="text-primary" />
             <span className="text-sm font-medium text-foreground/80">
-              Notre équipe
+              L'équipe Agendac
             </span>
           </div>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground mb-6 tracking-tight">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground mb-6 tracking-tight animate-slide-up" style={{ animationDelay: "0.1s" }}>
             Les experts{" "}
             <span className="text-gradient">Agendac</span>
           </h2>
-          <p className="text-muted-foreground text-lg">
+          <p className="text-muted-foreground text-lg animate-slide-up" style={{ animationDelay: "0.2s" }}>
             Une équipe passionnée dédiée à votre réussite.
           </p>
         </div>
@@ -78,15 +78,16 @@ const Team = () => {
           {teamMembers.map((member, index) => (
             <div
               key={index}
-              className="glass-card p-6 border-gradient group hover:glow-primary transition-all duration-500 text-center"
+              className="glass-card p-6 border-gradient group hover:glow-primary transition-all duration-500 text-center hover:-translate-y-2 animate-scale-in"
+              style={{ animationDelay: `${index * 0.05}s` }}
             >
               {/* Avatar */}
               <div className="relative w-28 h-28 mx-auto mb-5">
-                <div className="absolute inset-0 rounded-full gradient-hero opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur-xl" />
+                <div className="absolute inset-0 rounded-full gradient-hero opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur-xl scale-110" />
                 <img
                   src={member.image}
                   alt={member.name}
-                  className="relative w-full h-full object-cover rounded-full border-2 border-border group-hover:border-primary transition-colors duration-300"
+                  className="relative w-full h-full object-cover rounded-full border-2 border-border group-hover:border-primary transition-all duration-300 group-hover:scale-105"
                 />
               </div>
 
@@ -100,6 +101,8 @@ const Team = () => {
             </div>
           ))}
         </div>
+
+        <SectionCTA className="mt-16" />
       </div>
     </section>
   );
