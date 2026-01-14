@@ -1,10 +1,9 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Play, Sparkles } from "lucide-react";
-import { useEffect, useRef } from "react";
+import { useEffect } from "react";
+import FloatingCalendars from "./FloatingCalendars";
 
 const Hero = () => {
-  const videoRef = useRef<HTMLDivElement>(null);
-
   useEffect(() => {
     // Load Elfsight script
     const script = document.createElement("script");
@@ -27,6 +26,9 @@ const Hero = () => {
       <div className="absolute bottom-20 right-10 w-80 h-80 bg-accent/15 rounded-full blur-3xl animate-float" style={{ animationDelay: '-3s' }} />
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-secondary/10 rounded-full blur-3xl" />
 
+      {/* Floating Calendar Elements */}
+      <FloatingCalendars />
+
       {/* Content */}
       <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-5xl mx-auto">
@@ -35,7 +37,7 @@ const Hero = () => {
             <div className="inline-flex items-center gap-2 glass-card px-5 py-2.5 border-gradient">
               <Sparkles size={16} className="text-secondary" />
               <span className="text-sm font-medium text-foreground/90">
-                Agence N°1 de la rénovation énergétique
+                Agence N°1 de la rénovation de l'habitat
               </span>
             </div>
           </div>
@@ -67,7 +69,6 @@ const Hero = () => {
 
           {/* VSL Video */}
           <div 
-            ref={videoRef}
             className="max-w-4xl mx-auto animate-scale-in"
             style={{ animationDelay: "0.4s" }}
           >
