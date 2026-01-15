@@ -1,10 +1,9 @@
 import Header from "@/components/Header";
-import SocialProofBar from "@/components/SocialProofBar";
 import Hero from "@/components/Hero";
+import GoogleReviews from "@/components/GoogleReviews";
 import Stats from "@/components/Stats";
 import Mission from "@/components/Mission";
 import Clients from "@/components/Clients";
-import GoogleReviews from "@/components/GoogleReviews";
 import Interviews from "@/components/Interviews";
 import YouTubeShorts from "@/components/YouTubeShorts";
 import Team from "@/components/Team";
@@ -18,16 +17,15 @@ import WhatsAppWidget from "@/components/WhatsAppWidget";
 const Index = () => {
   return (
     <div className="min-h-screen bg-background">
-      <SocialProofBar />
       <Header />
       <main>
         <Hero />
-        <Stats />
-        <Clients />
-        <Mission />
         <GoogleReviews />
+        <Mission />
+        <Clients />
         <Interviews />
         <YouTubeShorts />
+        <Stats />
         <Team />
         <Gallery />
         <FAQ />
