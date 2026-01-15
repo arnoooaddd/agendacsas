@@ -1,7 +1,9 @@
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Play, Sparkles } from "lucide-react";
+import { ArrowRight, Play, Sparkles, Star } from "lucide-react";
 import { useEffect } from "react";
+import { motion } from "framer-motion";
 import FloatingCalendars from "./FloatingCalendars";
+import logoAgendac from "@/assets/logo-agendac.webp";
 
 const Hero = () => {
   useEffect(() => {
@@ -35,9 +37,30 @@ const Hero = () => {
       <div className="absolute inset-0 gradient-mesh opacity-100" />
       
       {/* Animated orbs - light version */}
-      <div className="absolute top-20 left-10 w-96 h-96 bg-primary/10 rounded-full blur-3xl animate-float" />
-      <div className="absolute bottom-20 right-10 w-80 h-80 bg-accent/8 rounded-full blur-3xl animate-float" style={{ animationDelay: '-3s' }} />
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-secondary/5 rounded-full blur-3xl animate-pulse-soft" />
+      <motion.div 
+        animate={{ 
+          y: [0, -20, 0],
+          scale: [1, 1.1, 1],
+        }}
+        transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
+        className="absolute top-20 left-10 w-96 h-96 bg-primary/10 rounded-full blur-3xl" 
+      />
+      <motion.div 
+        animate={{ 
+          y: [0, 20, 0],
+          scale: [1, 0.9, 1],
+        }}
+        transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
+        className="absolute bottom-20 right-10 w-80 h-80 bg-accent/8 rounded-full blur-3xl" 
+      />
+      <motion.div 
+        animate={{ 
+          scale: [1, 1.2, 1],
+          opacity: [0.05, 0.1, 0.05],
+        }}
+        transition={{ duration: 10, repeat: Infinity, ease: "easeInOut" }}
+        className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-secondary/5 rounded-full blur-3xl" 
+      />
 
       {/* Floating Calendar Elements */}
       <FloatingCalendars />
@@ -46,31 +69,51 @@ const Hero = () => {
       <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-5xl mx-auto">
           {/* Badge */}
-          <div className="flex justify-center mb-8 animate-slide-up">
-            <div className="inline-flex items-center gap-2 glass-card px-5 py-2.5 border-gradient animate-bounce-soft">
+          <motion.div 
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.1 }}
+            className="flex justify-center mb-8"
+          >
+            <div className="inline-flex items-center gap-2 glass-card px-5 py-2.5 border-gradient">
               <Sparkles size={16} className="text-primary" />
               <span className="text-sm font-medium text-foreground/90">
-                Agence N°1 de la rénovation de l'habitat
+                N°1 en France, Suisse et Belgique
               </span>
             </div>
-          </div>
+          </motion.div>
 
           {/* Headline */}
-          <h1 className="text-center text-4xl sm:text-5xl lg:text-7xl font-bold text-foreground mb-6 leading-[1.1] tracking-tight animate-slide-up" style={{ animationDelay: "0.1s" }}>
+          <motion.h1 
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="text-center text-4xl sm:text-5xl lg:text-7xl font-bold text-foreground mb-6 leading-[1.1] tracking-tight"
+          >
             L'accélérateur de croissance{" "}
             <span className="text-gradient">N°1</span>
             <br />
             des sociétés de{" "}
             <span className="text-gradient-warm">rénovation de l'habitat</span>
-          </h1>
+          </motion.h1>
 
           {/* Subtitle */}
-          <p className="text-center text-lg sm:text-xl text-muted-foreground mb-10 max-w-2xl mx-auto animate-slide-up" style={{ animationDelay: "0.2s" }}>
+          <motion.p 
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.3 }}
+            className="text-center text-lg sm:text-xl text-muted-foreground mb-10 max-w-2xl mx-auto"
+          >
             Des leads 100% exclusifs livrés directement dans votre agenda. Générez des rendez-vous qualifiés en automatique.
-          </p>
+          </motion.p>
 
           {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16 animate-slide-up" style={{ animationDelay: "0.3s" }}>
+          <motion.div 
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.4 }}
+            className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-8"
+          >
             <Button 
               onClick={scrollToContact}
               variant="secondary" 
@@ -89,13 +132,38 @@ const Hero = () => {
               <Play size={18} className="mr-1 text-primary" />
               Voir la présentation
             </Button>
-          </div>
+          </motion.div>
+
+          {/* Social Proof under CTA */}
+          <motion.div 
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.6, delay: 0.5 }}
+            className="flex items-center justify-center gap-2 mb-16"
+          >
+            <div className="glass-card px-5 py-3 flex items-center gap-3 border-gradient">
+              <div className="flex">
+                {[...Array(5)].map((_, i) => (
+                  <Star key={i} size={16} className="fill-yellow-500 text-yellow-500" />
+                ))}
+              </div>
+              <span className="text-sm font-medium text-foreground">
+                4.9/5 sur Google
+              </span>
+              <div className="w-px h-4 bg-border" />
+              <span className="text-sm text-muted-foreground">
+                +60 de vos confrères accompagnés
+              </span>
+            </div>
+          </motion.div>
 
           {/* VSL Video */}
-          <div 
+          <motion.div 
+            initial={{ opacity: 0, y: 40, scale: 0.95 }}
+            animate={{ opacity: 1, y: 0, scale: 1 }}
+            transition={{ duration: 0.8, delay: 0.6 }}
             id="vsl-video"
-            className="max-w-4xl mx-auto animate-scale-in"
-            style={{ animationDelay: "0.4s" }}
+            className="max-w-4xl mx-auto"
           >
             <div className="glass-card p-2 border-gradient glow-primary">
               <div className="relative aspect-video rounded-xl overflow-hidden bg-white shadow-lg">
@@ -108,23 +176,37 @@ const Hero = () => {
                 />
               </div>
             </div>
-          </div>
+          </motion.div>
 
           {/* Trust badges */}
-          <div className="flex flex-wrap items-center justify-center gap-8 mt-12 animate-fade-in" style={{ animationDelay: "0.6s" }}>
-            <div className="flex items-center gap-2 text-muted-foreground glass-card px-4 py-2 animate-bounce-soft" style={{ animationDelay: "0s" }}>
+          <motion.div 
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.6, delay: 0.8 }}
+            className="flex flex-wrap items-center justify-center gap-8 mt-12"
+          >
+            <motion.div 
+              whileHover={{ scale: 1.05, y: -2 }}
+              className="flex items-center gap-2 text-muted-foreground glass-card px-4 py-2"
+            >
               <div className="w-2 h-2 rounded-full bg-green-500 animate-pulse" />
-              <span className="text-sm">+200 partenaires accompagnés</span>
-            </div>
-            <div className="flex items-center gap-2 text-muted-foreground glass-card px-4 py-2 animate-bounce-soft" style={{ animationDelay: "0.2s" }}>
+              <span className="text-sm">+30 partenaires accompagnés</span>
+            </motion.div>
+            <motion.div 
+              whileHover={{ scale: 1.05, y: -2 }}
+              className="flex items-center gap-2 text-muted-foreground glass-card px-4 py-2"
+            >
               <div className="w-2 h-2 rounded-full bg-primary animate-pulse" />
               <span className="text-sm">Google Partner</span>
-            </div>
-            <div className="flex items-center gap-2 text-muted-foreground glass-card px-4 py-2 animate-bounce-soft" style={{ animationDelay: "0.4s" }}>
+            </motion.div>
+            <motion.div 
+              whileHover={{ scale: 1.05, y: -2 }}
+              className="flex items-center gap-2 text-muted-foreground glass-card px-4 py-2"
+            >
               <div className="w-2 h-2 rounded-full bg-secondary animate-pulse" />
               <span className="text-sm">Meta Business Partner</span>
-            </div>
-          </div>
+            </motion.div>
+          </motion.div>
         </div>
       </div>
     </section>

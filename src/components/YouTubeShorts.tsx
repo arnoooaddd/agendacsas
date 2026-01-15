@@ -1,6 +1,8 @@
 import { useEffect, useRef } from "react";
-import { Video, Lightbulb } from "lucide-react";
-import SectionCTA from "./SectionCTA";
+import { Lightbulb, Youtube } from "lucide-react";
+import { motion } from "framer-motion";
+import AnimatedSection from "./AnimatedSection";
+import { Button } from "./ui/button";
 
 const shortsVideos = [
   "https://www.youtube.com/embed/Y68enwjao4k?rel=0&modestbranding=1",
@@ -50,53 +52,80 @@ const YouTubeShorts = () => {
   }, []);
 
   return (
-    <section className="py-24 relative overflow-hidden">
+    <section className="py-24 relative overflow-hidden bg-background">
       {/* Background */}
-      <div className="absolute inset-0 bg-muted/30" />
       <div className="absolute inset-0 gradient-mesh opacity-50" />
 
       <div className="container mx-auto px-4 relative z-10">
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-12">
-          <div className="inline-flex items-center gap-2 glass-card px-4 py-2 mb-6 animate-slide-up">
-            <Lightbulb size={16} className="text-secondary" />
-            <span className="text-sm font-medium text-foreground/80">
-              Nos astuces en vidéo
-            </span>
-          </div>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground mb-6 tracking-tight animate-slide-up" style={{ animationDelay: "0.1s" }}>
-            Conseils{" "}
-            <span className="text-gradient-warm">gratuits</span>
-          </h2>
-          <p className="text-muted-foreground text-lg animate-slide-up" style={{ animationDelay: "0.2s" }}>
-            Découvrez nos conseils pour optimiser votre acquisition client.
-          </p>
+          <AnimatedSection>
+            <div className="inline-flex items-center gap-2 glass-card px-4 py-2 mb-6">
+              <Lightbulb size={16} className="text-secondary" />
+              <span className="text-sm font-medium text-foreground/80">
+                Nos astuces en vidéo
+              </span>
+            </div>
+          </AnimatedSection>
+          <AnimatedSection delay={0.1}>
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground mb-6 tracking-tight">
+              Conseils disponibles gratuitement{" "}
+              <span className="text-gradient-warm">sur notre chaîne YouTube</span>
+            </h2>
+          </AnimatedSection>
+          <AnimatedSection delay={0.2}>
+            <p className="text-muted-foreground text-lg mb-8">
+              Découvrez nos conseils pour optimiser votre acquisition client.
+            </p>
+          </AnimatedSection>
+          <AnimatedSection delay={0.3}>
+            <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+              <Button 
+                asChild 
+                size="xl" 
+                className="bg-[#FF0000] hover:bg-[#CC0000] text-white shadow-lg hover:shadow-xl"
+              >
+                <a 
+                  href="https://www.youtube.com/@agendac-fr/shorts" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-2"
+                >
+                  <Youtube size={24} />
+                  Voir notre chaîne YouTube
+                </a>
+              </Button>
+            </motion.div>
+          </AnimatedSection>
         </div>
 
         {/* Shorts Slider */}
-        <div className="max-w-6xl mx-auto">
-          <div ref={sliderRef} className="shorts-slider">
-            {shortsVideos.map((url, index) => (
-              <div 
-                key={index} 
-                className="shorts-slide animate-scale-in"
-                style={{ animationDelay: `${index * 0.1}s` }}
-              >
-                <iframe
-                  src={url}
-                  allowFullScreen
-                  title={`YouTube Short ${index + 1}`}
-                />
-              </div>
-            ))}
-          </div>
+        <AnimatedSection delay={0.4} direction="up">
+          <div className="max-w-6xl mx-auto">
+            <div ref={sliderRef} className="shorts-slider">
+              {shortsVideos.map((url, index) => (
+                <motion.div 
+                  key={index} 
+                  className="shorts-slide"
+                  initial={{ opacity: 0, scale: 0.8 }}
+                  whileInView={{ opacity: 1, scale: 1 }}
+                  transition={{ delay: index * 0.05 }}
+                  whileHover={{ scale: 1.02 }}
+                >
+                  <iframe
+                    src={url}
+                    allowFullScreen
+                    title={`YouTube Short ${index + 1}`}
+                  />
+                </motion.div>
+              ))}
+            </div>
 
-          <div className="pagination-wrapper">
-            <div ref={barRef} className="pagination-bar" />
+            <div className="pagination-wrapper">
+              <div ref={barRef} className="pagination-bar" />
+            </div>
           </div>
-        </div>
-
-        <SectionCTA className="mt-16" />
+        </AnimatedSection>
       </div>
     </section>
   );
