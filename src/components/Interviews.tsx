@@ -57,8 +57,8 @@ const Interviews = () => {
           </AnimatedSection>
           <AnimatedSection delay={0.1}>
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground mb-6 tracking-tight">
-              Témoignages{" "}
-              <span className="text-gradient-warm">vidéo</span>
+              Rencontre des{" "}
+              <span className="text-gradient-warm">partenaires Agendac</span>
             </h2>
           </AnimatedSection>
           <AnimatedSection delay={0.2}>

@@ -78,25 +78,6 @@ const YouTubeShorts = () => {
               Découvrez nos conseils pour optimiser votre acquisition client.
             </p>
           </AnimatedSection>
-          <AnimatedSection delay={0.3}>
-            <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-              <Button 
-                asChild 
-                size="xl" 
-                className="bg-[#FF0000] hover:bg-[#CC0000] text-white shadow-lg hover:shadow-xl"
-              >
-                <a 
-                  href="https://www.youtube.com/@agendac-fr/shorts" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="flex items-center gap-2"
-                >
-                  <Youtube size={24} />
-                  Voir notre chaîne YouTube
-                </a>
-              </Button>
-            </motion.div>
-          </AnimatedSection>
         </div>
 
         {/* Shorts Slider */}
@@ -123,6 +104,27 @@ const YouTubeShorts = () => {
 
             <div className="pagination-wrapper">
               <div ref={barRef} className="pagination-bar" />
+            </div>
+
+            {/* YouTube Button */}
+            <div className="flex justify-center mt-10">
+              <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+                <Button 
+                  asChild 
+                  size="xl" 
+                  className="bg-[#FF0000] hover:bg-[#CC0000] text-white shadow-lg hover:shadow-xl"
+                >
+                  <a 
+                    href="https://www.youtube.com/@agendac-fr/shorts" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-2"
+                  >
+                    <Youtube size={24} />
+                    Voir notre chaîne YouTube
+                  </a>
+                </Button>
+              </motion.div>
             </div>
           </div>
         </AnimatedSection>

@@ -10,7 +10,7 @@ import Team from "@/components/Team";
 import Gallery from "@/components/Gallery";
 import FAQ from "@/components/FAQ";
 import CaseStudy from "@/components/CaseStudy";
-import TypeformEmbed from "@/components/TypeformEmbed";
+
 import Footer from "@/components/Footer";
 import WhatsAppWidget from "@/components/WhatsAppWidget";
 
@@ -30,7 +30,7 @@ const Index = () => {
         <Gallery />
         <FAQ />
         <CaseStudy />
-        <TypeformEmbed />
+        
       </main>
       <Footer />
       <WhatsAppWidget />
