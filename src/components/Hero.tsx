@@ -178,35 +178,6 @@ const Hero = () => {
             </div>
           </motion.div>
 
-          {/* Trust badges */}
-          <motion.div 
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 0.6, delay: 0.8 }}
-            className="flex flex-wrap items-center justify-center gap-8 mt-12"
-          >
-            <motion.div 
-              whileHover={{ scale: 1.05, y: -2 }}
-              className="flex items-center gap-2 text-muted-foreground glass-card px-4 py-2"
-            >
-              <div className="w-2 h-2 rounded-full bg-green-500 animate-pulse" />
-              <span className="text-sm">+30 partenaires accompagnés</span>
-            </motion.div>
-            <motion.div 
-              whileHover={{ scale: 1.05, y: -2 }}
-              className="flex items-center gap-2 text-muted-foreground glass-card px-4 py-2"
-            >
-              <div className="w-2 h-2 rounded-full bg-primary animate-pulse" />
-              <span className="text-sm">Google Partner</span>
-            </motion.div>
-            <motion.div 
-              whileHover={{ scale: 1.05, y: -2 }}
-              className="flex items-center gap-2 text-muted-foreground glass-card px-4 py-2"
-            >
-              <div className="w-2 h-2 rounded-full bg-secondary animate-pulse" />
-              <span className="text-sm">Meta Business Partner</span>
-            </motion.div>
-          </motion.div>
         </div>
       </div>
     </section>

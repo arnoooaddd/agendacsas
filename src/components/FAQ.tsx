@@ -8,28 +8,16 @@ import {
 
 const faqs = [
   {
-    question: "Pour quels types d'entreprises travaillez-vous ?",
-    answer: "Nous travaillons exclusivement avec les entreprises de rénovation de l'habitat : CVC, ENR, isolation, menuiseries, toiture, etc. Cette spécialisation nous permet d'avoir une expertise pointue dans votre secteur.",
+    question: "Vendez-vous des leads / prospects ?",
+    answer: "Non. Agendac ne vend pas de leads.",
   },
   {
-    question: "Combien coûte un lead qualifié ?",
-    answer: "Le coût par lead varie selon votre zone géographique, votre secteur d'activité et la saisonnalité. En moyenne, nos clients obtiennent un retour sur investissement de x6,7 sur leur marge brute.",
+    question: "Que faites-vous chez Agendac ?",
+    answer: "Nous mettons en place des infrastructures d'acquisition client via le digital et développons la notoriété des entreprises de rénovation de l'habitat. Notre travail repose sur la communication : contenus professionnels, image de marque et présence en ligne cohérente, afin d'attirer des clients qualifiés sans promesses trompeuses, fausses aides ou discours low-cost. L'objectif est clair : permettre à nos partenaires de se différencier par la qualité et la crédibilité de leur entreprise, pas par le prix.",
   },
   {
-    question: "Quelle est la qualité des leads fournis ?",
-    answer: "Nos leads sont 100% exclusifs et qualifiés. Ils ont exprimé un besoin réel, ont un projet concret et correspondent à vos critères de ciblage. Pas de leads partagés avec d'autres entreprises.",
-  },
-  {
-    question: "En combien de temps vais-je voir des résultats ?",
-    answer: "Les premiers rendez-vous arrivent généralement dans les 2 à 3 premières semaines. L'optimisation continue de vos campagnes permet d'améliorer les performances au fil du temps.",
-  },
-  {
-    question: "Dois-je m'engager sur une durée minimum ?",
-    answer: "Nous recommandons un engagement de 3 mois minimum pour voir des résultats significatifs et optimiser vos campagnes. Cela dit, nous restons flexibles et adaptons nos offres à vos besoins.",
-  },
-  {
-    question: "Comment fonctionne le système de rendez-vous ?",
-    answer: "Les leads qualifiés sont directement intégrés dans votre agenda. Vous recevez une notification avec toutes les informations du prospect et le rendez-vous est confirmé. Simple et efficace.",
+    question: "Pourquoi Agendac plutôt qu'un autre prestataire ?",
+    answer: "Parce que nous sommes spécialisés dans la rénovation de l'habitat. Isolation, menuiserie, rénovation globale, piscine, aménagement… Nous connaissons vos métiers, votre clientèle et leurs attentes. Résultat : une communication alignée avec votre discours commercial, crédible, et pensée pour durer — pas une stratégie générique applicable à n'importe quel secteur.",
   },
 ];
 

@@ -7,12 +7,13 @@ import SectionCTA from "./SectionCTA";
 import arnaudImg from "@/assets/team/arnaud-utille.webp";
 import kerimImg from "@/assets/team/kerim-jakupovic.webp";
 import eduardoImg from "@/assets/team/eduardo-nery.webp";
-import rachadImg from "@/assets/team/rachad-ait-hamou.webp";
+import samiImg from "@/assets/team/sami-ait-hamou.webp";
+import manonImg from "@/assets/team/rachad-ait-hamou.webp";
 import paulineImg from "@/assets/team/pauline-pietre.webp";
 import andreiImg from "@/assets/team/andrei-avadanii.webp";
 import marceauImg from "@/assets/team/marceau-david.webp";
 import omarImg from "@/assets/team/omar-troussi.webp";
-import majdaImg from "@/assets/team/majda-khadiri.webp";
+
 
 const teamMembers = [
   {
@@ -31,9 +32,9 @@ const teamMembers = [
     image: eduardoImg,
   },
   {
-    name: "Rachad AIT HAMOU",
+    name: "Sami AIT HAMOU",
     role: "Responsable communication",
-    image: rachadImg,
+    image: samiImg,
   },
   {
     name: "Pauline PIETRÉ",
@@ -56,9 +57,9 @@ const teamMembers = [
     image: omarImg,
   },
   {
-    name: "Majda KHADIRI",
-    role: "Gestion clients et tournages",
-    image: majdaImg,
+    name: "Manon ODIER",
+    role: "Gestion clientèle",
+    image: manonImg,
   },
 ];
 
