@@ -3,7 +3,6 @@ import { ArrowRight, Play, Sparkles, Star } from "lucide-react";
 import { useEffect } from "react";
 import { motion } from "framer-motion";
 import FloatingCalendars from "./FloatingCalendars";
-import logoAgendac from "@/assets/logo-agendac.webp";
 
 const Hero = () => {
   useEffect(() => {
@@ -97,14 +96,14 @@ const Hero = () => {
             <span className="text-gradient-warm">rénovation de l'habitat</span>
           </motion.h1>
 
-          {/* Subtitle */}
+          {/* Subtitle - Updated */}
           <motion.p 
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.3 }}
-            className="text-center text-lg sm:text-xl text-muted-foreground mb-10 max-w-2xl mx-auto"
+            className="text-center text-lg sm:text-xl text-muted-foreground mb-10 max-w-3xl mx-auto"
           >
-            Des leads 100% exclusifs livrés directement dans votre agenda. Générez des rendez-vous qualifiés en automatique.
+            Nous accompagnons les entreprises réalisant plus de 500 000 € de CA annuel à bâtir une présence digitale solide et à générer une croissance prévisible et durable.
           </motion.p>
 
           {/* CTA Buttons */}

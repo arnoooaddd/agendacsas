@@ -33,13 +33,13 @@ const GoogleReviews = () => {
           </AnimatedSection>
           <AnimatedSection delay={0.1}>
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground mb-6 tracking-tight">
-              Ce que disent{" "}
-              <span className="text-gradient">nos partenaires</span>
+              Ce qu'en disent{" "}
+              <span className="text-gradient">vos confrères</span>
             </h2>
           </AnimatedSection>
           <AnimatedSection delay={0.2}>
             <p className="text-muted-foreground text-lg">
-              Plus de 60 entreprises nous font confiance pour leur acquisition client.
+              +60 entreprises déjà partenaires Agendac
             </p>
           </AnimatedSection>
         </div>

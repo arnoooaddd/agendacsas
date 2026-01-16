@@ -1,5 +1,7 @@
 import { useEffect } from "react";
 import { Building2 } from "lucide-react";
+import { motion } from "framer-motion";
+import AnimatedSection from "./AnimatedSection";
 import SectionCTA from "./SectionCTA";
 
 const Clients = () => {
@@ -22,24 +24,34 @@ const Clients = () => {
       <div className="container mx-auto px-4 relative z-10">
         {/* Section Header */}
         <div className="text-center mb-12">
-          <div className="inline-flex items-center gap-2 glass-card px-4 py-2 mb-4 animate-slide-up">
-            <Building2 size={16} className="text-primary" />
-            <span className="text-sm font-medium text-foreground/80">
-              Ils parlent d'Agendac
-            </span>
-          </div>
-          <h3 className="text-xl sm:text-2xl font-semibold text-foreground animate-slide-up" style={{ animationDelay: "0.1s" }}>
-            Nos <span className="text-gradient">partenaires Agendac</span>
-          </h3>
+          <AnimatedSection>
+            <div className="inline-flex items-center gap-2 glass-card px-4 py-2 mb-4">
+              <Building2 size={16} className="text-primary" />
+              <span className="text-sm font-medium text-foreground/80">
+                Ils parlent d'Agendac
+              </span>
+            </div>
+          </AnimatedSection>
+          <AnimatedSection delay={0.1}>
+            <h3 className="text-xl sm:text-2xl font-semibold text-foreground">
+              Ils sont <span className="text-gradient">partenaires Agendac</span>
+            </h3>
+          </AnimatedSection>
         </div>
 
         {/* Elfsight Logo Showcase Widget */}
-        <div className="max-w-6xl mx-auto animate-fade-in" style={{ animationDelay: "0.2s" }}>
-          <div 
-            className="elfsight-app-b1e000b2-31a9-48e4-8175-d63a0e2fdacd" 
-            data-elfsight-app-lazy
-          />
-        </div>
+        <AnimatedSection delay={0.2} direction="scale">
+          <motion.div 
+            whileHover={{ scale: 1.01 }}
+            transition={{ duration: 0.3 }}
+            className="max-w-6xl mx-auto"
+          >
+            <div 
+              className="elfsight-app-b1e000b2-31a9-48e4-8175-d63a0e2fdacd" 
+              data-elfsight-app-lazy
+            />
+          </motion.div>
+        </AnimatedSection>
 
         <SectionCTA className="mt-12" />
       </div>

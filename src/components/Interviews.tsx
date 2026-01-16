@@ -57,13 +57,13 @@ const Interviews = () => {
           </AnimatedSection>
           <AnimatedSection delay={0.1}>
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground mb-6 tracking-tight">
-              Rencontre des{" "}
+              Interview de vos confrères,{" "}
               <span className="text-gradient-warm">partenaires Agendac</span>
             </h2>
           </AnimatedSection>
           <AnimatedSection delay={0.2}>
             <p className="text-muted-foreground text-lg">
-              Découvrez les retours d'expérience de nos partenaires Agendac.
+              Découvrez leurs retours d'expérience
             </p>
           </AnimatedSection>
         </div>
