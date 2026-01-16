@@ -1,4 +1,6 @@
 import { HelpCircle } from "lucide-react";
+import { motion } from "framer-motion";
+import AnimatedSection from "./AnimatedSection";
 import {
   Accordion,
   AccordionContent,
@@ -30,37 +32,46 @@ const FAQ = () => {
       <div className="container mx-auto px-4 relative z-10">
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <div className="inline-flex items-center gap-2 glass-card px-5 py-2.5 mb-6 border-gradient">
-            <HelpCircle size={16} className="text-primary" />
-            <span className="text-sm font-medium text-foreground/80">
-              Questions fréquentes
-            </span>
-          </div>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground mb-6 tracking-tight">
-            Une question ?{" "}
-            <span className="text-gradient">On y répond</span>
-          </h2>
-          <p className="text-muted-foreground text-lg">
-            Retrouvez les réponses aux questions les plus fréquentes de nos partenaires.
-          </p>
+          <AnimatedSection>
+            <div className="inline-flex items-center gap-2 glass-card px-5 py-2.5 mb-6 border-gradient">
+              <HelpCircle size={16} className="text-primary" />
+              <span className="text-sm font-medium text-foreground/80">
+                Questions fréquentes
+              </span>
+            </div>
+          </AnimatedSection>
+          <AnimatedSection delay={0.1}>
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground mb-6 tracking-tight">
+              Une question ?{" "}
+              <span className="text-gradient">On y répond</span>
+            </h2>
+          </AnimatedSection>
+          <AnimatedSection delay={0.2}>
+            <p className="text-muted-foreground text-lg">
+              Retrouvez les réponses aux questions les plus fréquentes de nos partenaires.
+            </p>
+          </AnimatedSection>
         </div>
 
         {/* FAQ Accordion */}
         <div className="max-w-3xl mx-auto">
           <Accordion type="single" collapsible className="space-y-4">
             {faqs.map((faq, index) => (
-              <AccordionItem
-                key={index}
-                value={`item-${index}`}
-                className="glass-card border-gradient px-6 data-[state=open]:glow-primary transition-all duration-300"
-              >
-                <AccordionTrigger className="text-left text-foreground hover:text-primary hover:no-underline py-6 text-lg font-medium">
-                  {faq.question}
-                </AccordionTrigger>
-                <AccordionContent className="text-muted-foreground pb-6 text-base leading-relaxed">
-                  {faq.answer}
-                </AccordionContent>
-              </AccordionItem>
+              <AnimatedSection key={index} delay={index * 0.1} direction="scale">
+                <motion.div whileHover={{ scale: 1.01 }} transition={{ duration: 0.2 }}>
+                  <AccordionItem
+                    value={`item-${index}`}
+                    className="glass-card border-gradient px-6 data-[state=open]:glow-primary transition-all duration-300"
+                  >
+                    <AccordionTrigger className="text-left text-foreground hover:text-primary hover:no-underline py-6 text-lg font-medium">
+                      {faq.question}
+                    </AccordionTrigger>
+                    <AccordionContent className="text-muted-foreground pb-6 text-base leading-relaxed">
+                      {faq.answer}
+                    </AccordionContent>
+                  </AccordionItem>
+                </motion.div>
+              </AnimatedSection>
             ))}
           </Accordion>
         </div>
