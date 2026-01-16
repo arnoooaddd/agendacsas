@@ -219,7 +219,7 @@ const Footer = () => {
               <ul className="space-y-1 text-muted-foreground text-sm">
                 <li>SIREN : 930 805 981</li>
                 <li>Capital Social : 10 000 €</li>
-                <li className="text-xs">Une société du groupe AELU-MEDIA LLC</li>
+                <li className="text-xs">Une société du groupe Adornier LLC</li>
               </ul>
             </motion.div>
           </div>
