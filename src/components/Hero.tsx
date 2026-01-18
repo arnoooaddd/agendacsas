@@ -31,7 +31,7 @@ const Hero = () => {
   };
 
   return (
-    <section className="relative min-h-screen pt-24 pb-16 overflow-hidden bg-background">
+    <section id="hero" className="relative min-h-screen pt-16 sm:pt-24 pb-8 sm:pb-16 overflow-hidden bg-background">
       {/* Mesh gradient background */}
       <div className="absolute inset-0 gradient-mesh opacity-100" />
       
@@ -72,11 +72,11 @@ const Hero = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.1 }}
-            className="flex justify-center mb-8"
+            className="flex justify-center mb-4 sm:mb-8"
           >
-            <div className="inline-flex items-center gap-2 glass-card px-5 py-2.5 border-gradient">
-              <Sparkles size={16} className="text-primary" />
-              <span className="text-sm font-medium text-foreground/90">
+            <div className="inline-flex items-center gap-2 glass-card px-4 sm:px-5 py-2 sm:py-2.5 border-gradient">
+              <Sparkles size={14} className="text-primary sm:w-4 sm:h-4" />
+              <span className="text-xs sm:text-sm font-medium text-foreground/90">
                 N°1 en France, Suisse et Belgique
               </span>
             </div>
@@ -87,7 +87,7 @@ const Hero = () => {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="text-center text-4xl sm:text-5xl lg:text-7xl font-bold text-foreground mb-6 leading-[1.1] tracking-tight"
+            className="text-center text-3xl sm:text-5xl lg:text-7xl font-bold text-foreground mb-4 sm:mb-6 leading-[1.1] tracking-tight"
           >
             L'accélérateur de croissance{" "}
             <span className="text-gradient">N°1</span>
@@ -101,7 +101,7 @@ const Hero = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.3 }}
-            className="text-center text-lg sm:text-xl text-muted-foreground mb-10 max-w-3xl mx-auto"
+            className="text-center text-sm sm:text-lg lg:text-xl text-muted-foreground mb-6 sm:mb-10 max-w-3xl mx-auto px-2"
           >
             Nous accompagnons les entreprises réalisant plus de 500 000 € de CA annuel à bâtir une présence digitale solide et à générer une croissance prévisible et durable.
           </motion.p>
@@ -111,24 +111,24 @@ const Hero = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.4 }}
-            className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-8"
+            className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 mb-4 sm:mb-8"
           >
             <Button 
               onClick={scrollToContact}
               variant="secondary" 
-              size="xl" 
-              className="group glow-secondary"
+              size="lg" 
+              className="group glow-secondary text-sm sm:text-base"
             >
               Entrer en contact
-              <ArrowRight className="group-hover:translate-x-1 transition-transform" />
+              <ArrowRight className="group-hover:translate-x-1 transition-transform w-4 h-4" />
             </Button>
             <Button 
               onClick={scrollToPresentation}
               variant="outline" 
-              size="xl" 
-              className="group bg-white/50 hover:bg-white/80 border-border text-foreground"
+              size="lg" 
+              className="group bg-white/50 hover:bg-white/80 border-border text-foreground text-sm sm:text-base"
             >
-              <Play size={18} className="mr-1 text-primary" />
+              <Play size={16} className="mr-1 text-primary" />
               Voir la présentation
             </Button>
           </motion.div>
@@ -138,20 +138,20 @@ const Hero = () => {
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.6, delay: 0.5 }}
-            className="flex items-center justify-center gap-2 mb-16"
+            className="flex items-center justify-center gap-2 mb-8 sm:mb-16"
           >
-            <div className="glass-card px-5 py-3 flex items-center gap-3 border-gradient">
+            <div className="glass-card px-3 sm:px-5 py-2 sm:py-3 flex flex-wrap items-center justify-center gap-2 sm:gap-3 border-gradient">
               <div className="flex">
                 {[...Array(5)].map((_, i) => (
-                  <Star key={i} size={16} className="fill-yellow-500 text-yellow-500" />
+                  <Star key={i} size={14} className="fill-yellow-500 text-yellow-500 sm:w-4 sm:h-4" />
                 ))}
               </div>
-              <span className="text-sm font-medium text-foreground">
+              <span className="text-xs sm:text-sm font-medium text-foreground">
                 4.9/5 sur Google
               </span>
-              <div className="w-px h-4 bg-border" />
-              <span className="text-sm text-muted-foreground">
-                +60 de vos confrères accompagnés
+              <div className="hidden sm:block w-px h-4 bg-border" />
+              <span className="text-xs sm:text-sm text-muted-foreground">
+                +60 confrères accompagnés
               </span>
             </div>
           </motion.div>
