@@ -12,7 +12,6 @@ import FAQ from "@/components/FAQ";
 import CaseStudy from "@/components/CaseStudy";
 
 import Footer from "@/components/Footer";
-import WhatsAppWidget from "@/components/WhatsAppWidget";
 
 const Index = () => {
   return (
@@ -33,7 +32,6 @@ const Index = () => {
         
       </main>
       <Footer />
-      <WhatsAppWidget />
     </div>
   );
 };
