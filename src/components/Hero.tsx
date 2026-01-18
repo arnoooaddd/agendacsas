@@ -87,7 +87,7 @@ const Hero = () => {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="text-center text-3xl sm:text-5xl lg:text-7xl font-bold text-foreground mb-4 sm:mb-6 leading-[1.1] tracking-tight"
+            className="text-center text-4xl sm:text-5xl lg:text-7xl font-bold text-foreground mb-4 sm:mb-6 leading-[1.1] tracking-tight"
           >
             L'accélérateur de croissance{" "}
             <span className="text-gradient">N°1</span>
