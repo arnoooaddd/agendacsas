@@ -111,7 +111,7 @@ const Hero = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.4 }}
-            className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 mb-4 sm:mb-8"
+            className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 mb-6 sm:mb-8"
           >
             <Button 
               onClick={scrollToContact}
@@ -126,7 +126,7 @@ const Hero = () => {
               onClick={scrollToPresentation}
               variant="outline" 
               size="lg" 
-              className="group bg-white/50 hover:bg-white/80 border-border text-foreground text-sm sm:text-base"
+              className="hidden sm:flex group bg-white/50 hover:bg-white/80 border-border text-foreground text-sm sm:text-base"
             >
               <Play size={16} className="mr-1 text-primary" />
               Voir la présentation
