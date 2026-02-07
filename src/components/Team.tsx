@@ -18,12 +18,12 @@ import omarImg from "@/assets/team/omar-troussi.webp";
 const teamMembers = [
   {
     name: "Arnaud UTILLE",
-    role: "Gérant",
+    role: "Président",
     image: arnaudImg,
   },
   {
     name: "Kerim JAKUPOVIC",
-    role: "Chef des opérations",
+    role: "Directeur général",
     image: kerimImg,
   },
   {

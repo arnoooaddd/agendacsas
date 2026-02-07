@@ -50,7 +50,7 @@ const Gallery = () => {
           <motion.div 
             whileHover={{ scale: 1.01 }}
             transition={{ duration: 0.3 }}
-            className="max-w-6xl mx-auto"
+            className="w-full max-w-full"
           >
             <div className="glass-card p-6 border-gradient">
               <div 

@@ -9,6 +9,8 @@ import Resultats from "./pages/Resultats";
 import Simulateur from "./pages/Simulateur";
 import Rdv from "./pages/Rdv";
 import HashRedirect from "./pages/HashRedirect";
+import CreationReseaux from "./pages/CreationReseaux";
+import CreationSite from "./pages/CreationSite";
 
 const queryClient = new QueryClient();
 
@@ -27,6 +29,8 @@ const App = () => (
           <Route path="/interviews" element={<HashRedirect hash="resultats" />} />
           <Route path="/simulateur" element={<Simulateur />} />
           <Route path="/rdv" element={<Rdv />} />
+          <Route path="/creation-reseaux-sociaux" element={<CreationReseaux />} />
+          <Route path="/creation-site-internet" element={<CreationSite />} />
           <Route path="/services" element={<HashRedirect hash="hero" />} />
           <Route path="/service" element={<HashRedirect hash="hero" />} />
           <Route path="/merci" element={<NotFound />} />

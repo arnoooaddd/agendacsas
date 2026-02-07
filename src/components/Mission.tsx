@@ -40,16 +40,8 @@ const Mission = () => {
       <div className="absolute inset-0 gradient-mesh opacity-50" />
       
       {/* Decorative elements */}
-      <motion.div 
-        animate={{ y: [0, -20, 0], opacity: [0.05, 0.1, 0.05] }}
-        transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
-        className="absolute top-1/4 right-0 w-[500px] h-[500px] bg-primary/5 rounded-full blur-3xl" 
-      />
-      <motion.div 
-        animate={{ y: [0, 20, 0], opacity: [0.05, 0.08, 0.05] }}
-        transition={{ duration: 6, repeat: Infinity, ease: "easeInOut", delay: 1 }}
-        className="absolute bottom-1/4 left-0 w-[400px] h-[400px] bg-secondary/5 rounded-full blur-3xl" 
-      />
+      <div className="absolute top-1/4 right-0 w-[500px] h-[500px] bg-primary/5 rounded-full blur-3xl animate-pulse-soft" />
+      <div className="absolute bottom-1/4 left-0 w-[400px] h-[400px] bg-secondary/5 rounded-full blur-3xl animate-pulse-soft" style={{ animationDelay: "1s" }} />
 
       <div className="container mx-auto px-4 relative z-10">
         {/* Section Header */}
