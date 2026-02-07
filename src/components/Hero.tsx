@@ -35,31 +35,10 @@ const Hero = () => {
       {/* Mesh gradient background */}
       <div className="absolute inset-0 gradient-mesh opacity-100" />
       
-      {/* Animated orbs - light version */}
-      <motion.div 
-        animate={{ 
-          y: [0, -20, 0],
-          scale: [1, 1.1, 1],
-        }}
-        transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
-        className="absolute top-20 left-10 w-96 h-96 bg-primary/10 rounded-full blur-3xl" 
-      />
-      <motion.div 
-        animate={{ 
-          y: [0, 20, 0],
-          scale: [1, 0.9, 1],
-        }}
-        transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
-        className="absolute bottom-20 right-10 w-80 h-80 bg-accent/8 rounded-full blur-3xl" 
-      />
-      <motion.div 
-        animate={{ 
-          scale: [1, 1.2, 1],
-          opacity: [0.05, 0.1, 0.05],
-        }}
-        transition={{ duration: 10, repeat: Infinity, ease: "easeInOut" }}
-        className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-secondary/5 rounded-full blur-3xl" 
-      />
+      {/* Animated orbs - CSS only */}
+      <div className="absolute top-20 left-10 w-96 h-96 bg-primary/10 rounded-full blur-3xl animate-pulse-soft" />
+      <div className="absolute bottom-20 right-10 w-80 h-80 bg-accent/8 rounded-full blur-3xl animate-pulse-soft" style={{ animationDelay: "1.5s" }} />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-secondary/5 rounded-full blur-3xl animate-pulse-soft" style={{ animationDelay: "3s" }} />
 
       {/* Floating Calendar Elements */}
       <FloatingCalendars />
