@@ -5,6 +5,10 @@ import SectionCTA from "./SectionCTA";
 
 const interviews = [
   { 
+    id: "c62dc9c3f6394a5c896c8234c396ae6a",
+    quote: "+2 commerciaux embauchés en 3 mois"
+  },
+  { 
     id: "2c3056d9a2c249319ebda1af5158a722",
     quote: "Premier RDV = première signature"
   },
@@ -81,6 +85,7 @@ const Interviews = () => {
                   <iframe
                     src={`https://www.loom.com/embed/${interview.id}`}
                     frameBorder="0"
+                    loading="lazy"
                     allowFullScreen
                     className="absolute inset-0 w-full h-full"
                   />

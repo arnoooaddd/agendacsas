@@ -3,6 +3,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import AnimatedSection from "@/components/AnimatedSection";
 import SectionCTA from "@/components/SectionCTA";
+import ServiceFloatingElements from "@/components/ServiceFloatingElements";
 import { Globe, CheckCircle, Star, ArrowRight, Smartphone, Search, BarChart3, MessageSquare, Languages } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
@@ -33,6 +34,7 @@ const CreationSite = () => {
           <div className="absolute inset-0 gradient-mesh opacity-100" />
           <div className="absolute top-20 right-10 w-96 h-96 bg-primary/10 rounded-full blur-3xl animate-pulse-soft" />
           <div className="absolute bottom-10 left-10 w-80 h-80 bg-accent/8 rounded-full blur-3xl animate-pulse-soft" style={{ animationDelay: "1.5s" }} />
+          <ServiceFloatingElements variant="site" />
 
           <div className="container mx-auto px-4 relative z-10">
             <div className="max-w-4xl mx-auto text-center">
