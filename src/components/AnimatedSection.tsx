@@ -1,4 +1,3 @@
-import { motion } from "framer-motion";
 import { ReactNode } from "react";
 import useScrollAnimation from "@/hooks/useScrollAnimation";
 
@@ -9,31 +8,13 @@ interface AnimatedSectionProps {
   direction?: "up" | "down" | "left" | "right" | "scale" | "fade";
 }
 
-const variants = {
-  up: {
-    hidden: { opacity: 0, y: 60 },
-    visible: { opacity: 1, y: 0 },
-  },
-  down: {
-    hidden: { opacity: 0, y: -60 },
-    visible: { opacity: 1, y: 0 },
-  },
-  left: {
-    hidden: { opacity: 0, x: -60 },
-    visible: { opacity: 1, x: 0 },
-  },
-  right: {
-    hidden: { opacity: 0, x: 60 },
-    visible: { opacity: 1, x: 0 },
-  },
-  scale: {
-    hidden: { opacity: 0, scale: 0.8 },
-    visible: { opacity: 1, scale: 1 },
-  },
-  fade: {
-    hidden: { opacity: 0 },
-    visible: { opacity: 1 },
-  },
+const directionClass: Record<string, string> = {
+  up: "translate-y-[40px]",
+  down: "-translate-y-[40px]",
+  left: "-translate-x-[40px]",
+  right: "translate-x-[40px]",
+  scale: "scale-95",
+  fade: "",
 };
 
 const AnimatedSection = ({
@@ -45,20 +26,17 @@ const AnimatedSection = ({
   const { ref, isVisible } = useScrollAnimation({ threshold: 0.1 });
 
   return (
-    <motion.div
+    <div
       ref={ref}
-      initial="hidden"
-      animate={isVisible ? "visible" : "hidden"}
-      variants={variants[direction]}
-      transition={{
-        duration: 0.6,
-        delay,
-        ease: [0.22, 1, 0.36, 1],
-      }}
-      className={className}
+      className={`transition-all duration-700 ease-out ${
+        isVisible
+          ? "opacity-100 translate-y-0 translate-x-0 scale-100"
+          : `opacity-0 ${directionClass[direction]}`
+      } ${className}`}
+      style={{ transitionDelay: `${delay * 1000}ms` }}
     >
       {children}
-    </motion.div>
+    </div>
   );
 };
 

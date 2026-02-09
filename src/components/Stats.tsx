@@ -1,5 +1,4 @@
 import { TrendingUp, Euro, Target } from "lucide-react";
-import { motion } from "framer-motion";
 import AnimatedSection from "./AnimatedSection";
 
 const stats = [
@@ -36,29 +35,16 @@ const Stats = () => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {stats.map((stat, index) => (
               <AnimatedSection key={index} delay={index * 0.15} direction="scale">
-                <motion.div
-                  whileHover={{ y: -8, scale: 1.03 }}
-                  transition={{ duration: 0.3 }}
-                  className="glass-card p-8 border-gradient text-center group hover:glow-primary transition-all duration-500 bg-white/80"
-                >
-                  <motion.div 
-                    whileHover={{ rotate: 10, scale: 1.1 }}
-                    className={`inline-flex items-center justify-center w-14 h-14 rounded-2xl bg-card/60 mb-4 ${stat.color}`}
-                  >
+                <div className="glass-card p-8 border-gradient text-center group hover:glow-primary transition-all duration-500 bg-white/80 hover:-translate-y-2 hover:scale-[1.03]">
+                  <div className={`inline-flex items-center justify-center w-14 h-14 rounded-2xl bg-card/60 mb-4 ${stat.color}`}>
                     <stat.icon size={28} />
-                  </motion.div>
-                  <motion.div 
-                    initial={{ scale: 0.5, opacity: 0 }}
-                    whileInView={{ scale: 1, opacity: 1 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.5, delay: 0.2 + index * 0.1 }}
-                    className={`text-4xl sm:text-5xl font-bold mb-3 ${stat.color}`}
-                  >
+                  </div>
+                  <div className={`text-4xl sm:text-5xl font-bold mb-3 ${stat.color}`}>
                     {stat.value}
-                  </motion.div>
+                  </div>
                   <p className="text-foreground font-medium mb-1">{stat.label}</p>
                   <p className="text-muted-foreground text-sm">{stat.sublabel}</p>
-                </motion.div>
+                </div>
               </AnimatedSection>
             ))}
           </div>

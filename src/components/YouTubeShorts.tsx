@@ -1,6 +1,5 @@
 import { useEffect, useRef } from "react";
 import { Lightbulb, Youtube } from "lucide-react";
-import { motion } from "framer-motion";
 import AnimatedSection from "./AnimatedSection";
 import { Button } from "./ui/button";
 
@@ -22,29 +21,22 @@ const YouTubeShorts = () => {
   useEffect(() => {
     const slider = sliderRef.current;
     const bar = barRef.current;
-
     if (!slider || !bar) return;
 
     const updatePaginationBar = () => {
       const slides = slider.querySelectorAll(".shorts-slide");
       if (slides.length === 0) return;
-      
       const slideCount = slides.length;
       const slideWidth = (slides[0] as HTMLElement).offsetWidth + 20;
       const visibleCount = Math.round(slider.offsetWidth / slideWidth);
       const firstVisibleIndex = Math.round(slider.scrollLeft / slideWidth);
-
-      const barWidthPercent = (visibleCount / slideCount) * 100;
-      const barLeftPercent = (firstVisibleIndex / slideCount) * 100;
-
-      bar.style.width = `${barWidthPercent}%`;
-      bar.style.left = `${barLeftPercent}%`;
+      bar.style.width = `${(visibleCount / slideCount) * 100}%`;
+      bar.style.left = `${(firstVisibleIndex / slideCount) * 100}%`;
     };
 
     updatePaginationBar();
     slider.addEventListener("scroll", updatePaginationBar);
     window.addEventListener("resize", updatePaginationBar);
-
     return () => {
       slider.removeEventListener("scroll", updatePaginationBar);
       window.removeEventListener("resize", updatePaginationBar);
@@ -53,18 +45,14 @@ const YouTubeShorts = () => {
 
   return (
     <section className="py-24 relative overflow-hidden bg-background">
-      {/* Background */}
       <div className="absolute inset-0 gradient-mesh opacity-50" />
 
       <div className="container mx-auto px-4 relative z-10">
-        {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-12">
           <AnimatedSection>
             <div className="inline-flex items-center gap-2 glass-card px-4 py-2 mb-6">
               <Lightbulb size={16} className="text-secondary" />
-              <span className="text-sm font-medium text-foreground/80">
-                Nos astuces en vidéo
-              </span>
+              <span className="text-sm font-medium text-foreground/80">Nos astuces en vidéo</span>
             </div>
           </AnimatedSection>
           <AnimatedSection delay={0.1}>
@@ -80,21 +68,12 @@ const YouTubeShorts = () => {
           </AnimatedSection>
         </div>
 
-        {/* Shorts Slider */}
         <AnimatedSection delay={0.4} direction="up">
           <div className="max-w-6xl mx-auto">
             <div ref={sliderRef} className="shorts-slider">
               {shortsVideos.map((url, index) => (
-              <div 
-                  key={index} 
-                  className="shorts-slide"
-                >
-                  <iframe
-                    src={url}
-                    loading="lazy"
-                    allowFullScreen
-                    title={`YouTube Short ${index + 1}`}
-                  />
+                <div key={index} className="shorts-slide">
+                  <iframe src={url} loading="lazy" allowFullScreen title={`YouTube Short ${index + 1}`} />
                 </div>
               ))}
             </div>
@@ -103,25 +82,17 @@ const YouTubeShorts = () => {
               <div ref={barRef} className="pagination-bar" />
             </div>
 
-            {/* YouTube Button */}
             <div className="flex justify-center mt-10">
-              <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-                <Button 
-                  asChild 
-                  size="xl" 
-                  className="bg-[#FF0000] hover:bg-[#CC0000] text-white shadow-lg hover:shadow-xl"
-                >
-                  <a 
-                    href="https://www.youtube.com/@agendac-fr/shorts" 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    className="flex items-center gap-2"
-                  >
-                    <Youtube size={24} />
-                    Voir notre chaîne YouTube
-                  </a>
-                </Button>
-              </motion.div>
+              <Button 
+                asChild 
+                size="xl" 
+                className="bg-[#FF0000] hover:bg-[#CC0000] text-white shadow-lg hover:shadow-xl transition-transform hover:scale-105"
+              >
+                <a href="https://www.youtube.com/@agendac-fr/shorts" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
+                  <Youtube size={24} />
+                  Voir notre chaîne YouTube
+                </a>
+              </Button>
             </div>
           </div>
         </AnimatedSection>
