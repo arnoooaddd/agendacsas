@@ -20,6 +20,9 @@ const Header = () => {
     { label: "Témoignages", href: "#temoignages" },
     { label: "Résultats", href: "#resultats" },
     { label: "Équipe", href: "#equipe" },
+    { label: "Création de site", href: "/creation-site-internet", isPage: true },
+    { label: "Réseaux sociaux", href: "/creation-reseaux-sociaux", isPage: true },
+    { label: "Tournage vidéo", href: "/tournage", isPage: true },
     { label: "Contact", href: "#contact" },
   ];
 
@@ -67,19 +70,26 @@ const Header = () => {
 
           {/* Desktop Navigation */}
           <nav className="hidden lg:flex items-center gap-1">
-            {navLinks.map((link, index) => (
-              <motion.a
-                key={link.label}
-                href={link.href}
-                initial={{ opacity: 0, y: -10 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.1 * index }}
-                whileHover={{ scale: 1.05 }}
-                className="px-4 py-2 text-foreground/70 hover:text-foreground font-medium transition-colors rounded-lg hover:bg-muted/30"
-              >
-                {link.label}
-              </motion.a>
-            ))}
+            {navLinks.map((link, index) => {
+              const isPage = 'isPage' in link && link.isPage;
+              return isPage ? (
+                <a
+                  key={link.label}
+                  href={link.href}
+                  className="px-3 py-2 text-foreground/70 hover:text-foreground text-sm font-medium transition-colors rounded-lg hover:bg-muted/30"
+                >
+                  {link.label}
+                </a>
+              ) : (
+                <a
+                  key={link.label}
+                  href={link.href}
+                  className="px-3 py-2 text-foreground/70 hover:text-foreground text-sm font-medium transition-colors rounded-lg hover:bg-muted/30"
+                >
+                  {link.label}
+                </a>
+              );
+            })}
           </nav>
 
           {/* CTA Button */}

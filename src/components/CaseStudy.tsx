@@ -9,16 +9,8 @@ const CaseStudy = () => {
       <div className="absolute inset-0 gradient-mesh opacity-20" />
       
       {/* Decorative elements */}
-      <motion.div 
-        animate={{ scale: [1, 1.2, 1] }}
-        transition={{ duration: 10, repeat: Infinity, ease: "easeInOut" }}
-        className="absolute top-0 left-1/4 w-[600px] h-[600px] bg-primary/10 rounded-full blur-3xl" 
-      />
-      <motion.div 
-        animate={{ scale: [1, 0.8, 1] }}
-        transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
-        className="absolute bottom-0 right-1/4 w-[400px] h-[400px] bg-secondary/10 rounded-full blur-3xl" 
-      />
+      <div className="absolute top-0 left-1/4 w-[600px] h-[600px] bg-primary/10 rounded-full blur-3xl animate-pulse-soft" />
+      <div className="absolute bottom-0 right-1/4 w-[400px] h-[400px] bg-secondary/10 rounded-full blur-3xl animate-pulse-soft" style={{ animationDelay: "1s" }} />
 
       <div className="container mx-auto px-4 relative z-10">
         {/* Section Header */}
@@ -86,6 +78,7 @@ const CaseStudy = () => {
                 <iframe
                   src="https://www.loom.com/embed/23fe4fb7694e405fb0aad84f672b8571"
                   frameBorder="0"
+                  loading="lazy"
                   allowFullScreen
                   className="absolute inset-0 w-full h-full"
                 />

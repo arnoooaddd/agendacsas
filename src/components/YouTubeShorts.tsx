@@ -85,20 +85,17 @@ const YouTubeShorts = () => {
           <div className="max-w-6xl mx-auto">
             <div ref={sliderRef} className="shorts-slider">
               {shortsVideos.map((url, index) => (
-                <motion.div 
+              <div 
                   key={index} 
                   className="shorts-slide"
-                  initial={{ opacity: 0, scale: 0.8 }}
-                  whileInView={{ opacity: 1, scale: 1 }}
-                  transition={{ delay: index * 0.05 }}
-                  whileHover={{ scale: 1.02 }}
                 >
                   <iframe
                     src={url}
+                    loading="lazy"
                     allowFullScreen
                     title={`YouTube Short ${index + 1}`}
                   />
-                </motion.div>
+                </div>
               ))}
             </div>
 
