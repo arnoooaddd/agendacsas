@@ -27,9 +27,9 @@ const Header = () => {
   }, []);
 
   const navLinks = [
-    { label: "Témoignages", href: "#temoignages" },
-    { label: "Résultats", href: "#resultats" },
-    { label: "Équipe", href: "#equipe" },
+    { label: "Témoignages", href: "/#resultats" },
+    { label: "Étude de cas concrète", href: "/#etude-de-cas" },
+    { label: "Équipe", href: "/#equipe" },
     { label: "Contact", href: "#contact" },
   ];
 
