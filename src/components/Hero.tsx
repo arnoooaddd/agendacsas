@@ -54,7 +54,7 @@ const Hero = () => {
 
           {/* Subtitle */}
           <p className="text-center text-sm sm:text-lg lg:text-xl text-muted-foreground mb-6 sm:mb-10 max-w-3xl mx-auto px-2 animate-fade-in" style={{ animationDelay: "0.3s" }}>
-            Nous accompagnons les entreprises réalisant plus de 500 000 € de CA annuel à bâtir une présence digitale solide et à générer une croissance prévisible et durable.
+            Nous accompagnons les entreprises réalisant plus de 1 000 000 € de CA annuel à bâtir une présence digitale solide et à générer une croissance prévisible et durable.
           </p>
 
           {/* CTA Buttons */}

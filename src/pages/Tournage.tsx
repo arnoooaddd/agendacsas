@@ -141,6 +141,7 @@ const Tournage = () => {
                   <div className="text-center mb-8">
                     <h3 className="text-2xl font-bold text-foreground mb-2">Tournage professionnel</h3>
                     <div className="text-4xl font-bold text-primary">2 500 € <span className="text-sm font-normal text-muted-foreground">HT / tournage</span></div>
+                    <p className="text-sm text-secondary font-semibold mt-2">Clients Agendac : 1 250 € HT (–50 %)</p>
                   </div>
 
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-8">
