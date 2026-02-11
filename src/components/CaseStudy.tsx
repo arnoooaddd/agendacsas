@@ -4,7 +4,7 @@ import SectionCTA from "./SectionCTA";
 
 const CaseStudy = () => {
   return (
-    <section className="py-24 relative overflow-hidden bg-[#DFF1FF]">
+    <section id="etude-de-cas" className="py-24 relative overflow-hidden bg-[#DFF1FF]">
       <div className="absolute inset-0 gradient-mesh opacity-20" />
       <div className="absolute top-0 left-1/4 w-[600px] h-[600px] bg-primary/10 rounded-full blur-3xl animate-pulse-soft" />
       <div className="absolute bottom-0 right-1/4 w-[400px] h-[400px] bg-secondary/10 rounded-full blur-3xl animate-pulse-soft" style={{ animationDelay: "1s" }} />
