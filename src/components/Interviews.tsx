@@ -9,7 +9,7 @@ const interviews = [
   },
   { 
     id: "2c3056d9a2c249319ebda1af5158a722",
-    quote: "Premier RDV = première signature"
+    quote: "47% de transformation"
   },
   { 
     id: "047c8bbfb0ff450fbe57eb827b577394",
@@ -21,7 +21,7 @@ const interviews = [
   },
   { 
     id: "5ed556b972924eedbea2a01d988d9221",
-    quote: "+10 à +12 chantiers par mois, plus les parrainages"
+    quote: "+2 embauches après 6 mois de collaboration"
   },
   { 
     id: "1fb4dd4067094adb9422a1e9a0c42500",
