@@ -11,6 +11,9 @@ import paulineImg from "@/assets/team/pauline-pietre.webp";
 import andreiImg from "@/assets/team/andrei-avadanii.webp";
 import marceauImg from "@/assets/team/marceau-david.webp";
 import omarImg from "@/assets/team/omar-troussi.webp";
+import gabrielImg from "@/assets/team/gabriel-ageron.webp";
+import mickaelImg from "@/assets/team/mickael-berjaz.webp";
+import yasmineImg from "@/assets/team/yasmine-lale.webp";
 
 const teamMembers = [
   { name: "Arnaud UTILLE", role: "Président", image: arnaudImg },
@@ -22,6 +25,9 @@ const teamMembers = [
   { name: "Marceau David", role: "Technico-commercial", image: marceauImg },
   { name: "Omar TROUSSI", role: "Responsable publicités", image: omarImg },
   { name: "Manon ODIER", role: "Gestion clientèle", image: manonImg },
+  { name: "Gabriel AGERON", role: "Designer site internet", image: gabrielImg },
+  { name: "Mickael BERJAZ", role: "Monteur et designer", image: mickaelImg },
+  { name: "Yasmine LALE", role: "Responsable qualité", image: yasmineImg },
 ];
 
 const Team = () => {
