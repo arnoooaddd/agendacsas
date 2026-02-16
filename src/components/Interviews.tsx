@@ -72,7 +72,7 @@ const Interviews = () => {
                   <div className="flex items-start gap-2">
                     <Quote size={16} className="text-primary flex-shrink-0 mt-1" />
                     <p className="text-sm font-medium text-foreground italic">
-                      "{interview.quote}"
+                      {interview.quote.startsWith("47%") ? interview.quote : `"${interview.quote}"`}
                     </p>
                   </div>
                 </div>
