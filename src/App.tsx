@@ -12,6 +12,7 @@ import HashRedirect from "./pages/HashRedirect";
 import CreationReseaux from "./pages/CreationReseaux";
 import CreationSite from "./pages/CreationSite";
 import Tournage from "./pages/Tournage";
+import Results from "./pages/Results";
 
 const queryClient = new QueryClient();
 
@@ -33,6 +34,7 @@ const App = () => (
           <Route path="/creation-reseaux-sociaux" element={<CreationReseaux />} />
           <Route path="/creation-site-internet" element={<CreationSite />} />
           <Route path="/tournage" element={<Tournage />} />
+          <Route path="/results" element={<Results />} />
           <Route path="/services" element={<HashRedirect hash="hero" />} />
           <Route path="/service" element={<HashRedirect hash="hero" />} />
           <Route path="/merci" element={<NotFound />} />
