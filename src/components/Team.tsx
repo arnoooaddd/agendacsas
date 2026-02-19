@@ -27,7 +27,7 @@ const teamMembers = [
   { name: "Manon ODIER", role: "Gestion clientèle", image: manonImg },
   { name: "Gabriel AGERON", role: "Designer site internet", image: gabrielImg },
   { name: "Mickael BERJAZ", role: "Monteur et designer", image: mickaelImg },
-  { name: "Yasmine LALE", role: "Responsable qualité", image: yasmineImg },
+  { name: "Sophia Laleg", role: "Responsable qualité", image: yasmineImg },
 ];
 
 const Team = () => {
