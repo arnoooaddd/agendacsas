@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import Header from "@/components/Header";
-import Footer from "@/components/Footer";
+import ServiceFooter from "@/components/ServiceFooter";
 import AnimatedSection from "@/components/AnimatedSection";
 import SectionCTA from "@/components/SectionCTA";
 import ServiceFloatingElements from "@/components/ServiceFloatingElements";
@@ -219,7 +219,7 @@ const Tournage = () => {
           </div>
         </section>
       </main>
-      <Footer />
+      <ServiceFooter />
     </div>
   );
 };
