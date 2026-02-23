@@ -28,7 +28,7 @@ const Header = () => {
 
   const navLinks = [
     { label: "Témoignages", href: "/#resultats" },
-    { label: "Étude de cas concrète", href: "/#etude-de-cas" },
+    { label: "Résultats", href: "/results" },
     { label: "Équipe", href: "/#equipe" },
     { label: "Contact", href: "#contact" },
   ];
