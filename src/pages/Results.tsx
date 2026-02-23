@@ -185,101 +185,103 @@ const Results = () => {
             <div className="absolute inset-0 gradient-mesh opacity-20" />
             <div className="container mx-auto px-4 relative z-10">
               <div className="max-w-6xl mx-auto">
-                {/* Header */}
-                <AnimatedSection>
-                  <div className="text-center mb-12">
-                    <div className="inline-flex items-center gap-2 glass-card px-4 py-2 mb-4 bg-white/80">
-                      <TrendingUp size={16} className="text-primary" />
-                      <span className="text-sm font-medium text-foreground/80">Étude de cas</span>
-                    </div>
-                    <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-foreground mb-4 tracking-tight">
-                      <span className="text-gradient">{study.headline}</span>
-                    </h2>
-                    <div className="space-y-1 text-muted-foreground">
-                      <p className="font-semibold text-foreground text-lg">{study.company}</p>
-                      <p className="text-sm italic">SIREN : {study.siren}</p>
-                      {study.website && (
-                        <a href={study.website} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1 text-primary hover:underline text-sm">
-                          <ExternalLink size={14} /> {study.website.replace("https://", "").replace("www.", "")}
-                        </a>
-                      )}
-                      {study.phone && (
-                        <p className="flex items-center justify-center gap-1 text-sm">
-                          <Phone size={14} /> Ligne directe {study.phoneName} : {study.phone}
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
+                  {/* LEFT COLUMN — Client info + photos */}
+                  <AnimatedSection direction="left">
+                    <div className="space-y-6">
+                      {/* Name & headline */}
+                      <div>
+                        <div className="inline-flex items-center gap-2 glass-card px-4 py-2 mb-4 bg-white/80">
+                          <TrendingUp size={16} className="text-primary" />
+                          <span className="text-sm font-medium text-foreground/80">Étude de cas</span>
+                        </div>
+                        <h2 className="text-2xl sm:text-3xl font-bold text-foreground mb-2 tracking-tight">{study.name}</h2>
+                        <p className="text-xl font-semibold mb-4">
+                          <span className="text-gradient">{study.headline}</span>
                         </p>
-                      )}
-                    </div>
-                  </div>
-                </AnimatedSection>
+                      </div>
 
-                {/* Before / After */}
-                {(study.before || study.after) && (
-                  <AnimatedSection delay={0.1}>
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-10 max-w-3xl mx-auto">
-                      {study.before && (
-                        <div className="glass-card p-6 bg-white/80 border-l-4 border-red-400">
-                          <p className="text-sm font-semibold text-red-500 mb-2">Avant</p>
-                          <p className="text-sm text-foreground">{study.before}</p>
-                        </div>
-                      )}
-                      {study.after && (
-                        <div className="glass-card p-6 bg-white/80 border-l-4 border-green-500">
-                          <p className="text-sm font-semibold text-green-600 mb-2">Aujourd'hui</p>
-                          <p className="text-sm text-foreground">{study.after}</p>
-                        </div>
-                      )}
-                    </div>
-                  </AnimatedSection>
-                )}
+                      {/* Company details */}
+                      <div className="space-y-2 text-sm text-foreground">
+                        <p className="font-semibold text-base">Société {study.company}</p>
+                        <p className="text-muted-foreground italic">SIREN : {study.siren}</p>
+                        {study.website && (
+                          <a href={study.website} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1 text-primary hover:underline">
+                            <ExternalLink size={14} /> {study.website.replace("https://", "").replace("www.", "")}
+                          </a>
+                        )}
+                        {study.phone && (
+                          <p className="flex items-center gap-1">
+                            <Phone size={14} className="text-primary" /> Ligne directe {study.phoneName} : {study.phone}
+                          </p>
+                        )}
+                      </div>
 
-                {/* Content: photos + video */}
-                <div className={`grid grid-cols-1 ${study.loomId && study.photos.length > 0 ? "lg:grid-cols-2" : ""} gap-8 mb-10`}>
-                  {/* Photos */}
-                  {study.photos.length > 0 && (
-                    <AnimatedSection delay={0.2} direction="left">
-                      <div className="space-y-6">
-                        {study.photos.map((photo, pi) => (
-                          <div key={pi} className="glass-card p-3 bg-white/80 border-gradient">
-                            <div className="rounded-xl overflow-hidden">
-                              <img src={photo.src} alt={photo.caption} className="w-full h-auto object-cover" loading="lazy" />
+                      {/* Before / After */}
+                      {(study.before || study.after) && (
+                        <div className="space-y-3">
+                          {study.before && (
+                            <div className="glass-card p-5 bg-white/80 border-l-4 border-red-400">
+                              <p className="text-sm font-semibold text-red-500 mb-1">Avant</p>
+                              <p className="text-sm text-foreground">{study.before}</p>
                             </div>
-                            <p className="text-sm text-muted-foreground mt-3 text-center">{photo.caption}</p>
-                          </div>
-                        ))}
-                      </div>
-                    </AnimatedSection>
-                  )}
-
-                  {/* Loom */}
-                  {study.loomId && (
-                    <AnimatedSection delay={0.3} direction="right">
-                      <div className="glass-card p-3 border-gradient bg-white/80 h-full flex flex-col">
-                        <div className="relative aspect-video rounded-xl overflow-hidden bg-card shadow-lg flex-1">
-                          <iframe
-                            src={`https://www.loom.com/embed/${study.loomId}`}
-                            frameBorder="0"
-                            loading="lazy"
-                            allowFullScreen
-                            className="absolute inset-0 w-full h-full"
-                          />
+                          )}
+                          {study.after && (
+                            <div className="glass-card p-5 bg-white/80 border-l-4 border-green-500">
+                              <p className="text-sm font-semibold text-green-600 mb-1">Aujourd'hui</p>
+                              <p className="text-sm text-foreground">{study.after}</p>
+                            </div>
+                          )}
                         </div>
-                      </div>
-                    </AnimatedSection>
-                  )}
-                </div>
+                      )}
 
-                {/* Elfsight review */}
-                {study.elfsightReviewId && (
-                  <AnimatedSection delay={0.4} direction="scale">
-                    <div className="glass-card p-6 bg-white/80 border-gradient max-w-4xl mx-auto">
-                      <div className="flex items-center gap-2 mb-4">
-                        <Star size={16} className="text-yellow-500 fill-yellow-500" />
-                        <span className="text-sm font-medium text-foreground/80">Avis Google vérifié</span>
-                      </div>
-                      <div className={`elfsight-app-${study.elfsightReviewId}`} data-elfsight-app-lazy />
+                      {/* Photos */}
+                      {study.photos.length > 0 && (
+                        <div className="space-y-4">
+                          {study.photos.map((photo, pi) => (
+                            <div key={pi} className="glass-card p-3 bg-white/80 border-gradient">
+                              <div className="rounded-xl overflow-hidden">
+                                <img src={photo.src} alt={photo.caption} className="w-full h-auto object-cover" loading="lazy" />
+                              </div>
+                              <p className="text-sm text-muted-foreground mt-3 text-center">{photo.caption}</p>
+                            </div>
+                          ))}
+                        </div>
+                      )}
                     </div>
                   </AnimatedSection>
-                )}
+
+                  {/* RIGHT COLUMN — Video + Elfsight review */}
+                  <AnimatedSection direction="right" delay={0.15}>
+                    <div className="space-y-6 lg:sticky lg:top-28">
+                      {/* Loom */}
+                      {study.loomId && (
+                        <div className="glass-card p-3 border-gradient bg-white/80">
+                          <div className="relative aspect-video rounded-xl overflow-hidden bg-card shadow-lg">
+                            <iframe
+                              src={`https://www.loom.com/embed/${study.loomId}`}
+                              frameBorder="0"
+                              loading="lazy"
+                              allowFullScreen
+                              className="absolute inset-0 w-full h-full"
+                            />
+                          </div>
+                        </div>
+                      )}
+
+                      {/* Elfsight review */}
+                      {study.elfsightReviewId && (
+                        <div className="glass-card p-6 bg-white/80 border-gradient">
+                          <div className="flex items-center gap-2 mb-4">
+                            <Star size={16} className="text-yellow-500 fill-yellow-500" />
+                            <span className="text-sm font-medium text-foreground/80">Avis Google vérifié</span>
+                          </div>
+                          <div className={`elfsight-app-${study.elfsightReviewId}`} data-elfsight-app-lazy />
+                        </div>
+                      )}
+                    </div>
+                  </AnimatedSection>
+                </div>
 
                 <SectionCTA className="mt-10" />
               </div>
