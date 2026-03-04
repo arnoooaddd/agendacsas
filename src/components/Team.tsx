@@ -22,7 +22,7 @@ const teamMembers = [
   { name: "Sami AIT HAMOU", role: "Responsable communication", image: samiImg },
   { name: "Pauline PIETRÉ", role: "Vidéaste", image: paulineImg },
   { name: "Andrei AVADANII", role: "Monteur vidéo et designer", image: andreiImg },
-  { name: "Marceau David", role: "Resp. partenariats", image: marceauImg },
+  { name: "Marceau David", role: "Responsable partenariats", image: marceauImg },
   { name: "Omar TROUSSI", role: "Responsable publicités", image: omarImg },
   { name: "Manon ODIER", role: "Gestion clientèle", image: manonImg },
   { name: "Gabriel AGERON", role: "Designer site internet", image: gabrielImg },
