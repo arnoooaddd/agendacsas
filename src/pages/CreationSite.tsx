@@ -297,7 +297,7 @@ const CreationSite = () => {
                     <AnimatedSection delay={0.25} direction="right">
                       <div className="p-4 bg-muted/50 rounded-xl hover:bg-muted/70 transition-colors duration-300">
                         <p className="text-sm font-medium text-foreground mb-1">Modifications</p>
-                        <p className="text-muted-foreground text-sm">Année 1 : 29 €/h — Puis : 49 €/h</p>
+                        <p className="text-muted-foreground text-sm">Année 1 : 39 €/h — Puis : 49 €/h</p>
                       </div>
                     </AnimatedSection>
                   </div>
