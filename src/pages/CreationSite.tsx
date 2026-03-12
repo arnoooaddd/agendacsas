@@ -284,7 +284,7 @@ const CreationSite = () => {
                 <div className="glass-card p-8 border-gradient glow-primary">
                   <div className="text-center mb-8">
                     <h3 className="text-2xl font-bold text-foreground mb-2">Site internet professionnel</h3>
-                    <div className="text-4xl font-bold text-primary">4 000 € <span className="text-sm font-normal text-muted-foreground">HT</span></div>
+                    <div className="text-4xl font-bold text-primary">5 000 € <span className="text-sm font-normal text-muted-foreground">HT</span></div>
                   </div>
 
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-8">
