@@ -198,7 +198,7 @@ const CreationReseaux = () => {
               <AnimatedSection delay={0.1} direction="scale">
                 <div className="glass-card p-8 border-gradient h-full">
                   <h3 className="text-2xl font-bold text-foreground mb-2">Formule Essentielle</h3>
-                  <div className="text-3xl font-bold text-primary mb-6">197 € <span className="text-sm font-normal text-muted-foreground">HT</span></div>
+                  <div className="text-3xl font-bold text-primary mb-6">397 € <span className="text-sm font-normal text-muted-foreground">HT</span></div>
                   <ul className="space-y-3">
                     {[
                       "2 plateformes au choix",
@@ -220,7 +220,7 @@ const CreationReseaux = () => {
                 <div className="glass-card p-8 border-gradient h-full glow-primary relative overflow-hidden">
                   <div className="absolute top-4 right-4 bg-primary text-primary-foreground text-xs font-bold px-3 py-1 rounded-full">Populaire</div>
                   <h3 className="text-2xl font-bold text-foreground mb-2">Formule Complète</h3>
-                  <div className="text-3xl font-bold text-primary mb-6">297 € <span className="text-sm font-normal text-muted-foreground">HT</span></div>
+                  <div className="text-3xl font-bold text-primary mb-6">497 € <span className="text-sm font-normal text-muted-foreground">HT</span></div>
                   <ul className="space-y-3">
                     {[
                       "Page Facebook",
