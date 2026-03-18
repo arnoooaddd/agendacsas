@@ -13,6 +13,8 @@ import CreationReseaux from "./pages/CreationReseaux";
 import CreationSite from "./pages/CreationSite";
 import Tournage from "./pages/Tournage";
 import Results from "./pages/Results";
+import Blog from "./pages/Blog";
+import BlogArticle from "./pages/BlogArticle";
 
 const queryClient = new QueryClient();
 
