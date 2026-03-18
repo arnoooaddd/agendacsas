@@ -37,6 +37,8 @@ const App = () => (
           <Route path="/creation-site-internet" element={<CreationSite />} />
           <Route path="/tournage" element={<Tournage />} />
           <Route path="/results" element={<Results />} />
+          <Route path="/blog" element={<Blog />} />
+          <Route path="/blog/:slug" element={<BlogArticle />} />
           <Route path="/services" element={<HashRedirect hash="hero" />} />
           <Route path="/service" element={<HashRedirect hash="hero" />} />
           <Route path="/merci" element={<NotFound />} />
