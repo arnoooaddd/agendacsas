@@ -5,7 +5,7 @@ import AnimatedSection from "@/components/AnimatedSection";
 import { blogArticles } from "@/data/blogArticles";
 import { ArrowRight, Clock, Calendar } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
-import coverImage from "@/assets/blog/leads-renovation-2026.jpg";
+import { getCoverImage } from "@/utils/blogImages";
 
 const Blog = () => {
   const featured = blogArticles.find((a) => a.featured);
@@ -50,13 +50,13 @@ const Blog = () => {
                 <div className="grid md:grid-cols-2 gap-0">
                   <div className="aspect-[16/10] md:aspect-auto overflow-hidden">
                     <img
-                      src={coverImage}
+                      src={getCoverImage(featured.coverImage)}
                       alt={featured.title}
                       className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                     />
                   </div>
                   <div className="p-8 md:p-12 flex flex-col justify-center">
-                    <div className="flex items-center gap-3 mb-4">
+                    <div className="flex items-center gap-3 mb-4 flex-wrap">
                       <Badge className="bg-secondary text-secondary-foreground">À la une</Badge>
                       {featured.tags.map((tag) => (
                         <Badge key={tag} variant="outline" className="text-muted-foreground">
@@ -101,13 +101,13 @@ const Blog = () => {
                   >
                     <div className="aspect-[16/10] overflow-hidden">
                       <img
-                        src={coverImage}
+                        src={getCoverImage(article.coverImage)}
                         alt={article.title}
                         className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                       />
                     </div>
                     <div className="p-6">
-                      <div className="flex gap-2 mb-3">
+                      <div className="flex gap-2 mb-3 flex-wrap">
                         {article.tags.map((tag) => (
                           <Badge key={tag} variant="outline" className="text-xs text-muted-foreground">
                             {tag}
@@ -121,6 +121,9 @@ const Blog = () => {
                         {article.excerpt}
                       </p>
                       <div className="flex items-center gap-3 text-xs text-muted-foreground">
+                        <span className="flex items-center gap-1">
+                          <Calendar size={12} /> {formatDate(article.date)}
+                        </span>
                         <span className="flex items-center gap-1">
                           <Clock size={12} /> {article.readTime}
                         </span>
