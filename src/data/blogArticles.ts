@@ -47,7 +47,7 @@ export const blogArticles: BlogArticle[] = [
     author: "Agendac",
     date: "2026-03-18",
     readTime: "5 min",
-    featured: true,
+    featured: false,
     tags: ["Stratégie", "Marketing", "Rénovation"],
     keywords: [
       "marketing rénovation habitat",
