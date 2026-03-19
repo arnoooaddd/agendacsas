@@ -10,6 +10,7 @@ import { getCoverImage } from "@/utils/blogImages";
 const articleComponents: Record<string, React.ComponentType> = {
   "pourquoi-acheter-des-leads-renovation-mauvaise-strategie-2026": lazy(() => import("@/components/blog/ArticleLeadsRenovation")),
   "internaliser-marketing-renovation": lazy(() => import("@/components/blog/ArticleInternaliserMarketing")),
+  "arreter-achat-leads-renovation": lazy(() => import("@/components/blog/ArticleArreterAchatLeads")),
 };
 
 const BlogArticle = () => {
