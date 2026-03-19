@@ -14,6 +14,30 @@ export interface BlogArticle {
 
 export const blogArticles: BlogArticle[] = [
   {
+    slug: "marketing-renovation-habitat-publicite-leads",
+    title: "Marketing rénovation habitat : pourquoi la publicité fonctionne (et pourquoi vous perdez de l'argent)",
+    metaDescription: "Vous pensez que la publicité ne fonctionne pas dans la rénovation ? Découvrez pourquoi elle est rentable et comment générer des leads qualifiés sans dépendre des plateformes.",
+    excerpt: "\"J'ai une société dans la rénovation à plus de 1M€ de CA… mais faire de la publicité en ligne, ça ne sert à rien.\" C'est ce que pensent la majorité des dirigeants. Et c'est pour ça que certains stagnent… pendant que d'autres explosent.",
+    coverImage: "marketing-renovation-habitat",
+    author: "Arnaud UTILLE",
+    date: "2026-03-19",
+    readTime: "6 min",
+    featured: true,
+    tags: ["Marketing", "Publicité", "Rénovation"],
+    keywords: [
+      "marketing rénovation habitat",
+      "génération de leads rénovation",
+      "publicité rénovation habitat",
+      "acquisition clients rénovation",
+      "leads rénovation maison",
+      "stratégie marketing rénovation",
+      "publicité Facebook rénovation",
+      "publicité Google rénovation",
+      "agence marketing rénovation habitat",
+      "comment trouver des clients rénovation",
+    ],
+  },
+  {
     slug: "arreter-achat-leads-renovation",
     title: "Arrêter d'acheter des leads en rénovation : comment sortir de la guerre des prix en 5 étapes",
     metaDescription: "Marre de dépendre des leads en rénovation ? Découvrez comment générer vos propres clients et sortir de la guerre des prix avec une stratégie claire.",
@@ -22,7 +46,7 @@ export const blogArticles: BlogArticle[] = [
     author: "Arnaud UTILLE",
     date: "2026-03-19",
     readTime: "5 min",
-    featured: true,
+    featured: false,
     tags: ["Stratégie", "Acquisition", "Rénovation"],
     keywords: [
       "marketing rénovation habitat",
