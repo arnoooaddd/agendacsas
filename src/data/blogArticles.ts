@@ -14,6 +14,31 @@ export interface BlogArticle {
 
 export const blogArticles: BlogArticle[] = [
   {
+    slug: "arreter-achat-leads-renovation",
+    title: "Arrêter d'acheter des leads en rénovation : comment sortir de la guerre des prix en 5 étapes",
+    metaDescription: "Marre de dépendre des leads en rénovation ? Découvrez comment générer vos propres clients et sortir de la guerre des prix avec une stratégie claire.",
+    excerpt: "Aujourd'hui, une grande partie des entreprises de rénovation sont coincées dans le même schéma : achat de leads, concurrence agressive, marges sous pression. Le problème, ce n'est pas le marché — c'est le système d'acquisition.",
+    coverImage: "arreter-achat-leads-renovation",
+    author: "Arnaud UTILLE",
+    date: "2026-03-19",
+    readTime: "5 min",
+    featured: true,
+    tags: ["Stratégie", "Acquisition", "Rénovation"],
+    keywords: [
+      "marketing rénovation habitat",
+      "génération de leads rénovation",
+      "acquisition clients rénovation",
+      "leads rénovation maison",
+      "publicité rénovation habitat",
+      "stratégie marketing rénovation",
+      "comment trouver des clients en rénovation",
+      "alternatives à l'achat de leads rénovation",
+      "améliorer rentabilité entreprise rénovation",
+      "comment sortir de la guerre des prix bâtiment",
+      "système d'acquisition rénovation",
+    ],
+  },
+  {
     slug: "internaliser-marketing-renovation",
     title: "Internaliser ou externaliser son marketing en rénovation : ce que personne ne vous dit",
     metaDescription: "Faut-il recruter ou externaliser son marketing en rénovation ? Découvrez ce qui est vraiment rentable pour générer des leads.",
