@@ -14,6 +14,28 @@ export interface BlogArticle {
 
 export const blogArticles: BlogArticle[] = [
   {
+    slug: "google-ads-vs-facebook-ads-renovation",
+    title: "Google Ads vs Facebook Ads rénovation : lequel choisir ?",
+    metaDescription: "Google Ads ou Facebook Ads pour votre entreprise de rénovation ? Découvrez les différences, les erreurs à éviter et la meilleure stratégie pour générer des clients.",
+    excerpt: "Google Ads ou Facebook Ads pour générer des clients en rénovation ? Ce comparatif vous aide à comprendre les forces de chaque canal et comment structurer une stratégie d'acquisition rentable.",
+    coverImage: "google-ads-vs-facebook-ads-renovation",
+    author: "Arnaud UTILLE",
+    date: "2026-03-20",
+    readTime: "7 min",
+    featured: true,
+    tags: ["Google Ads", "Facebook Ads", "Rénovation"],
+    keywords: [
+      "google ads vs facebook ads rénovation habitat",
+      "marketing rénovation habitat",
+      "génération de leads rénovation",
+      "publicité entreprise bâtiment",
+      "acquisition clients rénovation",
+      "facebook ads rénovation",
+      "google ads rénovation",
+      "agence marketing rénovation",
+    ],
+  },
+  {
     slug: "marketing-renovation-habitat-publicite-leads",
     title: "Marketing rénovation habitat : pourquoi la publicité fonctionne (et pourquoi vous perdez de l'argent)",
     metaDescription: "Vous pensez que la publicité ne fonctionne pas dans la rénovation ? Découvrez pourquoi elle est rentable et comment générer des leads qualifiés sans dépendre des plateformes.",
@@ -22,7 +44,7 @@ export const blogArticles: BlogArticle[] = [
     author: "Arnaud UTILLE",
     date: "2026-03-19",
     readTime: "6 min",
-    featured: true,
+    featured: false,
     tags: ["Marketing", "Publicité", "Rénovation"],
     keywords: [
       "marketing rénovation habitat",
