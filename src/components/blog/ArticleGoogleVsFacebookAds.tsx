@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { CheckCircle, AlertTriangle, TrendingUp, Target, BarChart3, Zap, Clock, Search, Users } from "lucide-react";
+import { CheckCircle, AlertTriangle, TrendingUp, Target, BarChart3, Zap, Search, Users } from "lucide-react";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import SectionCTA from "@/components/SectionCTA";
 
@@ -9,7 +9,7 @@ const ArticleGoogleVsFacebookAds = () => (
     <section className="mb-10">
       <div className="bg-primary/5 border border-primary/20 rounded-2xl p-6 md:p-8">
         <p className="text-foreground font-medium leading-relaxed">
-          <strong>Google Ads ou Facebook Ads</strong> pour générer des clients en rénovation ? Ce comparatif vous aide à comprendre les forces de chaque canal, les erreurs qui font perdre de l'argent, et comment structurer une <strong>stratégie d'acquisition</strong> rentable pour votre entreprise de rénovation habitat.
+          <strong>Google Ads ou Facebook Ads</strong> pour générer des clients en <strong>rénovation habitat</strong> ? Ce comparatif vous aide à comprendre les forces de chaque canal, les erreurs qui font perdre de l'argent, et comment structurer une <em>stratégie d'acquisition</em> rentable pour votre entreprise de <strong>rénovation</strong>.
         </p>
       </div>
     </section>
@@ -28,6 +28,7 @@ const ArticleGoogleVsFacebookAds = () => (
             <li><a href="#meilleures-entreprises" className="hover:text-primary transition-colors">6. Ce que font les entreprises qui dominent leur marché</a></li>
             <li><a href="#dependance-leads" className="hover:text-primary transition-colors">7. Sortir de la dépendance aux leads</a></li>
             <li><a href="#conclusion" className="hover:text-primary transition-colors">8. Conclusion</a></li>
+            <li><a href="#faq-gvf" className="hover:text-primary transition-colors">9. Questions fréquentes</a></li>
           </ol>
         </nav>
       </div>
@@ -45,15 +46,15 @@ const ArticleGoogleVsFacebookAds = () => (
       </div>
 
       <p className="text-lg text-muted-foreground leading-relaxed mb-4 italic">
-        "Google Ads est mieux que Facebook Ads pour trouver des clients en rénovation…"
+        "Google Ads est mieux que Facebook Ads pour <strong>trouver des clients en rénovation</strong>…"
       </p>
       <p className="text-foreground font-semibold mb-4">C'est faux.</p>
       <p className="text-muted-foreground mb-4">
-        Et c'est exactement ce genre de raccourci qui fait perdre des dizaines de milliers d'euros à des entreprises du bâtiment chaque année.
+        Et c'est exactement ce genre de raccourci qui fait perdre des dizaines de milliers d'euros à des entreprises du <strong>bâtiment</strong> chaque année.
       </p>
       <p className="text-muted-foreground mb-2">La réalité est simple :</p>
       <p className="text-foreground font-semibold text-xl mb-4">
-        👉 Il n'y a pas de meilleur canal. Il y a une <Link to="/services" className="text-primary hover:underline">stratégie d'acquisition</Link> adaptée à votre situation.
+        👉 Il n'y a pas de meilleur canal. Il y a une <Link to="/" className="text-primary hover:underline">stratégie d'acquisition</Link> adaptée à votre situation.
       </p>
       <p className="text-muted-foreground">
         Encore faut-il comprendre comment ces deux leviers fonctionnent. Parce qu'ils ne jouent pas du tout au même jeu.
@@ -71,27 +72,27 @@ const ArticleGoogleVsFacebookAds = () => (
         </h2>
       </div>
 
-      <p className="text-muted-foreground mb-4">Google Ads repose sur un principe simple :</p>
-      <p className="text-foreground font-semibold mb-6">👉 Vous captez une demande déjà existante</p>
+      <p className="text-muted-foreground mb-4"><strong>Google Ads rénovation</strong> repose sur un principe simple :</p>
+      <p className="text-foreground font-semibold mb-6">👉 Vous captez une <em>demande déjà existante</em></p>
 
-      <p className="text-muted-foreground mb-3">Vos prospects cherchent activement :</p>
+      <h3 className="text-lg font-bold text-foreground font-display mb-3">Vos prospects cherchent activement :</h3>
       <ul className="space-y-2 text-muted-foreground mb-6">
-        <li className="flex items-start gap-2"><Search size={16} className="text-primary mt-0.5 shrink-0" /> "isolation extérieure prix"</li>
+        <li className="flex items-start gap-2"><Search size={16} className="text-primary mt-0.5 shrink-0" /> "<strong>isolation</strong> extérieure prix"</li>
         <li className="flex items-start gap-2"><Search size={16} className="text-primary mt-0.5 shrink-0" /> "rénovation salle de bain devis"</li>
-        <li className="flex items-start gap-2"><Search size={16} className="text-primary mt-0.5 shrink-0" /> "artisan menuiserie + ville"</li>
+        <li className="flex items-start gap-2"><Search size={16} className="text-primary mt-0.5 shrink-0" /> "artisan <strong>menuiserie</strong> + ville"</li>
       </ul>
       <p className="text-foreground font-medium mb-6">Et vous apparaissez au bon moment.</p>
 
       <h3 className="text-xl font-bold text-foreground font-display mb-4">Ce que ça implique concrètement</h3>
       <ul className="space-y-2 text-muted-foreground mb-6">
-        <li className="flex items-start gap-2"><CheckCircle size={16} className="text-primary mt-0.5 shrink-0" /> Leads très qualifiés</li>
-        <li className="flex items-start gap-2"><CheckCircle size={16} className="text-primary mt-0.5 shrink-0" /> Coût par lead plus élevé</li>
+        <li className="flex items-start gap-2"><CheckCircle size={16} className="text-primary mt-0.5 shrink-0" /> <strong>Leads très qualifiés</strong></li>
+        <li className="flex items-start gap-2"><CheckCircle size={16} className="text-primary mt-0.5 shrink-0" /> <strong>Coût par lead</strong> plus élevé</li>
         <li className="flex items-start gap-2"><CheckCircle size={16} className="text-primary mt-0.5 shrink-0" /> Volume plus faible</li>
         <li className="flex items-start gap-2"><CheckCircle size={16} className="text-primary mt-0.5 shrink-0" /> Cycle de vente souvent plus court</li>
       </ul>
 
       <div className="bg-primary/5 border border-primary/20 rounded-xl p-6">
-        <p className="text-foreground font-semibold mb-3">👉 Google Ads est un diesel</p>
+        <p className="text-foreground font-semibold mb-3">👉 Google Ads est un <em>diesel</em></p>
         <ul className="space-y-2 text-muted-foreground text-sm">
           <li>• Démarrage lent (<strong>60 à 90 jours</strong> pour être vraiment performant)</li>
           <li>• Phase d'optimisation nécessaire</li>
@@ -112,22 +113,22 @@ const ArticleGoogleVsFacebookAds = () => (
         </h2>
       </div>
 
-      <p className="text-muted-foreground mb-4">À l'inverse, Facebook Ads fonctionne sur un principe totalement différent :</p>
-      <p className="text-foreground font-semibold mb-6">👉 Vous créez la demande</p>
+      <p className="text-muted-foreground mb-4">À l'inverse, <strong>Facebook Ads rénovation</strong> fonctionne sur un principe totalement différent :</p>
+      <p className="text-foreground font-semibold mb-6">👉 Vous <em>créez la demande</em></p>
       <p className="text-muted-foreground mb-6">
         Vous interrompez vos prospects pendant qu'ils scrollent. Ils ne cherchaient pas forcément vos services… mais vous captez leur attention.
       </p>
 
       <h3 className="text-xl font-bold text-foreground font-display mb-4">Résultat</h3>
       <ul className="space-y-2 text-muted-foreground mb-6">
-        <li className="flex items-start gap-2"><CheckCircle size={16} className="text-primary mt-0.5 shrink-0" /> Beaucoup plus de volume</li>
-        <li className="flex items-start gap-2"><CheckCircle size={16} className="text-primary mt-0.5 shrink-0" /> Coût par lead souvent plus bas</li>
+        <li className="flex items-start gap-2"><CheckCircle size={16} className="text-primary mt-0.5 shrink-0" /> <strong>Beaucoup plus de volume</strong></li>
+        <li className="flex items-start gap-2"><CheckCircle size={16} className="text-primary mt-0.5 shrink-0" /> <strong>Coût par lead</strong> souvent plus bas</li>
         <li className="flex items-start gap-2"><CheckCircle size={16} className="text-primary mt-0.5 shrink-0" /> Prospects moins qualifiés (au départ)</li>
-        <li className="flex items-start gap-2"><CheckCircle size={16} className="text-primary mt-0.5 shrink-0" /> Nécessite un bon process commercial derrière</li>
+        <li className="flex items-start gap-2"><CheckCircle size={16} className="text-primary mt-0.5 shrink-0" /> Nécessite un bon <em>process commercial</em> derrière</li>
       </ul>
 
       <div className="bg-secondary/5 border border-secondary/20 rounded-xl p-6 mb-6">
-        <p className="text-foreground font-semibold mb-3">👉 Facebook Ads est un accélérateur</p>
+        <p className="text-foreground font-semibold mb-3">👉 Facebook Ads est un <em>accélérateur</em></p>
         <ul className="space-y-2 text-muted-foreground text-sm">
           <li>• Résultats visibles en <strong>3 à 5 semaines</strong></li>
           <li>• Phase d'apprentissage rapide</li>
@@ -135,10 +136,10 @@ const ArticleGoogleVsFacebookAds = () => (
         </ul>
       </div>
 
-      <p className="text-muted-foreground mb-3">En revanche :</p>
+      <h3 className="text-lg font-bold text-foreground font-display mb-3">En revanche :</h3>
       <ul className="space-y-1 text-muted-foreground">
         <li>• Moins stable</li>
-        <li>• Dépend fortement de la créa, de l'offre et du ciblage</li>
+        <li>• Dépend fortement de la <strong>créa</strong>, de l'offre et du ciblage</li>
         <li>• Peut s'essouffler si mal structuré</li>
       </ul>
     </section>
@@ -151,20 +152,20 @@ const ArticleGoogleVsFacebookAds = () => (
           <h4 className="text-lg font-bold text-foreground mb-4 text-center">🔵 Google Ads</h4>
           <ul className="space-y-2 text-sm text-muted-foreground">
             <li className="flex items-start gap-2"><CheckCircle size={14} className="text-primary mt-0.5 shrink-0" /> Capte la demande existante</li>
-            <li className="flex items-start gap-2"><CheckCircle size={14} className="text-primary mt-0.5 shrink-0" /> Leads très qualifiés</li>
+            <li className="flex items-start gap-2"><CheckCircle size={14} className="text-primary mt-0.5 shrink-0" /> <strong>Leads très qualifiés</strong></li>
             <li className="flex items-start gap-2"><CheckCircle size={14} className="text-primary mt-0.5 shrink-0" /> Démarrage lent (60-90 jours)</li>
             <li className="flex items-start gap-2"><CheckCircle size={14} className="text-primary mt-0.5 shrink-0" /> Stable et prévisible</li>
-            <li className="flex items-start gap-2"><CheckCircle size={14} className="text-primary mt-0.5 shrink-0" /> Coût par lead plus élevé</li>
+            <li className="flex items-start gap-2"><CheckCircle size={14} className="text-primary mt-0.5 shrink-0" /> <strong>Coût lead</strong> plus élevé</li>
           </ul>
         </div>
         <div className="bg-secondary/5 border border-secondary/20 rounded-xl p-6">
           <h4 className="text-lg font-bold text-foreground mb-4 text-center">🟠 Facebook Ads</h4>
           <ul className="space-y-2 text-sm text-muted-foreground">
-            <li className="flex items-start gap-2"><CheckCircle size={14} className="text-secondary mt-0.5 shrink-0" /> Crée la demande</li>
-            <li className="flex items-start gap-2"><CheckCircle size={14} className="text-secondary mt-0.5 shrink-0" /> Volume élevé</li>
+            <li className="flex items-start gap-2"><CheckCircle size={14} className="text-secondary mt-0.5 shrink-0" /> <em>Crée</em> la demande</li>
+            <li className="flex items-start gap-2"><CheckCircle size={14} className="text-secondary mt-0.5 shrink-0" /> <strong>Volume élevé</strong></li>
             <li className="flex items-start gap-2"><CheckCircle size={14} className="text-secondary mt-0.5 shrink-0" /> Résultats en 3-5 semaines</li>
             <li className="flex items-start gap-2"><CheckCircle size={14} className="text-secondary mt-0.5 shrink-0" /> Moins stable</li>
-            <li className="flex items-start gap-2"><CheckCircle size={14} className="text-secondary mt-0.5 shrink-0" /> Coût par lead plus bas</li>
+            <li className="flex items-start gap-2"><CheckCircle size={14} className="text-secondary mt-0.5 shrink-0" /> <strong>Coût lead</strong> plus bas</li>
           </ul>
         </div>
       </div>
@@ -183,20 +184,20 @@ const ArticleGoogleVsFacebookAds = () => (
 
       <p className="text-muted-foreground mb-4">Le vrai problème, ce n'est pas Google vs Facebook.</p>
       <p className="text-foreground font-semibold text-xl mb-6">
-        👉 C'est l'absence de système d'acquisition structuré
+        👉 C'est l'absence de <strong>système d'acquisition structuré</strong>
       </p>
 
-      <p className="text-muted-foreground mb-3">La plupart des entreprises de rénovation :</p>
+      <h3 className="text-lg font-bold text-foreground font-display mb-3">La plupart des entreprises de rénovation :</h3>
       <ul className="space-y-1 text-muted-foreground mb-6">
-        <li>• achètent des leads</li>
+        <li>• <strong>achètent des leads</strong></li>
         <li>• testent un peu de pub</li>
-        <li>• changent d'agence tous les 3 mois</li>
+        <li>• changent d'<em>agence</em> tous les 3 mois</li>
       </ul>
 
       <p className="text-muted-foreground mb-4">Et concluent que "la publicité ne marche pas".</p>
       <p className="text-foreground font-semibold mb-2">C'est faux.</p>
       <p className="text-foreground font-semibold">
-        👉 Ce qui ne marche pas, c'est l'absence de <Link to="/blog/marketing-renovation-habitat-publicite-leads" className="text-primary hover:underline">stratégie globale</Link>.
+        👉 Ce qui ne marche pas, c'est l'absence de <Link to="/blog/marketing-renovation-habitat-publicite-leads" className="text-primary hover:underline">stratégie marketing globale</Link>.
       </p>
     </section>
 
@@ -204,10 +205,10 @@ const ArticleGoogleVsFacebookAds = () => (
     <section className="mb-12">
       <div className="bg-card border border-border rounded-2xl p-8 md:p-10 text-center shadow-card">
         <p className="text-muted-foreground mb-2">
-          Vous ne savez pas quel canal activer en priorité pour votre entreprise ?
+          Vous ne savez pas quel canal activer en priorité pour votre entreprise de <strong>rénovation</strong> ?
         </p>
         <p className="text-foreground font-semibold text-lg mb-6">
-          Découvrez la stratégie qui fonctionne pour les entreprises de rénovation à +1M€.
+          Découvrez la <strong>stratégie d'acquisition</strong> qui fonctionne pour les entreprises à +1M€.
         </p>
         <SectionCTA />
       </div>
@@ -228,10 +229,10 @@ const ArticleGoogleVsFacebookAds = () => (
 
       <div className="space-y-4 mb-6">
         <div className="bg-secondary/5 border border-secondary/20 rounded-xl p-4">
-          <p className="text-foreground font-medium">👉 <strong>Si vous voulez du volume rapidement</strong> → Facebook Ads</p>
+          <p className="text-foreground font-medium">👉 <strong>Si vous voulez du volume rapidement</strong> → <em>Facebook Ads</em></p>
         </div>
         <div className="bg-primary/5 border border-primary/20 rounded-xl p-4">
-          <p className="text-foreground font-medium">👉 <strong>Si vous voulez des leads qualifiés et du long terme</strong> → Google Ads</p>
+          <p className="text-foreground font-medium">👉 <strong>Si vous voulez des leads qualifiés et du long terme</strong> → <em>Google Ads</em></p>
         </div>
         <div className="bg-gradient-to-r from-primary/5 to-secondary/5 border border-primary/20 rounded-xl p-4">
           <p className="text-foreground font-semibold">👉 <strong>Si vous voulez scaler intelligemment</strong> → Les deux</p>
@@ -251,11 +252,11 @@ const ArticleGoogleVsFacebookAds = () => (
       </div>
 
       <p className="text-muted-foreground mb-4">
-        Les sociétés de rénovation les plus performantes ne choisissent pas. <strong className="text-foreground">Elles structurent.</strong>
+        Les sociétés de <strong>rénovation</strong> les plus performantes ne choisissent pas. <strong className="text-foreground">Elles structurent.</strong>
       </p>
 
       <div className="bg-muted/50 border border-border rounded-xl p-6 mb-6">
-        <p className="text-foreground font-medium mb-3">Elles utilisent :</p>
+        <h3 className="text-lg font-bold text-foreground mb-3">Elles utilisent :</h3>
         <ul className="space-y-2 text-muted-foreground">
           <li className="flex items-start gap-2"><CheckCircle size={16} className="text-primary mt-0.5 shrink-0" /> <strong>Facebook Ads</strong> → pour générer du volume</li>
           <li className="flex items-start gap-2"><CheckCircle size={16} className="text-primary mt-0.5 shrink-0" /> <strong>Google Ads</strong> → pour capter la demande chaude</li>
@@ -264,7 +265,7 @@ const ArticleGoogleVsFacebookAds = () => (
         </ul>
       </div>
 
-      <p className="text-foreground font-semibold mb-1">👉 Résultat : elles ne dépendent plus des plateformes de leads.</p>
+      <p className="text-foreground font-semibold mb-1">👉 Résultat : elles ne dépendent plus des plateformes de <em>leads</em>.</p>
       <p className="text-foreground font-medium">
         Elles contrôlent leur <Link to="/resultats" className="text-primary hover:underline">acquisition</Link>.
       </p>
@@ -281,13 +282,13 @@ const ArticleGoogleVsFacebookAds = () => (
         </h2>
       </div>
 
-      <p className="text-muted-foreground mb-3">Acheter des leads, c'est simple. Mais :</p>
+      <p className="text-muted-foreground mb-3"><strong>Acheter des leads</strong>, c'est simple. Mais :</p>
       <div className="bg-destructive/5 border border-destructive/20 rounded-xl p-6 mb-6">
         <ul className="space-y-2 text-muted-foreground">
           <li className="flex items-start gap-2"><span className="text-destructive mt-1">•</span> Marges réduites</li>
           <li className="flex items-start gap-2"><span className="text-destructive mt-1">•</span> Concurrence accrue</li>
           <li className="flex items-start gap-2"><span className="text-destructive mt-1">•</span> Qualité variable</li>
-          <li className="flex items-start gap-2"><span className="text-destructive mt-1">•</span> Dépendance totale</li>
+          <li className="flex items-start gap-2"><span className="text-destructive mt-1">•</span> <strong>Dépendance totale</strong></li>
         </ul>
       </div>
 
@@ -297,7 +298,7 @@ const ArticleGoogleVsFacebookAds = () => (
       <div className="bg-primary/5 border border-primary/20 rounded-xl p-6">
         <ul className="space-y-2 text-muted-foreground">
           <li className="flex items-start gap-2"><CheckCircle size={16} className="text-primary mt-0.5 shrink-0" /> Plus de contrôle</li>
-          <li className="flex items-start gap-2"><CheckCircle size={16} className="text-primary mt-0.5 shrink-0" /> Meilleure rentabilité</li>
+          <li className="flex items-start gap-2"><CheckCircle size={16} className="text-primary mt-0.5 shrink-0" /> Meilleure <strong>rentabilité marketing</strong></li>
           <li className="flex items-start gap-2"><CheckCircle size={16} className="text-primary mt-0.5 shrink-0" /> Croissance stable</li>
           <li className="flex items-start gap-2"><CheckCircle size={16} className="text-primary mt-0.5 shrink-0" /> Valorisation de l'entreprise</li>
         </ul>
@@ -311,11 +312,11 @@ const ArticleGoogleVsFacebookAds = () => (
         <ul className="space-y-3">
           <li className="flex items-start gap-3">
             <CheckCircle size={20} className="text-primary mt-0.5 shrink-0" />
-            <span className="text-foreground"><strong>Google Ads</strong> capte la demande existante — c'est un levier de fond, stable et rentable sur le long terme.</span>
+            <span className="text-foreground"><strong>Google Ads</strong> capte la demande existante — c'est un levier de fond, <em>stable et rentable</em> sur le long terme.</span>
           </li>
           <li className="flex items-start gap-3">
             <CheckCircle size={20} className="text-primary mt-0.5 shrink-0" />
-            <span className="text-foreground"><strong>Facebook Ads</strong> crée la demande — c'est un accélérateur puissant pour générer du volume rapidement.</span>
+            <span className="text-foreground"><strong>Facebook Ads</strong> crée la demande — c'est un <em>accélérateur</em> puissant pour générer du volume rapidement.</span>
           </li>
           <li className="flex items-start gap-3">
             <CheckCircle size={20} className="text-primary mt-0.5 shrink-0" />
@@ -323,7 +324,7 @@ const ArticleGoogleVsFacebookAds = () => (
           </li>
           <li className="flex items-start gap-3">
             <CheckCircle size={20} className="text-primary mt-0.5 shrink-0" />
-            <span className="text-foreground">Les entreprises qui dominent combinent les deux avec un process commercial solide et une image de marque forte.</span>
+            <span className="text-foreground">Les entreprises qui dominent combinent les deux avec un <strong>process commercial</strong> solide et une <em>image de marque</em> forte.</span>
           </li>
         </ul>
       </div>
@@ -335,11 +336,11 @@ const ArticleGoogleVsFacebookAds = () => (
         Conclusion : arrêtez de chercher le "meilleur canal"
       </h2>
       <p className="text-muted-foreground mb-4">Ce n'est pas une question d'outil.</p>
-      <p className="text-foreground font-semibold mb-6">👉 C'est une question de structure.</p>
+      <p className="text-foreground font-semibold mb-6">👉 C'est une question de <strong>structure</strong>.</p>
 
-      <p className="text-muted-foreground mb-3">Si votre acquisition n'est pas maîtrisée :</p>
+      <p className="text-muted-foreground mb-3">Si votre <em>acquisition</em> n'est pas maîtrisée :</p>
       <ul className="space-y-1 text-muted-foreground mb-6">
-        <li>• vous surpayez vos clients</li>
+        <li>• vous surpayez vos <strong>clients</strong></li>
         <li>• vous subissez le marché</li>
         <li>• vous perdez en compétitivité</li>
       </ul>
@@ -349,21 +350,17 @@ const ArticleGoogleVsFacebookAds = () => (
     <section className="mb-16">
       <div className="bg-card border border-border rounded-2xl p-8 md:p-12 text-center shadow-card">
         <p className="text-foreground font-semibold text-lg mb-2">
-          Vous dirigez une entreprise de rénovation à +1M€ ?
+          Vous dirigez une entreprise de <strong>rénovation</strong> à +1M€ ?
         </p>
-        <p className="text-muted-foreground mb-2">
-          Si vous voulez savoir quel canal activer en priorité, comment structurer votre acquisition et générer des RDV qualifiés en continu :
-        </p>
-        <p className="text-foreground font-semibold mb-2">👉 Rendez-vous sur Agendac.fr</p>
-        <p className="text-xs text-muted-foreground mb-6">
-          Article rédigé par <strong>Arnaud UTILLE</strong>, Président d'Agendac
+        <p className="text-muted-foreground mb-6">
+          Si vous voulez savoir quel canal activer en priorité, comment <strong>structurer votre acquisition</strong> et générer des RDV qualifiés en continu :
         </p>
         <SectionCTA />
       </div>
     </section>
 
     {/* FAQ SEO */}
-    <section className="mb-12">
+    <section className="mb-12" id="faq-gvf">
       <h2 className="text-2xl md:text-3xl font-bold text-foreground font-display mb-6">
         Questions fréquentes
       </h2>
@@ -373,7 +370,7 @@ const ArticleGoogleVsFacebookAds = () => (
             Google Ads ou Facebook Ads : lequel est le plus rentable en rénovation ?
           </AccordionTrigger>
           <AccordionContent className="text-muted-foreground">
-            Cela dépend de votre objectif. Google Ads génère des leads plus qualifiés avec un coût unitaire plus élevé. Facebook Ads produit plus de volume à moindre coût. Les entreprises les plus performantes combinent les deux dans un système d'acquisition structuré.
+            Cela dépend de votre objectif. <strong>Google Ads rénovation</strong> génère des leads plus qualifiés avec un coût unitaire plus élevé. <strong>Facebook Ads rénovation</strong> produit plus de volume à moindre coût. Les entreprises les plus performantes combinent les deux dans un <em>système d'acquisition</em> structuré.
           </AccordionContent>
         </AccordionItem>
         <AccordionItem value="faq-2" className="border-border">
@@ -381,7 +378,7 @@ const ArticleGoogleVsFacebookAds = () => (
             Combien de temps faut-il pour voir des résultats avec Google Ads ?
           </AccordionTrigger>
           <AccordionContent className="text-muted-foreground">
-            Google Ads nécessite généralement 60 à 90 jours d'optimisation avant d'atteindre sa pleine performance. C'est un levier de fond qui devient stable et prévisible une fois bien configuré.
+            <strong>Google Ads</strong> nécessite généralement <strong>60 à 90 jours</strong> d'optimisation avant d'atteindre sa pleine performance. C'est un levier de fond qui devient <em>stable et prévisible</em> une fois bien configuré par une <Link to="/" className="text-primary hover:underline">agence marketing rénovation</Link> spécialisée.
           </AccordionContent>
         </AccordionItem>
         <AccordionItem value="faq-3" className="border-border">
@@ -389,7 +386,7 @@ const ArticleGoogleVsFacebookAds = () => (
             Facebook Ads fonctionne-t-il pour les entreprises de rénovation ?
           </AccordionTrigger>
           <AccordionContent className="text-muted-foreground">
-            Oui, Facebook Ads est très efficace pour la rénovation habitat. Il permet de générer un volume important de leads rapidement (résultats en 3 à 5 semaines). La clé est d'avoir un bon process commercial pour qualifier et convertir ces prospects.
+            Oui, <strong>Facebook Ads</strong> est très efficace pour la <strong>rénovation habitat</strong>. Il permet de générer un volume important de <em>leads</em> rapidement (résultats en 3 à 5 semaines). La clé est d'avoir un bon process commercial pour qualifier et convertir ces prospects.
           </AccordionContent>
         </AccordionItem>
         <AccordionItem value="faq-4" className="border-border">
@@ -397,7 +394,7 @@ const ArticleGoogleVsFacebookAds = () => (
             Pourquoi acheter des leads n'est pas une bonne stratégie ?
           </AccordionTrigger>
           <AccordionContent className="text-muted-foreground">
-            L'achat de leads crée une dépendance aux plateformes, compresse vos marges et vous met en concurrence directe sur les prix. Un système d'acquisition maîtrisé (publicité + marque + process) offre plus de contrôle et une meilleure rentabilité.
+            L'<strong>achat de leads</strong> crée une dépendance aux plateformes, compresse vos marges et vous met en concurrence directe sur les prix. Un <strong>système d'acquisition</strong> maîtrisé (publicité + marque + process) offre plus de contrôle et une meilleure <em>rentabilité</em>. <Link to="/blog/pourquoi-acheter-des-leads-renovation-mauvaise-strategie-2026" className="text-primary hover:underline">En savoir plus →</Link>
           </AccordionContent>
         </AccordionItem>
         <AccordionItem value="faq-5" className="border-border">
@@ -405,7 +402,7 @@ const ArticleGoogleVsFacebookAds = () => (
             Quel budget prévoir pour Google Ads et Facebook Ads en rénovation ?
           </AccordionTrigger>
           <AccordionContent className="text-muted-foreground">
-            Le budget dépend de votre zone géographique, vos services et vos objectifs. L'essentiel n'est pas le montant investi, mais la structure derrière : tracking, tunnel de conversion, process commercial. Sans ça, même un gros budget ne produira pas de résultats.
+            Le budget dépend de votre zone géographique, vos services et vos objectifs. L'essentiel n'est pas le montant investi, mais la <strong>structure</strong> derrière : tracking, <em>tunnel de vente</em>, process commercial. Sans ça, même un gros budget ne produira pas de résultats.
           </AccordionContent>
         </AccordionItem>
       </Accordion>

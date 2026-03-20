@@ -6,6 +6,7 @@ import { Badge } from "@/components/ui/badge";
 import { ArrowLeft, Clock, Calendar } from "lucide-react";
 import { useEffect, lazy, Suspense } from "react";
 import { getCoverImage } from "@/utils/blogImages";
+import arnaudImg from "@/assets/team/arnaud-utille.webp";
 
 const articleComponents: Record<string, React.ComponentType> = {
   "pourquoi-acheter-des-leads-renovation-mauvaise-strategie-2026": lazy(() => import("@/components/blog/ArticleLeadsRenovation")),
@@ -22,6 +23,31 @@ const BlogArticle = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, [slug]);
+
+  useEffect(() => {
+    if (article) {
+      document.title = article.title + " | Agendac";
+      const metaDesc = document.querySelector('meta[name="description"]');
+      if (metaDesc) metaDesc.setAttribute("content", article.metaDescription);
+      else {
+        const meta = document.createElement("meta");
+        meta.name = "description";
+        meta.content = article.metaDescription;
+        document.head.appendChild(meta);
+      }
+      const metaKw = document.querySelector('meta[name="keywords"]');
+      if (metaKw) metaKw.setAttribute("content", article.keywords.join(", "));
+      else {
+        const meta = document.createElement("meta");
+        meta.name = "keywords";
+        meta.content = article.keywords.join(", ");
+        document.head.appendChild(meta);
+      }
+    }
+    return () => {
+      document.title = "Agendac - Agence marketing rénovation habitat";
+    };
+  }, [article]);
 
   if (!article) {
     return (
@@ -59,10 +85,23 @@ const BlogArticle = () => {
             headline: article.title,
             description: article.metaDescription,
             image: cover,
-            author: { "@type": "Organization", name: "Agendac" },
+            author: {
+              "@type": "Person",
+              name: "Arnaud UTILLE",
+              jobTitle: "Président",
+              worksFor: { "@type": "Organization", name: "Agendac" },
+            },
             datePublished: article.date,
-            publisher: { "@type": "Organization", name: "Agendac" },
+            publisher: {
+              "@type": "Organization",
+              name: "Agendac",
+              url: "https://agendac.fr",
+            },
             keywords: article.keywords.join(", "),
+            mainEntityOfPage: {
+              "@type": "WebPage",
+              "@id": `https://agendac.fr/blog/${article.slug}`,
+            },
           }),
         }}
       />
@@ -84,10 +123,21 @@ const BlogArticle = () => {
             <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground font-display leading-tight mb-6">
               {article.title}
             </h1>
-            <div className="flex items-center gap-4 text-sm text-muted-foreground">
+            <div className="flex items-center gap-4 text-sm text-muted-foreground mb-6">
               <span className="flex items-center gap-1"><Calendar size={14} /> {formatDate(article.date)}</span>
               <span className="flex items-center gap-1"><Clock size={14} /> {article.readTime} de lecture</span>
-              <span>Par {article.author}</span>
+            </div>
+            {/* Author card */}
+            <div className="flex items-center gap-4 p-4 rounded-xl bg-muted/50 border border-border">
+              <img
+                src={arnaudImg}
+                alt="Arnaud UTILLE, Président d'Agendac"
+                className="w-14 h-14 rounded-full object-cover border-2 border-primary/20"
+              />
+              <div>
+                <p className="font-semibold text-foreground">Arnaud UTILLE</p>
+                <p className="text-sm text-muted-foreground">Président d'Agendac — <Link to="/" className="text-primary hover:underline">Agence marketing rénovation</Link></p>
+              </div>
             </div>
           </header>
 
@@ -100,8 +150,6 @@ const BlogArticle = () => {
               <ArticleContent />
             </Suspense>
           )}
-
-          <div className="sr-only">{article.keywords.join(", ")}</div>
         </article>
       </main>
       <Footer />
