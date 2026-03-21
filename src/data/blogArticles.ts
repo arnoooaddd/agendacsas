@@ -14,6 +14,30 @@ export interface BlogArticle {
 
 export const blogArticles: BlogArticle[] = [
   {
+    slug: "contacter-leads-reseaux-sociaux-renovation",
+    title: "Comment contacter efficacement des leads réseaux sociaux en rénovation (et les transformer en RDV)",
+    metaDescription: "Leads Facebook/Instagram rénovation : le process exact pour les contacter, les relancer et les transformer en RDV qualifiés. Guide complet avec résultats.",
+    excerpt: "80 % des leads ne répondent pas au 1er appel. Découvrez le process exact — SMS, double appel, relances sur 5 jours — pour transformer vos leads réseaux sociaux en rendez-vous qualifiés.",
+    coverImage: "contacter-leads-reseaux-sociaux",
+    author: "Arnaud UTILLE",
+    date: "2026-03-22",
+    readTime: "6 min",
+    featured: true,
+    tags: ["Acquisition", "Facebook Ads", "Rénovation"],
+    keywords: [
+      "facebook ads rénovation",
+      "acquisition clients rénovation",
+      "génération de leads rénovation",
+      "génération de leads BTP",
+      "coût acquisition client rénovation",
+      "stratégie marketing rénovation",
+      "rentabilité marketing rénovation",
+      "campagnes publicitaires rénovation",
+      "agence marketing rénovation",
+      "système acquisition client rénovation",
+    ],
+  },
+  {
     slug: "niveaux-qualification-prospect-renovation",
     title: "Les 4 niveaux de qualification d'un prospect en rénovation (et comment les convertir)",
     metaDescription: "Tous les leads ne se valent pas. Découvrez les 4 niveaux de qualification prospect en rénovation et comment structurer votre tunnel de vente pour convertir.",
@@ -22,7 +46,7 @@ export const blogArticles: BlogArticle[] = [
     author: "Arnaud UTILLE",
     date: "2026-03-22",
     readTime: "6 min",
-    featured: true,
+    featured: false,
     tags: ["Stratégie", "Acquisition", "Rénovation"],
     keywords: [
       "tunnel de vente rénovation",
