@@ -14,6 +14,30 @@ export interface BlogArticle {
 
 export const blogArticles: BlogArticle[] = [
   {
+    slug: "plateforme-publicite-renovation",
+    title: "Sur quelle plateforme lancer de la publicité en rénovation ? Google Ads vs Meta Ads en 2026",
+    metaDescription: "Google Ads ou Meta Ads pour votre entreprise de rénovation à +1M€ ? Comparatif, cas concrets et stratégie multi-canal pour structurer votre acquisition.",
+    excerpt: "Google Ads capte la demande, Meta Ads la crée. Découvrez quelle plateforme publicitaire choisir selon votre objectif — et pourquoi les entreprises performantes combinent les deux.",
+    coverImage: "plateforme-publicite-renovation",
+    author: "Arnaud UTILLE",
+    date: "2026-03-22",
+    readTime: "7 min",
+    featured: true,
+    tags: ["Google Ads", "Facebook Ads", "Rénovation"],
+    keywords: [
+      "google ads rénovation",
+      "facebook ads rénovation",
+      "publicité rénovation",
+      "acquisition clients rénovation",
+      "campagnes publicitaires rénovation",
+      "stratégie marketing rénovation",
+      "coût acquisition client rénovation",
+      "génération de leads rénovation",
+      "agence marketing rénovation",
+      "marketing digital rénovation",
+    ],
+  },
+  {
     slug: "contacter-leads-reseaux-sociaux-renovation",
     title: "Comment contacter efficacement des leads réseaux sociaux en rénovation (et les transformer en RDV)",
     metaDescription: "Leads Facebook/Instagram rénovation : le process exact pour les contacter, les relancer et les transformer en RDV qualifiés. Guide complet avec résultats.",
@@ -22,7 +46,7 @@ export const blogArticles: BlogArticle[] = [
     author: "Arnaud UTILLE",
     date: "2026-03-22",
     readTime: "6 min",
-    featured: true,
+    featured: false,
     tags: ["Acquisition", "Facebook Ads", "Rénovation"],
     keywords: [
       "facebook ads rénovation",
