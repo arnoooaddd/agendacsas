@@ -14,6 +14,30 @@ export interface BlogArticle {
 
 export const blogArticles: BlogArticle[] = [
   {
+    slug: "niveaux-qualification-prospect-renovation",
+    title: "Les 4 niveaux de qualification d'un prospect en rénovation (et comment les convertir)",
+    metaDescription: "Tous les leads ne se valent pas. Découvrez les 4 niveaux de qualification prospect en rénovation et comment structurer votre tunnel de vente pour convertir.",
+    excerpt: "3 % sont prêts à acheter, 37 % peuvent être convertis avec la bonne stratégie. Découvrez les 4 niveaux de maturité d'un prospect en rénovation et comment structurer un tunnel de vente efficace.",
+    coverImage: "niveaux-qualification-prospect-renovation",
+    author: "Arnaud UTILLE",
+    date: "2026-03-22",
+    readTime: "6 min",
+    featured: true,
+    tags: ["Stratégie", "Acquisition", "Rénovation"],
+    keywords: [
+      "tunnel de vente rénovation",
+      "acquisition clients rénovation",
+      "génération de leads rénovation",
+      "système acquisition client rénovation",
+      "stratégie marketing rénovation",
+      "google ads rénovation",
+      "facebook ads rénovation",
+      "coût lead rénovation",
+      "marketing digital rénovation",
+      "publicité rénovation",
+    ],
+  },
+  {
     slug: "externaliser-prise-rdv-renovation",
     title: "Pourquoi externaliser sa prise de rendez-vous en rénovation ? Le levier que vous ignorez",
     metaDescription: "Externaliser la prise de RDV en rénovation : plus de rendez-vous, moins de pertes, meilleure rentabilité. Découvrez pourquoi c'est un levier critique.",
@@ -22,7 +46,7 @@ export const blogArticles: BlogArticle[] = [
     author: "Arnaud UTILLE",
     date: "2026-03-22",
     readTime: "5 min",
-    featured: true,
+    featured: false,
     tags: ["Acquisition", "Stratégie", "Rénovation"],
     keywords: [
       "acquisition clients rénovation",
