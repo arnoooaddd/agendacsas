@@ -6,12 +6,7 @@
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://agendac.fr/resultats</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://agendac.fr/results</loc>
+    <loc>https://agendac.fr/resultats-clients-agendac</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -44,6 +39,36 @@
     <loc>https://agendac.fr/blog</loc>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://agendac.fr/blog/se-demarquer-arnaques-renovation</loc>
+    <lastmod>2026-03-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://agendac.fr/blog/publicite-renovation-2026</loc>
+    <lastmod>2026-03-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://agendac.fr/blog/retargeting-prospects-renovation</loc>
+    <lastmod>2026-03-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://agendac.fr/blog/plateforme-publicite-renovation</loc>
+    <lastmod>2026-03-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://agendac.fr/blog/contacter-leads-reseaux-sociaux-renovation</loc>
+    <lastmod>2026-03-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://agendac.fr/blog/niveaux-qualification-prospect-renovation</loc>
@@ -102,36 +127,6 @@
   <url>
     <loc>https://agendac.fr/blog/pourquoi-acheter-des-leads-renovation-mauvaise-strategie-2026</loc>
     <lastmod>2026-03-15</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://agendac.fr/blog/contacter-leads-reseaux-sociaux-renovation</loc>
-    <lastmod>2026-03-22</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://agendac.fr/blog/plateforme-publicite-renovation</loc>
-    <lastmod>2026-03-22</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://agendac.fr/blog/retargeting-prospects-renovation</loc>
-    <lastmod>2026-03-22</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://agendac.fr/blog/publicite-renovation-2026</loc>
-    <lastmod>2026-03-22</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://agendac.fr/blog/se-demarquer-arnaques-renovation</loc>
-    <lastmod>2026-03-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
