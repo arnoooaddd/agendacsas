@@ -7,6 +7,7 @@ import coutPublicite from "@/assets/blog/cout-publicite-renovation-habitat.jpg";
 import delaiResultats from "@/assets/blog/delai-resultats-acquisition-digitale-renovation.jpg";
 import choisirAgence from "@/assets/blog/choisir-agence-marketing-renovation.jpg";
 import externaliserRdv from "@/assets/blog/externaliser-prise-rdv-renovation.png";
+import niveauxQualification from "@/assets/blog/niveaux-qualification-prospect-renovation.png";
 
 const coverImages: Record<string, string> = {
   "leads-renovation-2026": leadsRenovation,
@@ -18,6 +19,7 @@ const coverImages: Record<string, string> = {
   "delai-resultats-acquisition-digitale-renovation": delaiResultats,
   "choisir-agence-marketing-renovation": choisirAgence,
   "externaliser-prise-rdv-renovation": externaliserRdv,
+  "niveaux-qualification-prospect-renovation": niveauxQualification,
 };
 
 export const getCoverImage = (key: string): string => {
