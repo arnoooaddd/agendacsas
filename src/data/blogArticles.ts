@@ -46,7 +46,7 @@ export const blogArticles: BlogArticle[] = [
     author: "Arnaud UTILLE",
     date: "2026-03-20",
     readTime: "7 min",
-    featured: true,
+    featured: false,
     tags: ["Google Ads", "Facebook Ads", "Rénovation"],
     keywords: [
       "google ads vs facebook ads rénovation habitat",
