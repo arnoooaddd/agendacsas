@@ -9,7 +9,7 @@ const ArticleNiveauxQualificationProspect = () => (
     <section className="mb-10">
       <div className="bg-primary/5 border border-primary/20 rounded-2xl p-6 md:p-8">
         <p className="text-foreground font-medium leading-relaxed">
-          Tous les leads ne se valent pas. Seulement <strong>3 %</strong> sont prêts à acheter — mais <strong>37 % peuvent être convertis</strong> avec la bonne stratégie. Découvrez les <strong>4 niveaux de qualification</strong> d'un prospect en rénovation et comment structurer votre <strong><em>tunnel de vente rénovation</em></strong> pour maximiser chaque opportunité.
+          Tous les leads ne se valent pas. Seulement <strong>3 %</strong> sont prêts à acheter — mais <strong>37 % peuvent être convertis</strong> avec la bonne stratégie. Découvrez les 4 niveaux de qualification d'un prospect en rénovation et comment structurer votre <strong>tunnel de vente</strong> pour maximiser chaque opportunité.
         </p>
       </div>
     </section>
@@ -35,13 +35,13 @@ const ArticleNiveauxQualificationProspect = () => (
     {/* Introduction */}
     <section className="mb-12">
       <p className="text-foreground font-semibold text-xl mb-4">
-        Si vous traitez tous vos prospects de la même manière, <strong>vous perdez de l'argent</strong>.
+        Si vous traitez tous vos prospects de la même manière, vous perdez de l'argent.
       </p>
       <p className="text-muted-foreground mb-4">
-        En <strong><em>marketing digital rénovation</em></strong>, la maturité d'un prospect détermine tout : le message, le canal, le contenu et le coût pour le convertir.
+        En <strong>marketing digital rénovation</strong>, la maturité d'un prospect détermine tout : le message, le canal, le contenu et le coût pour le convertir.
       </p>
       <p className="text-foreground font-medium">
-        Comprendre ces 4 niveaux, c'est la base d'un <strong><em>système acquisition client rénovation</em></strong> rentable.
+        Comprendre ces 4 niveaux, c'est la base d'un <strong>système d'acquisition client rénovation</strong> rentable.
       </p>
     </section>
 
@@ -52,30 +52,30 @@ const ArticleNiveauxQualificationProspect = () => (
           <Target size={20} className="text-destructive" />
         </div>
         <h2 className="text-2xl md:text-3xl font-bold text-foreground font-display">
-          🔴 Les 3 % prêts à acheter — le cash immédiat
+          Les 3 % prêts à acheter — le cash immédiat
         </h2>
       </div>
+
       <p className="text-muted-foreground mb-4">Ce sont les prospects qui :</p>
       <ul className="space-y-2 text-muted-foreground mb-6">
         <li className="flex items-start gap-2"><CheckCircle size={16} className="text-primary mt-0.5 shrink-0" /> <strong>Cherchent activement</strong> une entreprise</li>
         <li className="flex items-start gap-2"><CheckCircle size={16} className="text-primary mt-0.5 shrink-0" /> <strong>Comparent</strong> des devis</li>
         <li className="flex items-start gap-2"><CheckCircle size={16} className="text-primary mt-0.5 shrink-0" /> Veulent <strong>passer à l'action</strong> rapidement</li>
       </ul>
+
       <p className="text-muted-foreground mb-6">
         Typiquement : <em>"installateur pompe à chaleur prix"</em> ou <em>"devis isolation combles"</em>.
       </p>
 
       <h3 className="text-lg font-bold text-foreground font-display mb-3">Stratégie : conversion directe</h3>
-      <ul className="space-y-1 text-muted-foreground mb-6">
-        <li>• <strong><em>Google Ads rénovation</em></strong> (search) → capter l'intention</li>
+      <ul className="space-y-1 text-muted-foreground mb-4">
+        <li>• <strong>Google Ads rénovation</strong> (search) → capter l'intention</li>
         <li>• Landing page optimisée</li>
         <li>• Prise de RDV rapide</li>
       </ul>
-      <div className="bg-primary/5 border border-primary/20 rounded-xl p-6">
-        <p className="text-foreground font-medium">
-          👉 Objectif : <strong>transformer immédiatement en devis</strong>. Ces prospects sont les plus rentables, mais aussi les plus disputés.
-        </p>
-      </div>
+      <p className="text-foreground font-medium">
+        👉 Objectif : <strong>transformer immédiatement en devis</strong>. Ces prospects sont les plus rentables, mais aussi les plus disputés.
+      </p>
     </section>
 
     {/* Niveau 17% */}
@@ -85,9 +85,10 @@ const ArticleNiveauxQualificationProspect = () => (
           <Search size={20} className="text-orange-500" />
         </div>
         <h2 className="text-2xl md:text-3xl font-bold text-foreground font-display">
-          🟠 Les 17 % en recherche active — choisir la bonne entreprise
+          Les 17 % en recherche active — choisir la bonne entreprise
         </h2>
       </div>
+
       <p className="text-muted-foreground mb-4">
         Ils ont un projet et vont passer à l'action. Mais ils hésitent sur le <strong>prestataire</strong>, la <strong>crédibilité</strong> et la <strong>confiance</strong>.
       </p>
@@ -97,10 +98,11 @@ const ArticleNiveauxQualificationProspect = () => (
         <li className="flex items-start gap-2"><CheckCircle size={16} className="text-primary mt-0.5 shrink-0" /> <strong>Témoignages clients</strong> en vidéo</li>
         <li className="flex items-start gap-2"><CheckCircle size={16} className="text-primary mt-0.5 shrink-0" /> Vidéos de chantiers (avant / après)</li>
         <li className="flex items-start gap-2"><CheckCircle size={16} className="text-primary mt-0.5 shrink-0" /> Présentation de l'équipe</li>
-        <li className="flex items-start gap-2"><CheckCircle size={16} className="text-primary mt-0.5 shrink-0" /> <strong><em>Facebook Ads rénovation</em></strong> avec du contenu de réassurance</li>
+        <li className="flex items-start gap-2"><CheckCircle size={16} className="text-primary mt-0.5 shrink-0" /> <strong>Facebook Ads rénovation</strong> avec du contenu de réassurance</li>
       </ul>
+
       <p className="text-foreground font-semibold">
-        👉 <strong>Objectif : devenir l'évidence.</strong> <Link to="/results" className="text-primary hover:underline">Voir cette stratégie en action →</Link>
+        👉 Objectif : devenir l'évidence. <Link to="/results" className="text-primary hover:underline">Voir cette stratégie en action →</Link>
       </p>
     </section>
 
@@ -111,9 +113,10 @@ const ArticleNiveauxQualificationProspect = () => (
           <BookOpen size={20} className="text-yellow-500" />
         </div>
         <h2 className="text-2xl md:text-3xl font-bold text-foreground font-display">
-          🟡 Les 20 % conscients du problème — mais pas encore prêts
+          Les 20 % conscients du problème — mais pas encore prêts
         </h2>
       </div>
+
       <p className="text-muted-foreground mb-4">Ils ont un problème :</p>
       <ul className="space-y-1 text-muted-foreground mb-4">
         <li>• Facture d'électricité trop élevée</li>
@@ -128,11 +131,10 @@ const ArticleNiveauxQualificationProspect = () => (
         <li className="flex items-start gap-2"><CheckCircle size={16} className="text-primary mt-0.5 shrink-0" /> Vidéos explicatives</li>
         <li className="flex items-start gap-2"><CheckCircle size={16} className="text-primary mt-0.5 shrink-0" /> Articles de blog optimisés</li>
       </ul>
-      <div className="bg-primary/5 border border-primary/20 rounded-xl p-6">
-        <p className="text-foreground font-medium">
-          👉 Objectif : les faire passer de <em>"je me pose des questions"</em> → <em>"je dois agir"</em>. C'est le cœur de la <strong><em>stratégie marketing rénovation</em></strong>.
-        </p>
-      </div>
+
+      <p className="text-foreground font-medium">
+        👉 Objectif : les faire passer de <em>"je me pose des questions"</em> → <em>"je dois agir"</em>. C'est le cœur de la <strong>stratégie marketing rénovation</strong>.
+      </p>
     </section>
 
     {/* CTA milieu */}
@@ -151,17 +153,16 @@ const ArticleNiveauxQualificationProspect = () => (
           <Eye size={20} className="text-blue-500" />
         </div>
         <h2 className="text-2xl md:text-3xl font-bold text-foreground font-display">
-          🔵 Les 60 % non conscients — ne pas prioriser
+          Les 60 % non conscients — ne pas prioriser
         </h2>
       </div>
+
       <p className="text-muted-foreground mb-4">
         Ils ne savent pas qu'ils ont un problème. Ils ne cherchent rien.
       </p>
-      <div className="bg-destructive/5 border border-destructive/20 rounded-xl p-6 mb-6">
-        <p className="text-foreground font-medium">
-          ⚠️ Aller les chercher en <strong><em>publicité rénovation</em></strong> directe = très coûteux et peu rentable.
-        </p>
-      </div>
+      <p className="text-foreground font-medium mb-6">
+        ⚠️ Aller les chercher en <strong>publicité rénovation</strong> directe = très coûteux et peu rentable.
+      </p>
 
       <h3 className="text-lg font-bold text-foreground font-display mb-3">Approche recommandée</h3>
       <ul className="space-y-2 text-muted-foreground">
@@ -181,8 +182,9 @@ const ArticleNiveauxQualificationProspect = () => (
           La vraie stratégie : faire monter les prospects
         </h2>
       </div>
+
       <p className="text-muted-foreground mb-4">
-        Une bonne <strong><em>stratégie marketing rénovation</em></strong> fait <strong>évoluer les prospects</strong> :
+        Une bonne <strong>stratégie marketing rénovation</strong> fait évoluer les prospects :
       </p>
       <ul className="space-y-1 text-muted-foreground mb-6">
         <li>• <strong>20 % → 17 %</strong> (éducation)</li>
@@ -200,8 +202,9 @@ const ArticleNiveauxQualificationProspect = () => (
           <li><strong>6.</strong> Il demande un <strong>devis</strong> ✅</li>
         </ol>
       </div>
+
       <p className="text-foreground font-medium">
-        👉 C'est la base d'un <strong><em>tunnel de vente rénovation</em></strong> performant. C'est ce que nous structurons chez <Link to="/" className="text-primary hover:underline font-medium">Agendac</Link>.
+        👉 C'est la base d'un <strong>tunnel de vente rénovation</strong> performant. C'est ce que nous structurons chez <Link to="/" className="text-primary hover:underline font-medium">Agendac</Link>.
       </p>
     </section>
 
@@ -215,17 +218,16 @@ const ArticleNiveauxQualificationProspect = () => (
           L'erreur classique qui vous coûte cher
         </h2>
       </div>
+
       <p className="text-foreground font-semibold mb-4">Faire uniquement de la conversion sur les 3 %.</p>
-      <div className="bg-muted/50 border border-border rounded-xl p-6">
-        <ul className="space-y-3 text-muted-foreground">
-          <li className="flex items-start gap-2"><span className="text-destructive mt-1">•</span> <strong>Volume limité</strong> — seulement 3 % du marché</li>
-          <li className="flex items-start gap-2"><span className="text-destructive mt-1">•</span> <strong>Concurrence élevée</strong> — tout le monde se bat dessus</li>
-          <li className="flex items-start gap-2"><span className="text-destructive mt-1">•</span> <strong><em>Coût lead rénovation</em> élevé</strong> — enchères maximales</li>
-        </ul>
-        <p className="text-foreground font-medium mt-4">
-          Les entreprises qui dominent travaillent <strong>les 4 niveaux</strong> simultanément.
-        </p>
-      </div>
+      <ul className="space-y-2 text-muted-foreground mb-6">
+        <li className="flex items-start gap-2"><span className="text-destructive mt-1">•</span> <strong>Volume limité</strong> — seulement 3 % du marché</li>
+        <li className="flex items-start gap-2"><span className="text-destructive mt-1">•</span> <strong>Concurrence élevée</strong> — tout le monde se bat dessus</li>
+        <li className="flex items-start gap-2"><span className="text-destructive mt-1">•</span> <strong>Coût lead rénovation</strong> élevé — enchères maximales</li>
+      </ul>
+      <p className="text-foreground font-medium">
+        Les entreprises qui dominent travaillent <strong>les 4 niveaux</strong> simultanément.
+      </p>
     </section>
 
     {/* À retenir */}
@@ -235,7 +237,7 @@ const ArticleNiveauxQualificationProspect = () => (
         <ul className="space-y-3">
           <li className="flex items-start gap-3"><CheckCircle size={20} className="text-primary mt-0.5 shrink-0" /><span className="text-foreground">Tous les prospects n'ont <strong>pas la même maturité</strong></span></li>
           <li className="flex items-start gap-3"><CheckCircle size={20} className="text-primary mt-0.5 shrink-0" /><span className="text-foreground">Chaque niveau demande un <strong>type de contenu spécifique</strong></span></li>
-          <li className="flex items-start gap-3"><CheckCircle size={20} className="text-primary mt-0.5 shrink-0" /><span className="text-foreground">Le vrai levier = structurer un <strong><em>tunnel de vente rénovation</em></strong> complet</span></li>
+          <li className="flex items-start gap-3"><CheckCircle size={20} className="text-primary mt-0.5 shrink-0" /><span className="text-foreground">Le vrai levier = structurer un <strong>tunnel de vente rénovation</strong> complet</span></li>
         </ul>
         <p className="text-foreground font-semibold mt-4">
           👉 Les entreprises qui gagnent <strong>contrôlent le parcours complet</strong>.
@@ -258,7 +260,7 @@ const ArticleNiveauxQualificationProspect = () => (
       <Accordion type="single" collapsible className="w-full">
         <AccordionItem value="faq-1" className="border-border">
           <AccordionTrigger className="text-left text-foreground hover:no-underline">Comment qualifier un prospect en rénovation ?</AccordionTrigger>
-          <AccordionContent className="text-muted-foreground">Il existe <strong>4 niveaux de maturité</strong> : 3 % prêts à acheter, 17 % en recherche, 20 % conscients du problème, 60 % non conscients. Chaque niveau nécessite une approche différente.</AccordionContent>
+          <AccordionContent className="text-muted-foreground">Il existe <strong>4 niveaux de maturité</strong> : 3 % prêts à acheter, 17 % en recherche, 20 % conscients du problème, 60 % non conscients. Chaque niveau nécessite une approche différente en <strong>acquisition clients rénovation</strong>.</AccordionContent>
         </AccordionItem>
         <AccordionItem value="faq-2" className="border-border">
           <AccordionTrigger className="text-left text-foreground hover:no-underline">Comment structurer un tunnel de vente en rénovation ?</AccordionTrigger>
@@ -266,11 +268,11 @@ const ArticleNiveauxQualificationProspect = () => (
         </AccordionItem>
         <AccordionItem value="faq-3" className="border-border">
           <AccordionTrigger className="text-left text-foreground hover:no-underline">Pourquoi mes leads ne convertissent pas ?</AccordionTrigger>
-          <AccordionContent className="text-muted-foreground">Souvent parce que vous traitez tous les prospects de la même manière. Adaptez votre message à chaque niveau de maturité.</AccordionContent>
+          <AccordionContent className="text-muted-foreground">Souvent parce que vous traitez tous les prospects de la même manière. Adaptez votre message à chaque niveau de maturité pour améliorer votre <strong>génération de leads rénovation</strong>.</AccordionContent>
         </AccordionItem>
         <AccordionItem value="faq-4" className="border-border">
           <AccordionTrigger className="text-left text-foreground hover:no-underline">Faut-il utiliser Google Ads ou Facebook Ads ?</AccordionTrigger>
-          <AccordionContent className="text-muted-foreground">Les deux. Google Ads capte les 3 % (intention), Facebook Ads travaille les 17-20 %. En savoir plus dans notre <Link to="/blog/google-ads-vs-facebook-ads-renovation" className="text-primary hover:underline">comparatif</Link>.</AccordionContent>
+          <AccordionContent className="text-muted-foreground">Les deux. <strong>Google Ads</strong> capte les 3 % (intention), <strong>Facebook Ads</strong> travaille les 17-20 %. En savoir plus dans notre <Link to="/blog/google-ads-vs-facebook-ads-renovation" className="text-primary hover:underline">comparatif</Link>.</AccordionContent>
         </AccordionItem>
       </Accordion>
     </section>
@@ -281,11 +283,11 @@ const ArticleNiveauxQualificationProspect = () => (
       <div className="grid sm:grid-cols-2 gap-4">
         <Link to="/blog/cout-publicite-renovation-habitat" className="block bg-muted/50 border border-border rounded-xl p-5 hover:border-primary/50 transition-colors no-underline">
           <h3 className="font-semibold text-foreground mb-2">Combien coûte la publicité en rénovation ?</h3>
-          <p className="text-sm text-muted-foreground">Budgets, coûts par lead et stratégie 2026</p>
+          <p className="text-sm text-muted-foreground">Budgets, coûts par lead et stratégie complète.</p>
         </Link>
         <Link to="/blog/google-ads-vs-facebook-ads-renovation" className="block bg-muted/50 border border-border rounded-xl p-5 hover:border-primary/50 transition-colors no-underline">
           <h3 className="font-semibold text-foreground mb-2">Google Ads vs Facebook Ads rénovation</h3>
-          <p className="text-sm text-muted-foreground">Lequel choisir pour générer des clients ?</p>
+          <p className="text-sm text-muted-foreground">Lequel choisir pour votre entreprise ?</p>
         </Link>
       </div>
     </section>
