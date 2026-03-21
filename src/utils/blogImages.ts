@@ -10,8 +10,10 @@ import externaliserRdv from "@/assets/blog/externaliser-prise-rdv-renovation.png
 import niveauxQualification from "@/assets/blog/niveaux-qualification-prospect-renovation.png";
 import contacterLeads from "@/assets/blog/contacter-leads-reseaux-sociaux.png";
 import plateformePublicite from "@/assets/blog/plateforme-publicite-renovation.jpg";
+import retargetingProspects from "@/assets/blog/retargeting-prospects-renovation.png";
 
 const coverImages: Record<string, string> = {
+  "retargeting-prospects-renovation": retargetingProspects,
   "plateforme-publicite-renovation": plateformePublicite,
   "contacter-leads-reseaux-sociaux": contacterLeads,
   "leads-renovation-2026": leadsRenovation,
