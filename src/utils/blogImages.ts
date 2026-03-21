@@ -17,6 +17,7 @@ const coverImages: Record<string, string> = {
   "cout-publicite-renovation-habitat": coutPublicite,
   "delai-resultats-acquisition-digitale-renovation": delaiResultats,
   "choisir-agence-marketing-renovation": choisirAgence,
+  "externaliser-prise-rdv-renovation": externaliserRdv,
 };
 
 export const getCoverImage = (key: string): string => {
