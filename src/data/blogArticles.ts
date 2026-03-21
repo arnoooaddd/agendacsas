@@ -14,6 +14,30 @@ export interface BlogArticle {
 
 export const blogArticles: BlogArticle[] = [
   {
+    slug: "cout-publicite-renovation-habitat",
+    title: "Combien coûte la publicité en rénovation habitat ? Budgets, coûts par lead et stratégie 2026",
+    metaDescription: "Combien coûte la publicité pour une entreprise de rénovation ? Google Ads, Meta Ads, coût par lead et budgets réels. Guide complet pour maîtriser votre acquisition.",
+    excerpt: "Google Ads, Meta Ads, coût par lead, budgets réels : découvrez combien coûte réellement la publicité pour une entreprise de rénovation de l'habitat et comment structurer un système d'acquisition rentable.",
+    coverImage: "cout-publicite-renovation-habitat",
+    author: "Arnaud UTILLE",
+    date: "2026-03-21",
+    readTime: "6 min",
+    featured: true,
+    tags: ["Publicité", "Budget", "Rénovation"],
+    keywords: [
+      "coût lead rénovation",
+      "coût acquisition client rénovation",
+      "publicité rénovation",
+      "publicité BTP",
+      "google ads rénovation",
+      "facebook ads rénovation",
+      "campagnes publicitaires rénovation",
+      "roi publicité rénovation",
+      "rentabilité marketing rénovation",
+      "budget publicité rénovation",
+    ],
+  },
+  {
     slug: "google-ads-vs-facebook-ads-renovation",
     title: "Google Ads vs Facebook Ads rénovation habitat : lequel choisir en 2026 ?",
     metaDescription: "Google Ads ou Facebook Ads pour votre entreprise de rénovation ? Comparatif complet, erreurs à éviter et stratégie d'acquisition pour générer des clients.",
@@ -22,7 +46,7 @@ export const blogArticles: BlogArticle[] = [
     author: "Arnaud UTILLE",
     date: "2026-03-20",
     readTime: "7 min",
-    featured: true,
+    featured: false,
     tags: ["Google Ads", "Facebook Ads", "Rénovation"],
     keywords: [
       "google ads vs facebook ads rénovation habitat",
