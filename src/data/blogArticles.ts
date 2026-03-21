@@ -14,6 +14,30 @@ export interface BlogArticle {
 
 export const blogArticles: BlogArticle[] = [
   {
+    slug: "delai-resultats-acquisition-digitale-renovation",
+    title: "Combien de temps pour voir des résultats en acquisition digitale rénovation ? Timelines et budgets 2026",
+    metaDescription: "Combien de temps pour générer des leads en rénovation avec Google Ads et Meta Ads ? Timelines réelles, budgets et erreurs à éviter. Guide complet.",
+    excerpt: "Entre 3 semaines et 3 mois selon les plateformes et votre budget : découvrez les timelines réelles de l'acquisition digitale en rénovation, les budgets nécessaires et les erreurs qui rallongent vos délais.",
+    coverImage: "delai-resultats-acquisition-digitale-renovation",
+    author: "Arnaud UTILLE",
+    date: "2026-03-21",
+    readTime: "6 min",
+    featured: true,
+    tags: ["Acquisition", "Google Ads", "Facebook Ads"],
+    keywords: [
+      "acquisition clients rénovation",
+      "génération de leads rénovation",
+      "google ads rénovation",
+      "facebook ads rénovation",
+      "campagnes publicitaires rénovation",
+      "publicité rénovation",
+      "système acquisition client rénovation",
+      "agence marketing rénovation",
+      "roi publicité rénovation",
+      "marketing digital rénovation",
+    ],
+  },
+  {
     slug: "cout-publicite-renovation-habitat",
     title: "Combien coûte la publicité en rénovation habitat ? Budgets, coûts par lead et stratégie 2026",
     metaDescription: "Combien coûte la publicité pour une entreprise de rénovation ? Google Ads, Meta Ads, coût par lead et budgets réels. Guide complet pour maîtriser votre acquisition.",
