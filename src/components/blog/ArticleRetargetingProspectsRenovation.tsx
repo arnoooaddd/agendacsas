@@ -141,7 +141,7 @@ const ArticleRetargetingProspectsRenovation = () => (
     </section>
 
     {/* CTA milieu */}
-    <SectionCTA variant="blog" />
+    <SectionCTA />
 
     {/* Section 4 */}
     <section className="mb-12" id="cas-concret-retargeting">
