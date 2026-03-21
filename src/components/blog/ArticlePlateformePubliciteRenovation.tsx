@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Search, Megaphone, Target, CheckCircle, AlertTriangle, BarChart3, Layers, Zap, TrendingUp } from "lucide-react";
+import { Search, Megaphone, Target, CheckCircle, AlertTriangle, BarChart3, Layers, TrendingUp } from "lucide-react";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import SectionCTA from "@/components/SectionCTA";
 
@@ -9,7 +9,7 @@ const ArticlePlateformePubliciteRenovation = () => (
     <section className="mb-10">
       <div className="bg-primary/5 border border-primary/20 rounded-2xl p-6 md:p-8">
         <p className="text-foreground font-medium leading-relaxed">
-          Google Ads, Facebook Ads, YouTube Ads… sur quelle plateforme investir quand on fait <strong>+1M€ de CA en rénovation</strong> ? Il ne s'agit pas de « tester » — il s'agit de structurer une <strong><em>acquisition clients rénovation</em></strong> scalable. Cet article compare les plateformes, leurs forces, et vous montre comment les <strong>combiner intelligemment</strong>.
+          Google Ads, Facebook Ads, YouTube Ads… sur quelle plateforme investir quand on fait <strong>+1M€ de CA en rénovation</strong> ? Il ne s'agit pas de « tester » — il s'agit de structurer une <strong>acquisition clients rénovation</strong> scalable. Cet article compare les plateformes, leurs forces, et vous montre comment les combiner intelligemment.
         </p>
       </div>
     </section>
@@ -35,13 +35,13 @@ const ArticlePlateformePubliciteRenovation = () => (
     {/* Introduction */}
     <section className="mb-12">
       <p className="text-foreground font-semibold text-xl mb-4">
-        Vous avez déjà du bouche-à-oreille. Le but n'est pas de « tester » — c'est de <strong>structurer une acquisition scalable</strong>.
+        Vous avez déjà du bouche-à-oreille. Le but n'est pas de « tester » — c'est de structurer une acquisition scalable.
       </p>
       <p className="text-muted-foreground mb-4">
-        À +1M€ de CA, vous ne pouvez plus vous permettre de dépendre d'un seul canal. La <strong><em>publicité rénovation</em></strong> bien structurée vous donne un flux de prospects prévisible et maîtrisé.
+        À +1M€ de CA, vous ne pouvez plus vous permettre de dépendre d'un seul canal. La <strong>publicité rénovation</strong> bien structurée vous donne un flux de prospects prévisible et maîtrisé.
       </p>
       <p className="text-foreground font-medium">
-        Encore faut-il savoir <strong>quelle plateforme utiliser</strong>, et surtout <strong>comment les articuler</strong>.
+        Encore faut-il savoir <strong>quelle plateforme utiliser</strong>, et surtout comment les articuler.
       </p>
     </section>
 
@@ -56,37 +56,24 @@ const ArticlePlateformePubliciteRenovation = () => (
         </h2>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
-        <div className="bg-primary/5 border border-primary/20 rounded-xl p-6">
-          <div className="flex items-center gap-2 mb-3">
-            <Search size={18} className="text-primary" />
-            <h3 className="text-base font-bold text-foreground font-display">Prospects intentionnistes</h3>
-          </div>
-          <p className="text-sm text-muted-foreground mb-3">Ils <strong>cherchent activement</strong> une solution :</p>
-          <ul className="space-y-1 text-sm text-muted-foreground">
-            <li>✅ Veulent un devis</li>
-            <li>✅ Comparent les prestataires</li>
-            <li>✅ Prêts à passer à l'action</li>
-          </ul>
-          <p className="text-xs text-primary font-semibold mt-3">→ Canal : Google Ads</p>
-        </div>
-        <div className="bg-accent/30 border border-accent/50 rounded-xl p-6">
-          <div className="flex items-center gap-2 mb-3">
-            <Megaphone size={18} className="text-primary" />
-            <h3 className="text-base font-bold text-foreground font-display">Prospects passifs</h3>
-          </div>
-          <p className="text-sm text-muted-foreground mb-3">Ils <strong>ne cherchent pas encore</strong> mais peuvent être intéressés :</p>
-          <ul className="space-y-1 text-sm text-muted-foreground">
-            <li>✅ Découvrent votre offre</li>
-            <li>✅ Ont des objections</li>
-            <li>✅ Besoin de réassurance</li>
-          </ul>
-          <p className="text-xs text-primary font-semibold mt-3">→ Canal : Meta / YouTube Ads</p>
-        </div>
-      </div>
+      <h3 className="text-lg font-bold text-foreground font-display mb-3">1. Prospects intentionnistes (Google)</h3>
+      <p className="text-muted-foreground mb-4">Ils <strong>cherchent activement</strong> une solution :</p>
+      <ul className="space-y-1 text-muted-foreground mb-6">
+        <li>• Veulent un devis</li>
+        <li>• Comparent les prestataires</li>
+        <li>• Prêts à passer à l'action</li>
+      </ul>
+
+      <h3 className="text-lg font-bold text-foreground font-display mb-3">2. Prospects passifs (Meta / YouTube)</h3>
+      <p className="text-muted-foreground mb-4">Ils ne cherchent pas encore mais peuvent être intéressés :</p>
+      <ul className="space-y-1 text-muted-foreground mb-6">
+        <li>• Découvrent votre offre</li>
+        <li>• Ont des objections</li>
+        <li>• Besoin de réassurance</li>
+      </ul>
 
       <p className="text-foreground font-medium">
-        👉 Une <strong><em>stratégie marketing rénovation</em></strong> performante cible les deux audiences — pas une seule.
+        👉 Une <strong>stratégie marketing rénovation</strong> performante cible les deux audiences — pas une seule.
       </p>
     </section>
 
@@ -102,48 +89,41 @@ const ArticlePlateformePubliciteRenovation = () => (
       </div>
 
       <p className="text-muted-foreground mb-4">
-        <strong><em>Google Ads rénovation</em></strong> repose sur un principe simple : vous apparaissez quand un prospect <strong>cherche activement</strong> vos services. C'est le canal le plus qualifié.
+        <strong>Google Ads rénovation</strong> repose sur un principe simple : vous apparaissez quand un prospect cherche activement vos services. C'est le canal le plus qualifié.
       </p>
 
-      <div className="bg-muted/50 border border-border rounded-xl p-6 mb-6">
-        <h3 className="text-base font-bold text-foreground font-display mb-3">Exemples de recherches captées :</h3>
-        <ul className="space-y-1 text-sm text-muted-foreground italic">
-          <li>• « installateur panneaux solaires prix »</li>
-          <li>• « isolation combles aides 2026 »</li>
-          <li>• « devis rénovation salle de bain »</li>
-        </ul>
-      </div>
+      <p className="text-muted-foreground mb-3">Exemples de recherches captées :</p>
+      <ul className="space-y-1 text-muted-foreground italic mb-6">
+        <li>• « installateur panneaux solaires prix »</li>
+        <li>• « isolation combles aides 2026 »</li>
+        <li>• « devis rénovation salle de bain »</li>
+      </ul>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
-        <div className="bg-primary/5 border border-primary/20 rounded-xl p-5">
-          <h4 className="text-sm font-bold text-foreground font-display mb-2">✅ Avantages</h4>
-          <ul className="space-y-1 text-sm text-muted-foreground">
-            <li>• Leads <strong>très qualifiés</strong></li>
-            <li>• Forte intention d'achat</li>
-            <li>• Taux de closing élevé</li>
-            <li>• Acquisition <strong>stable</strong> dans le temps</li>
-          </ul>
-        </div>
-        <div className="bg-destructive/5 border border-destructive/20 rounded-xl p-5">
-          <h4 className="text-sm font-bold text-foreground font-display mb-2">⚠️ Inconvénients</h4>
-          <ul className="space-y-1 text-sm text-muted-foreground">
-            <li>• <strong><em>Coût lead rénovation</em></strong> plus élevé</li>
-            <li>• Phase d'apprentissage (60–90 jours)</li>
-            <li>• Volume limité au marché existant</li>
-          </ul>
-        </div>
-      </div>
+      <h3 className="text-lg font-bold text-foreground font-display mb-3">Avantages</h3>
+      <ul className="space-y-2 text-muted-foreground mb-6">
+        <li className="flex items-start gap-2"><CheckCircle size={16} className="text-primary mt-0.5 shrink-0" /> Leads <strong>très qualifiés</strong></li>
+        <li className="flex items-start gap-2"><CheckCircle size={16} className="text-primary mt-0.5 shrink-0" /> Forte intention d'achat</li>
+        <li className="flex items-start gap-2"><CheckCircle size={16} className="text-primary mt-0.5 shrink-0" /> Taux de closing élevé</li>
+        <li className="flex items-start gap-2"><CheckCircle size={16} className="text-primary mt-0.5 shrink-0" /> Acquisition <strong>stable</strong> dans le temps</li>
+      </ul>
+
+      <h3 className="text-lg font-bold text-foreground font-display mb-3">Inconvénients</h3>
+      <ul className="space-y-2 text-muted-foreground mb-6">
+        <li className="flex items-start gap-2"><span className="text-destructive mt-1">•</span> <strong>Coût lead rénovation</strong> plus élevé</li>
+        <li className="flex items-start gap-2"><span className="text-destructive mt-1">•</span> Phase d'apprentissage (60–90 jours)</li>
+        <li className="flex items-start gap-2"><span className="text-destructive mt-1">•</span> Volume limité au marché existant</li>
+      </ul>
 
       <p className="text-foreground font-medium">
-        👉 <strong>Idéal pour</strong> : structurer une base d'acquisition solide et sécuriser du chiffre d'affaires de manière prévisible.
+        👉 Idéal pour structurer une base d'acquisition solide et sécuriser du chiffre d'affaires de manière prévisible.
       </p>
     </section>
 
     {/* Section 3 - Meta / YouTube */}
     <section className="mb-12" id="meta-youtube">
       <div className="flex items-center gap-3 mb-6">
-        <div className="w-10 h-10 rounded-xl bg-accent/50 flex items-center justify-center">
-          <Megaphone size={20} className="text-primary" />
+        <div className="w-10 h-10 rounded-xl bg-secondary/10 flex items-center justify-center">
+          <Megaphone size={20} className="text-secondary" />
         </div>
         <h2 className="text-2xl md:text-3xl font-bold text-foreground font-display">
           Meta / YouTube Ads : créer la demande
@@ -151,42 +131,37 @@ const ArticlePlateformePubliciteRenovation = () => (
       </div>
 
       <p className="text-muted-foreground mb-4">
-        <strong><em>Facebook Ads rénovation</em></strong>, Instagram Ads et YouTube Ads fonctionnent sur un principe totalement différent : vous <strong>interrompez</strong> le prospect pour capter son attention.
+        <strong>Facebook Ads rénovation</strong>, Instagram Ads et YouTube Ads fonctionnent sur un principe totalement différent : vous interrompez le prospect pour capter son attention.
       </p>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
-        <div className="bg-primary/5 border border-primary/20 rounded-xl p-5">
-          <h4 className="text-sm font-bold text-foreground font-display mb-2">✅ Avantages</h4>
-          <ul className="space-y-1 text-sm text-muted-foreground">
-            <li>• <strong>Volume rapide</strong></li>
-            <li>• Coût par lead plus faible</li>
-            <li>• Montée en puissance en <strong>3–5 semaines</strong></li>
-            <li>• Idéal pour le <strong>retargeting</strong></li>
-          </ul>
-        </div>
-        <div className="bg-destructive/5 border border-destructive/20 rounded-xl p-5">
-          <h4 className="text-sm font-bold text-foreground font-display mb-2">⚠️ Inconvénients</h4>
-          <ul className="space-y-1 text-sm text-muted-foreground">
-            <li>• Leads <strong>moins qualifiés</strong> au départ</li>
-            <li>• Besoin de contenu (vidéo + copy)</li>
-            <li>• Plus de travail <strong>commercial</strong> derrière</li>
-          </ul>
-        </div>
-      </div>
+      <h3 className="text-lg font-bold text-foreground font-display mb-3">Avantages</h3>
+      <ul className="space-y-2 text-muted-foreground mb-6">
+        <li className="flex items-start gap-2"><CheckCircle size={16} className="text-primary mt-0.5 shrink-0" /> <strong>Volume rapide</strong></li>
+        <li className="flex items-start gap-2"><CheckCircle size={16} className="text-primary mt-0.5 shrink-0" /> Coût par lead plus faible</li>
+        <li className="flex items-start gap-2"><CheckCircle size={16} className="text-primary mt-0.5 shrink-0" /> Montée en puissance en <strong>3–5 semaines</strong></li>
+        <li className="flex items-start gap-2"><CheckCircle size={16} className="text-primary mt-0.5 shrink-0" /> Idéal pour le retargeting</li>
+      </ul>
+
+      <h3 className="text-lg font-bold text-foreground font-display mb-3">Inconvénients</h3>
+      <ul className="space-y-2 text-muted-foreground mb-6">
+        <li className="flex items-start gap-2"><span className="text-destructive mt-1">•</span> Leads <strong>moins qualifiés</strong> au départ</li>
+        <li className="flex items-start gap-2"><span className="text-destructive mt-1">•</span> Besoin de contenu (vidéo + copy)</li>
+        <li className="flex items-start gap-2"><span className="text-destructive mt-1">•</span> Plus de travail commercial derrière</li>
+      </ul>
 
       <p className="text-foreground font-medium">
-        👉 <strong>Idéal pour</strong> : remplir un pipe rapidement, lisser les périodes creuses et alimenter le retargeting.
+        👉 Idéal pour remplir un pipe rapidement, lisser les périodes creuses et alimenter le retargeting.
       </p>
     </section>
 
     {/* CTA milieu */}
     <section className="mb-12">
-      <div className="bg-primary/5 border border-primary/20 rounded-2xl p-6 md:p-8 text-center">
-        <p className="text-foreground font-semibold text-lg mb-2">
+      <div className="bg-card border border-border rounded-2xl p-8 md:p-10 text-center shadow-card">
+        <p className="text-muted-foreground mb-2">
           Vous ne savez pas par quelle plateforme commencer ?
         </p>
-        <p className="text-muted-foreground mb-4">
-          Chez <Link to="/" className="text-primary hover:underline font-semibold">Agendac</Link>, on construit des <strong><em>systèmes d'acquisition client rénovation</em></strong> multi-canal adaptés à votre situation.
+        <p className="text-foreground font-semibold text-lg mb-6">
+          Chez <Link to="/" className="text-primary hover:underline font-semibold">Agendac</Link>, on construit des <strong>systèmes d'acquisition client rénovation</strong> multi-canal adaptés à votre situation.
         </p>
         <SectionCTA />
       </div>
@@ -195,57 +170,41 @@ const ArticlePlateformePubliciteRenovation = () => (
     {/* Section 4 - Choisir */}
     <section className="mb-12" id="choisir">
       <div className="flex items-center gap-3 mb-6">
-        <div className="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center">
-          <Layers size={20} className="text-primary" />
+        <div className="w-10 h-10 rounded-xl bg-accent/10 flex items-center justify-center">
+          <Layers size={20} className="text-accent" />
         </div>
         <h2 className="text-2xl md:text-3xl font-bold text-foreground font-display">
           Quelle plateforme choisir selon votre objectif
         </h2>
       </div>
 
-      <div className="space-y-4 mb-6">
-        <div className="bg-destructive/5 border border-destructive/20 rounded-xl p-6">
-          <div className="flex items-center gap-2 mb-2">
-            <Zap size={18} className="text-destructive" />
-            <h3 className="text-base font-bold text-foreground font-display">Cas 1 : Trou de planning</h3>
-          </div>
-          <p className="text-sm text-muted-foreground mb-2">👉 <strong>Priorité : Meta / YouTube Ads</strong></p>
-          <ul className="space-y-1 text-sm text-muted-foreground">
-            <li>• Résultats rapides (3–5 semaines)</li>
-            <li>• Volume immédiat</li>
-            <li>• Coût d'entrée plus faible</li>
-          </ul>
-        </div>
+      <h3 className="text-lg font-bold text-foreground font-display mb-3">Cas 1 : Trou de planning</h3>
+      <p className="text-muted-foreground mb-2">👉 Priorité : <strong>Meta / YouTube Ads</strong></p>
+      <ul className="space-y-1 text-muted-foreground mb-6">
+        <li>• Résultats rapides (3–5 semaines)</li>
+        <li>• Volume immédiat</li>
+        <li>• Coût d'entrée plus faible</li>
+      </ul>
 
-        <div className="bg-primary/5 border border-primary/20 rounded-xl p-6">
-          <div className="flex items-center gap-2 mb-2">
-            <TrendingUp size={18} className="text-primary" />
-            <h3 className="text-base font-bold text-foreground font-display">Cas 2 : Stabiliser l'acquisition</h3>
-          </div>
-          <p className="text-sm text-muted-foreground mb-2">👉 <strong>Priorité : Google Ads</strong></p>
-          <ul className="space-y-1 text-sm text-muted-foreground">
-            <li>• Leads très qualifiés</li>
-            <li>• Prévisibilité</li>
-            <li>• Meilleure <strong><em>rentabilité marketing rénovation</em></strong> long terme</li>
-          </ul>
-        </div>
+      <h3 className="text-lg font-bold text-foreground font-display mb-3">Cas 2 : Stabiliser l'acquisition</h3>
+      <p className="text-muted-foreground mb-2">👉 Priorité : <strong>Google Ads</strong></p>
+      <ul className="space-y-1 text-muted-foreground mb-6">
+        <li>• Leads très qualifiés</li>
+        <li>• Prévisibilité</li>
+        <li>• Meilleure <strong>rentabilité marketing rénovation</strong> long terme</li>
+      </ul>
 
-        <div className="bg-accent/30 border border-accent/50 rounded-xl p-6">
-          <div className="flex items-center gap-2 mb-2">
-            <BarChart3 size={18} className="text-primary" />
-            <h3 className="text-base font-bold text-foreground font-display">Cas 3 : Structuré (&gt;1M€ CA)</h3>
-          </div>
-          <p className="text-sm text-foreground font-semibold">👉 Vous devez faire les deux.</p>
-          <p className="text-sm text-muted-foreground mt-1">Combiner Google + Meta = acquisition complète et scalable.</p>
-        </div>
-      </div>
+      <h3 className="text-lg font-bold text-foreground font-display mb-3">Cas 3 : Entreprise structurée (&gt;1M€ CA)</h3>
+      <p className="text-foreground font-semibold mb-4">
+        👉 Vous devez faire les deux. Combiner Google + Meta = acquisition complète et scalable.
+      </p>
     </section>
 
     {/* Section 5 - Combiner */}
     <section className="mb-12" id="combiner">
       <div className="flex items-center gap-3 mb-6">
         <div className="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center">
-          <Layers size={20} className="text-primary" />
+          <TrendingUp size={20} className="text-primary" />
         </div>
         <h2 className="text-2xl md:text-3xl font-bold text-foreground font-display">
           Le vrai levier : combiner les deux
@@ -253,45 +212,31 @@ const ArticlePlateformePubliciteRenovation = () => (
       </div>
 
       <p className="text-muted-foreground mb-4">
-        Les entreprises de rénovation qui dominent leur marché <strong>ne choisissent pas</strong> entre Google et Meta. Elles <strong>structurent</strong> un système multi-canal.
+        Les entreprises de rénovation qui dominent leur marché ne choisissent pas entre Google et Meta. Elles structurent un système multi-canal.
       </p>
 
+      <h3 className="text-lg font-bold text-foreground font-display mb-3">Le parcours multi-canal type</h3>
       <div className="bg-muted/50 border border-border rounded-xl p-6 mb-6">
-        <h3 className="text-base font-bold text-foreground font-display mb-4">🔁 Le parcours multi-canal type :</h3>
-        <div className="space-y-3 text-muted-foreground">
-          <p className="flex items-start gap-2">
-            <span className="bg-primary text-white rounded-full w-6 h-6 flex items-center justify-center text-xs font-bold flex-shrink-0 mt-0.5">1</span>
-            <span>Prospect cherche sur <strong>Google</strong> → clique → <strong>ne convertit pas</strong></span>
-          </p>
-          <p className="flex items-start gap-2">
-            <span className="bg-primary text-white rounded-full w-6 h-6 flex items-center justify-center text-xs font-bold flex-shrink-0 mt-0.5">2</span>
-            <span>Il voit vos <strong>vidéos sur Facebook / YouTube</strong> (retargeting)</span>
-          </p>
-          <p className="flex items-start gap-2">
-            <span className="bg-primary text-white rounded-full w-6 h-6 flex items-center justify-center text-xs font-bold flex-shrink-0 mt-0.5">3</span>
-            <span>Vous <strong>répondez à ses objections</strong> via le contenu</span>
-          </p>
-          <p className="flex items-start gap-2">
-            <span className="bg-primary text-white rounded-full w-6 h-6 flex items-center justify-center text-xs font-bold flex-shrink-0 mt-0.5">4</span>
-            <span>Il revient → <strong>demande un devis</strong></span>
-          </p>
-        </div>
+        <ol className="space-y-2 text-muted-foreground">
+          <li><strong>1.</strong> Prospect cherche sur <strong>Google</strong> → clique → ne convertit pas</li>
+          <li><strong>2.</strong> Il voit vos <strong>vidéos sur Facebook / YouTube</strong> (retargeting)</li>
+          <li><strong>3.</strong> Vous répondez à ses <strong>objections</strong> via le contenu</li>
+          <li><strong>4.</strong> Il revient → <strong>demande un devis</strong></li>
+        </ol>
       </div>
 
-      <div className="bg-primary/5 border border-primary/20 rounded-xl p-6 mb-6">
-        <h3 className="text-base font-bold text-foreground font-display mb-3">📊 L'effet levier du multi-canal :</h3>
-        <ul className="space-y-2 text-muted-foreground">
-          <li className="flex items-start gap-2"><CheckCircle size={16} className="text-primary mt-1 flex-shrink-0" /> <strong>Meta</strong> → crée la demande</li>
-          <li className="flex items-start gap-2"><CheckCircle size={16} className="text-primary mt-1 flex-shrink-0" /> <strong>Google</strong> → capture la demande</li>
-          <li className="flex items-start gap-2"><CheckCircle size={16} className="text-primary mt-1 flex-shrink-0" /> <strong>Retargeting</strong> → convertit les indécis</li>
-        </ul>
-      </div>
+      <p className="text-muted-foreground mb-3">L'effet levier du multi-canal :</p>
+      <ul className="space-y-2 text-muted-foreground mb-6">
+        <li className="flex items-start gap-2"><CheckCircle size={16} className="text-primary mt-0.5 shrink-0" /> <strong>Meta</strong> → crée la demande</li>
+        <li className="flex items-start gap-2"><CheckCircle size={16} className="text-primary mt-0.5 shrink-0" /> <strong>Google</strong> → capture la demande</li>
+        <li className="flex items-start gap-2"><CheckCircle size={16} className="text-primary mt-0.5 shrink-0" /> <strong>Retargeting</strong> → convertit les indécis</li>
+      </ul>
 
       <p className="text-foreground font-medium">
-        👉 Résultat : plus de volume, meilleure qualité, <strong><em>coût acquisition client rénovation</em></strong> optimisé.
+        👉 Résultat : plus de volume, meilleure qualité, <strong>coût acquisition client rénovation</strong> optimisé.
       </p>
       <p className="text-muted-foreground mt-4">
-        Pour comprendre en détail la différence entre les deux canaux, consultez notre article : <Link to="/blog/google-ads-vs-facebook-ads-renovation" className="text-primary hover:underline font-semibold">Google Ads vs Facebook Ads rénovation : lequel choisir ?</Link>
+        Pour comprendre en détail la différence entre les deux canaux : <Link to="/blog/google-ads-vs-facebook-ads-renovation" className="text-primary hover:underline font-semibold">Google Ads vs Facebook Ads rénovation : lequel choisir ?</Link>
       </p>
     </section>
 
@@ -306,32 +251,27 @@ const ArticlePlateformePubliciteRenovation = () => (
         </h2>
       </div>
 
-      <div className="bg-destructive/5 border border-destructive/20 rounded-xl p-6 mb-6">
-        <ul className="space-y-3 text-muted-foreground">
-          <li className="flex items-start gap-2"><span className="text-destructive font-bold">✗</span> <strong>Choisir une seule plateforme</strong> et ignorer l'autre</li>
-          <li className="flex items-start gap-2"><span className="text-destructive font-bold">✗</span> <strong>Ne pas retargeter</strong> — chaque visiteur perdu = argent gaspillé</li>
-          <li className="flex items-start gap-2"><span className="text-destructive font-bold">✗</span> <strong>Pas de contenu vidéo</strong> — indispensable sur Meta et YouTube</li>
-          <li className="flex items-start gap-2"><span className="text-destructive font-bold">✗</span> <strong>Attendre des résultats immédiats</strong> sur Google — comptez 60–90 jours</li>
-          <li className="flex items-start gap-2"><span className="text-destructive font-bold">✗</span> <strong>Pas de tracking</strong> — impossible d'optimiser sans données</li>
-        </ul>
-      </div>
+      <ul className="space-y-3 text-muted-foreground mb-6">
+        <li className="flex items-start gap-2"><span className="text-destructive font-bold">✗</span> <strong>Choisir une seule plateforme</strong> et ignorer l'autre</li>
+        <li className="flex items-start gap-2"><span className="text-destructive font-bold">✗</span> <strong>Ne pas retargeter</strong> — chaque visiteur perdu = argent gaspillé</li>
+        <li className="flex items-start gap-2"><span className="text-destructive font-bold">✗</span> <strong>Pas de contenu vidéo</strong> — indispensable sur Meta et YouTube</li>
+        <li className="flex items-start gap-2"><span className="text-destructive font-bold">✗</span> <strong>Attendre des résultats immédiats</strong> sur Google — comptez 60–90 jours</li>
+        <li className="flex items-start gap-2"><span className="text-destructive font-bold">✗</span> <strong>Pas de tracking</strong> — impossible d'optimiser sans données</li>
+      </ul>
 
       <p className="text-muted-foreground">
-        Ces erreurs sont responsables de la majorité des échecs en <strong><em>campagnes publicitaires rénovation</em></strong>. Le problème n'est pas la plateforme — c'est l'absence de système.
+        Ces erreurs sont responsables de la majorité des échecs en <strong>campagnes publicitaires rénovation</strong>. Le problème n'est pas la plateforme — c'est l'absence de système.
       </p>
     </section>
 
     {/* CTA final */}
     <section className="mb-12">
-      <div className="bg-primary/5 border border-primary/20 rounded-2xl p-6 md:p-8 text-center">
-        <h2 className="text-xl md:text-2xl font-bold text-foreground font-display mb-3">
-          Prêt à structurer votre acquisition multi-canal ?
-        </h2>
+      <div className="bg-card border border-border rounded-2xl p-8 md:p-12 text-center shadow-card">
         <p className="text-muted-foreground mb-2">
-          Chez <Link to="/" className="text-primary hover:underline font-semibold">Agendac</Link>, on construit des systèmes de <strong><em>génération de leads rénovation</em></strong> complets : Google Ads + Meta Ads + retargeting + process commercial.
+          Prêt à structurer votre acquisition multi-canal ?
         </p>
-        <p className="text-muted-foreground mb-6">
-          👉 Consultez nos <Link to="/results" className="text-primary hover:underline font-semibold">résultats clients</Link> pour voir ce que ça donne en conditions réelles.
+        <p className="text-foreground font-semibold text-lg mb-6">
+          Chez <Link to="/" className="text-primary hover:underline font-semibold">Agendac</Link>, on construit des systèmes de <strong>génération de leads rénovation</strong> complets.
         </p>
         <SectionCTA />
       </div>
@@ -339,53 +279,46 @@ const ArticlePlateformePubliciteRenovation = () => (
 
     {/* FAQ */}
     <section id="faq">
-      <div className="flex items-center gap-3 mb-6">
-        <div className="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center">
-          <Target size={20} className="text-primary" />
-        </div>
-        <h2 className="text-2xl md:text-3xl font-bold text-foreground font-display">
-          Questions fréquentes
-        </h2>
-      </div>
+      <h2 className="text-2xl md:text-3xl font-bold text-foreground font-display mb-6">Questions fréquentes</h2>
       <Accordion type="single" collapsible className="w-full">
-        <AccordionItem value="faq-1">
-          <AccordionTrigger className="text-foreground font-semibold text-left">
+        <AccordionItem value="faq-1" className="border-border">
+          <AccordionTrigger className="text-left text-foreground hover:no-underline">
             Google Ads ou Facebook Ads : lequel est le plus rentable en rénovation ?
           </AccordionTrigger>
           <AccordionContent className="text-muted-foreground">
-            <strong><em>Google Ads rénovation</em></strong> génère des leads plus qualifiés avec un meilleur taux de closing. <strong><em>Facebook Ads rénovation</em></strong> offre plus de volume à moindre coût. La meilleure rentabilité s'obtient en combinant les deux dans un <strong><em>système d'acquisition client rénovation</em></strong> structuré.
+            <strong>Google Ads</strong> génère des leads plus qualifiés avec un meilleur taux de closing. <strong>Facebook Ads</strong> offre plus de volume à moindre coût. La meilleure rentabilité s'obtient en combinant les deux dans un système d'<strong>acquisition client rénovation</strong> structuré.
           </AccordionContent>
         </AccordionItem>
-        <AccordionItem value="faq-2">
-          <AccordionTrigger className="text-foreground font-semibold text-left">
+        <AccordionItem value="faq-2" className="border-border">
+          <AccordionTrigger className="text-left text-foreground hover:no-underline">
             Quel budget prévoir pour la publicité en rénovation ?
           </AccordionTrigger>
           <AccordionContent className="text-muted-foreground">
-            Pour une entreprise à +1M€ de CA, comptez minimum 3 000 €/mois (1 500 € Meta + 1 500 € Google). Un budget performant se situe entre 5 000 et 6 500 €/mois. Consultez notre article détaillé sur le <Link to="/blog/cout-publicite-renovation-habitat" className="text-primary hover:underline">coût de la publicité en rénovation</Link>.
+            Pour une entreprise à +1M€ de CA, comptez minimum 3 000 €/mois (1 500 € Meta + 1 500 € Google). Un budget performant se situe entre 5 000 et 6 500 €/mois. Consultez notre article sur le <Link to="/blog/cout-publicite-renovation-habitat" className="text-primary hover:underline">coût de la publicité en rénovation</Link>.
           </AccordionContent>
         </AccordionItem>
-        <AccordionItem value="faq-3">
-          <AccordionTrigger className="text-foreground font-semibold text-left">
+        <AccordionItem value="faq-3" className="border-border">
+          <AccordionTrigger className="text-left text-foreground hover:no-underline">
             Combien de temps pour voir des résultats avec la publicité en rénovation ?
           </AccordionTrigger>
           <AccordionContent className="text-muted-foreground">
             Meta Ads : résultats en 3 à 5 semaines. Google Ads : 60 à 90 jours pour une performance optimisée. Découvrez les timelines détaillées dans notre article sur les <Link to="/blog/delai-resultats-acquisition-digitale-renovation" className="text-primary hover:underline">délais de résultats en acquisition digitale</Link>.
           </AccordionContent>
         </AccordionItem>
-        <AccordionItem value="faq-4">
-          <AccordionTrigger className="text-foreground font-semibold text-left">
+        <AccordionItem value="faq-4" className="border-border">
+          <AccordionTrigger className="text-left text-foreground hover:no-underline">
             Faut-il une agence marketing pour gérer ses campagnes en rénovation ?
           </AccordionTrigger>
           <AccordionContent className="text-muted-foreground">
-            Si vous n'avez pas d'expertise en <strong><em>marketing digital rénovation</em></strong> en interne, oui. Une <strong><em>agence marketing rénovation</em></strong> spécialisée apporte l'expérience et les méthodes déjà validées. Découvrez nos <Link to="/blog/choisir-agence-marketing-renovation" className="text-primary hover:underline">5 critères pour choisir la bonne agence</Link>.
+            Si vous n'avez pas d'expertise en <strong>marketing digital rénovation</strong> en interne, oui. Une <strong>agence marketing rénovation</strong> spécialisée apporte l'expérience et les méthodes déjà validées. Découvrez nos <Link to="/blog/choisir-agence-marketing-renovation" className="text-primary hover:underline">5 critères pour choisir la bonne agence</Link>.
           </AccordionContent>
         </AccordionItem>
-        <AccordionItem value="faq-5">
-          <AccordionTrigger className="text-foreground font-semibold text-left">
+        <AccordionItem value="faq-5" className="border-border">
+          <AccordionTrigger className="text-left text-foreground hover:no-underline">
             Pourquoi le retargeting est-il indispensable en rénovation ?
           </AccordionTrigger>
           <AccordionContent className="text-muted-foreground">
-            Un prospect qui visite votre site sans convertir n'est pas perdu — à condition de le <strong>retargeter</strong>. En le reciblant sur Facebook, Instagram ou YouTube avec du contenu adapté, vous transformez un visiteur passif en demande de devis. Sans retargeting, vous perdez une part importante de vos investissements publicitaires.
+            Un prospect qui visite votre site sans convertir n'est pas perdu — à condition de le retargeter. En le reciblant sur Facebook, Instagram ou YouTube avec du contenu adapté, vous transformez un visiteur passif en demande de devis.
           </AccordionContent>
         </AccordionItem>
       </Accordion>
