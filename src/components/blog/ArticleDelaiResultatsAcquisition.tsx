@@ -218,7 +218,7 @@ const ArticleDelaiResultatsAcquisition = () => (
       </ul>
       <div className="bg-primary/5 border border-primary/20 rounded-xl p-6">
         <p className="text-foreground font-medium">
-          👉 Si vous ne remontez pas ces données → vous perdez <strong>50% de performance</strong>. Les <Link to="/results" className="text-primary hover:underline font-medium">entreprises que nous accompagnons</Link> remontent systématiquement leurs conversions.
+          👉 Si vous ne remontez pas ces données → vous perdez <strong>50% de performance</strong>. Les <Link to="/resultats-clients-agendac" className="text-primary hover:underline font-medium">entreprises que nous accompagnons</Link> remontent systématiquement leurs conversions.
         </p>
       </div>
     </section>

@@ -102,7 +102,7 @@ const ArticleNiveauxQualificationProspect = () => (
       </ul>
 
       <p className="text-foreground font-semibold">
-        👉 Objectif : devenir l'évidence. <Link to="/results" className="text-primary hover:underline">Voir cette stratégie en action →</Link>
+        👉 Objectif : devenir l'évidence. <Link to="/resultats-clients-agendac" className="text-primary hover:underline">Voir cette stratégie en action →</Link>
       </p>
     </section>
 

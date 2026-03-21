@@ -267,7 +267,7 @@ const ArticleGoogleVsFacebookAds = () => (
 
       <p className="text-foreground font-semibold mb-1">👉 Résultat : elles ne dépendent plus des plateformes de <em>leads</em>.</p>
       <p className="text-foreground font-medium">
-        Elles contrôlent leur <Link to="/resultats" className="text-primary hover:underline">acquisition</Link>.
+        Elles contrôlent leur <Link to="/resultats-clients-agendac" className="text-primary hover:underline">acquisition</Link>.
       </p>
     </section>
 

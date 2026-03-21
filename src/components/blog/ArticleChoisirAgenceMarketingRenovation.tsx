@@ -187,7 +187,7 @@ const ArticleChoisirAgenceMarketingRenovation = () => (
         <li className="flex items-start gap-2"><CheckCircle size={16} className="text-primary mt-0.5 shrink-0" /> Présence marketing active</li>
       </ul>
       <p className="text-muted-foreground">
-        <Link to="/results" className="text-primary hover:underline font-medium">→ Voir nos résultats clients</Link>
+        <Link to="/resultats-clients-agendac" className="text-primary hover:underline font-medium">→ Voir nos résultats clients</Link>
       </p>
       <div className="bg-primary/5 border border-primary/20 rounded-xl p-6 mt-6">
         <p className="text-foreground font-medium">

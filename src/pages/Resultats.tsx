@@ -1,9 +1,11 @@
 import { useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 
 const Resultats = () => {
+  const navigate = useNavigate();
   useEffect(() => {
-    window.location.href = "https://agendacsas.fr/resultats";
-  }, []);
+    navigate("/resultats-clients-agendac", { replace: true });
+  }, [navigate]);
 
   return (
     <div className="min-h-screen flex items-center justify-center bg-background">

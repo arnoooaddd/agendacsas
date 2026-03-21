@@ -328,7 +328,7 @@ const ArticleRetargetingProspectsRenovation = () => (
           </Link>
         </li>
         <li>
-          <Link to="/resultats" className="text-primary hover:underline">
+          <Link to="/resultats-clients-agendac" className="text-primary hover:underline">
             Voir nos études de cas clients →
           </Link>
         </li>

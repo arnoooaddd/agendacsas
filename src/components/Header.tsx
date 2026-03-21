@@ -28,7 +28,7 @@ const Header = () => {
 
   const navLinks = [
     { label: "Témoignages", href: "/#resultats" },
-    { label: "Résultats", href: "/results" },
+    { label: "Résultats", href: "/resultats-clients-agendac" },
     { label: "Blog", href: "/blog" },
     { label: "Équipe", href: "/#equipe" },
     { label: "Contact", href: "#contact" },

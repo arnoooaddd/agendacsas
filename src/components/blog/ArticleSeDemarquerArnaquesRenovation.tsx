@@ -238,7 +238,7 @@ const ArticleSeDemarquerArnaquesRenovation = () => (
       </ul>
 
       <p className="text-muted-foreground">
-        Découvrez <Link to="/resultats" className="text-primary hover:underline font-medium">nos études de cas</Link> pour voir comment nos partenaires structurent leur présence en ligne.
+        Découvrez <Link to="/resultats-clients-agendac" className="text-primary hover:underline font-medium">nos études de cas</Link> pour voir comment nos partenaires structurent leur présence en ligne.
       </p>
     </section>
 
