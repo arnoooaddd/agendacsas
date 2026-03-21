@@ -26,17 +26,18 @@ const App = () => (
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Index />} />
+          <Route path="/resultats-clients-agendac" element={<Results />} />
           <Route path="/resultats" element={<Resultats />} />
-          <Route path="/resultat" element={<HashRedirect hash="resultats" />} />
-          <Route path="/résultat" element={<HashRedirect hash="resultats" />} />
-          <Route path="/résultats" element={<HashRedirect hash="resultats" />} />
-          <Route path="/interviews" element={<HashRedirect hash="resultats" />} />
+          <Route path="/resultat" element={<Resultats />} />
+          <Route path="/résultat" element={<Resultats />} />
+          <Route path="/résultats" element={<Resultats />} />
+          <Route path="/results" element={<Resultats />} />
+          <Route path="/interviews" element={<Resultats />} />
           <Route path="/simulateur" element={<Simulateur />} />
           <Route path="/rdv" element={<Rdv />} />
           <Route path="/creation-reseaux-sociaux" element={<CreationReseaux />} />
           <Route path="/creation-site-internet" element={<CreationSite />} />
           <Route path="/tournage" element={<Tournage />} />
-          <Route path="/results" element={<Results />} />
           <Route path="/blog" element={<Blog />} />
           <Route path="/blog/:slug" element={<BlogArticle />} />
           <Route path="/services" element={<HashRedirect hash="hero" />} />
