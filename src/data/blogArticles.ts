@@ -14,6 +14,30 @@ export interface BlogArticle {
 
 export const blogArticles: BlogArticle[] = [
   {
+    slug: "choisir-agence-marketing-renovation",
+    title: "Comment choisir une agence marketing rénovation : les 5 critères qui font la différence en 2026",
+    metaDescription: "Comment choisir la bonne agence marketing rénovation ? 5 critères concrets pour identifier un prestataire capable de générer des leads qualifiés en BTP.",
+    excerpt: "90 % des agences ne comprennent pas le BTP. Mauvais prestataire = budget perdu. Voici les 5 critères concrets pour choisir une agence marketing rénovation capable de construire un vrai système d'acquisition rentable.",
+    coverImage: "choisir-agence-marketing-renovation",
+    author: "Arnaud UTILLE",
+    date: "2026-03-22",
+    readTime: "6 min",
+    featured: true,
+    tags: ["Agence", "Marketing", "Rénovation"],
+    keywords: [
+      "agence marketing rénovation",
+      "agence marketing BTP",
+      "agence génération de leads rénovation",
+      "agence communication rénovation",
+      "acquisition clients rénovation",
+      "coût acquisition client rénovation",
+      "google ads rénovation",
+      "facebook ads rénovation",
+      "système acquisition client rénovation",
+      "marketing digital rénovation",
+    ],
+  },
+  {
     slug: "delai-resultats-acquisition-digitale-renovation",
     title: "Combien de temps pour voir des résultats en acquisition digitale rénovation ? Timelines et budgets 2026",
     metaDescription: "Combien de temps pour générer des leads en rénovation avec Google Ads et Meta Ads ? Timelines réelles, budgets et erreurs à éviter. Guide complet.",
@@ -22,7 +46,7 @@ export const blogArticles: BlogArticle[] = [
     author: "Arnaud UTILLE",
     date: "2026-03-21",
     readTime: "6 min",
-    featured: true,
+    featured: false,
     tags: ["Acquisition", "Google Ads", "Facebook Ads"],
     keywords: [
       "acquisition clients rénovation",
