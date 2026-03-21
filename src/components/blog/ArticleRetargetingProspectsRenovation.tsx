@@ -306,7 +306,7 @@ const ArticleRetargetingProspectsRenovation = () => (
     </section>
 
     {/* CTA fin */}
-    <SectionCTA variant="blog" />
+    <SectionCTA />
 
     {/* Articles liés */}
     <section className="mb-12">
