@@ -14,6 +14,30 @@ export interface BlogArticle {
 
 export const blogArticles: BlogArticle[] = [
   {
+    slug: "publicite-renovation-2026",
+    title: "Publicité rénovation 2026 : ce qui fonctionne (et ce qui ne marche plus)",
+    metaDescription: "Publicité rénovation en 2026 : contenu IA, multi-canal, retargeting. Découvrez ce qui fonctionne vraiment et ce qu'il faut arrêter pour générer des leads qualifiés.",
+    excerpt: "Les règles de la publicité rénovation ont changé. Contenu IA générique, pubs agressives, mono-canal : découvrez ce qui ne marche plus et comment structurer une acquisition performante en 2026.",
+    coverImage: "publicite-renovation-2026",
+    author: "Arnaud UTILLE",
+    date: "2026-03-22",
+    readTime: "6 min",
+    featured: true,
+    tags: ["Publicité", "Stratégie", "Rénovation"],
+    keywords: [
+      "publicité rénovation",
+      "stratégie marketing rénovation",
+      "acquisition clients rénovation",
+      "campagnes publicitaires rénovation",
+      "google ads rénovation",
+      "facebook ads rénovation",
+      "coût lead rénovation",
+      "génération de leads rénovation",
+      "agence marketing rénovation",
+      "marketing digital rénovation",
+    ],
+  },
+  {
     slug: "retargeting-prospects-renovation",
     title: "Comment recibler ses prospects en rénovation (et récupérer les leads perdus) — Guide retargeting 2026",
     metaDescription: "80 à 95 % des visiteurs ne convertissent pas. Découvrez comment le retargeting multi-canal récupère vos leads perdus en rénovation et booste votre acquisition.",
@@ -22,7 +46,7 @@ export const blogArticles: BlogArticle[] = [
     author: "Arnaud UTILLE",
     date: "2026-03-22",
     readTime: "7 min",
-    featured: true,
+    featured: false,
     tags: ["Retargeting", "Acquisition", "Rénovation"],
     keywords: [
       "acquisition clients rénovation",
