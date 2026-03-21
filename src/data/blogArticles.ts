@@ -14,6 +14,30 @@ export interface BlogArticle {
 
 export const blogArticles: BlogArticle[] = [
   {
+    slug: "externaliser-prise-rdv-renovation",
+    title: "Pourquoi externaliser sa prise de rendez-vous en rénovation ? Le levier que vous ignorez",
+    metaDescription: "Externaliser la prise de RDV en rénovation : plus de rendez-vous, moins de pertes, meilleure rentabilité. Découvrez pourquoi c'est un levier critique.",
+    excerpt: "Vous payez des leads mais vos prospects ne sont pas rappelés correctement ? Chaque appel manqué vous coûte de l'argent. Découvrez pourquoi externaliser la prise de rendez-vous est un levier critique pour votre acquisition.",
+    coverImage: "externaliser-prise-rdv-renovation",
+    author: "Arnaud UTILLE",
+    date: "2026-03-22",
+    readTime: "5 min",
+    featured: true,
+    tags: ["Acquisition", "Stratégie", "Rénovation"],
+    keywords: [
+      "acquisition clients rénovation",
+      "génération de leads rénovation",
+      "système acquisition client rénovation",
+      "externaliser marketing rénovation",
+      "coût acquisition client rénovation",
+      "stratégie marketing rénovation",
+      "rentabilité marketing rénovation",
+      "agence marketing rénovation",
+      "publicité rénovation",
+      "marketing digital rénovation",
+    ],
+  },
+  {
     slug: "choisir-agence-marketing-renovation",
     title: "Comment choisir une agence marketing rénovation : les 5 critères qui font la différence en 2026",
     metaDescription: "Comment choisir la bonne agence marketing rénovation ? 5 critères concrets pour identifier un prestataire capable de générer des leads qualifiés en BTP.",
