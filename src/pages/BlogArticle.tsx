@@ -22,6 +22,7 @@ const articleComponents: Record<string, React.ComponentType> = {
   "contacter-leads-reseaux-sociaux-renovation": lazy(() => import("@/components/blog/ArticleContacterLeadsReseauxSociaux")),
   "plateforme-publicite-renovation": lazy(() => import("@/components/blog/ArticlePlateformePubliciteRenovation")),
   "retargeting-prospects-renovation": lazy(() => import("@/components/blog/ArticleRetargetingProspectsRenovation")),
+  "publicite-renovation-2026": lazy(() => import("@/components/blog/ArticlePubliciteRenovation2026")),
 };
 
 const BlogArticle = () => {

@@ -11,8 +11,10 @@ import niveauxQualification from "@/assets/blog/niveaux-qualification-prospect-r
 import contacterLeads from "@/assets/blog/contacter-leads-reseaux-sociaux.png";
 import plateformePublicite from "@/assets/blog/plateforme-publicite-renovation.jpg";
 import retargetingProspects from "@/assets/blog/retargeting-prospects-renovation.png";
+import publiciteRenovation2026 from "@/assets/blog/publicite-renovation-2026.png";
 
 const coverImages: Record<string, string> = {
+  "publicite-renovation-2026": publiciteRenovation2026,
   "retargeting-prospects-renovation": retargetingProspects,
   "plateforme-publicite-renovation": plateformePublicite,
   "contacter-leads-reseaux-sociaux": contacterLeads,

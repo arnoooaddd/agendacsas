@@ -46,7 +46,7 @@ export const blogArticles: BlogArticle[] = [
     author: "Arnaud UTILLE",
     date: "2026-03-22",
     readTime: "7 min",
-    featured: true,
+    featured: false,
     tags: ["Retargeting", "Acquisition", "Rénovation"],
     keywords: [
       "acquisition clients rénovation",
