@@ -46,7 +46,7 @@ export const blogArticles: BlogArticle[] = [
     author: "Arnaud UTILLE",
     date: "2026-03-21",
     readTime: "6 min",
-    featured: true,
+    featured: false,
     tags: ["Publicité", "Budget", "Rénovation"],
     keywords: [
       "coût lead rénovation",
