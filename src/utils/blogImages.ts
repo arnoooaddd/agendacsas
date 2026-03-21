@@ -12,8 +12,10 @@ import contacterLeads from "@/assets/blog/contacter-leads-reseaux-sociaux.png";
 import plateformePublicite from "@/assets/blog/plateforme-publicite-renovation.jpg";
 import retargetingProspects from "@/assets/blog/retargeting-prospects-renovation.png";
 import publiciteRenovation2026 from "@/assets/blog/publicite-renovation-2026.png";
+import seDemarquerArnaques from "@/assets/blog/se-demarquer-arnaques-renovation.jpg";
 
 const coverImages: Record<string, string> = {
+  "se-demarquer-arnaques-renovation": seDemarquerArnaques,
   "publicite-renovation-2026": publiciteRenovation2026,
   "retargeting-prospects-renovation": retargetingProspects,
   "plateforme-publicite-renovation": plateformePublicite,

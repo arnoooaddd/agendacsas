@@ -46,7 +46,7 @@ export const blogArticles: BlogArticle[] = [
     author: "Arnaud UTILLE",
     date: "2026-03-22",
     readTime: "6 min",
-    featured: true,
+    featured: false,
     tags: ["Publicité", "Stratégie", "Rénovation"],
     keywords: [
       "publicité rénovation",
