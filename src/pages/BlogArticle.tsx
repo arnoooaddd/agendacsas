@@ -19,6 +19,7 @@ const articleComponents: Record<string, React.ComponentType> = {
   "choisir-agence-marketing-renovation": lazy(() => import("@/components/blog/ArticleChoisirAgenceMarketingRenovation")),
   "externaliser-prise-rdv-renovation": lazy(() => import("@/components/blog/ArticleExternaliserPriseRdv")),
   "niveaux-qualification-prospect-renovation": lazy(() => import("@/components/blog/ArticleNiveauxQualificationProspect")),
+  "contacter-leads-reseaux-sociaux-renovation": lazy(() => import("@/components/blog/ArticleContacterLeadsReseauxSociaux")),
 };
 
 const BlogArticle = () => {
