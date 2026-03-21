@@ -244,7 +244,7 @@ const ArticleContacterLeadsReseauxSociaux = () => (
         Chez <Link to="/" className="text-primary hover:underline font-semibold">Agendac</Link>, chaque RDV comptabilisé = un devis réalisé. Le <strong>système d'acquisition client rénovation</strong> ne s'arrête pas au lead — il va jusqu'à l'opportunité commerciale concrète.
       </p>
       <p className="text-foreground font-medium">
-        👉 Consultez nos <Link to="/results" className="text-primary hover:underline font-semibold">résultats clients</Link> pour voir l'impact en conditions réelles.
+        👉 Consultez nos <Link to="/resultats-clients-agendac" className="text-primary hover:underline font-semibold">résultats clients</Link> pour voir l'impact en conditions réelles.
       </p>
     </section>
 

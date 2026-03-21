@@ -225,7 +225,7 @@ const ArticleCoutPubliciteRenovation = () => (
         </h2>
       </div>
       <p className="text-muted-foreground mb-4">
-        Les <Link to="/results" className="text-primary hover:underline font-medium">entreprises de rénovation qui performent</Link> ne choisissent pas. <strong>Elles font les deux.</strong>
+        Les <Link to="/resultats-clients-agendac" className="text-primary hover:underline font-medium">entreprises de rénovation qui performent</Link> ne choisissent pas. <strong>Elles font les deux.</strong>
       </p>
 
       <h3 className="text-lg font-bold text-foreground font-display mb-3">Cas concret de retargeting</h3>

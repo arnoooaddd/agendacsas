@@ -224,7 +224,7 @@ const ArticleExternaliserPriseRdv = () => (
         👉 Vous ne payez pas pour des leads. <strong>Vous payez pour des opportunités réelles.</strong>
       </p>
       <p className="text-muted-foreground">
-        <Link to="/results" className="text-primary hover:underline font-medium">→ Voir nos résultats clients concrets</Link>
+        <Link to="/resultats-clients-agendac" className="text-primary hover:underline font-medium">→ Voir nos résultats clients concrets</Link>
       </p>
     </section>
 

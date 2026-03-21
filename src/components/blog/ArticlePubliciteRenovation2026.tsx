@@ -237,7 +237,7 @@ const ArticlePubliciteRenovation2026 = () => (
       </ul>
 
       <p className="text-muted-foreground">
-        Pour un accompagnement complet, découvrez <Link to="/resultats" className="text-primary hover:underline font-medium">nos études de cas</Link>.
+        Pour un accompagnement complet, découvrez <Link to="/resultats-clients-agendac" className="text-primary hover:underline font-medium">nos études de cas</Link>.
       </p>
     </section>
 

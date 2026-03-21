@@ -178,7 +178,7 @@ const ArticleMarketingRenovation = () => (
         <li className="flex items-start gap-2"><CheckCircle size={16} className="text-primary mt-0.5 shrink-0" /> Des chantiers signés partout en France</li>
       </ul>
       <p className="text-muted-foreground mb-2">Pas en théorie.</p>
-      <p className="text-foreground font-semibold">👉 En conditions réelles. <Link to="/resultats" className="text-primary hover:underline">Voir nos résultats clients →</Link></p>
+      <p className="text-foreground font-semibold">👉 En conditions réelles. <Link to="/resultats-clients-agendac" className="text-primary hover:underline">Voir nos résultats clients →</Link></p>
     </section>
 
     {/* Ce qui change tout */}

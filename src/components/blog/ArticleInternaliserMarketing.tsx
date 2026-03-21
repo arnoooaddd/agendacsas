@@ -170,7 +170,7 @@ const ArticleInternaliserMarketing = () => (
       <p className="text-foreground font-medium">Et surtout :</p>
       <p className="text-foreground font-semibold text-lg mt-2">👉 Moins de stress, plus de contrôle</p>
       <p className="text-muted-foreground mt-2">
-        <Link to="/resultats" className="text-primary hover:underline font-medium">→ Voir nos résultats clients</Link>
+        <Link to="/resultats-clients-agendac" className="text-primary hover:underline font-medium">→ Voir nos résultats clients</Link>
       </p>
     </section>
 
@@ -342,7 +342,7 @@ const ArticleInternaliserMarketing = () => (
             Comment choisir une agence marketing pour la rénovation ?
           </AccordionTrigger>
           <AccordionContent className="text-muted-foreground">
-            Privilégiez une <strong>agence marketing rénovation</strong> spécialisée dans votre secteur, avec des <Link to="/resultats" className="text-primary hover:underline">résultats prouvés</Link>, un <em>système d'acquisition</em> structuré et une transparence totale sur les performances et le ROI.
+            Privilégiez une <strong>agence marketing rénovation</strong> spécialisée dans votre secteur, avec des <Link to="/resultats-clients-agendac" className="text-primary hover:underline">résultats prouvés</Link>, un <em>système d'acquisition</em> structuré et une transparence totale sur les performances et le ROI.
           </AccordionContent>
         </AccordionItem>
         <AccordionItem value="faq-4" className="border-border">
