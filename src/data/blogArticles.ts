@@ -14,6 +14,30 @@ export interface BlogArticle {
 
 export const blogArticles: BlogArticle[] = [
   {
+    slug: "retargeting-prospects-renovation",
+    title: "Comment recibler ses prospects en rénovation (et récupérer les leads perdus) — Guide retargeting 2026",
+    metaDescription: "80 à 95 % des visiteurs ne convertissent pas. Découvrez comment le retargeting multi-canal récupère vos leads perdus en rénovation et booste votre acquisition.",
+    excerpt: "Vous payez pour du trafic, mais sans retargeting vous laissez vos concurrents convertir à votre place. Découvrez comment recibler vos prospects sur Google, Meta et YouTube pour récupérer les leads perdus.",
+    coverImage: "retargeting-prospects-renovation",
+    author: "Arnaud UTILLE",
+    date: "2026-03-22",
+    readTime: "7 min",
+    featured: true,
+    tags: ["Retargeting", "Acquisition", "Rénovation"],
+    keywords: [
+      "acquisition clients rénovation",
+      "google ads rénovation",
+      "facebook ads rénovation",
+      "campagnes publicitaires rénovation",
+      "stratégie marketing rénovation",
+      "coût acquisition client rénovation",
+      "génération de leads rénovation",
+      "tunnel de vente rénovation",
+      "machine à leads rénovation",
+      "marketing digital rénovation",
+    ],
+  },
+  {
     slug: "plateforme-publicite-renovation",
     title: "Sur quelle plateforme lancer de la publicité en rénovation ? Google Ads vs Meta Ads en 2026",
     metaDescription: "Google Ads ou Meta Ads pour votre entreprise de rénovation à +1M€ ? Comparatif, cas concrets et stratégie multi-canal pour structurer votre acquisition.",
@@ -22,7 +46,7 @@ export const blogArticles: BlogArticle[] = [
     author: "Arnaud UTILLE",
     date: "2026-03-22",
     readTime: "7 min",
-    featured: true,
+    featured: false,
     tags: ["Google Ads", "Facebook Ads", "Rénovation"],
     keywords: [
       "google ads rénovation",
