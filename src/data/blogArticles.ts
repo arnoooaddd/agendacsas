@@ -14,6 +14,30 @@ export interface BlogArticle {
 
 export const blogArticles: BlogArticle[] = [
   {
+    slug: "se-demarquer-arnaques-renovation",
+    title: "Comment se démarquer des arnaques en rénovation : générer des leads fiables en 2027",
+    metaDescription: "Arnaques, faux leads, prospects méfiants : découvrez comment bâtir un système d'acquisition clients rénovation fiable et vous démarquer de la concurrence.",
+    excerpt: "Les prospects ne font plus confiance par défaut. Arnaques, leads partagés, sociétés douteuses : découvrez comment construire un écosystème marketing qui vous différencie et génère des leads fiables.",
+    coverImage: "se-demarquer-arnaques-renovation",
+    author: "Arnaud UTILLE",
+    date: "2026-03-22",
+    readTime: "6 min",
+    featured: true,
+    tags: ["Stratégie", "Acquisition", "Rénovation"],
+    keywords: [
+      "acquisition clients rénovation",
+      "achat leads rénovation",
+      "système acquisition client rénovation",
+      "coût acquisition client rénovation",
+      "génération de leads rénovation",
+      "machine à leads rénovation",
+      "google ads rénovation",
+      "facebook ads rénovation",
+      "campagnes publicitaires rénovation",
+      "agence marketing rénovation",
+    ],
+  },
+  {
     slug: "publicite-renovation-2026",
     title: "Publicité rénovation 2026 : ce qui fonctionne (et ce qui ne marche plus)",
     metaDescription: "Publicité rénovation en 2026 : contenu IA, multi-canal, retargeting. Découvrez ce qui fonctionne vraiment et ce qu'il faut arrêter pour générer des leads qualifiés.",
