@@ -6,6 +6,7 @@ import googleVsFacebookAds from "@/assets/blog/google-ads-vs-facebook-ads-renova
 import coutPublicite from "@/assets/blog/cout-publicite-renovation-habitat.jpg";
 import delaiResultats from "@/assets/blog/delai-resultats-acquisition-digitale-renovation.jpg";
 import choisirAgence from "@/assets/blog/choisir-agence-marketing-renovation.jpg";
+import externaliserRdv from "@/assets/blog/externaliser-prise-rdv-renovation.png";
 
 const coverImages: Record<string, string> = {
   "leads-renovation-2026": leadsRenovation,
