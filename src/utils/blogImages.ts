@@ -12,7 +12,7 @@ import contacterLeads from "@/assets/blog/contacter-leads-reseaux-sociaux.png";
 import plateformePublicite from "@/assets/blog/plateforme-publicite-renovation.png";
 import retargetingProspects from "@/assets/blog/retargeting-prospects-renovation.png";
 import publiciteRenovation2026 from "@/assets/blog/publicite-renovation-2026.png";
-import seDemarquerArnaques from "@/assets/blog/se-demarquer-arnaques-renovation.jpg";
+import seDemarquerArnaques from "@/assets/blog/se-demarquer-arnaques-renovation.png";
 
 const coverImages: Record<string, string> = {
   "se-demarquer-arnaques-renovation": seDemarquerArnaques,
