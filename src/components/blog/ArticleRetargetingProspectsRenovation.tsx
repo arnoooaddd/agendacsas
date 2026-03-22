@@ -2,6 +2,11 @@ import { Link } from "react-router-dom";
 import { Eye, Target, RefreshCw, Users, Layers, AlertTriangle, CheckCircle, BarChart3 } from "lucide-react";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import SectionCTA from "@/components/SectionCTA";
+import facebookLogo from "@/assets/logos/facebook.png";
+import googleAdsLogo from "@/assets/logos/google-ads.png";
+import youtubeLogo from "@/assets/logos/youtube.png";
+import tiktokLogo from "@/assets/logos/tiktok.png";
+import linkedinLogo from "@/assets/logos/linkedin.png";
 
 const ArticleRetargetingProspectsRenovation = () => (
   <div className="prose-custom">
