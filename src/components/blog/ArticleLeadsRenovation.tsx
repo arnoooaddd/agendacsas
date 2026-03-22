@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { CheckCircle, AlertTriangle, TrendingUp, Zap, Target } from "lucide-react";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import SectionCTA from "@/components/SectionCTA";
+import ArticleVideoSection from "./ArticleVideoSection";
 
 const ArticleLeadsRenovation = () => (
   <div className="prose-custom">
@@ -30,6 +31,15 @@ const ArticleLeadsRenovation = () => (
         </nav>
       </div>
     </section>
+
+    <ArticleVideoSection
+      videoId="Y_oZiyaFC-E"
+      summary={
+        <>
+          <p>Découvrez en 60 secondes pourquoi <strong>acheter des leads en rénovation</strong> est une stratégie perdante — et ce que font les entreprises qui réussissent à la place.</p>
+        </>
+      }
+    />
 
     {/* Introduction */}
     <section className="mb-12">

@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { CheckCircle, AlertTriangle, TrendingUp, Users, Shield, Star, Target } from "lucide-react";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import SectionCTA from "@/components/SectionCTA";
+import ArticleVideoSection from "./ArticleVideoSection";
 
 const ArticleArreterAchatLeads = () => (
   <div className="prose-custom">
@@ -31,6 +32,15 @@ const ArticleArreterAchatLeads = () => (
         </nav>
       </div>
     </section>
+
+    <ArticleVideoSection
+      videoId="KRqBTiVQFAc"
+      summary={
+        <>
+          <p>5 étapes pour <strong>arrêter d'acheter des leads</strong>, sortir de la guerre des prix et construire votre propre système d'acquisition en rénovation.</p>
+        </>
+      }
+    />
 
     {/* Introduction */}
     <section className="mb-12">

@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { CheckCircle, AlertTriangle, TrendingUp, Target, BarChart3, Zap, Eye } from "lucide-react";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import SectionCTA from "@/components/SectionCTA";
+import ArticleVideoSection from "./ArticleVideoSection";
 
 const ArticleMarketingRenovation = () => (
   <div className="prose-custom">
@@ -33,6 +34,15 @@ const ArticleMarketingRenovation = () => (
         </nav>
       </div>
     </section>
+
+    <ArticleVideoSection
+      videoId="wd8pbwE7CCM"
+      summary={
+        <>
+          <p>La publicité en rénovation fonctionne — mais pas comme vous le pensez. Découvrez comment un <strong>système d'acquisition structuré</strong> change la donne.</p>
+        </>
+      }
+    />
 
     {/* Introduction */}
     <section className="mb-12">

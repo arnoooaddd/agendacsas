@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { CheckCircle, AlertTriangle, TrendingUp, Target, BarChart3, Zap, Search, Users } from "lucide-react";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import SectionCTA from "@/components/SectionCTA";
+import ArticleVideoSection from "./ArticleVideoSection";
 import googleAdsLogo from "@/assets/logos/google-ads.png";
 import facebookLogo from "@/assets/logos/facebook.png";
 
@@ -35,6 +36,15 @@ const ArticleGoogleVsFacebookAds = () => (
         </nav>
       </div>
     </section>
+
+    <ArticleVideoSection
+      videoId="7IdgZV4WGnA"
+      summary={
+        <>
+          <p><strong>Google Ads vs Facebook Ads</strong> en rénovation : lequel choisir ? Découvrez les forces de chaque plateforme et pourquoi les meilleurs combinent les deux.</p>
+        </>
+      }
+    />
 
     {/* Introduction */}
     <section className="mb-12" id="mauvaise-question">

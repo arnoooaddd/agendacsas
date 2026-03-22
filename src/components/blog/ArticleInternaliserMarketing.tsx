@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { CheckCircle, AlertTriangle, TrendingUp, Users, BarChart3, Target, DollarSign } from "lucide-react";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import SectionCTA from "@/components/SectionCTA";
+import ArticleVideoSection from "./ArticleVideoSection";
 
 const ArticleInternaliserMarketing = () => (
   <div className="prose-custom">
@@ -33,6 +34,15 @@ const ArticleInternaliserMarketing = () => (
         </nav>
       </div>
     </section>
+
+    <ArticleVideoSection
+      videoId="_5y4FhPW6Xo"
+      summary={
+        <>
+          <p>En 60 secondes, comprenez pourquoi <strong>internaliser son marketing en rénovation</strong> coûte souvent plus cher qu'on ne le pense — et quand il vaut mieux externaliser.</p>
+        </>
+      }
+    />
 
     {/* Introduction */}
     <section className="mb-12">
