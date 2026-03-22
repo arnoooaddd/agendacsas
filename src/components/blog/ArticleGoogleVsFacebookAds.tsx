@@ -107,8 +107,8 @@ const ArticleGoogleVsFacebookAds = () => (
     {/* Facebook Ads */}
     <section className="mb-12" id="facebook-ads">
       <div className="flex items-center gap-3 mb-6">
-        <div className="w-10 h-10 rounded-xl bg-secondary/10 flex items-center justify-center">
-          <Users size={20} className="text-secondary" />
+        <div className="w-10 h-10 rounded-xl flex items-center justify-center overflow-hidden">
+          <img src={facebookLogo} alt="Facebook Ads" className="w-8 h-8 object-contain" />
         </div>
         <h2 className="text-2xl md:text-3xl font-bold text-foreground font-display">
           Facebook Ads : du volume rapide… mais plus instable
