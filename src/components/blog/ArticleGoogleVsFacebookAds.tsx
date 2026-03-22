@@ -66,8 +66,8 @@ const ArticleGoogleVsFacebookAds = () => (
     {/* Google Ads */}
     <section className="mb-12" id="google-ads">
       <div className="flex items-center gap-3 mb-6">
-        <div className="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center">
-          <Search size={20} className="text-primary" />
+        <div className="w-10 h-10 rounded-xl flex items-center justify-center overflow-hidden">
+          <img src={googleAdsLogo} alt="Google Ads" className="w-8 h-8 object-contain" />
         </div>
         <h2 className="text-2xl md:text-3xl font-bold text-foreground font-display">
           Google Ads : un canal lent, mais extrêmement rentable
