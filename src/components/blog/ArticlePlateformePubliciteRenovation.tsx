@@ -2,6 +2,8 @@ import { Link } from "react-router-dom";
 import { Search, Megaphone, Target, CheckCircle, AlertTriangle, BarChart3, Layers, TrendingUp } from "lucide-react";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import SectionCTA from "@/components/SectionCTA";
+import googleAdsLogo from "@/assets/logos/google-ads.png";
+import metaLogo from "@/assets/logos/meta.png";
 
 const ArticlePlateformePubliciteRenovation = () => (
   <div className="prose-custom">
