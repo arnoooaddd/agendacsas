@@ -9,10 +9,10 @@ import choisirAgence from "@/assets/blog/choisir-agence-marketing-renovation.png
 import externaliserRdv from "@/assets/blog/externaliser-prise-rdv-renovation-new.png";
 import niveauxQualification from "@/assets/blog/niveaux-qualification-prospect-renovation.png";
 import contacterLeads from "@/assets/blog/contacter-leads-reseaux-sociaux.png";
-import plateformePublicite from "@/assets/blog/plateforme-publicite-renovation.jpg";
+import plateformePublicite from "@/assets/blog/plateforme-publicite-renovation.png";
 import retargetingProspects from "@/assets/blog/retargeting-prospects-renovation.png";
 import publiciteRenovation2026 from "@/assets/blog/publicite-renovation-2026.png";
-import seDemarquerArnaques from "@/assets/blog/se-demarquer-arnaques-renovation.jpg";
+import seDemarquerArnaques from "@/assets/blog/se-demarquer-arnaques-renovation.png";
 
 const coverImages: Record<string, string> = {
   "se-demarquer-arnaques-renovation": seDemarquerArnaques,
