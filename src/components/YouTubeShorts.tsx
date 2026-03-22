@@ -4,14 +4,11 @@ import AnimatedSection from "./AnimatedSection";
 import { Button } from "./ui/button";
 
 const shortsVideos = [
-  "https://www.youtube.com/embed/Y68enwjao4k?rel=0&modestbranding=1",
-  "https://www.youtube.com/embed/JjjtvUlBqOg?rel=0&modestbranding=1",
-  "https://www.youtube.com/embed/aPxxveSQpOs?rel=0&modestbranding=1",
-  "https://www.youtube.com/embed/vXolQuDhVWY?rel=0&modestbranding=1",
-  "https://www.youtube.com/embed/rl1F0jPImIE?rel=0&modestbranding=1",
-  "https://www.youtube.com/embed/P1NE-6dauMQ?rel=0&modestbranding=1",
-  "https://www.youtube.com/embed/j4C8xgYMfdE?rel=0&modestbranding=1",
-  "https://www.youtube.com/embed/GNq_1jMdJgE?rel=0&modestbranding=1",
+  "https://www.youtube.com/embed/Y_oZiyaFC-E?rel=0&modestbranding=1",
+  "https://www.youtube.com/embed/_5y4FhPW6Xo?rel=0&modestbranding=1",
+  "https://www.youtube.com/embed/KRqBTiVQFAc?rel=0&modestbranding=1",
+  "https://www.youtube.com/embed/wd8pbwE7CCM?rel=0&modestbranding=1",
+  "https://www.youtube.com/embed/7IdgZV4WGnA?rel=0&modestbranding=1",
 ];
 
 const YouTubeShorts = () => {

@@ -37,6 +37,15 @@ const ArticleGoogleVsFacebookAds = () => (
       </div>
     </section>
 
+    <ArticleVideoSection
+      videoId="7IdgZV4WGnA"
+      summary={
+        <>
+          <p><strong>Google Ads vs Facebook Ads</strong> en rénovation : lequel choisir ? Découvrez les forces de chaque plateforme et pourquoi les meilleurs combinent les deux.</p>
+        </>
+      }
+    />
+
     {/* Introduction */}
     <section className="mb-12" id="mauvaise-question">
       <div className="flex items-center gap-3 mb-6">

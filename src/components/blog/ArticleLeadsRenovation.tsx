@@ -32,6 +32,15 @@ const ArticleLeadsRenovation = () => (
       </div>
     </section>
 
+    <ArticleVideoSection
+      videoId="Y_oZiyaFC-E"
+      summary={
+        <>
+          <p>Découvrez en 60 secondes pourquoi <strong>acheter des leads en rénovation</strong> est une stratégie perdante — et ce que font les entreprises qui réussissent à la place.</p>
+        </>
+      }
+    />
+
     {/* Introduction */}
     <section className="mb-12">
       <p className="text-lg text-muted-foreground leading-relaxed mb-4">

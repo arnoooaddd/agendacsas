@@ -35,6 +35,15 @@ const ArticleInternaliserMarketing = () => (
       </div>
     </section>
 
+    <ArticleVideoSection
+      videoId="_5y4FhPW6Xo"
+      summary={
+        <>
+          <p>En 60 secondes, comprenez pourquoi <strong>internaliser son marketing en rénovation</strong> coûte souvent plus cher qu'on ne le pense — et quand il vaut mieux externaliser.</p>
+        </>
+      }
+    />
+
     {/* Introduction */}
     <section className="mb-12">
       <p className="text-lg text-muted-foreground leading-relaxed mb-4">

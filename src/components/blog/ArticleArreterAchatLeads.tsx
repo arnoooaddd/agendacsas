@@ -33,6 +33,15 @@ const ArticleArreterAchatLeads = () => (
       </div>
     </section>
 
+    <ArticleVideoSection
+      videoId="KRqBTiVQFAc"
+      summary={
+        <>
+          <p>5 étapes pour <strong>arrêter d'acheter des leads</strong>, sortir de la guerre des prix et construire votre propre système d'acquisition en rénovation.</p>
+        </>
+      }
+    />
+
     {/* Introduction */}
     <section className="mb-12">
       <p className="text-lg text-muted-foreground leading-relaxed mb-4">

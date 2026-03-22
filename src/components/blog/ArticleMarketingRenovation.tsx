@@ -35,6 +35,15 @@ const ArticleMarketingRenovation = () => (
       </div>
     </section>
 
+    <ArticleVideoSection
+      videoId="wd8pbwE7CCM"
+      summary={
+        <>
+          <p>La publicité en rénovation fonctionne — mais pas comme vous le pensez. Découvrez comment un <strong>système d'acquisition structuré</strong> change la donne.</p>
+        </>
+      }
+    />
+
     {/* Introduction */}
     <section className="mb-12">
       <p className="text-lg text-muted-foreground leading-relaxed mb-4 italic">
