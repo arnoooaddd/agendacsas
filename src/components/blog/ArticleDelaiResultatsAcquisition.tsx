@@ -2,6 +2,8 @@ import { Link } from "react-router-dom";
 import { Clock, Zap, Search, BarChart3, Target, AlertTriangle, Rocket, CheckCircle } from "lucide-react";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import SectionCTA from "@/components/SectionCTA";
+import googleAdsLogo from "@/assets/logos/google-ads.png";
+import metaLogo from "@/assets/logos/meta.png";
 
 const ArticleDelaiResultatsAcquisition = () => (
   <div className="prose-custom">
@@ -74,8 +76,8 @@ const ArticleDelaiResultatsAcquisition = () => (
     {/* Meta Ads */}
     <section className="mb-12" id="meta-ads-timeline">
       <div className="flex items-center gap-3 mb-6">
-        <div className="w-10 h-10 rounded-xl bg-accent/10 flex items-center justify-center">
-          <Zap size={20} className="text-accent" />
+        <div className="w-10 h-10 rounded-xl flex items-center justify-center overflow-hidden">
+          <img src={metaLogo} alt="Meta Ads" className="w-8 h-8 object-contain" />
         </div>
         <h2 className="text-2xl md:text-3xl font-bold text-foreground font-display">
           Meta Ads : résultats en 3 à 5 semaines
@@ -105,8 +107,8 @@ const ArticleDelaiResultatsAcquisition = () => (
     {/* Google Ads */}
     <section className="mb-12" id="google-ads-timeline">
       <div className="flex items-center gap-3 mb-6">
-        <div className="w-10 h-10 rounded-xl bg-secondary/10 flex items-center justify-center">
-          <Search size={20} className="text-secondary" />
+        <div className="w-10 h-10 rounded-xl flex items-center justify-center overflow-hidden">
+          <img src={googleAdsLogo} alt="Google Ads" className="w-8 h-8 object-contain" />
         </div>
         <h2 className="text-2xl md:text-3xl font-bold text-foreground font-display">
           Google Ads : performance optimale en 2 à 3 mois

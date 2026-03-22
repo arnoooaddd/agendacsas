@@ -2,6 +2,11 @@ import { Link } from "react-router-dom";
 import { Eye, Target, RefreshCw, Users, Layers, AlertTriangle, CheckCircle, BarChart3 } from "lucide-react";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import SectionCTA from "@/components/SectionCTA";
+import facebookLogo from "@/assets/logos/facebook.png";
+import googleAdsLogo from "@/assets/logos/google-ads.png";
+import youtubeLogo from "@/assets/logos/youtube.png";
+import tiktokLogo from "@/assets/logos/tiktok.png";
+import linkedinLogo from "@/assets/logos/linkedin.png";
 
 const ArticleRetargetingProspectsRenovation = () => (
   <div className="prose-custom">
@@ -81,10 +86,11 @@ const ArticleRetargetingProspectsRenovation = () => (
       <h3 className="text-lg font-bold text-foreground font-display mb-3">Disponible sur toutes les plateformes</h3>
 
       <ul className="space-y-3 text-muted-foreground mb-6">
-        <li className="flex items-start gap-2"><CheckCircle size={16} className="text-primary mt-1 flex-shrink-0" /> <em><strong>Facebook Ads rénovation</strong></em> (Meta Pixel)</li>
-        <li className="flex items-start gap-2"><CheckCircle size={16} className="text-primary mt-1 flex-shrink-0" /> <em><strong>Google Ads</strong></em> (balise de conversion)</li>
-        <li className="flex items-start gap-2"><CheckCircle size={16} className="text-primary mt-1 flex-shrink-0" /> YouTube Ads</li>
-        <li className="flex items-start gap-2"><CheckCircle size={16} className="text-primary mt-1 flex-shrink-0" /> TikTok Ads, LinkedIn Ads</li>
+        <li className="flex items-center gap-3"><img src={facebookLogo} alt="Facebook" className="w-5 h-5 object-contain" /> <em><strong>Facebook Ads rénovation</strong></em> (Meta Pixel)</li>
+        <li className="flex items-center gap-3"><img src={googleAdsLogo} alt="Google Ads" className="w-5 h-5 object-contain" /> <em><strong>Google Ads</strong></em> (balise de conversion)</li>
+        <li className="flex items-center gap-3"><img src={youtubeLogo} alt="YouTube" className="w-5 h-5 object-contain" /> YouTube Ads</li>
+        <li className="flex items-center gap-3"><img src={tiktokLogo} alt="TikTok" className="w-5 h-5 object-contain" /> TikTok Ads</li>
+        <li className="flex items-center gap-3"><img src={linkedinLogo} alt="LinkedIn" className="w-5 h-5 object-contain" /> LinkedIn Ads</li>
       </ul>
 
       <h3 className="text-lg font-bold text-foreground font-display mb-3">Ce qu'il fait concrètement</h3>

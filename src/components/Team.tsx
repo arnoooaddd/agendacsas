@@ -18,16 +18,16 @@ import yasmineImg from "@/assets/team/yasmine-lale.webp";
 const teamMembers = [
   { name: "Arnaud UTILLE", role: "Président", image: arnaudImg },
   { name: "Kerim JAKUPOVIC", role: "Directeur général", image: kerimImg },
-  { name: "Eduardo Nery", role: "Vidéaste", image: eduardoImg },
+  { name: "Eduardo NERY", role: "Vidéaste", image: eduardoImg },
   { name: "Sami AIT HAMOU", role: "Responsable communication", image: samiImg },
   { name: "Pauline PIETRÉ", role: "Vidéaste", image: paulineImg },
   { name: "Andrei AVADANII", role: "Monteur vidéo et designer", image: andreiImg },
-  { name: "Marceau David", role: "Responsable partenariats", image: marceauImg },
+  { name: "Marceau DAVID", role: "Responsable partenariats", image: marceauImg },
   { name: "Omar TROUSSI", role: "Responsable publicités", image: omarImg },
   { name: "Manon ODIER", role: "Gestion clientèle", image: manonImg },
   { name: "Gabriel AGERON", role: "Designer site internet", image: gabrielImg },
   { name: "Mickael BERJAZ", role: "Monteur et designer", image: mickaelImg },
-  { name: "Sophia Laleg", role: "Responsable qualité", image: yasmineImg },
+  { name: "Sophia LALEG", role: "Responsable qualité", image: yasmineImg },
 ];
 
 const Team = () => {
