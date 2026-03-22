@@ -18,7 +18,7 @@ import yasmineImg from "@/assets/team/yasmine-lale.webp";
 const teamMembers = [
   { name: "Arnaud UTILLE", role: "Président", image: arnaudImg },
   { name: "Kerim JAKUPOVIC", role: "Directeur général", image: kerimImg },
-  { name: "Eduardo Nery", role: "Vidéaste", image: eduardoImg },
+  { name: "Eduardo NERY", role: "Vidéaste", image: eduardoImg },
   { name: "Sami AIT HAMOU", role: "Responsable communication", image: samiImg },
   { name: "Pauline PIETRÉ", role: "Vidéaste", image: paulineImg },
   { name: "Andrei AVADANII", role: "Monteur vidéo et designer", image: andreiImg },
