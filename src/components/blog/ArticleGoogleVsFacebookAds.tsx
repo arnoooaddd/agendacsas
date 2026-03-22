@@ -2,6 +2,8 @@ import { Link } from "react-router-dom";
 import { CheckCircle, AlertTriangle, TrendingUp, Target, BarChart3, Zap, Search, Users } from "lucide-react";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import SectionCTA from "@/components/SectionCTA";
+import googleAdsLogo from "@/assets/logos/google-ads.png";
+import facebookLogo from "@/assets/logos/facebook.png";
 
 const ArticleGoogleVsFacebookAds = () => (
   <div className="prose-custom">
