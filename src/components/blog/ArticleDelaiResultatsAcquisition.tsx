@@ -2,6 +2,8 @@ import { Link } from "react-router-dom";
 import { Clock, Zap, Search, BarChart3, Target, AlertTriangle, Rocket, CheckCircle } from "lucide-react";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import SectionCTA from "@/components/SectionCTA";
+import googleAdsLogo from "@/assets/logos/google-ads.png";
+import metaLogo from "@/assets/logos/meta.png";
 
 const ArticleDelaiResultatsAcquisition = () => (
   <div className="prose-custom">
