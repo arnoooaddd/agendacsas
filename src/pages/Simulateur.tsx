@@ -2,7 +2,8 @@ import { useEffect } from "react";
 
 const Simulateur = () => {
   useEffect(() => {
-    window.location.href = "https://agendacsas.fr/simulateur";
+    const params = window.location.search;
+    window.location.href = "https://agendacsas.fr/simulateur" + params;
   }, []);
 
   return (
