@@ -2,7 +2,8 @@ import { useEffect } from "react";
 
 const Rdv = () => {
   useEffect(() => {
-    window.location.href = "https://agendacsas.fr/rdv";
+    const params = window.location.search;
+    window.location.href = "https://agendacsas.fr/rdv" + params;
   }, []);
 
   return (

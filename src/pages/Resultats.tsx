@@ -4,7 +4,8 @@ import { useNavigate } from "react-router-dom";
 const Resultats = () => {
   const navigate = useNavigate();
   useEffect(() => {
-    navigate("/resultats-clients-agendac", { replace: true });
+    const params = window.location.search;
+    navigate("/resultats-clients-agendac" + params, { replace: true });
   }, [navigate]);
 
   return (
