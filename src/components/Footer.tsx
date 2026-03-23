@@ -12,6 +12,12 @@ const Footer = () => {
       script.src = "//embed.typeform.com/next/embed.js";
       script.async = true;
       document.body.appendChild(script);
+    } else {
+      // Script already loaded — force Typeform to re-scan for new widgets
+      const tf = (window as any).tf;
+      if (tf && tf.load) {
+        tf.load();
+      }
     }
     const existingElfsight = document.querySelector('script[src="https://elfsightcdn.com/platform.js"]');
     if (!existingElfsight) {
