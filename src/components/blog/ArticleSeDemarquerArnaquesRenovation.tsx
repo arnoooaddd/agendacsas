@@ -112,7 +112,7 @@ const ArticleSeDemarquerArnaquesRenovation = () => (
       </div>
 
       <p className="text-muted-foreground mb-4">
-        En 2027, la différence entre une entreprise qui stagne et une qui explose se résume à un mot : <strong>confiance</strong>.
+        En 2026, la différence entre une entreprise qui stagne et une qui explose se résume à un mot : <strong>confiance</strong>.
       </p>
 
       <h3 className="text-lg font-bold text-foreground font-display mb-3">Ce que vous devez montrer</h3>

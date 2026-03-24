@@ -15,7 +15,7 @@ export interface BlogArticle {
 export const blogArticles: BlogArticle[] = [
   {
     slug: "se-demarquer-arnaques-renovation",
-    title: "Comment se démarquer des arnaques en rénovation : générer des leads fiables en 2027",
+    title: "Comment se démarquer des arnaques en rénovation : générer des leads fiables en 2026",
     metaDescription: "Arnaques, faux leads, prospects méfiants : découvrez comment bâtir un système d'acquisition clients rénovation fiable et vous démarquer de la concurrence.",
     excerpt: "Les prospects ne font plus confiance par défaut. Arnaques, leads partagés, sociétés douteuses : découvrez comment construire un écosystème marketing qui vous différencie et génère des leads fiables.",
     coverImage: "se-demarquer-arnaques-renovation",
