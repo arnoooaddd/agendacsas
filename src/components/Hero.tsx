@@ -88,7 +88,7 @@ const Hero = () => {
             <div className="glass-card p-2 border-gradient glow-primary">
               <div className="relative aspect-video rounded-xl overflow-hidden bg-white shadow-lg">
                 <iframe
-                  src="https://www.youtube.com/embed/-JicDnVRJzU?rel=0&modestbranding=1"
+                  src="https://www.youtube.com/embed/0d0PUhctvMs?rel=0&modestbranding=1"
                   title="Présentation Agendac"
                   loading="lazy"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
