@@ -34,7 +34,7 @@ const Header = () => {
 
   const serviceLinks = [
     { label: "Prise de rendez-vous qualifiés", href: "/prise-rendez-vous", star: true },
-    { label: "Tournage professionnel", href: "/tournage", star: false },
+    { label: "Tournage professionnel", href: "/tournage", star: true },
     { label: "Création de site internet", href: "/creation-site-internet", star: false },
     { label: "Création de réseaux sociaux", href: "/creation-reseaux-sociaux", star: false },
   ];
@@ -122,8 +122,8 @@ const Header = () => {
       </div>
 
       {isMenuOpen && (
-        <div className="lg:hidden absolute top-full left-0 right-0 glass border-t border-border/50 overflow-hidden animate-fade-in">
-          <nav className="container mx-auto px-4 py-6 flex flex-col gap-2">
+        <div className="lg:hidden absolute top-full left-0 right-0 bg-background/98 backdrop-blur-xl border-t border-border/50 overflow-hidden animate-fade-in">
+          <nav className="container mx-auto px-4 py-6 flex flex-col gap-2 bg-background/95 backdrop-blur-xl">
             {/* Mobile services accordion first */}
             <button
               onClick={() => setIsMobileServicesOpen(!isMobileServicesOpen)}
