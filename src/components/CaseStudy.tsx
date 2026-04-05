@@ -14,13 +14,13 @@ const CaseStudy = () => {
           <AnimatedSection>
             <div className="inline-flex items-center gap-2 glass-card px-5 py-2.5 mb-6 border-gradient bg-white/80">
               <TrendingUp size={16} className="text-primary" />
-              <span className="text-sm font-medium text-foreground/80">Étude de cas concrète</span>
+              <span className="text-sm font-medium text-foreground/80">+110 RDV qualifiés en 90 jours</span>
             </div>
           </AnimatedSection>
           <AnimatedSection delay={0.1}>
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground mb-6 tracking-tight">
-              +110 RDV qualifiés en{" "}
-              <span className="text-gradient">90 jours</span>
+              Étude de cas concrète avec un{" "}
+              <span className="text-gradient">partenaire Agendac</span>
             </h2>
           </AnimatedSection>
           <AnimatedSection delay={0.2}>

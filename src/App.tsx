@@ -15,6 +15,8 @@ import Tournage from "./pages/Tournage";
 import Results from "./pages/Results";
 import Blog from "./pages/Blog";
 import BlogArticle from "./pages/BlogArticle";
+import PriseRendezVous from "./pages/PriseRendezVous";
+import EquipeAgendac from "./pages/EquipeAgendac";
 
 const queryClient = new QueryClient();
 
@@ -38,12 +40,13 @@ const App = () => (
           <Route path="/creation-reseaux-sociaux" element={<CreationReseaux />} />
           <Route path="/creation-site-internet" element={<CreationSite />} />
           <Route path="/tournage" element={<Tournage />} />
+          <Route path="/prise-rendez-vous" element={<PriseRendezVous />} />
+          <Route path="/equipe-agendac" element={<EquipeAgendac />} />
           <Route path="/blog" element={<Blog />} />
           <Route path="/blog/:slug" element={<BlogArticle />} />
           <Route path="/services" element={<HashRedirect hash="hero" />} />
           <Route path="/service" element={<HashRedirect hash="hero" />} />
           <Route path="/merci" element={<NotFound />} />
-          {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>

@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from "react";
 import { Button } from "@/components/ui/button";
-import { Menu, X, ChevronDown } from "lucide-react";
+import { Menu, X, ChevronDown, Star } from "lucide-react";
 import logoAgendac from "@/assets/logo-agendac.webp";
 
 const Header = () => {
@@ -27,17 +27,16 @@ const Header = () => {
   }, []);
 
   const navLinks = [
-    { label: "Témoignages", href: "/#resultats" },
-    { label: "Résultats", href: "/resultats-clients-agendac" },
+    { label: "Résultats partenaires", href: "/resultats-clients-agendac" },
     { label: "Blog", href: "/blog" },
-    { label: "Équipe", href: "/#equipe" },
-    { label: "Contact", href: "#contact" },
+    { label: "Nous contacter", href: "#contact" },
   ];
 
   const serviceLinks = [
-    { label: "Création de site internet", href: "/creation-site-internet" },
-    { label: "Création de réseaux sociaux", href: "/creation-reseaux-sociaux" },
-    { label: "Tournage professionnel", href: "/tournage" },
+    { label: "Prise de rendez-vous qualifiés", href: "/prise-rendez-vous", star: true },
+    { label: "Tournage professionnel", href: "/tournage", star: false },
+    { label: "Création de site internet", href: "/creation-site-internet", star: false },
+    { label: "Création de réseaux sociaux", href: "/creation-reseaux-sociaux", star: false },
   ];
 
   const scrollToContact = () => {
@@ -64,6 +63,38 @@ const Header = () => {
           </a>
 
           <nav className="hidden lg:flex items-center gap-1">
+            {/* Services dropdown first */}
+            <div ref={servicesRef} className="relative">
+              <button
+                onClick={() => setIsServicesOpen(!isServicesOpen)}
+                className="px-3 py-2 text-foreground/70 hover:text-foreground text-sm font-medium transition-colors rounded-lg hover:bg-muted/30 flex items-center gap-1"
+              >
+                Nos services
+                <ChevronDown size={14} className={`transition-transform ${isServicesOpen ? "rotate-180" : ""}`} />
+              </button>
+              {isServicesOpen && (
+                <div className="absolute top-full left-0 mt-2 w-72 bg-background border border-border rounded-xl shadow-xl z-50 py-2 animate-fade-in">
+                  {serviceLinks.map((link) => (
+                    <a
+                      key={link.label}
+                      href={link.href}
+                      className="flex items-center gap-2 px-4 py-2.5 text-sm text-foreground/70 hover:text-foreground hover:bg-muted/50 transition-colors"
+                      onClick={() => setIsServicesOpen(false)}
+                    >
+                      {link.star && <Star size={14} className="text-yellow-500 fill-yellow-500 flex-shrink-0" />}
+                      <span>{link.label}</span>
+                    </a>
+                  ))}
+                </div>
+              )}
+            </div>
+            {/* Équipe Agendac */}
+            <a
+              href="/equipe-agendac"
+              className="px-3 py-2 text-foreground/70 hover:text-foreground text-sm font-medium transition-colors rounded-lg hover:bg-muted/30"
+            >
+              Équipe Agendac
+            </a>
             {navLinks.map((link) => (
               <a
                 key={link.label}
@@ -73,30 +104,6 @@ const Header = () => {
                 {link.label}
               </a>
             ))}
-            {/* Services dropdown */}
-            <div ref={servicesRef} className="relative">
-              <button
-                onClick={() => setIsServicesOpen(!isServicesOpen)}
-                className="px-3 py-2 text-foreground/70 hover:text-foreground text-sm font-medium transition-colors rounded-lg hover:bg-muted/30 flex items-center gap-1"
-              >
-                Services complémentaires
-                <ChevronDown size={14} className={`transition-transform ${isServicesOpen ? "rotate-180" : ""}`} />
-              </button>
-              {isServicesOpen && (
-                <div className="absolute top-full left-0 mt-2 w-64 bg-background border border-border rounded-xl shadow-xl z-50 py-2 animate-fade-in">
-                  {serviceLinks.map((link) => (
-                    <a
-                      key={link.label}
-                      href={link.href}
-                      className="block px-4 py-2.5 text-sm text-foreground/70 hover:text-foreground hover:bg-muted/50 transition-colors"
-                      onClick={() => setIsServicesOpen(false)}
-                    >
-                      {link.label}
-                    </a>
-                  ))}
-                </div>
-              )}
-            </div>
           </nav>
 
           <div className="hidden lg:flex items-center gap-4">
@@ -117,6 +124,37 @@ const Header = () => {
       {isMenuOpen && (
         <div className="lg:hidden absolute top-full left-0 right-0 glass border-t border-border/50 overflow-hidden animate-fade-in">
           <nav className="container mx-auto px-4 py-6 flex flex-col gap-2">
+            {/* Mobile services accordion first */}
+            <button
+              onClick={() => setIsMobileServicesOpen(!isMobileServicesOpen)}
+              className="text-foreground/70 hover:text-foreground font-medium py-3 px-4 rounded-xl hover:bg-muted/30 transition-colors flex items-center justify-between"
+            >
+              Nos services
+              <ChevronDown size={16} className={`transition-transform ${isMobileServicesOpen ? "rotate-180" : ""}`} />
+            </button>
+            {isMobileServicesOpen && (
+              <div className="ml-4 flex flex-col gap-1">
+                {serviceLinks.map((link) => (
+                  <a
+                    key={link.label}
+                    href={link.href}
+                    className="text-foreground/70 hover:text-foreground font-medium py-2.5 px-4 rounded-xl hover:bg-muted/30 transition-colors text-sm flex items-center gap-2"
+                    onClick={() => setIsMenuOpen(false)}
+                  >
+                    {link.star && <Star size={12} className="text-yellow-500 fill-yellow-500" />}
+                    {link.label}
+                  </a>
+                ))}
+              </div>
+            )}
+            {/* Équipe Agendac */}
+            <a
+              href="/equipe-agendac"
+              className="text-foreground/70 hover:text-foreground font-medium py-3 px-4 rounded-xl hover:bg-muted/30 transition-colors"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              Équipe Agendac
+            </a>
             {navLinks.map((link) => (
               <a
                 key={link.label}
@@ -127,28 +165,6 @@ const Header = () => {
                 {link.label}
               </a>
             ))}
-            {/* Mobile services accordion */}
-            <button
-              onClick={() => setIsMobileServicesOpen(!isMobileServicesOpen)}
-              className="text-foreground/70 hover:text-foreground font-medium py-3 px-4 rounded-xl hover:bg-muted/30 transition-colors flex items-center justify-between"
-            >
-              Services complémentaires
-              <ChevronDown size={16} className={`transition-transform ${isMobileServicesOpen ? "rotate-180" : ""}`} />
-            </button>
-            {isMobileServicesOpen && (
-              <div className="ml-4 flex flex-col gap-1">
-                {serviceLinks.map((link) => (
-                  <a
-                    key={link.label}
-                    href={link.href}
-                    className="text-foreground/70 hover:text-foreground font-medium py-2.5 px-4 rounded-xl hover:bg-muted/30 transition-colors text-sm"
-                    onClick={() => setIsMenuOpen(false)}
-                  >
-                    {link.label}
-                  </a>
-                ))}
-              </div>
-            )}
             <Button onClick={scrollToContact} variant="secondary" className="mt-4 w-full glow-secondary">
               Entrer en contact
             </Button>

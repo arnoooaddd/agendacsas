@@ -10,7 +10,7 @@ import Team from "@/components/Team";
 import Gallery from "@/components/Gallery";
 import FAQ from "@/components/FAQ";
 import CaseStudy from "@/components/CaseStudy";
-
+import ExemplesTournage from "@/components/ExemplesTournage";
 import Footer from "@/components/Footer";
 
 const Index = () => {
@@ -24,12 +24,12 @@ const Index = () => {
         <Clients />
         <Interviews />
         <YouTubeShorts />
+        <ExemplesTournage />
         <Stats />
         <Team />
         <Gallery />
         <FAQ />
         <CaseStudy />
-        
       </main>
       <Footer />
     </div>

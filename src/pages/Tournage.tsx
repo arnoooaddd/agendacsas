@@ -4,6 +4,7 @@ import ServiceFooter from "@/components/ServiceFooter";
 import AnimatedSection from "@/components/AnimatedSection";
 import SectionCTA from "@/components/SectionCTA";
 import ServiceFloatingElements from "@/components/ServiceFloatingElements";
+import ExemplesTournage from "@/components/ExemplesTournage";
 import { Video, CheckCircle, Star, ArrowRight, FileText, Clock, CreditCard, Film, Repeat, Package } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
@@ -178,6 +179,9 @@ const Tournage = () => {
             </div>
           </div>
         </section>
+
+        {/* Exemples de tournage */}
+        <ExemplesTournage />
 
         {/* Partenaires */}
         <section className="py-20 relative overflow-hidden border-y border-border/30 bg-muted/20">
