@@ -1,8 +1,8 @@
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import GoogleReviews from "@/components/GoogleReviews";
+import Services from "@/components/Services";
 import Stats from "@/components/Stats";
-import Mission from "@/components/Mission";
 import Clients from "@/components/Clients";
 import Interviews from "@/components/Interviews";
 import YouTubeShorts from "@/components/YouTubeShorts";
@@ -20,7 +20,7 @@ const Index = () => {
       <main>
         <Hero />
         <GoogleReviews />
-        <Mission />
+        <Services />
         <Clients />
         <Interviews />
         <YouTubeShorts />
