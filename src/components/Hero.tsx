@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Play, Sparkles, Star } from "lucide-react";
+import { ArrowRight, Sparkles, Star } from "lucide-react";
 import { useEffect } from "react";
 import FloatingCalendars from "./FloatingCalendars";
 
@@ -19,9 +19,9 @@ const Hero = () => {
     if (footer) footer.scrollIntoView({ behavior: "smooth" });
   };
 
-  const scrollToPresentation = () => {
-    const video = document.getElementById("vsl-video");
-    if (video) video.scrollIntoView({ behavior: "smooth", block: "center" });
+  const scrollToServices = () => {
+    const services = document.getElementById("nos-services");
+    if (services) services.scrollIntoView({ behavior: "smooth" });
   };
 
   return (
@@ -63,9 +63,8 @@ const Hero = () => {
               Entrer en contact
               <ArrowRight className="group-hover:translate-x-1 transition-transform w-4 h-4" />
             </Button>
-            <Button onClick={scrollToPresentation} variant="outline" size="lg" className="hidden sm:flex group bg-white/50 hover:bg-white/80 border-border text-foreground text-sm sm:text-base">
-              <Play size={16} className="mr-1 text-primary" />
-              Voir la présentation
+            <Button onClick={scrollToServices} variant="outline" size="lg" className="hidden sm:flex group bg-white/50 hover:bg-white/80 border-border text-foreground text-sm sm:text-base">
+              Voir nos services
             </Button>
           </div>
 

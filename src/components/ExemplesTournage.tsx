@@ -1,6 +1,7 @@
 import { useEffect, useRef } from "react";
-import { Camera } from "lucide-react";
+import { Camera, ArrowRight } from "lucide-react";
 import AnimatedSection from "./AnimatedSection";
+import { Button } from "./ui/button";
 
 const exemplesVideos = [
   { url: "https://www.youtube.com/embed/jtxqj3Mm4WM?rel=0&modestbranding=1", title: "Pergola 4 Saisons | Agendac Exemple", isShort: true },
@@ -76,6 +77,17 @@ const ExemplesTournage = () => {
             <div className="pagination-wrapper">
               <div ref={barRef} className="pagination-bar" />
             </div>
+          </div>
+        </AnimatedSection>
+
+        <AnimatedSection delay={0.5}>
+          <div className="flex justify-center mt-10">
+            <Button asChild variant="secondary" size="lg" className="group glow-secondary">
+              <a href="/tournage" className="flex items-center gap-2">
+                Découvrir notre service de tournage professionnel
+                <ArrowRight className="group-hover:translate-x-1 transition-transform w-4 h-4" />
+              </a>
+            </Button>
           </div>
         </AnimatedSection>
       </div>

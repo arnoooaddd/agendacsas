@@ -45,7 +45,7 @@ const PriseRendezVous = () => {
               <motion.p initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.2 }}
                 className="text-muted-foreground text-lg max-w-2xl mx-auto mb-10"
               >
-                On gère votre communication, on génère les prospects, on les qualifie par téléphone et on prend le rendez-vous. Vous ne payez que pour les rendez-vous commercialement qualifiés.
+                Agendac gère votre communication, filtre les prospects, les qualifie par téléphone et prend rendez-vous. Vous ne payez que lorsqu'un devis est envoyé au client.
               </motion.p>
               <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.3 }}>
                 <Button onClick={scrollToContact} variant="secondary" size="lg" className="group glow-secondary">
@@ -69,7 +69,7 @@ const PriseRendezVous = () => {
               </AnimatedSection>
               <AnimatedSection delay={0.1}>
                 <p className="text-muted-foreground text-lg">
-                  Un modèle transparent : vous ne payez que lorsque vous êtes satisfait du rendez-vous.
+                   Un modèle simple : vous ne payez que lorsqu'un devis est envoyé et qu'une intention de vente est réalisée.
                 </p>
               </AnimatedSection>
             </div>
@@ -87,7 +87,7 @@ const PriseRendezVous = () => {
                       { icon: Target, text: "Génération de prospects via des campagnes publicitaires ciblées" },
                       { icon: Users, text: "Qualification stricte par téléphone par notre équipe" },
                       { icon: CalendarCheck, text: "Prise de rendez-vous directement dans votre agenda" },
-                      { icon: ThumbsUp, text: "Facturation uniquement sur les RDV commercialement qualifiés" },
+                      { icon: ThumbsUp, text: "Facturation uniquement lorsqu'un devis est envoyé au client" },
                     ].map((item, i) => (
                       <div key={i} className="flex items-start gap-4">
                         <div className="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center flex-shrink-0">
