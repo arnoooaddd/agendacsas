@@ -180,6 +180,9 @@ const Tournage = () => {
           </div>
         </section>
 
+        {/* Exemples de tournage */}
+        <ExemplesTournage />
+
         {/* Partenaires */}
         <section className="py-20 relative overflow-hidden border-y border-border/30 bg-muted/20">
           <div className="absolute inset-0 gradient-mesh opacity-30" />
