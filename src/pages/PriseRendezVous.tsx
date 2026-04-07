@@ -78,7 +78,7 @@ const PriseRendezVous = () => {
         <CaseStudy />
 
         {/* Formule PP-RDV */}
-        <section className="py-24 relative overflow-hidden bg-background">
+        <section id="formule-pprdv" className="py-24 relative overflow-hidden bg-background">
           <div className="absolute inset-0 gradient-mesh opacity-20" />
           <div className="container mx-auto px-4 relative z-10">
             <div className="text-center max-w-3xl mx-auto mb-16">
