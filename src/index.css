@@ -357,7 +357,7 @@
   display: flex;
   gap: 20px;
   width: max-content;
-  animation: infinite-scroll 60s linear infinite;
+  animation: infinite-scroll 30s linear infinite;
   padding: 10px 0;
 }
 
@@ -386,7 +386,7 @@
     flex: 0 0 180px;
   }
   .infinite-slider-track {
-    animation-duration: 45s;
+    animation-duration: 22s;
   }
 }
 
@@ -395,6 +395,6 @@
     flex: 0 0 160px;
   }
   .infinite-slider-track {
-    animation-duration: 35s;
+    animation-duration: 18s;
   }
 }
