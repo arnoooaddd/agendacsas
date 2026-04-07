@@ -49,9 +49,21 @@ const PriseRendezVous = () => {
               >
                 Agendac gère votre communication, filtre les prospects, les qualifie par téléphone et prend rendez-vous. Vous ne payez que lorsqu'un devis est envoyé au client.
               </motion.p>
-              <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.3 }}>
-                <Button onClick={scrollToContact} variant="secondary" size="lg" className="group glow-secondary">
-                  Planifier un appel de mise en route
+              <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.3 }}
+                className="flex flex-col sm:flex-row items-center gap-4"
+              >
+                <Button
+                  onClick={() => document.getElementById("etude-de-cas")?.scrollIntoView({ behavior: "smooth" })}
+                  variant="secondary" size="lg" className="group glow-secondary"
+                >
+                  Voir une étude de cas
+                  <ArrowRight className="group-hover:translate-x-1 transition-transform w-4 h-4" />
+                </Button>
+                <Button
+                  onClick={() => document.getElementById("formule-pprdv")?.scrollIntoView({ behavior: "smooth" })}
+                  variant="outline" size="lg" className="group"
+                >
+                  En savoir plus sur l'offre
                   <ArrowRight className="group-hover:translate-x-1 transition-transform w-4 h-4" />
                 </Button>
               </motion.div>
@@ -66,7 +78,7 @@ const PriseRendezVous = () => {
         <CaseStudy />
 
         {/* Formule PP-RDV */}
-        <section className="py-24 relative overflow-hidden bg-background">
+        <section id="formule-pprdv" className="py-24 relative overflow-hidden bg-background">
           <div className="absolute inset-0 gradient-mesh opacity-20" />
           <div className="container mx-auto px-4 relative z-10">
             <div className="text-center max-w-3xl mx-auto mb-16">
