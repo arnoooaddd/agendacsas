@@ -5,7 +5,7 @@ import AnimatedSection from "@/components/AnimatedSection";
 import SectionCTA from "@/components/SectionCTA";
 import ServiceFloatingElements from "@/components/ServiceFloatingElements";
 import ExemplesTournage from "@/components/ExemplesTournage";
-import { Video, CheckCircle, Star, ArrowRight, FileText, Clock, CreditCard, Film, Repeat, Package } from "lucide-react";
+import { Video, CheckCircle, Star, ArrowRight, FileText, Clock, Film, Repeat, Package } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
 
