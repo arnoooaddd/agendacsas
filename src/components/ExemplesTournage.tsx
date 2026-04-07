@@ -1,5 +1,5 @@
-import { useEffect, useRef } from "react";
-import { Camera, ArrowRight } from "lucide-react";
+import { useEffect, useRef, useState, useCallback } from "react";
+import { Camera, ArrowRight, ChevronLeft, ChevronRight } from "lucide-react";
 import AnimatedSection from "./AnimatedSection";
 import { Button } from "./ui/button";
 
@@ -19,7 +19,53 @@ interface ExemplesTournageProps {
 const ExemplesTournage = ({ ctaMode = "tournage" }: ExemplesTournageProps) => {
   const sliderRef = useRef<HTMLDivElement>(null);
   const barRef = useRef<HTMLDivElement>(null);
+  const autoScrollRef = useRef<number | null>(null);
+  const [isHovered, setIsHovered] = useState(false);
+  const [canScrollLeft, setCanScrollLeft] = useState(false);
+  const [canScrollRight, setCanScrollRight] = useState(true);
 
+  const updateScrollState = useCallback(() => {
+    const slider = sliderRef.current;
+    if (!slider) return;
+    setCanScrollLeft(slider.scrollLeft > 5);
+    setCanScrollRight(slider.scrollLeft < slider.scrollWidth - slider.offsetWidth - 5);
+  }, []);
+
+  // Auto-scroll logic
+  useEffect(() => {
+    const slider = sliderRef.current;
+    if (!slider) return;
+
+    const startAutoScroll = () => {
+      if (autoScrollRef.current) return;
+      autoScrollRef.current = window.setInterval(() => {
+        if (!slider) return;
+        const maxScroll = slider.scrollWidth - slider.offsetWidth;
+        if (slider.scrollLeft >= maxScroll - 2) {
+          slider.scrollTo({ left: 0, behavior: "smooth" });
+        } else {
+          slider.scrollBy({ left: 2, behavior: "auto" });
+        }
+      }, 30);
+    };
+
+    const stopAutoScroll = () => {
+      if (autoScrollRef.current) {
+        clearInterval(autoScrollRef.current);
+        autoScrollRef.current = null;
+      }
+    };
+
+    if (!isHovered) {
+      startAutoScroll();
+    } else {
+      stopAutoScroll();
+    }
+
+    return () => stopAutoScroll();
+  }, [isHovered]);
+
+  // Pagination bar
   useEffect(() => {
     const slider = sliderRef.current;
     const bar = barRef.current;
@@ -34,6 +80,7 @@ const ExemplesTournage = ({ ctaMode = "tournage" }: ExemplesTournageProps) => {
       const firstVisibleIndex = Math.round(slider.scrollLeft / slideWidth);
       bar.style.width = `${(visibleCount / slideCount) * 100}%`;
       bar.style.left = `${(firstVisibleIndex / slideCount) * 100}%`;
+      updateScrollState();
     };
 
     updatePaginationBar();
@@ -43,7 +90,15 @@ const ExemplesTournage = ({ ctaMode = "tournage" }: ExemplesTournageProps) => {
       slider.removeEventListener("scroll", updatePaginationBar);
       window.removeEventListener("resize", updatePaginationBar);
     };
-  }, []);
+  }, [updateScrollState]);
+
+  const scrollBy = (direction: "left" | "right") => {
+    const slider = sliderRef.current;
+    if (!slider) return;
+    const slideEl = slider.querySelector(".shorts-slide") as HTMLElement | null;
+    const amount = slideEl ? slideEl.offsetWidth + 20 : 300;
+    slider.scrollBy({ left: direction === "left" ? -amount : amount, behavior: "smooth" });
+  };
 
   const scrollToContact = () => {
     const footer = document.getElementById("contact");
@@ -76,10 +131,32 @@ const ExemplesTournage = ({ ctaMode = "tournage" }: ExemplesTournageProps) => {
         </div>
 
         <AnimatedSection delay={0.4} direction="up">
-          <div className="max-w-6xl mx-auto">
+          <div
+            className="max-w-6xl mx-auto relative group"
+            onMouseEnter={() => setIsHovered(true)}
+            onMouseLeave={() => setIsHovered(false)}
+          >
+            {/* Left arrow */}
+            <button
+              onClick={() => scrollBy("left")}
+              className={`slider-arrow slider-arrow-left ${canScrollLeft ? "opacity-100" : "opacity-0 pointer-events-none"}`}
+              aria-label="Précédent"
+            >
+              <ChevronLeft className="w-5 h-5" />
+            </button>
+
+            {/* Right arrow */}
+            <button
+              onClick={() => scrollBy("right")}
+              className={`slider-arrow slider-arrow-right ${canScrollRight ? "opacity-100" : "opacity-0 pointer-events-none"}`}
+              aria-label="Suivant"
+            >
+              <ChevronRight className="w-5 h-5" />
+            </button>
+
             <div ref={sliderRef} className="shorts-slider">
               {exemplesVideos.map((video, index) => (
-                <div key={index} className={video.isShort ? "shorts-slide" : "shorts-slide"} style={!video.isShort ? { aspectRatio: "16/9", minWidth: "320px" } : undefined}>
+                <div key={index} className="shorts-slide" style={!video.isShort ? { aspectRatio: "16/9", minWidth: "320px" } : undefined}>
                   <iframe src={video.url} loading="lazy" allowFullScreen title={video.title} />
                 </div>
               ))}
