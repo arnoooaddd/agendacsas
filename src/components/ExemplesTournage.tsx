@@ -10,7 +10,11 @@ const exemplesVideos = [
   { url: "https://www.youtube.com/embed/48gviholwLc?rel=0&modestbranding=1", title: "Maisolia | Exemple Agendac", isShort: true },
 ];
 
-const ExemplesTournage = () => {
+interface ExemplesTournageProps {
+  ctaMode?: "tournage" | "contact";
+}
+
+const ExemplesTournage = ({ ctaMode = "tournage" }: ExemplesTournageProps) => {
   const sliderRef = useRef<HTMLDivElement>(null);
   const barRef = useRef<HTMLDivElement>(null);
 
@@ -39,8 +43,13 @@ const ExemplesTournage = () => {
     };
   }, []);
 
+  const scrollToContact = () => {
+    const footer = document.getElementById("contact");
+    if (footer) footer.scrollIntoView({ behavior: "smooth" });
+  };
+
   return (
-    <section className="py-24 relative overflow-hidden bg-muted/30">
+    <section id="exemples-tournage" className="py-24 relative overflow-hidden bg-muted/30">
       <div className="absolute inset-0 gradient-mesh opacity-30" />
 
       <div className="container mx-auto px-4 relative z-10">
@@ -82,12 +91,19 @@ const ExemplesTournage = () => {
 
         <AnimatedSection delay={0.5}>
           <div className="flex justify-center mt-10">
-            <Button asChild variant="secondary" size="lg" className="group glow-secondary">
-              <a href="/tournage" className="flex items-center gap-2">
-                Découvrir notre service de tournage professionnel
+            {ctaMode === "tournage" ? (
+              <Button asChild variant="secondary" size="lg" className="group glow-secondary">
+                <a href="/tournage" className="flex items-center gap-2">
+                  Découvrir notre service de tournage professionnel
+                  <ArrowRight className="group-hover:translate-x-1 transition-transform w-4 h-4" />
+                </a>
+              </Button>
+            ) : (
+              <Button onClick={scrollToContact} variant="secondary" size="lg" className="group glow-secondary">
+                Entrer en contact
                 <ArrowRight className="group-hover:translate-x-1 transition-transform w-4 h-4" />
-              </a>
-            </Button>
+              </Button>
+            )}
           </div>
         </AnimatedSection>
       </div>
