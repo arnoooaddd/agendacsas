@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import Header from "@/components/Header";
-import ServiceFooter from "@/components/ServiceFooter";
+import Footer from "@/components/Footer";
 import AnimatedSection from "@/components/AnimatedSection";
 import SectionCTA from "@/components/SectionCTA";
 import ServiceFloatingElements from "@/components/ServiceFloatingElements";
@@ -56,9 +56,18 @@ const Tournage = () => {
               >
                 Réalisation d'un tournage professionnel orienté prise de contact. Scripts, tournage sur site, montage et livraison — 100 % internalisé.
               </motion.p>
-              <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.3 }}>
+              <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.3 }}
+                className="flex flex-col sm:flex-row items-center gap-4"
+              >
                 <Button onClick={scrollToContact} variant="secondary" size="lg" className="group glow-secondary">
                   Demander un devis
+                  <ArrowRight className="group-hover:translate-x-1 transition-transform w-4 h-4" />
+                </Button>
+                <Button
+                  onClick={() => document.getElementById("exemples-tournage")?.scrollIntoView({ behavior: "smooth" })}
+                  variant="outline" size="lg" className="group"
+                >
+                  Voir des exemples
                   <ArrowRight className="group-hover:translate-x-1 transition-transform w-4 h-4" />
                 </Button>
               </motion.div>
@@ -127,62 +136,6 @@ const Tournage = () => {
           </div>
         </section>
 
-        {/* Tarifs & détails */}
-        <section className="py-24 relative overflow-hidden bg-muted/30">
-          <div className="absolute inset-0 gradient-mesh opacity-30" />
-          <div className="container mx-auto px-4 relative z-10">
-            <div className="text-center max-w-3xl mx-auto mb-16">
-              <AnimatedSection>
-                <h2 className="text-3xl sm:text-4xl font-bold text-foreground mb-6 tracking-tight">
-                  Tarif & <span className="text-gradient-warm">conditions</span>
-                </h2>
-              </AnimatedSection>
-            </div>
-
-            <div className="max-w-3xl mx-auto">
-              <AnimatedSection delay={0.1} direction="scale">
-                <div className="glass-card p-8 border-gradient glow-primary">
-                  <div className="text-center mb-8">
-                    <h3 className="text-2xl font-bold text-foreground mb-2">Tournage professionnel</h3>
-                    <div className="text-4xl font-bold text-primary">5 000 € <span className="text-sm font-normal text-muted-foreground">HT / tournage</span></div>
-                    <p className="text-sm text-secondary font-semibold mt-2">Clients Agendac : 4 000 € HT</p>
-                  </div>
-
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-8">
-                    <div className="p-4 bg-muted/50 rounded-xl">
-                      <CreditCard size={20} className="text-primary mb-2" />
-                      <p className="text-sm font-medium text-foreground mb-1">Paiement</p>
-                      <p className="text-muted-foreground text-sm">Requis avant le tournage</p>
-                    </div>
-                    <div className="p-4 bg-muted/50 rounded-xl">
-                      <Clock size={20} className="text-primary mb-2" />
-                      <p className="text-sm font-medium text-foreground mb-1">Délai de livraison</p>
-                      <p className="text-muted-foreground text-sm">7 à 10 jours après tournage</p>
-                    </div>
-                  </div>
-
-                  <div className="space-y-4">
-                    {[
-                      "En moyenne 8 à 15 vidéos par tournage",
-                      "Nombre exact défini selon les marchés, zones ciblées et déclinaisons nécessaires",
-                      "Un corps de vidéo principal commun, décliné avec plusieurs accroches adaptées",
-                      "Modifications illimitées jusqu'à validation finale",
-                      "Livraison définitive après validation du client",
-                    ].map((item, i) => (
-                      <div key={i} className="flex items-start gap-3">
-                        <CheckCircle size={16} className="text-primary mt-0.5 flex-shrink-0" />
-                        <span className="text-muted-foreground text-sm">{item}</span>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-              </AnimatedSection>
-
-              <SectionCTA className="mt-16" />
-            </div>
-          </div>
-        </section>
-
         {/* Partenaires */}
         <section className="py-20 relative overflow-hidden border-y border-border/30 bg-muted/20">
           <div className="absolute inset-0 gradient-mesh opacity-30" />
@@ -201,29 +154,8 @@ const Tournage = () => {
             </AnimatedSection>
           </div>
         </section>
-
-        {/* Rencontre des partenaires */}
-        <section className="py-24 relative overflow-hidden bg-background">
-          <div className="absolute inset-0 gradient-mesh opacity-40" />
-          <div className="container mx-auto px-4 relative z-10">
-            <div className="text-center max-w-3xl mx-auto mb-16">
-              <AnimatedSection>
-                <h2 className="text-3xl sm:text-4xl font-bold text-foreground mb-6 tracking-tight">
-                  Rencontre des <span className="text-gradient-warm">partenaires Agendac</span>
-                </h2>
-              </AnimatedSection>
-            </div>
-            <AnimatedSection delay={0.3} direction="scale">
-              <div className="w-full max-w-full">
-                <div className="glass-card p-6 border-gradient">
-                  <div className="elfsight-app-989ab5e2-99fb-4015-ab1f-50030f53aa48" data-elfsight-app-lazy />
-                </div>
-              </div>
-            </AnimatedSection>
-          </div>
-        </section>
       </main>
-      <ServiceFooter />
+      <Footer />
     </div>
   );
 };

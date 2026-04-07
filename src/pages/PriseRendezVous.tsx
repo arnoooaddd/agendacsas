@@ -206,7 +206,7 @@ const PriseRendezVous = () => {
         </section>
 
         {/* Exemples de tournage */}
-        <ExemplesTournage />
+        <ExemplesTournage ctaMode="contact" />
       </main>
       <Footer />
     </div>
