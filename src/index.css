@@ -338,10 +338,8 @@
 .shorts-slider {
   display: flex;
   gap: 20px;
-  scroll-snap-type: x mandatory;
   overflow-x: auto;
   padding: 10px 0;
-  scroll-behavior: smooth;
   -ms-overflow-style: none;
   scrollbar-width: none;
 }
@@ -352,7 +350,7 @@
 
 .shorts-slide {
   flex: 0 0 calc(100% / 3 - 13.34px);
-  scroll-snap-align: start;
+  
   border-radius: 16px;
   box-shadow: 0 4px 20px rgba(0, 116, 212, 0.1);
   overflow: hidden;
