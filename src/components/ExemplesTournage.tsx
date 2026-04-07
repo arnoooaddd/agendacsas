@@ -174,7 +174,7 @@ const ExemplesTournage = ({ ctaMode = "tournage" }: ExemplesTournageProps) => {
             </button>
 
             <div ref={sliderRef} className="shorts-slider">
-              {exemplesVideos.map((video, index) => (
+              {infiniteVideos.map((video, index) => (
                 <div key={index} className="shorts-slide" style={!video.isShort ? { aspectRatio: "16/9", minWidth: "320px" } : undefined}>
                   <iframe src={video.url} loading="lazy" allowFullScreen title={video.title} />
                 </div>
