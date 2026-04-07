@@ -101,7 +101,7 @@ const Tournage = () => {
         </section>
 
         {/* Exemples de tournage */}
-        <ExemplesTournage />
+        <ExemplesTournage ctaMode="contact" />
 
         {/* Ce qui est inclus */}
         <section className="py-24 relative overflow-hidden bg-background">
