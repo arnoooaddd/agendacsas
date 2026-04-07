@@ -31,22 +31,41 @@ const ExemplesTournage = ({ ctaMode = "tournage" }: ExemplesTournageProps) => {
     setCanScrollRight(slider.scrollLeft < slider.scrollWidth - slider.offsetWidth - 5);
   }, []);
 
-  // Auto-scroll logic
+  // Infinite auto-scroll: render 3x videos, reset to middle set seamlessly
+  const totalVideos = exemplesVideos.length;
+  const infiniteVideos = [...exemplesVideos, ...exemplesVideos, ...exemplesVideos];
+
   useEffect(() => {
     const slider = sliderRef.current;
     if (!slider) return;
+
+    // Start at the beginning of the middle copy
+    const slides = slider.querySelectorAll(".shorts-slide");
+    if (slides.length > 0) {
+      const slideWidth = (slides[0] as HTMLElement).offsetWidth + 20;
+      slider.scrollLeft = slideWidth * totalVideos;
+    }
 
     const startAutoScroll = () => {
       if (autoScrollRef.current) return;
       autoScrollRef.current = window.setInterval(() => {
         if (!slider) return;
-        const maxScroll = slider.scrollWidth - slider.offsetWidth;
-        if (slider.scrollLeft >= maxScroll - 2) {
-          slider.scrollTo({ left: 0, behavior: "smooth" });
-        } else {
-          slider.scrollBy({ left: 2, behavior: "auto" });
+        const slides = slider.querySelectorAll(".shorts-slide");
+        if (slides.length === 0) return;
+        const slideWidth = (slides[0] as HTMLElement).offsetWidth + 20;
+        const oneSetWidth = slideWidth * totalVideos;
+
+        slider.scrollLeft += 1.5;
+
+        // If we've scrolled past the middle+end set, jump back to middle
+        if (slider.scrollLeft >= oneSetWidth * 2) {
+          slider.scrollLeft -= oneSetWidth;
         }
-      }, 30);
+        // If somehow scrolled before start of middle, jump forward
+        if (slider.scrollLeft < oneSetWidth * 0.1) {
+          slider.scrollLeft += oneSetWidth;
+        }
+      }, 20);
     };
 
     const stopAutoScroll = () => {
@@ -63,7 +82,7 @@ const ExemplesTournage = ({ ctaMode = "tournage" }: ExemplesTournageProps) => {
     }
 
     return () => stopAutoScroll();
-  }, [isHovered]);
+  }, [isHovered, totalVideos]);
 
   // Pagination bar
   useEffect(() => {
