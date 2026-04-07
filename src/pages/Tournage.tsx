@@ -57,7 +57,7 @@ const Tournage = () => {
                 Réalisation d'un tournage professionnel orienté prise de contact. Scripts, tournage sur site, montage et livraison — 100 % internalisé.
               </motion.p>
               <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.3 }}
-                className="flex flex-col sm:flex-row items-center gap-4"
+                className="flex flex-col sm:flex-row items-center justify-center gap-4"
               >
                 <Button onClick={scrollToContact} variant="secondary" size="lg" className="group glow-secondary">
                   Demander un devis
