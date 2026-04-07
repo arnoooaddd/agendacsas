@@ -4,6 +4,8 @@ import Footer from "@/components/Footer";
 import AnimatedSection from "@/components/AnimatedSection";
 import SectionCTA from "@/components/SectionCTA";
 import ExemplesTournage from "@/components/ExemplesTournage";
+import GoogleReviews from "@/components/GoogleReviews";
+import CaseStudy from "@/components/CaseStudy";
 import { CalendarCheck, CheckCircle, Star, ArrowRight, Shield, Target, Clock, Users, Zap, ThumbsUp } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
@@ -57,8 +59,14 @@ const PriseRendezVous = () => {
           </div>
         </section>
 
+        {/* Avis Google */}
+        <GoogleReviews />
+
+        {/* Étude de cas */}
+        <CaseStudy />
+
         {/* Formule PP-RDV */}
-        <section className="py-24 relative overflow-hidden bg-[#DFF1FF]">
+        <section className="py-24 relative overflow-hidden bg-background">
           <div className="absolute inset-0 gradient-mesh opacity-20" />
           <div className="container mx-auto px-4 relative z-10">
             <div className="text-center max-w-3xl mx-auto mb-16">
@@ -151,7 +159,7 @@ const PriseRendezVous = () => {
         </section>
 
         {/* Ce qui nous différencie */}
-        <section className="py-24 relative overflow-hidden bg-background">
+        <section className="py-24 relative overflow-hidden bg-[#DFF1FF]">
           <div className="absolute inset-0 gradient-mesh opacity-30" />
           <div className="container mx-auto px-4 relative z-10">
             <div className="text-center max-w-3xl mx-auto mb-16">
