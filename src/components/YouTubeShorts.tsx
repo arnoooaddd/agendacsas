@@ -1,44 +1,18 @@
-import { useEffect, useRef } from "react";
+import { useState } from "react";
 import { Lightbulb, Youtube } from "lucide-react";
 import AnimatedSection from "./AnimatedSection";
 import { Button } from "./ui/button";
 
 const shortsVideos = [
-  "https://www.youtube.com/embed/Y_oZiyaFC-E?rel=0&modestbranding=1",
-  "https://www.youtube.com/embed/_5y4FhPW6Xo?rel=0&modestbranding=1",
-  "https://www.youtube.com/embed/KRqBTiVQFAc?rel=0&modestbranding=1",
-  "https://www.youtube.com/embed/wd8pbwE7CCM?rel=0&modestbranding=1",
-  "https://www.youtube.com/embed/7IdgZV4WGnA?rel=0&modestbranding=1",
+  { url: "https://www.youtube.com/embed/Y_oZiyaFC-E?rel=0&modestbranding=1", title: "Conseil Agendac 1" },
+  { url: "https://www.youtube.com/embed/_5y4FhPW6Xo?rel=0&modestbranding=1", title: "Conseil Agendac 2" },
+  { url: "https://www.youtube.com/embed/KRqBTiVQFAc?rel=0&modestbranding=1", title: "Conseil Agendac 3" },
+  { url: "https://www.youtube.com/embed/wd8pbwE7CCM?rel=0&modestbranding=1", title: "Conseil Agendac 4" },
+  { url: "https://www.youtube.com/embed/7IdgZV4WGnA?rel=0&modestbranding=1", title: "Conseil Agendac 5" },
 ];
 
 const YouTubeShorts = () => {
-  const sliderRef = useRef<HTMLDivElement>(null);
-  const barRef = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    const slider = sliderRef.current;
-    const bar = barRef.current;
-    if (!slider || !bar) return;
-
-    const updatePaginationBar = () => {
-      const slides = slider.querySelectorAll(".shorts-slide");
-      if (slides.length === 0) return;
-      const slideCount = slides.length;
-      const slideWidth = (slides[0] as HTMLElement).offsetWidth + 20;
-      const visibleCount = Math.round(slider.offsetWidth / slideWidth);
-      const firstVisibleIndex = Math.round(slider.scrollLeft / slideWidth);
-      bar.style.width = `${(visibleCount / slideCount) * 100}%`;
-      bar.style.left = `${(firstVisibleIndex / slideCount) * 100}%`;
-    };
-
-    updatePaginationBar();
-    slider.addEventListener("scroll", updatePaginationBar);
-    window.addEventListener("resize", updatePaginationBar);
-    return () => {
-      slider.removeEventListener("scroll", updatePaginationBar);
-      window.removeEventListener("resize", updatePaginationBar);
-    };
-  }, []);
+  const [isPaused, setIsPaused] = useState(false);
 
   return (
     <section className="py-24 relative overflow-hidden bg-background">
@@ -66,31 +40,39 @@ const YouTubeShorts = () => {
         </div>
 
         <AnimatedSection delay={0.4} direction="up">
-          <div className="max-w-6xl mx-auto">
-            <div ref={sliderRef} className="shorts-slider">
-              {shortsVideos.map((url, index) => (
-                <div key={index} className="shorts-slide">
-                  <iframe src={url} loading="lazy" allowFullScreen title={`YouTube Short ${index + 1}`} />
+          <div
+            className="infinite-slider-wrapper"
+            onMouseEnter={() => setIsPaused(true)}
+            onMouseLeave={() => setIsPaused(false)}
+          >
+            <div
+              className="infinite-slider-track"
+              style={{ animationPlayState: isPaused ? "paused" : "running" }}
+            >
+              {shortsVideos.map((video, index) => (
+                <div key={`a-${index}`} className="shorts-slide">
+                  <iframe src={video.url} loading="lazy" allowFullScreen title={video.title} />
+                </div>
+              ))}
+              {shortsVideos.map((video, index) => (
+                <div key={`b-${index}`} className="shorts-slide">
+                  <iframe src={video.url} loading="lazy" allowFullScreen title={video.title} />
                 </div>
               ))}
             </div>
+          </div>
 
-            <div className="pagination-wrapper">
-              <div ref={barRef} className="pagination-bar" />
-            </div>
-
-            <div className="flex justify-center mt-10">
-              <Button 
-                asChild 
-                size="xl" 
-                className="bg-[#FF0000] hover:bg-[#CC0000] text-white shadow-lg hover:shadow-xl transition-transform hover:scale-105"
-              >
-                <a href="https://www.youtube.com/@agendac-fr/shorts" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
-                  <Youtube size={24} />
-                  Voir notre chaîne YouTube
-                </a>
-              </Button>
-            </div>
+          <div className="flex justify-center mt-10">
+            <Button 
+              asChild 
+              size="xl" 
+              className="bg-[#FF0000] hover:bg-[#CC0000] text-white shadow-lg hover:shadow-xl transition-transform hover:scale-105"
+            >
+              <a href="https://www.youtube.com/@agendac-fr/shorts" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
+                <Youtube size={24} />
+                Voir notre chaîne YouTube
+              </a>
+            </Button>
           </div>
         </AnimatedSection>
       </div>
