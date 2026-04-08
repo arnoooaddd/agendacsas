@@ -1,4 +1,4 @@
-import { useParams, Link } from "react-router-dom";
+import { useParams, Link, Navigate, useSearchParams } from "react-router-dom";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { blogArticles } from "@/data/blogArticles";
@@ -45,18 +45,25 @@ const slugRedirects: Record<string, string> = {
   "pourquoi-acheter-des-leads-renovation-mauvaise-strategie-2026": "achat-leads-renovation-mauvaise-strategie",
 };
 
-const BlogArticle = () => {
+// Wrapper component that handles redirects before rendering the main component
+const BlogArticleRedirectGuard = () => {
   const { slug } = useParams();
+  const [searchParams] = useSearchParams();
 
-  const resolvedSlug = slug && slugRedirects[slug] ? slugRedirects[slug] : slug;
-  const article = blogArticles.find((a) => a.slug === resolvedSlug);
+  // If old slug, redirect immediately — no hooks below, clean early return
+  if (slug && slugRedirects[slug]) {
+    const search = searchParams.toString();
+    const newUrl = `/blog/${slugRedirects[slug]}${search ? `?${search}` : ""}`;
+    return <Navigate to={newUrl} replace />;
+  }
+
+  return <BlogArticleContent slug={slug} />;
+};
+
+const BlogArticleContent = ({ slug }: { slug: string | undefined }) => {
+  const article = blogArticles.find((a) => a.slug === slug);
 
   useEffect(() => {
-    // Redirect old slugs to new ones, preserving URL params
-    if (slug && slugRedirects[slug]) {
-      const search = window.location.search;
-      window.history.replaceState(null, "", `/blog/${slugRedirects[slug]}${search}`);
-    }
     window.scrollTo(0, 0);
   }, [slug]);
 
@@ -105,7 +112,7 @@ const BlogArticle = () => {
       year: "numeric",
     });
 
-  const ArticleContent = resolvedSlug ? articleComponents[resolvedSlug] : null;
+  const ArticleContent = slug ? articleComponents[slug] : null;
   const cover = getCoverImage(article.coverImage);
 
   return (
@@ -193,4 +200,4 @@ const BlogArticle = () => {
   );
 };
 
-export default BlogArticle;
+export default BlogArticleRedirectGuard;
