@@ -1,4 +1,4 @@
-import { useParams, Link } from "react-router-dom";
+import { useParams, Link, Navigate } from "react-router-dom";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { blogArticles } from "@/data/blogArticles";
@@ -26,8 +26,34 @@ const articleComponents: Record<string, React.ComponentType> = {
   "generation-leads-fiables-entreprise-renovation": lazy(() => import("@/components/blog/ArticleSeDemarquerArnaquesRenovation")),
 };
 
+// Redirects from old blog slugs to new SEO-optimized URLs
+const slugRedirects: Record<string, string> = {
+  "se-demarquer-arnaques-renovation": "generation-leads-fiables-entreprise-renovation",
+  "publicite-renovation-2026": "strategie-publicite-entreprise-renovation-2026",
+  "retargeting-prospects-renovation": "retargeting-leads-perdus-renovation-habitat",
+  "plateforme-publicite-renovation": "google-ads-meta-ads-entreprise-renovation",
+  "contacter-leads-reseaux-sociaux-renovation": "contacter-leads-facebook-ads-renovation-rdv",
+  "niveaux-qualification-prospect-renovation": "qualification-prospect-tunnel-vente-renovation",
+  "externaliser-prise-rdv-renovation": "externaliser-prise-rdv-entreprise-renovation",
+  "choisir-agence-marketing-renovation": "choisir-agence-marketing-renovation-btp",
+  "delai-resultats-acquisition-digitale-renovation": "delai-resultats-acquisition-clients-renovation",
+  "cout-publicite-renovation-habitat": "cout-publicite-google-ads-meta-ads-renovation",
+  "google-ads-vs-facebook-ads-renovation": "google-ads-vs-facebook-ads-renovation-habitat",
+  "marketing-renovation-habitat-publicite-leads": "marketing-renovation-habitat-generation-leads",
+  "arreter-achat-leads-renovation": "arreter-achat-leads-renovation-habitat",
+  "internaliser-marketing-renovation": "internaliser-externaliser-marketing-renovation-btp",
+  "pourquoi-acheter-des-leads-renovation-mauvaise-strategie-2026": "achat-leads-renovation-mauvaise-strategie",
+};
+
 const BlogArticle = () => {
   const { slug } = useParams();
+
+  // Redirect old slugs to new ones, preserving URL params
+  if (slug && slugRedirects[slug]) {
+    const search = window.location.search;
+    return <Navigate to={`/blog/${slugRedirects[slug]}${search}`} replace />;
+  }
+
   const article = blogArticles.find((a) => a.slug === slug);
 
   useEffect(() => {
