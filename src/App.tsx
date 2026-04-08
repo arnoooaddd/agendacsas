@@ -15,30 +15,10 @@ import Tournage from "./pages/Tournage";
 import Results from "./pages/Results";
 import Blog from "./pages/Blog";
 import BlogArticle from "./pages/BlogArticle";
-import BlogRedirect from "./pages/BlogRedirect";
 import PriseRendezVous from "./pages/PriseRendezVous";
 import EquipeAgendac from "./pages/EquipeAgendac";
 
 const queryClient = new QueryClient();
-
-// Old blog slugs that need redirects to new SEO-optimized URLs
-const oldBlogSlugs = [
-  "se-demarquer-arnaques-renovation",
-  "publicite-renovation-2026",
-  "retargeting-prospects-renovation",
-  "plateforme-publicite-renovation",
-  "contacter-leads-reseaux-sociaux-renovation",
-  "niveaux-qualification-prospect-renovation",
-  "externaliser-prise-rdv-renovation",
-  "choisir-agence-marketing-renovation",
-  "delai-resultats-acquisition-digitale-renovation",
-  "cout-publicite-renovation-habitat",
-  "google-ads-vs-facebook-ads-renovation",
-  "marketing-renovation-habitat-publicite-leads",
-  "arreter-achat-leads-renovation",
-  "internaliser-marketing-renovation",
-  "pourquoi-acheter-des-leads-renovation-mauvaise-strategie-2026",
-];
 
 const App = () => (
   <QueryClientProvider client={queryClient}>
@@ -64,10 +44,6 @@ const App = () => (
           <Route path="/equipe-agendac" element={<EquipeAgendac />} />
           <Route path="/blog" element={<Blog />} />
           <Route path="/blog/:slug" element={<BlogArticle />} />
-          {/* Redirects from old blog slugs to new SEO-optimized URLs */}
-          {oldBlogSlugs.map((slug) => (
-            <Route key={slug} path={`/blog/${slug}`} element={<BlogRedirect />} />
-          ))}
           <Route path="/services" element={<HashRedirect hash="hero" />} />
           <Route path="/service" element={<HashRedirect hash="hero" />} />
           <Route path="/merci" element={<NotFound />} />
