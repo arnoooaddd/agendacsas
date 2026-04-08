@@ -48,15 +48,15 @@ const slugRedirects: Record<string, string> = {
 const BlogArticle = () => {
   const { slug } = useParams();
 
-  // Redirect old slugs to new ones, preserving URL params
-  if (slug && slugRedirects[slug]) {
-    const search = window.location.search;
-    return <Navigate to={`/blog/${slugRedirects[slug]}${search}`} replace />;
-  }
-
-  const article = blogArticles.find((a) => a.slug === slug);
+  const resolvedSlug = slug && slugRedirects[slug] ? slugRedirects[slug] : slug;
+  const article = blogArticles.find((a) => a.slug === resolvedSlug);
 
   useEffect(() => {
+    // Redirect old slugs to new ones, preserving URL params
+    if (slug && slugRedirects[slug]) {
+      const search = window.location.search;
+      window.history.replaceState(null, "", `/blog/${slugRedirects[slug]}${search}`);
+    }
     window.scrollTo(0, 0);
   }, [slug]);
 
