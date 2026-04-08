@@ -271,7 +271,7 @@ const ArticleContacterLeadsReseauxSociaux = () => (
         Ces erreurs sont responsables de la majorité des pertes dans la <strong>génération de leads rénovation</strong>. Ce n'est pas un problème de qualité de leads — c'est un problème de process.
       </p>
       <p className="text-foreground font-medium">
-        👉 Pour aller plus loin : <Link to="/blog/externaliser-prise-rdv-renovation" className="text-primary hover:underline font-semibold">Pourquoi externaliser sa prise de rendez-vous en rénovation</Link>.
+        👉 Pour aller plus loin : <Link to="/blog/externaliser-prise-rdv-entreprise-renovation" className="text-primary hover:underline font-semibold">Pourquoi externaliser sa prise de rendez-vous en rénovation</Link>.
       </p>
     </section>
 

@@ -272,7 +272,7 @@ const ArticleNiveauxQualificationProspect = () => (
         </AccordionItem>
         <AccordionItem value="faq-4" className="border-border">
           <AccordionTrigger className="text-left text-foreground hover:no-underline">Faut-il utiliser Google Ads ou Facebook Ads ?</AccordionTrigger>
-          <AccordionContent className="text-muted-foreground">Les deux. <strong>Google Ads</strong> capte les 3 % (intention), <strong>Facebook Ads</strong> travaille les 17-20 %. En savoir plus dans notre <Link to="/blog/google-ads-vs-facebook-ads-renovation" className="text-primary hover:underline">comparatif</Link>.</AccordionContent>
+          <AccordionContent className="text-muted-foreground">Les deux. <strong>Google Ads</strong> capte les 3 % (intention), <strong>Facebook Ads</strong> travaille les 17-20 %. En savoir plus dans notre <Link to="/blog/google-ads-vs-facebook-ads-renovation-habitat" className="text-primary hover:underline">comparatif</Link>.</AccordionContent>
         </AccordionItem>
       </Accordion>
     </section>
@@ -281,11 +281,11 @@ const ArticleNiveauxQualificationProspect = () => (
     <section className="mb-12">
       <h2 className="text-2xl font-bold text-foreground font-display mb-6">📚 Articles connexes</h2>
       <div className="grid sm:grid-cols-2 gap-4">
-        <Link to="/blog/cout-publicite-renovation-habitat" className="block bg-muted/50 border border-border rounded-xl p-5 hover:border-primary/50 transition-colors no-underline">
+        <Link to="/blog/cout-publicite-google-ads-meta-ads-renovation" className="block bg-muted/50 border border-border rounded-xl p-5 hover:border-primary/50 transition-colors no-underline">
           <h3 className="font-semibold text-foreground mb-2">Combien coûte la publicité en rénovation ?</h3>
           <p className="text-sm text-muted-foreground">Budgets, coûts par lead et stratégie complète.</p>
         </Link>
-        <Link to="/blog/google-ads-vs-facebook-ads-renovation" className="block bg-muted/50 border border-border rounded-xl p-5 hover:border-primary/50 transition-colors no-underline">
+        <Link to="/blog/google-ads-vs-facebook-ads-renovation-habitat" className="block bg-muted/50 border border-border rounded-xl p-5 hover:border-primary/50 transition-colors no-underline">
           <h3 className="font-semibold text-foreground mb-2">Google Ads vs Facebook Ads rénovation</h3>
           <p className="text-sm text-muted-foreground">Lequel choisir pour votre entreprise ?</p>
         </Link>

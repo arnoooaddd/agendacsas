@@ -295,7 +295,7 @@ const ArticleCoutPubliciteRenovation = () => (
           <li className="flex items-start gap-2"><span className="text-destructive mt-1">•</span> <strong>Lancer avec 500 €</strong> → aucune data exploitable</li>
           <li className="flex items-start gap-2"><span className="text-destructive mt-1">•</span> <strong>Ne pas qualifier les leads</strong> → algo mal nourri</li>
           <li className="flex items-start gap-2"><span className="text-destructive mt-1">•</span> <strong>Pas de script commercial</strong> → leads gaspillés</li>
-          <li className="flex items-start gap-2"><span className="text-destructive mt-1">•</span> <strong>Pas de différenciation</strong> → <Link to="/blog/arreter-achat-leads-renovation" className="text-primary hover:underline">guerre de prix</Link></li>
+          <li className="flex items-start gap-2"><span className="text-destructive mt-1">•</span> <strong>Pas de différenciation</strong> → <Link to="/blog/arreter-achat-leads-renovation-habitat" className="text-primary hover:underline">guerre de prix</Link></li>
         </ul>
       </div>
     </section>
@@ -353,7 +353,7 @@ const ArticleCoutPubliciteRenovation = () => (
         </AccordionItem>
         <AccordionItem value="faq-3" className="border-border">
           <AccordionTrigger className="text-left text-foreground hover:no-underline">Google Ads ou Facebook Ads pour la rénovation ?</AccordionTrigger>
-          <AccordionContent className="text-muted-foreground">Les deux sont complémentaires. Les entreprises qui performent utilisent les deux dans un <Link to="/blog/google-ads-vs-facebook-ads-renovation" className="text-primary hover:underline">système structuré</Link>.</AccordionContent>
+          <AccordionContent className="text-muted-foreground">Les deux sont complémentaires. Les entreprises qui performent utilisent les deux dans un <Link to="/blog/google-ads-vs-facebook-ads-renovation-habitat" className="text-primary hover:underline">système structuré</Link>.</AccordionContent>
         </AccordionItem>
         <AccordionItem value="faq-4" className="border-border">
           <AccordionTrigger className="text-left text-foreground hover:no-underline">Comment réduire le coût d'acquisition client en rénovation ?</AccordionTrigger>
@@ -366,19 +366,19 @@ const ArticleCoutPubliciteRenovation = () => (
     <section className="mb-12">
       <h2 className="text-2xl font-bold text-foreground font-display mb-6">📚 Articles connexes</h2>
       <div className="grid sm:grid-cols-2 gap-4">
-        <Link to="/blog/google-ads-vs-facebook-ads-renovation" className="block bg-muted/50 border border-border rounded-xl p-5 hover:border-primary/50 transition-colors no-underline">
+        <Link to="/blog/google-ads-vs-facebook-ads-renovation-habitat" className="block bg-muted/50 border border-border rounded-xl p-5 hover:border-primary/50 transition-colors no-underline">
           <h3 className="font-semibold text-foreground mb-2">Google Ads vs Facebook Ads rénovation</h3>
           <p className="text-sm text-muted-foreground">Lequel choisir pour générer des clients ?</p>
         </Link>
-        <Link to="/blog/delai-resultats-acquisition-digitale-renovation" className="block bg-muted/50 border border-border rounded-xl p-5 hover:border-primary/50 transition-colors no-underline">
+        <Link to="/blog/delai-resultats-acquisition-clients-renovation" className="block bg-muted/50 border border-border rounded-xl p-5 hover:border-primary/50 transition-colors no-underline">
           <h3 className="font-semibold text-foreground mb-2">Combien de temps pour voir des résultats ?</h3>
           <p className="text-sm text-muted-foreground">Timelines et budgets réels en acquisition digitale</p>
         </Link>
-        <Link to="/blog/arreter-achat-leads-renovation" className="block bg-muted/50 border border-border rounded-xl p-5 hover:border-primary/50 transition-colors no-underline">
+        <Link to="/blog/arreter-achat-leads-renovation-habitat" className="block bg-muted/50 border border-border rounded-xl p-5 hover:border-primary/50 transition-colors no-underline">
           <h3 className="font-semibold text-foreground mb-2">Arrêter d'acheter des leads en rénovation</h3>
           <p className="text-sm text-muted-foreground">Comment sortir de la guerre des prix</p>
         </Link>
-        <Link to="/blog/internaliser-marketing-renovation" className="block bg-muted/50 border border-border rounded-xl p-5 hover:border-primary/50 transition-colors no-underline">
+        <Link to="/blog/internaliser-externaliser-marketing-renovation-btp" className="block bg-muted/50 border border-border rounded-xl p-5 hover:border-primary/50 transition-colors no-underline">
           <h3 className="font-semibold text-foreground mb-2">Internaliser ou externaliser son marketing ?</h3>
           <p className="text-sm text-muted-foreground">Le vrai coût caché pour les entreprises de rénovation</p>
         </Link>

@@ -185,7 +185,7 @@ const ArticlePubliciteRenovation2026 = () => (
       <p className="text-foreground font-medium mb-4">Avec pixel → lead récupéré et converti.</p>
 
       <p className="text-muted-foreground">
-        👉 Pour approfondir, consultez notre article sur <Link to="/blog/retargeting-prospects-renovation" className="text-primary hover:underline font-medium">le retargeting en rénovation</Link>.
+        👉 Pour approfondir, consultez notre article sur <Link to="/blog/retargeting-leads-perdus-renovation-habitat" className="text-primary hover:underline font-medium">le retargeting en rénovation</Link>.
       </p>
     </section>
 
@@ -254,11 +254,11 @@ const ArticlePubliciteRenovation2026 = () => (
     <section className="mb-12">
       <h2 className="text-2xl font-bold text-foreground font-display mb-6">📚 Articles liés</h2>
       <div className="grid sm:grid-cols-2 gap-4">
-        <Link to="/blog/retargeting-prospects-renovation" className="block bg-muted/50 border border-border rounded-xl p-5 hover:border-primary/50 transition-colors no-underline">
+        <Link to="/blog/retargeting-leads-perdus-renovation-habitat" className="block bg-muted/50 border border-border rounded-xl p-5 hover:border-primary/50 transition-colors no-underline">
           <h3 className="font-semibold text-foreground mb-2">Comment recibler ses prospects en rénovation</h3>
           <p className="text-sm text-muted-foreground">Récupérer les leads perdus grâce au retargeting.</p>
         </Link>
-        <Link to="/blog/cout-publicite-renovation-habitat" className="block bg-muted/50 border border-border rounded-xl p-5 hover:border-primary/50 transition-colors no-underline">
+        <Link to="/blog/cout-publicite-google-ads-meta-ads-renovation" className="block bg-muted/50 border border-border rounded-xl p-5 hover:border-primary/50 transition-colors no-underline">
           <h3 className="font-semibold text-foreground mb-2">Combien coûte la publicité en rénovation ?</h3>
           <p className="text-sm text-muted-foreground">Budgets, coûts par lead et stratégie complète.</p>
         </Link>
@@ -290,7 +290,7 @@ const ArticlePubliciteRenovation2026 = () => (
             Quel budget prévoir pour une stratégie multi-canal en rénovation ?
           </AccordionTrigger>
           <AccordionContent className="text-muted-foreground">
-            Pour une entreprise à +1M€ de CA, comptez 3 000 à 6 500 €/mois en combinant <strong>Google Ads</strong> et <strong>Facebook Ads</strong>. Consultez notre article sur <Link to="/blog/cout-publicite-renovation-habitat" className="text-primary hover:underline">le coût de la publicité en rénovation</Link>.
+            Pour une entreprise à +1M€ de CA, comptez 3 000 à 6 500 €/mois en combinant <strong>Google Ads</strong> et <strong>Facebook Ads</strong>. Consultez notre article sur <Link to="/blog/cout-publicite-google-ads-meta-ads-renovation" className="text-primary hover:underline">le coût de la publicité en rénovation</Link>.
           </AccordionContent>
         </AccordionItem>
         <AccordionItem value="faq-4" className="border-border">

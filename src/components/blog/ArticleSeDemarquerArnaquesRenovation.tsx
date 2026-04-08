@@ -96,7 +96,7 @@ const ArticleSeDemarquerArnaquesRenovation = () => (
       </p>
 
       <p className="text-muted-foreground">
-        Pour comprendre en détail : <Link to="/blog/pourquoi-acheter-des-leads-renovation-mauvaise-strategie-2026" className="text-primary hover:underline font-medium">Pourquoi acheter des leads en rénovation est une mauvaise stratégie</Link>.
+        Pour comprendre en détail : <Link to="/blog/achat-leads-renovation-mauvaise-strategie" className="text-primary hover:underline font-medium">Pourquoi acheter des leads en rénovation est une mauvaise stratégie</Link>.
       </p>
     </section>
 
@@ -170,7 +170,7 @@ const ArticleSeDemarquerArnaquesRenovation = () => (
       </p>
 
       <p className="text-muted-foreground">
-        Et tout connecter via le retargeting — consultez <Link to="/blog/retargeting-prospects-renovation" className="text-primary hover:underline font-medium">notre guide complet sur le retargeting en rénovation</Link>.
+        Et tout connecter via le retargeting — consultez <Link to="/blog/retargeting-leads-perdus-renovation-habitat" className="text-primary hover:underline font-medium">notre guide complet sur le retargeting en rénovation</Link>.
       </p>
     </section>
 
@@ -270,11 +270,11 @@ const ArticleSeDemarquerArnaquesRenovation = () => (
     <section className="mb-12">
       <h2 className="text-2xl font-bold text-foreground font-display mb-6">📚 Articles liés</h2>
       <div className="grid sm:grid-cols-2 gap-4">
-        <Link to="/blog/internaliser-marketing-renovation" className="block bg-muted/50 border border-border rounded-xl p-5 hover:border-primary/50 transition-colors no-underline">
+        <Link to="/blog/internaliser-externaliser-marketing-renovation-btp" className="block bg-muted/50 border border-border rounded-xl p-5 hover:border-primary/50 transition-colors no-underline">
           <h3 className="font-semibold text-foreground mb-2">Internaliser ou externaliser son marketing</h3>
           <p className="text-sm text-muted-foreground">Le vrai coût caché de l'internalisation.</p>
         </Link>
-        <Link to="/blog/retargeting-prospects-renovation" className="block bg-muted/50 border border-border rounded-xl p-5 hover:border-primary/50 transition-colors no-underline">
+        <Link to="/blog/retargeting-leads-perdus-renovation-habitat" className="block bg-muted/50 border border-border rounded-xl p-5 hover:border-primary/50 transition-colors no-underline">
           <h3 className="font-semibold text-foreground mb-2">Comment recibler ses prospects</h3>
           <p className="text-sm text-muted-foreground">Récupérer les leads perdus grâce au retargeting.</p>
         </Link>
