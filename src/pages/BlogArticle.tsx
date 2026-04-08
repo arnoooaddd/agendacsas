@@ -112,7 +112,7 @@ const BlogArticleContent = ({ slug }: { slug: string | undefined }) => {
       year: "numeric",
     });
 
-  const ArticleContent = resolvedSlug ? articleComponents[resolvedSlug] : null;
+  const ArticleContent = slug ? articleComponents[slug] : null;
   const cover = getCoverImage(article.coverImage);
 
   return (
@@ -200,4 +200,4 @@ const BlogArticleContent = ({ slug }: { slug: string | undefined }) => {
   );
 };
 
-export default BlogArticle;
+export default BlogArticleRedirectGuard;
