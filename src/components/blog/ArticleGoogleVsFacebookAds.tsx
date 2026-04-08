@@ -209,7 +209,7 @@ const ArticleGoogleVsFacebookAds = () => (
       <p className="text-muted-foreground mb-4">Et concluent que "la publicité ne marche pas".</p>
       <p className="text-foreground font-semibold mb-2">C'est faux.</p>
       <p className="text-foreground font-semibold">
-        👉 Ce qui ne marche pas, c'est l'absence de <Link to="/blog/marketing-renovation-habitat-publicite-leads" className="text-primary hover:underline">stratégie marketing globale</Link>.
+        👉 Ce qui ne marche pas, c'est l'absence de <Link to="/blog/marketing-renovation-habitat-generation-leads" className="text-primary hover:underline">stratégie marketing globale</Link>.
       </p>
     </section>
 
@@ -305,7 +305,7 @@ const ArticleGoogleVsFacebookAds = () => (
       </div>
 
       <p className="text-foreground font-medium mb-3">
-        👉 À l'inverse, un <Link to="/blog/arreter-achat-leads-renovation" className="text-primary hover:underline">système d'acquisition maîtrisé</Link> permet :
+        👉 À l'inverse, un <Link to="/blog/arreter-achat-leads-renovation-habitat" className="text-primary hover:underline">système d'acquisition maîtrisé</Link> permet :
       </p>
       <div className="bg-primary/5 border border-primary/20 rounded-xl p-6">
         <ul className="space-y-2 text-muted-foreground">
@@ -406,7 +406,7 @@ const ArticleGoogleVsFacebookAds = () => (
             Pourquoi acheter des leads n'est pas une bonne stratégie ?
           </AccordionTrigger>
           <AccordionContent className="text-muted-foreground">
-            L'<strong>achat de leads</strong> crée une dépendance aux plateformes, compresse vos marges et vous met en concurrence directe sur les prix. Un <strong>système d'acquisition</strong> maîtrisé (publicité + marque + process) offre plus de contrôle et une meilleure <em>rentabilité</em>. <Link to="/blog/pourquoi-acheter-des-leads-renovation-mauvaise-strategie-2026" className="text-primary hover:underline">En savoir plus →</Link>
+            L'<strong>achat de leads</strong> crée une dépendance aux plateformes, compresse vos marges et vous met en concurrence directe sur les prix. Un <strong>système d'acquisition</strong> maîtrisé (publicité + marque + process) offre plus de contrôle et une meilleure <em>rentabilité</em>. <Link to="/blog/achat-leads-renovation-mauvaise-strategie" className="text-primary hover:underline">En savoir plus →</Link>
           </AccordionContent>
         </AccordionItem>
         <AccordionItem value="faq-5" className="border-border">
@@ -424,16 +424,16 @@ const ArticleGoogleVsFacebookAds = () => (
     <section className="mb-8">
       <h3 className="text-lg font-bold text-foreground font-display mb-4">📚 Articles connexes</h3>
       <div className="grid sm:grid-cols-2 gap-3">
-        <Link to="/blog/marketing-renovation-habitat-publicite-leads" className="block p-4 rounded-xl border border-border hover:border-primary/50 transition-colors bg-card">
+        <Link to="/blog/marketing-renovation-habitat-generation-leads" className="block p-4 rounded-xl border border-border hover:border-primary/50 transition-colors bg-card">
           <p className="text-sm font-medium text-foreground">Marketing rénovation habitat : pourquoi la publicité fonctionne</p>
         </Link>
-        <Link to="/blog/arreter-achat-leads-renovation" className="block p-4 rounded-xl border border-border hover:border-primary/50 transition-colors bg-card">
+        <Link to="/blog/arreter-achat-leads-renovation-habitat" className="block p-4 rounded-xl border border-border hover:border-primary/50 transition-colors bg-card">
           <p className="text-sm font-medium text-foreground">Arrêter d'acheter des leads en rénovation</p>
         </Link>
-        <Link to="/blog/pourquoi-acheter-des-leads-renovation-mauvaise-strategie-2026" className="block p-4 rounded-xl border border-border hover:border-primary/50 transition-colors bg-card">
+        <Link to="/blog/achat-leads-renovation-mauvaise-strategie" className="block p-4 rounded-xl border border-border hover:border-primary/50 transition-colors bg-card">
           <p className="text-sm font-medium text-foreground">Pourquoi acheter des leads est une mauvaise stratégie en 2026</p>
         </Link>
-        <Link to="/blog/internaliser-marketing-renovation" className="block p-4 rounded-xl border border-border hover:border-primary/50 transition-colors bg-card">
+        <Link to="/blog/internaliser-externaliser-marketing-renovation-btp" className="block p-4 rounded-xl border border-border hover:border-primary/50 transition-colors bg-card">
           <p className="text-sm font-medium text-foreground">Internaliser ou externaliser son marketing en rénovation</p>
         </Link>
       </div>

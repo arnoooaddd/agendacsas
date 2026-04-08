@@ -307,7 +307,7 @@ const ArticleRetargetingProspectsRenovation = () => (
       </ul>
 
       <p className="text-muted-foreground">
-        👉 Pour comprendre quel canal activer en premier, consultez notre article <Link to="/blog/plateforme-publicite-renovation" className="text-primary hover:underline font-medium">sur quelle plateforme lancer de la publicité en rénovation</Link>.
+        👉 Pour comprendre quel canal activer en premier, consultez notre article <Link to="/blog/google-ads-meta-ads-entreprise-renovation" className="text-primary hover:underline font-medium">sur quelle plateforme lancer de la publicité en rénovation</Link>.
       </p>
     </section>
 
@@ -319,17 +319,17 @@ const ArticleRetargetingProspectsRenovation = () => (
       <h2 className="text-xl font-bold text-foreground font-display mb-4">📚 Articles liés</h2>
       <ul className="space-y-2">
         <li>
-          <Link to="/blog/google-ads-vs-facebook-ads-renovation" className="text-primary hover:underline">
+          <Link to="/blog/google-ads-vs-facebook-ads-renovation-habitat" className="text-primary hover:underline">
             Google Ads vs Facebook Ads rénovation : lequel choisir ?
           </Link>
         </li>
         <li>
-          <Link to="/blog/cout-publicite-renovation-habitat" className="text-primary hover:underline">
+          <Link to="/blog/cout-publicite-google-ads-meta-ads-renovation" className="text-primary hover:underline">
             Combien coûte la publicité en rénovation habitat ?
           </Link>
         </li>
         <li>
-          <Link to="/blog/niveaux-qualification-prospect-renovation" className="text-primary hover:underline">
+          <Link to="/blog/qualification-prospect-tunnel-vente-renovation" className="text-primary hover:underline">
             Les 4 niveaux de qualification d'un prospect en rénovation
           </Link>
         </li>

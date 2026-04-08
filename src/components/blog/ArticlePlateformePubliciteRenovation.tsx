@@ -238,7 +238,7 @@ const ArticlePlateformePubliciteRenovation = () => (
         👉 Résultat : plus de volume, meilleure qualité, <strong>coût acquisition client rénovation</strong> optimisé.
       </p>
       <p className="text-muted-foreground mt-4">
-        Pour comprendre en détail la différence entre les deux canaux : <Link to="/blog/google-ads-vs-facebook-ads-renovation" className="text-primary hover:underline font-semibold">Google Ads vs Facebook Ads rénovation : lequel choisir ?</Link>
+        Pour comprendre en détail la différence entre les deux canaux : <Link to="/blog/google-ads-vs-facebook-ads-renovation-habitat" className="text-primary hover:underline font-semibold">Google Ads vs Facebook Ads rénovation : lequel choisir ?</Link>
       </p>
     </section>
 
@@ -296,7 +296,7 @@ const ArticlePlateformePubliciteRenovation = () => (
             Quel budget prévoir pour la publicité en rénovation ?
           </AccordionTrigger>
           <AccordionContent className="text-muted-foreground">
-            Pour une entreprise à +1M€ de CA, comptez minimum 3 000 €/mois (1 500 € Meta + 1 500 € Google). Un budget performant se situe entre 5 000 et 6 500 €/mois. Consultez notre article sur le <Link to="/blog/cout-publicite-renovation-habitat" className="text-primary hover:underline">coût de la publicité en rénovation</Link>.
+            Pour une entreprise à +1M€ de CA, comptez minimum 3 000 €/mois (1 500 € Meta + 1 500 € Google). Un budget performant se situe entre 5 000 et 6 500 €/mois. Consultez notre article sur le <Link to="/blog/cout-publicite-google-ads-meta-ads-renovation" className="text-primary hover:underline">coût de la publicité en rénovation</Link>.
           </AccordionContent>
         </AccordionItem>
         <AccordionItem value="faq-3" className="border-border">
@@ -304,7 +304,7 @@ const ArticlePlateformePubliciteRenovation = () => (
             Combien de temps pour voir des résultats avec la publicité en rénovation ?
           </AccordionTrigger>
           <AccordionContent className="text-muted-foreground">
-            Meta Ads : résultats en 3 à 5 semaines. Google Ads : 60 à 90 jours pour une performance optimisée. Découvrez les timelines détaillées dans notre article sur les <Link to="/blog/delai-resultats-acquisition-digitale-renovation" className="text-primary hover:underline">délais de résultats en acquisition digitale</Link>.
+            Meta Ads : résultats en 3 à 5 semaines. Google Ads : 60 à 90 jours pour une performance optimisée. Découvrez les timelines détaillées dans notre article sur les <Link to="/blog/delai-resultats-acquisition-clients-renovation" className="text-primary hover:underline">délais de résultats en acquisition digitale</Link>.
           </AccordionContent>
         </AccordionItem>
         <AccordionItem value="faq-4" className="border-border">
@@ -312,7 +312,7 @@ const ArticlePlateformePubliciteRenovation = () => (
             Faut-il une agence marketing pour gérer ses campagnes en rénovation ?
           </AccordionTrigger>
           <AccordionContent className="text-muted-foreground">
-            Si vous n'avez pas d'expertise en <strong>marketing digital rénovation</strong> en interne, oui. Une <strong>agence marketing rénovation</strong> spécialisée apporte l'expérience et les méthodes déjà validées. Découvrez nos <Link to="/blog/choisir-agence-marketing-renovation" className="text-primary hover:underline">5 critères pour choisir la bonne agence</Link>.
+            Si vous n'avez pas d'expertise en <strong>marketing digital rénovation</strong> en interne, oui. Une <strong>agence marketing rénovation</strong> spécialisée apporte l'expérience et les méthodes déjà validées. Découvrez nos <Link to="/blog/choisir-agence-marketing-renovation-btp" className="text-primary hover:underline">5 critères pour choisir la bonne agence</Link>.
           </AccordionContent>
         </AccordionItem>
         <AccordionItem value="faq-5" className="border-border">

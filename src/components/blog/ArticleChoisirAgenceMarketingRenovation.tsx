@@ -253,7 +253,7 @@ const ArticleChoisirAgenceMarketingRenovation = () => (
         </AccordionItem>
         <AccordionItem value="faq-2" className="border-border">
           <AccordionTrigger className="text-left text-foreground hover:no-underline">Combien coûte une agence marketing BTP ?</AccordionTrigger>
-          <AccordionContent className="text-muted-foreground">Comptez 2 000 à 5 000 €/mois pour une prestation complète. C'est souvent plus rentable qu'un <Link to="/blog/internaliser-marketing-renovation" className="text-primary hover:underline">recrutement interne</Link>.</AccordionContent>
+          <AccordionContent className="text-muted-foreground">Comptez 2 000 à 5 000 €/mois pour une prestation complète. C'est souvent plus rentable qu'un <Link to="/blog/internaliser-externaliser-marketing-renovation-btp" className="text-primary hover:underline">recrutement interne</Link>.</AccordionContent>
         </AccordionItem>
         <AccordionItem value="faq-3" className="border-border">
           <AccordionTrigger className="text-left text-foreground hover:no-underline">Faut-il une agence spécialisée BTP ou généraliste ?</AccordionTrigger>
@@ -261,7 +261,7 @@ const ArticleChoisirAgenceMarketingRenovation = () => (
         </AccordionItem>
         <AccordionItem value="faq-4" className="border-border">
           <AccordionTrigger className="text-left text-foreground hover:no-underline">Pourquoi l'achat de leads est un red flag ?</AccordionTrigger>
-          <AccordionContent className="text-muted-foreground">L'achat de leads crée une dépendance totale. En savoir plus dans notre article sur <Link to="/blog/pourquoi-acheter-des-leads-renovation-mauvaise-strategie-2026" className="text-primary hover:underline">les leads en rénovation</Link>.</AccordionContent>
+          <AccordionContent className="text-muted-foreground">L'achat de leads crée une dépendance totale. En savoir plus dans notre article sur <Link to="/blog/achat-leads-renovation-mauvaise-strategie" className="text-primary hover:underline">les leads en rénovation</Link>.</AccordionContent>
         </AccordionItem>
       </Accordion>
     </section>
@@ -270,11 +270,11 @@ const ArticleChoisirAgenceMarketingRenovation = () => (
     <section className="mb-12">
       <h2 className="text-2xl font-bold text-foreground font-display mb-6">📚 Articles connexes</h2>
       <div className="grid sm:grid-cols-2 gap-4">
-        <Link to="/blog/cout-publicite-renovation-habitat" className="block bg-muted/50 border border-border rounded-xl p-5 hover:border-primary/50 transition-colors no-underline">
+        <Link to="/blog/cout-publicite-google-ads-meta-ads-renovation" className="block bg-muted/50 border border-border rounded-xl p-5 hover:border-primary/50 transition-colors no-underline">
           <h3 className="font-semibold text-foreground mb-2">Combien coûte la publicité en rénovation ?</h3>
           <p className="text-sm text-muted-foreground">Budgets, coûts par lead et stratégie 2026</p>
         </Link>
-        <Link to="/blog/internaliser-marketing-renovation" className="block bg-muted/50 border border-border rounded-xl p-5 hover:border-primary/50 transition-colors no-underline">
+        <Link to="/blog/internaliser-externaliser-marketing-renovation-btp" className="block bg-muted/50 border border-border rounded-xl p-5 hover:border-primary/50 transition-colors no-underline">
           <h3 className="font-semibold text-foreground mb-2">Internaliser ou externaliser son marketing ?</h3>
           <p className="text-sm text-muted-foreground">Le vrai coût caché pour les entreprises de rénovation</p>
         </Link>

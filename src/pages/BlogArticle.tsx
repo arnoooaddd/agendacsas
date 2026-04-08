@@ -9,28 +9,54 @@ import { getCoverImage } from "@/utils/blogImages";
 import arnaudImg from "@/assets/team/arnaud-utille.webp";
 
 const articleComponents: Record<string, React.ComponentType> = {
-  "pourquoi-acheter-des-leads-renovation-mauvaise-strategie-2026": lazy(() => import("@/components/blog/ArticleLeadsRenovation")),
-  "internaliser-marketing-renovation": lazy(() => import("@/components/blog/ArticleInternaliserMarketing")),
-  "arreter-achat-leads-renovation": lazy(() => import("@/components/blog/ArticleArreterAchatLeads")),
-  "marketing-renovation-habitat-publicite-leads": lazy(() => import("@/components/blog/ArticleMarketingRenovation")),
-  "google-ads-vs-facebook-ads-renovation": lazy(() => import("@/components/blog/ArticleGoogleVsFacebookAds")),
-  "cout-publicite-renovation-habitat": lazy(() => import("@/components/blog/ArticleCoutPubliciteRenovation")),
-  "delai-resultats-acquisition-digitale-renovation": lazy(() => import("@/components/blog/ArticleDelaiResultatsAcquisition")),
-  "choisir-agence-marketing-renovation": lazy(() => import("@/components/blog/ArticleChoisirAgenceMarketingRenovation")),
-  "externaliser-prise-rdv-renovation": lazy(() => import("@/components/blog/ArticleExternaliserPriseRdv")),
-  "niveaux-qualification-prospect-renovation": lazy(() => import("@/components/blog/ArticleNiveauxQualificationProspect")),
-  "contacter-leads-reseaux-sociaux-renovation": lazy(() => import("@/components/blog/ArticleContacterLeadsReseauxSociaux")),
-  "plateforme-publicite-renovation": lazy(() => import("@/components/blog/ArticlePlateformePubliciteRenovation")),
-  "retargeting-prospects-renovation": lazy(() => import("@/components/blog/ArticleRetargetingProspectsRenovation")),
-  "publicite-renovation-2026": lazy(() => import("@/components/blog/ArticlePubliciteRenovation2026")),
-  "se-demarquer-arnaques-renovation": lazy(() => import("@/components/blog/ArticleSeDemarquerArnaquesRenovation")),
+  "achat-leads-renovation-mauvaise-strategie": lazy(() => import("@/components/blog/ArticleLeadsRenovation")),
+  "internaliser-externaliser-marketing-renovation-btp": lazy(() => import("@/components/blog/ArticleInternaliserMarketing")),
+  "arreter-achat-leads-renovation-habitat": lazy(() => import("@/components/blog/ArticleArreterAchatLeads")),
+  "marketing-renovation-habitat-generation-leads": lazy(() => import("@/components/blog/ArticleMarketingRenovation")),
+  "google-ads-vs-facebook-ads-renovation-habitat": lazy(() => import("@/components/blog/ArticleGoogleVsFacebookAds")),
+  "cout-publicite-google-ads-meta-ads-renovation": lazy(() => import("@/components/blog/ArticleCoutPubliciteRenovation")),
+  "delai-resultats-acquisition-clients-renovation": lazy(() => import("@/components/blog/ArticleDelaiResultatsAcquisition")),
+  "choisir-agence-marketing-renovation-btp": lazy(() => import("@/components/blog/ArticleChoisirAgenceMarketingRenovation")),
+  "externaliser-prise-rdv-entreprise-renovation": lazy(() => import("@/components/blog/ArticleExternaliserPriseRdv")),
+  "qualification-prospect-tunnel-vente-renovation": lazy(() => import("@/components/blog/ArticleNiveauxQualificationProspect")),
+  "contacter-leads-facebook-ads-renovation-rdv": lazy(() => import("@/components/blog/ArticleContacterLeadsReseauxSociaux")),
+  "google-ads-meta-ads-entreprise-renovation": lazy(() => import("@/components/blog/ArticlePlateformePubliciteRenovation")),
+  "retargeting-leads-perdus-renovation-habitat": lazy(() => import("@/components/blog/ArticleRetargetingProspectsRenovation")),
+  "strategie-publicite-entreprise-renovation-2026": lazy(() => import("@/components/blog/ArticlePubliciteRenovation2026")),
+  "generation-leads-fiables-entreprise-renovation": lazy(() => import("@/components/blog/ArticleSeDemarquerArnaquesRenovation")),
+};
+
+// Redirects from old blog slugs to new SEO-optimized URLs
+const slugRedirects: Record<string, string> = {
+  "se-demarquer-arnaques-renovation": "generation-leads-fiables-entreprise-renovation",
+  "publicite-renovation-2026": "strategie-publicite-entreprise-renovation-2026",
+  "retargeting-prospects-renovation": "retargeting-leads-perdus-renovation-habitat",
+  "plateforme-publicite-renovation": "google-ads-meta-ads-entreprise-renovation",
+  "contacter-leads-reseaux-sociaux-renovation": "contacter-leads-facebook-ads-renovation-rdv",
+  "niveaux-qualification-prospect-renovation": "qualification-prospect-tunnel-vente-renovation",
+  "externaliser-prise-rdv-renovation": "externaliser-prise-rdv-entreprise-renovation",
+  "choisir-agence-marketing-renovation": "choisir-agence-marketing-renovation-btp",
+  "delai-resultats-acquisition-digitale-renovation": "delai-resultats-acquisition-clients-renovation",
+  "cout-publicite-renovation-habitat": "cout-publicite-google-ads-meta-ads-renovation",
+  "google-ads-vs-facebook-ads-renovation": "google-ads-vs-facebook-ads-renovation-habitat",
+  "marketing-renovation-habitat-publicite-leads": "marketing-renovation-habitat-generation-leads",
+  "arreter-achat-leads-renovation": "arreter-achat-leads-renovation-habitat",
+  "internaliser-marketing-renovation": "internaliser-externaliser-marketing-renovation-btp",
+  "pourquoi-acheter-des-leads-renovation-mauvaise-strategie-2026": "achat-leads-renovation-mauvaise-strategie",
 };
 
 const BlogArticle = () => {
   const { slug } = useParams();
-  const article = blogArticles.find((a) => a.slug === slug);
+
+  const resolvedSlug = slug && slugRedirects[slug] ? slugRedirects[slug] : slug;
+  const article = blogArticles.find((a) => a.slug === resolvedSlug);
 
   useEffect(() => {
+    // Redirect old slugs to new ones, preserving URL params
+    if (slug && slugRedirects[slug]) {
+      const search = window.location.search;
+      window.history.replaceState(null, "", `/blog/${slugRedirects[slug]}${search}`);
+    }
     window.scrollTo(0, 0);
   }, [slug]);
 
@@ -79,7 +105,7 @@ const BlogArticle = () => {
       year: "numeric",
     });
 
-  const ArticleContent = slug ? articleComponents[slug] : null;
+  const ArticleContent = resolvedSlug ? articleComponents[resolvedSlug] : null;
   const cover = getCoverImage(article.coverImage);
 
   return (

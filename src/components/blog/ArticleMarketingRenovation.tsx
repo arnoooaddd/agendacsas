@@ -256,7 +256,7 @@ const ArticleMarketingRenovation = () => (
       </div>
 
       <p className="text-muted-foreground">
-        <Link to="/blog/pourquoi-acheter-des-leads-renovation-mauvaise-strategie-2026" className="text-primary hover:underline font-medium">→ Lire aussi : Pourquoi acheter des leads en rénovation est une mauvaise stratégie en 2026</Link>
+        <Link to="/blog/achat-leads-renovation-mauvaise-strategie" className="text-primary hover:underline font-medium">→ Lire aussi : Pourquoi acheter des leads en rénovation est une mauvaise stratégie en 2026</Link>
       </p>
     </section>
 
@@ -382,16 +382,16 @@ const ArticleMarketingRenovation = () => (
     <section className="mb-12">
       <h3 className="text-lg font-bold text-foreground font-display mb-4">📚 Articles connexes</h3>
       <div className="grid sm:grid-cols-2 gap-3">
-        <Link to="/blog/pourquoi-acheter-des-leads-renovation-mauvaise-strategie-2026" className="block p-4 rounded-xl border border-border hover:border-primary/50 transition-colors bg-card">
+        <Link to="/blog/achat-leads-renovation-mauvaise-strategie" className="block p-4 rounded-xl border border-border hover:border-primary/50 transition-colors bg-card">
           <p className="text-sm font-medium text-foreground">Pourquoi acheter des leads en rénovation est une mauvaise stratégie en 2026</p>
         </Link>
-        <Link to="/blog/arreter-achat-leads-renovation" className="block p-4 rounded-xl border border-border hover:border-primary/50 transition-colors bg-card">
+        <Link to="/blog/arreter-achat-leads-renovation-habitat" className="block p-4 rounded-xl border border-border hover:border-primary/50 transition-colors bg-card">
           <p className="text-sm font-medium text-foreground">Arrêter d'acheter des leads : sortir de la guerre des prix en 5 étapes</p>
         </Link>
-        <Link to="/blog/google-ads-vs-facebook-ads-renovation" className="block p-4 rounded-xl border border-border hover:border-primary/50 transition-colors bg-card">
+        <Link to="/blog/google-ads-vs-facebook-ads-renovation-habitat" className="block p-4 rounded-xl border border-border hover:border-primary/50 transition-colors bg-card">
           <p className="text-sm font-medium text-foreground">Google Ads vs Facebook Ads rénovation : lequel choisir ?</p>
         </Link>
-        <Link to="/blog/internaliser-marketing-renovation" className="block p-4 rounded-xl border border-border hover:border-primary/50 transition-colors bg-card">
+        <Link to="/blog/internaliser-externaliser-marketing-renovation-btp" className="block p-4 rounded-xl border border-border hover:border-primary/50 transition-colors bg-card">
           <p className="text-sm font-medium text-foreground">Internaliser ou externaliser son marketing en rénovation</p>
         </Link>
       </div>
