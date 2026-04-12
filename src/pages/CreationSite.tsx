@@ -343,7 +343,7 @@ const CreationSite = () => {
             </div>
             <AnimatedSection delay={0.2} direction="scale">
               <div className="max-w-6xl mx-auto">
-                <div className="elfsight-app-b1e000b2-31a9-48e4-8175-d63a0e2fdacd" data-elfsight-app-lazy />
+                <div className="elfsight-app-0635f11a-49f9-4b8a-99c5-6896695156b5" data-elfsight-app-lazy />
               </div>
             </AnimatedSection>
           </div>
