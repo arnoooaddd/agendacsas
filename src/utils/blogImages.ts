@@ -15,6 +15,7 @@ import publiciteRenovation2026 from "@/assets/blog/publicite-renovation-2026.png
 import seDemarquerArnaques from "@/assets/blog/se-demarquer-arnaques-renovation.png";
 
 const coverImages: Record<string, string> = {
+  // Anciennes clés (compat)
   "se-demarquer-arnaques-renovation": seDemarquerArnaques,
   "publicite-renovation-2026": publiciteRenovation2026,
   "retargeting-prospects-renovation": retargetingProspects,
@@ -30,6 +31,23 @@ const coverImages: Record<string, string> = {
   "choisir-agence-marketing-renovation": choisirAgence,
   "externaliser-prise-rdv-renovation": externaliserRdv,
   "niveaux-qualification-prospect-renovation": niveauxQualification,
+
+  // Nouvelles clés (slugs SEO actuels)
+  "generation-leads-fiables-entreprise-renovation": seDemarquerArnaques,
+  "strategie-publicite-entreprise-renovation-2026": publiciteRenovation2026,
+  "retargeting-leads-perdus-renovation-habitat": retargetingProspects,
+  "google-ads-meta-ads-entreprise-renovation": plateformePublicite,
+  "contacter-leads-facebook-ads-renovation-rdv": contacterLeads,
+  "qualification-prospect-tunnel-vente-renovation": niveauxQualification,
+  "externaliser-prise-rdv-entreprise-renovation": externaliserRdv,
+  "choisir-agence-marketing-renovation-btp": choisirAgence,
+  "delai-resultats-acquisition-clients-renovation": delaiResultats,
+  "cout-publicite-google-ads-meta-ads-renovation": coutPublicite,
+  "google-ads-vs-facebook-ads-renovation-habitat": googleVsFacebookAds,
+  "marketing-renovation-habitat-generation-leads": marketingRenovation,
+  "arreter-achat-leads-renovation-habitat": arreterAchatLeads,
+  "internaliser-externaliser-marketing-renovation-btp": internaliserMarketing,
+  "achat-leads-renovation-mauvaise-strategie": leadsRenovation,
 };
 
 export const getCoverImage = (key: string): string => {
