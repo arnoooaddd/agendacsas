@@ -17,6 +17,8 @@ import Blog from "./pages/Blog";
 import BlogArticle from "./pages/BlogArticle";
 import PriseRendezVous from "./pages/PriseRendezVous";
 import EquipeAgendac from "./pages/EquipeAgendac";
+import Presentation from "./pages/Presentation";
+import Confirmation from "./pages/Confirmation";
 
 const queryClient = new QueryClient();
 
@@ -42,6 +44,8 @@ const App = () => (
           <Route path="/tournage" element={<Tournage />} />
           <Route path="/prise-rendez-vous" element={<PriseRendezVous />} />
           <Route path="/equipe-agendac" element={<EquipeAgendac />} />
+          <Route path="/presentation" element={<Presentation />} />
+          <Route path="/confirmation" element={<Confirmation />} />
           <Route path="/blog" element={<Blog />} />
           <Route path="/blog/:slug" element={<BlogArticle />} />
           <Route path="/services" element={<HashRedirect hash="hero" />} />
