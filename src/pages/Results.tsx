@@ -236,7 +236,9 @@ const Results = () => {
                       {/* Company details */}
                       <div className="space-y-1.5 text-sm">
                         <p className="font-semibold text-foreground">Société {study.company}</p>
-                        <p className="text-muted-foreground">SIREN : {study.siren}</p>
+                        {study.siren && (
+                          <p className="text-muted-foreground">SIREN : {study.siren}</p>
+                        )}
                         {study.website && (
                           <a href={study.website} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1 text-primary hover:underline text-sm">
                             <ExternalLink size={13} /> {study.website.replace("https://", "").replace("www.", "")}
