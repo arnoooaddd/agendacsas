@@ -77,6 +77,16 @@ const caseStudies: CaseStudy[] = [
     photos: [],
   },
   {
+    name: "Anthony PROPERZIO",
+    headline: "11 signatures sur 18 RDV de son premier pack Agendac",
+    company: "Stores et Fenêtres du Golfe",
+    siren: "",
+    before: "Entrants liés uniquement au bouche-à-oreille, dans un secteur premium très concurrentiel (pergolas et menuiseries haut de gamme dans le Golfe de Saint-Tropez).",
+    after: "11/18 signés sur son premier pack de rendez-vous Agendac. Demandes régulières et prospects vraiment qualifiés. Collaboration lancée en décembre 2025.",
+    loomId: "1f323a8804894ab886bcccc0aee2d361",
+    photos: [],
+  },
+  {
     name: "Fabio VALERO",
     headline: "100% des demandes qualifiées",
     company: "BAS Construction",
@@ -96,6 +106,7 @@ const caseStudies: CaseStudy[] = [
     website: "https://plaine-solaire.fr",
     before: "Chantiers 100% via le bouche-à-oreille, fluctuations dues aux aléas de l'industrie.",
     after: "Demande entrante maîtrisée, rendez-vous chaque semaine même pendant les périodes tranquilles.",
+    loomId: "486a59765db8471e9175bc7dc26ee5dc",
     elfsightReviewId: "f328e299-e046-405c-a121-2857dc1863d8",
     googleReviewLink: "https://maps.app.goo.gl/JRRB2dM5GyNDqEH68",
     photos: [{ src: plainePhoto, caption: "Rencontre avec M. Unalan à Veauche — Août 2025" }],
@@ -225,7 +236,9 @@ const Results = () => {
                       {/* Company details */}
                       <div className="space-y-1.5 text-sm">
                         <p className="font-semibold text-foreground">Société {study.company}</p>
-                        <p className="text-muted-foreground">SIREN : {study.siren}</p>
+                        {study.siren && (
+                          <p className="text-muted-foreground">SIREN : {study.siren}</p>
+                        )}
                         {study.website && (
                           <a href={study.website} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1 text-primary hover:underline text-sm">
                             <ExternalLink size={13} /> {study.website.replace("https://", "").replace("www.", "")}

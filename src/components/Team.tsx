@@ -9,7 +9,6 @@ import samiImg from "@/assets/team/sami-ait-hamou.webp";
 import manonImg from "@/assets/team/rachad-ait-hamou.webp";
 import paulineImg from "@/assets/team/pauline-pietre.webp";
 import andreiImg from "@/assets/team/andrei-avadanii.webp";
-import marceauImg from "@/assets/team/marceau-david.webp";
 import omarImg from "@/assets/team/omar-troussi.webp";
 import gabrielImg from "@/assets/team/gabriel-ageron.webp";
 import mickaelImg from "@/assets/team/mickael-berjaz.webp";
@@ -26,7 +25,6 @@ const otherMembers = [
   { name: "Sami AIT HAMOU", image: samiImg },
   { name: "Pauline PIETRÉ", image: paulineImg },
   { name: "Andrei AVADANII", image: andreiImg },
-  { name: "Marceau DAVID", image: marceauImg },
   { name: "Omar TROUSSI", image: omarImg },
   { name: "Manon ODIER", image: manonImg },
   { name: "Gabriel AGERON", image: gabrielImg },

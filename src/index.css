@@ -398,3 +398,52 @@
     animation-duration: 18s;
   }
 }
+
+/* Reviews scrolling bands */
+.reviews-band-wrapper {
+  overflow: hidden;
+  width: 100%;
+  mask-image: linear-gradient(to right, transparent 0%, black 4%, black 96%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to right, transparent 0%, black 4%, black 96%, transparent 100%);
+}
+
+@keyframes reviews-scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+@keyframes reviews-scroll-reverse {
+  0% { transform: translateX(-50%); }
+  100% { transform: translateX(0); }
+}
+
+.reviews-band-track {
+  display: flex;
+  gap: 20px;
+  width: max-content;
+  padding: 12px 0;
+  animation: reviews-scroll 60s linear infinite;
+}
+
+.reviews-band-track.reverse {
+  animation: reviews-scroll-reverse 60s linear infinite;
+}
+
+.reviews-band-track:hover {
+  animation-play-state: paused;
+}
+
+.reviews-band-card {
+  flex: 0 0 320px;
+  min-height: 200px;
+  border-radius: 16px;
+}
+
+@media (max-width: 768px) {
+  .reviews-band-card {
+    flex: 0 0 280px;
+  }
+  .reviews-band-track {
+    animation-duration: 45s;
+  }
+}

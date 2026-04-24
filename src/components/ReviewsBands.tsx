@@ -1,5 +1,4 @@
 import { Star, ExternalLink } from "lucide-react";
-import AnimatedSection from "./AnimatedSection";
 import { googleReviews, type GoogleReview } from "@/data/googleReviews";
 
 const GOOGLE_REVIEWS_URL = "https://maps.app.goo.gl/TNdbPMnYo7pMY9e18";
@@ -35,14 +34,7 @@ const ReviewCard = ({ review }: { review: GoogleReview }) => (
   </article>
 );
 
-const ReviewsBand = ({
-  reviews,
-  reverse = false,
-}: {
-  reviews: GoogleReview[];
-  reverse?: boolean;
-}) => {
-  // Duplicate for seamless infinite loop
+const Band = ({ reviews, reverse = false }: { reviews: GoogleReview[]; reverse?: boolean }) => {
   const items = [...reviews, ...reviews];
   return (
     <div className="reviews-band-wrapper">
@@ -55,54 +47,34 @@ const ReviewsBand = ({
   );
 };
 
-const GoogleReviews = () => {
-  // Split reviews into two bands
+/**
+ * Compact two-band scrolling Google reviews — for embedding inside an existing
+ * section with its own heading.
+ */
+const ReviewsBands = ({ showLink = true }: { showLink?: boolean }) => {
   const half = Math.ceil(googleReviews.length / 2);
   const firstBand = googleReviews.slice(0, half);
   const secondBand = googleReviews.slice(half).concat(googleReviews.slice(0, Math.max(0, 6 - (googleReviews.length - half))));
 
   return (
-    <section id="temoignages" className="py-20 relative overflow-hidden bg-[#DFF1FF]">
-      <div className="absolute inset-0 gradient-mesh opacity-40" />
-
-      <div className="container mx-auto px-4 relative z-10">
-        <div className="text-center max-w-3xl mx-auto mb-12">
-          <AnimatedSection>
-            <div className="inline-flex items-center gap-2 glass-card px-4 py-2 mb-6 bg-white/80">
-              <Star size={16} className="text-yellow-500 fill-yellow-500" />
-              <span className="text-sm font-medium text-foreground/80">Avis vérifiés Google</span>
-            </div>
-          </AnimatedSection>
-          <AnimatedSection delay={0.1}>
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground mb-4 tracking-tight">
-              Ce qu'en disent{" "}
-              <span className="text-gradient">vos confrères</span>
-            </h2>
-          </AnimatedSection>
-          <AnimatedSection delay={0.2}>
-            <p className="text-muted-foreground text-lg">+60 entreprises déjà partenaires Agendac · 4.9/5 sur Google</p>
-          </AnimatedSection>
+    <div className="space-y-5">
+      <Band reviews={firstBand} />
+      <Band reviews={secondBand} reverse />
+      {showLink && (
+        <div className="flex justify-center pt-2">
+          <a
+            href={GOOGLE_REVIEWS_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 text-sm font-medium text-primary hover:underline"
+          >
+            <ExternalLink size={14} />
+            Voir tous les avis Google
+          </a>
         </div>
-      </div>
-
-      <div className="space-y-6">
-        <ReviewsBand reviews={firstBand} />
-        <ReviewsBand reviews={secondBand} reverse />
-      </div>
-
-      <div className="container mx-auto px-4 relative z-10 mt-10 flex justify-center">
-        <a
-          href={GOOGLE_REVIEWS_URL}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="inline-flex items-center gap-2 text-sm font-medium text-primary hover:underline"
-        >
-          <ExternalLink size={14} />
-          Voir tous les avis Google
-        </a>
-      </div>
-    </section>
+      )}
+    </div>
   );
 };
 
-export default GoogleReviews;
+export default ReviewsBands;

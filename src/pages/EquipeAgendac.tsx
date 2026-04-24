@@ -12,7 +12,6 @@ import samiImg from "@/assets/team/sami-ait-hamou.webp";
 import manonImg from "@/assets/team/rachad-ait-hamou.webp";
 import paulineImg from "@/assets/team/pauline-pietre.webp";
 import andreiImg from "@/assets/team/andrei-avadanii.webp";
-import marceauImg from "@/assets/team/marceau-david.webp";
 import omarImg from "@/assets/team/omar-troussi.webp";
 import gabrielImg from "@/assets/team/gabriel-ageron.webp";
 import mickaelImg from "@/assets/team/mickael-berjaz.webp";
@@ -29,7 +28,6 @@ const teamMembers = [
   { name: "Sami AIT HAMOU", role: "Responsable communication", image: samiImg },
   { name: "Pauline PIETRÉ", role: "Vidéaste", image: paulineImg },
   { name: "Andrei AVADANII", role: "Monteur vidéo et designer", image: andreiImg },
-  { name: "Marceau DAVID", role: "Responsable partenariats", image: marceauImg },
   { name: "Omar TROUSSI", role: "Responsable publicités", image: omarImg },
   { name: "Manon ODIER", role: "Gestion clientèle", image: manonImg },
   { name: "Gabriel AGERON", role: "Designer site internet", image: gabrielImg },
