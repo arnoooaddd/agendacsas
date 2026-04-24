@@ -419,9 +419,9 @@
 
 .reviews-band-track {
   display: flex;
-  gap: 20px;
+  gap: 14px;
   width: max-content;
-  padding: 12px 0;
+  padding: 8px 0;
   animation: reviews-scroll 60s linear infinite;
 }
 

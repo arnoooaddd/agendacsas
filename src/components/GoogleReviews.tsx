@@ -56,14 +56,12 @@ const ReviewsBand = ({
 };
 
 const GoogleReviews = () => {
-  // Split reviews into three bands
-  const total = googleReviews.length;
-  const third = Math.ceil(total / 3);
+  // Split reviews into two bands
+  const half = Math.ceil(googleReviews.length / 2);
   const ensure = (arr: GoogleReview[]) =>
     arr.length >= 5 ? arr : arr.concat(googleReviews).slice(0, Math.max(arr.length, 5));
-  const band1 = ensure(googleReviews.slice(0, third));
-  const band2 = ensure(googleReviews.slice(third, third * 2));
-  const band3 = ensure(googleReviews.slice(third * 2));
+  const band1 = ensure(googleReviews.slice(0, half));
+  const band2 = ensure(googleReviews.slice(half));
 
   return (
     <section id="temoignages" className="py-20 relative overflow-hidden bg-[#DFF1FF]">
@@ -92,7 +90,6 @@ const GoogleReviews = () => {
       <div className="space-y-6">
         <ReviewsBand reviews={band1} />
         <ReviewsBand reviews={band2} reverse />
-        <ReviewsBand reviews={band3} />
       </div>
 
       <div className="container mx-auto px-4 relative z-10 mt-10 flex justify-center">
