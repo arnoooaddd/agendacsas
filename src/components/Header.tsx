@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from "react";
 import { Button } from "@/components/ui/button";
-import { Menu, X, ChevronDown, Star } from "lucide-react";
+import { Menu, X, ChevronDown, Star, Trophy } from "lucide-react";
 import logoAgendac from "@/assets/logo-agendac.webp";
 
 const Header = () => {
@@ -27,7 +27,6 @@ const Header = () => {
   }, []);
 
   const navLinks = [
-    { label: "Résultats partenaires", href: "/resultats-clients-agendac" },
     { label: "Blog", href: "/blog" },
     { label: "Nous contacter", href: "#contact" },
   ];
@@ -90,6 +89,13 @@ const Header = () => {
             </div>
             {/* Équipe Agendac */}
             <a
+              href="/resultats-clients-agendac"
+              className="px-3 py-2 text-foreground/70 hover:text-foreground text-sm font-medium transition-colors rounded-lg hover:bg-muted/30 inline-flex items-center gap-1.5"
+            >
+              <Trophy size={14} className="text-secondary" />
+              Résultats partenaires
+            </a>
+            <a
               href="/equipe-agendac"
               className="px-3 py-2 text-foreground/70 hover:text-foreground text-sm font-medium transition-colors rounded-lg hover:bg-muted/30"
             >
@@ -148,6 +154,14 @@ const Header = () => {
               </div>
             )}
             {/* Équipe Agendac */}
+            <a
+              href="/resultats-clients-agendac"
+              className="text-foreground/70 hover:text-foreground font-medium py-3 px-4 rounded-xl hover:bg-muted/30 transition-colors flex items-center gap-2"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              <Trophy size={14} className="text-secondary" />
+              Résultats partenaires
+            </a>
             <a
               href="/equipe-agendac"
               className="text-foreground/70 hover:text-foreground font-medium py-3 px-4 rounded-xl hover:bg-muted/30 transition-colors"
