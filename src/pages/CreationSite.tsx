@@ -221,9 +221,7 @@ const CreationSite = () => {
               </AnimatedSection>
             </div>
             <AnimatedSection delay={0.2} direction="scale">
-              <div className="max-w-6xl mx-auto glass-card p-6 border-gradient bg-white/80">
-                <div className="elfsight-app-7b392c24-b2f9-41a6-a0a1-e7b021fe02f7" data-elfsight-app-lazy />
-              </div>
+              <ReviewsBands />
             </AnimatedSection>
           </div>
         </section>
