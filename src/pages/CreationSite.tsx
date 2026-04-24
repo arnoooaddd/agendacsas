@@ -4,6 +4,7 @@ import ServiceFooter from "@/components/ServiceFooter";
 import AnimatedSection from "@/components/AnimatedSection";
 import SectionCTA from "@/components/SectionCTA";
 import ServiceFloatingElements from "@/components/ServiceFloatingElements";
+import ReviewsBands from "@/components/ReviewsBands";
 import { Globe, CheckCircle, Star, ArrowRight, Smartphone, Search, BarChart3, MessageSquare, Languages } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
