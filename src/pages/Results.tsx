@@ -43,7 +43,7 @@ const caseStudies: CaseStudy[] = [
     siren: "922344551",
     before: "Dépendance au bouche-à-oreille, pas de croissance maîtrisée.",
     after: "x7,2 sur son investissement initial en 32 jours.",
-    loomId: "2c3056d9a2c249319ebda1af5158a722",
+    loomId: "486a59765db8471e9175bc7dc26ee5dc",
     elfsightReviewId: "8cf0bfac-5dd3-4a72-bdb0-c6a2b8f0ec73",
     googleReviewLink: "https://maps.app.goo.gl/83onr3AhDpU9mGnt9",
     photos: [
@@ -93,7 +93,7 @@ const caseStudies: CaseStudy[] = [
     siren: "952429967",
     before: "Peu de visibilité en ligne.",
     after: "93% de rendez-vous pertinents, un planning rempli.",
-    loomId: "486a59765db8471e9175bc7dc26ee5dc",
+    loomId: "1fb4dd4067094adb9422a1e9a0c42500",
     elfsightReviewId: "458e6f96-6f95-4a01-805b-f652d0c986b5",
     googleReviewLink: "https://maps.app.goo.gl/igVcjpsA1EWhU2Qy9",
     photos: [],
@@ -152,11 +152,11 @@ const Results = () => {
               <div className="text-center max-w-4xl mx-auto">
                 <div className="inline-flex items-center gap-2 glass-card px-5 py-2.5 mb-6">
                   <Trophy size={16} className="text-secondary" />
-                  <span className="text-sm font-medium text-foreground/80">Résultats vérifiables</span>
+                  <span className="text-sm font-medium text-foreground/80">Résultats partenaires</span>
                 </div>
                 <h1 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-foreground mb-6 tracking-tight leading-tight">
                   Vos confrères obtiennent d'
-                  <span className="text-gradient">excellents résultats</span>
+                  <span className="text-gradient">excellents résultats</span> avec Agendac
                 </h1>
                 <p className="text-muted-foreground text-lg max-w-2xl mx-auto mb-10">
                   La preuve en chiffres, en vidéos et en rencontres. Chaque entreprise ci-dessous est vérifiable.
