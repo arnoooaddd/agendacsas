@@ -52,14 +52,21 @@ const Band = ({ reviews, reverse = false }: { reviews: GoogleReview[]; reverse?:
  * section with its own heading.
  */
 const ReviewsBands = ({ showLink = true }: { showLink?: boolean }) => {
-  const half = Math.ceil(googleReviews.length / 2);
-  const firstBand = googleReviews.slice(0, half);
-  const secondBand = googleReviews.slice(half).concat(googleReviews.slice(0, Math.max(0, 6 - (googleReviews.length - half))));
+  // Split reviews into 3 bands for richer scrolling display
+  const total = googleReviews.length;
+  const third = Math.ceil(total / 3);
+  const band1 = googleReviews.slice(0, third);
+  const band2 = googleReviews.slice(third, third * 2);
+  const band3 = googleReviews.slice(third * 2);
+  // Ensure each band has enough cards for a smooth loop
+  const ensure = (arr: GoogleReview[]) =>
+    arr.length >= 5 ? arr : arr.concat(googleReviews).slice(0, Math.max(arr.length, 5));
 
   return (
     <div className="space-y-5">
-      <Band reviews={firstBand} />
-      <Band reviews={secondBand} reverse />
+      <Band reviews={ensure(band1)} />
+      <Band reviews={ensure(band2)} reverse />
+      <Band reviews={ensure(band3)} />
       {showLink && (
         <div className="flex justify-center pt-2">
           <a
