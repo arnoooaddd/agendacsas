@@ -405,6 +405,8 @@
   width: 100%;
   mask-image: linear-gradient(to right, transparent 0%, black 4%, black 96%, transparent 100%);
   -webkit-mask-image: linear-gradient(to right, transparent 0%, black 4%, black 96%, transparent 100%);
+  isolation: isolate;
+  display: block;
 }
 
 @keyframes reviews-scroll {
@@ -423,6 +425,8 @@
   width: max-content;
   padding: 8px 0;
   animation: reviews-scroll 60s linear infinite;
+  will-change: transform;
+  transform: translateZ(0);
 }
 
 .reviews-band-track.reverse {
@@ -444,6 +448,9 @@
     flex: 0 0 280px;
   }
   .reviews-band-track {
-    animation-duration: 45s;
+    animation-duration: 90s;
+  }
+  .reviews-band-track.reverse {
+    animation-duration: 90s;
   }
 }
