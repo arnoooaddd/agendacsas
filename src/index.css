@@ -423,6 +423,8 @@
   width: max-content;
   padding: 8px 0;
   animation: reviews-scroll 60s linear infinite;
+  will-change: transform;
+  transform: translateZ(0);
 }
 
 .reviews-band-track.reverse {
@@ -444,6 +446,9 @@
     flex: 0 0 280px;
   }
   .reviews-band-track {
-    animation-duration: 45s;
+    animation-duration: 90s;
+  }
+  .reviews-band-track.reverse {
+    animation-duration: 90s;
   }
 }
