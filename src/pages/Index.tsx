@@ -11,6 +11,7 @@ import Gallery from "@/components/Gallery";
 import FAQ from "@/components/FAQ";
 import CaseStudy from "@/components/CaseStudy";
 import ExemplesTournage from "@/components/ExemplesTournage";
+import RelatedArticles from "@/components/RelatedArticles";
 import Footer from "@/components/Footer";
 
 const Index = () => {
@@ -30,6 +31,14 @@ const Index = () => {
         <Gallery />
         <FAQ />
         <CaseStudy />
+        <RelatedArticles
+          slugs={[
+            "internaliser-externaliser-marketing-renovation-btp",
+            "achat-leads-renovation-mauvaise-strategie",
+            "google-ads-vs-facebook-ads-renovation-habitat",
+          ]}
+          subtitle="Décryptages, stratégies et chiffres pour structurer votre acquisition en rénovation de l'habitat."
+        />
       </main>
       <Footer />
     </div>

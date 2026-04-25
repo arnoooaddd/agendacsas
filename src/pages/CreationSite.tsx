@@ -5,6 +5,7 @@ import AnimatedSection from "@/components/AnimatedSection";
 import SectionCTA from "@/components/SectionCTA";
 import ServiceFloatingElements from "@/components/ServiceFloatingElements";
 import ReviewsBands from "@/components/ReviewsBands";
+import RelatedArticles from "@/components/RelatedArticles";
 import { Globe, CheckCircle, Star, ArrowRight, Smartphone, Search, BarChart3, MessageSquare, Languages } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
@@ -368,6 +369,11 @@ const CreationSite = () => {
             </AnimatedSection>
           </div>
         </section>
+
+        <RelatedArticles
+          slugs={["generation-leads-fiables-entreprise-renovation"]}
+          subtitle="Un site qui inspire confiance : la première arme contre les arnaques en rénovation."
+        />
       </main>
       <ServiceFooter />
     </div>

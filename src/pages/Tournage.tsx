@@ -6,6 +6,7 @@ import SectionCTA from "@/components/SectionCTA";
 import ServiceFloatingElements from "@/components/ServiceFloatingElements";
 import ExemplesTournage from "@/components/ExemplesTournage";
 import ReviewsBands from "@/components/ReviewsBands";
+import RelatedArticles from "@/components/RelatedArticles";
 import { Video, CheckCircle, Star, ArrowRight, FileText, Clock, Film, Repeat, Package } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
@@ -153,6 +154,11 @@ const Tournage = () => {
             </AnimatedSection>
           </div>
         </section>
+
+        <RelatedArticles
+          slugs={["generation-leads-fiables-entreprise-renovation"]}
+          subtitle="Construisez une image de marque qui rassure et démarquez-vous des arnaques en rénovation."
+        />
       </main>
       <Footer />
     </div>
