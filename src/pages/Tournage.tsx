@@ -154,6 +154,11 @@ const Tournage = () => {
             </AnimatedSection>
           </div>
         </section>
+
+        <RelatedArticles
+          slugs={["generation-leads-fiables-entreprise-renovation"]}
+          subtitle="Construisez une image de marque qui rassure et démarquez-vous des arnaques en rénovation."
+        />
       </main>
       <Footer />
     </div>

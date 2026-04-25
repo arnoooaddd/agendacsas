@@ -5,6 +5,7 @@ import AnimatedSection from "@/components/AnimatedSection";
 import SectionCTA from "@/components/SectionCTA";
 import ServiceFloatingElements from "@/components/ServiceFloatingElements";
 import ReviewsBands from "@/components/ReviewsBands";
+import RelatedArticles from "@/components/RelatedArticles";
 import { Share2, Facebook, Instagram, Youtube, Linkedin, MapPin, Settings, CheckCircle, Star, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
