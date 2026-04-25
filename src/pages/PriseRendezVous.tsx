@@ -6,6 +6,7 @@ import SectionCTA from "@/components/SectionCTA";
 import ExemplesTournage from "@/components/ExemplesTournage";
 import GoogleReviews from "@/components/GoogleReviews";
 import CaseStudy from "@/components/CaseStudy";
+import RelatedArticles from "@/components/RelatedArticles";
 import { CalendarCheck, CheckCircle, Star, ArrowRight, Shield, Target, Clock, Users, Zap, ThumbsUp } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
@@ -207,6 +208,15 @@ const PriseRendezVous = () => {
 
         {/* Exemples de tournage */}
         <ExemplesTournage ctaMode="contact" />
+
+        <RelatedArticles
+          slugs={[
+            "externaliser-prise-rdv-entreprise-renovation",
+            "contacter-leads-facebook-ads-renovation-rdv",
+            "cout-publicite-google-ads-meta-ads-renovation",
+          ]}
+          subtitle="Approfondissez les leviers de la prise de rendez-vous et de l'acquisition en rénovation."
+        />
       </main>
       <Footer />
     </div>

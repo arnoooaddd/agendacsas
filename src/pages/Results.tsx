@@ -3,6 +3,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import AnimatedSection from "@/components/AnimatedSection";
 import SectionCTA from "@/components/SectionCTA";
+import RelatedArticles from "@/components/RelatedArticles";
 import { TrendingUp, ExternalLink, Star, Camera, Trophy, Play } from "lucide-react";
 
 import lbdmPhoto from "@/assets/results/lbdm.webp";
@@ -384,6 +385,10 @@ const Results = () => {
         <div className="hidden lg:block">
           <div className="elfsight-app-a7ff1cfb-bff4-4e9a-845d-4c2803668e5a" data-elfsight-app-lazy />
         </div>
+        <RelatedArticles
+          slugs={["choisir-agence-marketing-renovation-btp"]}
+          subtitle="Choisir le bon partenaire marketing en rénovation : ce qu'il faut vérifier avant de signer."
+        />
       </main>
       <Footer />
     </div>
