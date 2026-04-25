@@ -7,6 +7,71 @@ import { ArrowLeft, Clock, Calendar } from "lucide-react";
 import { useEffect, lazy, Suspense } from "react";
 import { getCoverImage } from "@/utils/blogImages";
 import arnaudImg from "@/assets/team/arnaud-utille.webp";
+import RelatedService, { type ServiceKey } from "@/components/RelatedService";
+
+// Mapping article slug → most relevant Agendac service
+const articleToService: Record<string, { service: ServiceKey; intro?: string }> = {
+  "achat-leads-renovation-mauvaise-strategie": {
+    service: "prise-rendez-vous",
+    intro: "Au lieu d'acheter des leads partagés, construisez votre propre système d'acquisition.",
+  },
+  "internaliser-externaliser-marketing-renovation-btp": {
+    service: "prise-rendez-vous",
+    intro: "L'alternative concrète à un recrutement marketing en interne.",
+  },
+  "arreter-achat-leads-renovation-habitat": {
+    service: "prise-rendez-vous",
+    intro: "Sortez de la guerre des prix avec un système d'acquisition exclusif.",
+  },
+  "marketing-renovation-habitat-generation-leads": {
+    service: "prise-rendez-vous",
+    intro: "L'infrastructure complète pour transformer vos campagnes en chiffre d'affaires.",
+  },
+  "google-ads-vs-facebook-ads-renovation-habitat": {
+    service: "prise-rendez-vous",
+    intro: "Agendac orchestre Google Ads et Meta Ads pour vous — payable au RDV qualifié.",
+  },
+  "cout-publicite-google-ads-meta-ads-renovation": {
+    service: "prise-rendez-vous",
+    intro: "Maîtrisez votre coût d'acquisition : ne payez qu'au devis envoyé.",
+  },
+  "delai-resultats-acquisition-clients-renovation": {
+    service: "prise-rendez-vous",
+    intro: "Premiers rendez-vous qualifiés sous 21 jours après la mise en route.",
+  },
+  "choisir-agence-marketing-renovation-btp": {
+    service: "prise-rendez-vous",
+    intro: "Une agence spécialisée rénovation, payable au résultat.",
+  },
+  "externaliser-prise-rdv-entreprise-renovation": {
+    service: "prise-rendez-vous",
+    intro: "Notre offre dédiée pour ne plus jamais perdre un lead par manque de relance.",
+  },
+  "qualification-prospect-tunnel-vente-renovation": {
+    service: "prise-rendez-vous",
+    intro: "Notre équipe qualifie chaque prospect par téléphone avant tout RDV.",
+  },
+  "contacter-leads-facebook-ads-renovation-rdv": {
+    service: "prise-rendez-vous",
+    intro: "Externalisez le rappel et la qualification de vos leads Meta.",
+  },
+  "google-ads-meta-ads-entreprise-renovation": {
+    service: "prise-rendez-vous",
+    intro: "Multi-canal géré de A à Z : campagnes, qualification, prise de RDV.",
+  },
+  "retargeting-leads-perdus-renovation-habitat": {
+    service: "creation-site-internet",
+    intro: "Un site bien tracké est la base d'un retargeting performant.",
+  },
+  "strategie-publicite-entreprise-renovation-2026": {
+    service: "tournage",
+    intro: "Les vidéos qui performent en 2026 ne s'improvisent pas — production internalisée.",
+  },
+  "generation-leads-fiables-entreprise-renovation": {
+    service: "creation-reseaux-sociaux",
+    intro: "Crédibilité en ligne : la première arme pour vous démarquer des arnaques.",
+  },
+};
 
 const articleComponents: Record<string, React.ComponentType> = {
   "achat-leads-renovation-mauvaise-strategie": lazy(() => import("@/components/blog/ArticleLeadsRenovation")),
@@ -192,6 +257,13 @@ const BlogArticleContent = ({ slug }: { slug: string | undefined }) => {
             <Suspense fallback={<div className="text-center py-12 text-muted-foreground">Chargement…</div>}>
               <ArticleContent />
             </Suspense>
+          )}
+
+          {slug && articleToService[slug] && (
+            <RelatedService
+              service={articleToService[slug].service}
+              intro={articleToService[slug].intro}
+            />
           )}
         </article>
       </main>
