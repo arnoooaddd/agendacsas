@@ -285,6 +285,11 @@ const CreationReseaux = () => {
             </AnimatedSection>
           </div>
         </section>
+
+        <RelatedArticles
+          slugs={["generation-leads-fiables-entreprise-renovation"]}
+          subtitle="Des réseaux sociaux crédibles : la base pour vous démarquer des arnaques en rénovation."
+        />
       </main>
       <ServiceFooter />
     </div>

@@ -369,6 +369,11 @@ const CreationSite = () => {
             </AnimatedSection>
           </div>
         </section>
+
+        <RelatedArticles
+          slugs={["generation-leads-fiables-entreprise-renovation"]}
+          subtitle="Un site qui inspire confiance : la première arme contre les arnaques en rénovation."
+        />
       </main>
       <ServiceFooter />
     </div>

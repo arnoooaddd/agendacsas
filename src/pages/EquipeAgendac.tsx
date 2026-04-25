@@ -4,6 +4,7 @@ import Footer from "@/components/Footer";
 import AnimatedSection from "@/components/AnimatedSection";
 import { Users } from "lucide-react";
 import { motion } from "framer-motion";
+import RelatedArticles from "@/components/RelatedArticles";
 
 import arnaudImg from "@/assets/team/arnaud-utille.webp";
 import kerimImg from "@/assets/team/kerim-jakupovic.webp";
@@ -137,6 +138,14 @@ const EquipeAgendac = () => {
             </div>
           </div>
         </section>
+
+        <RelatedArticles
+          slugs={[
+            "choisir-agence-marketing-renovation-btp",
+            "delai-resultats-acquisition-clients-renovation",
+          ]}
+          subtitle="Comprendre comment choisir une agence et combien de temps attendre des résultats en acquisition rénovation."
+        />
       </main>
       <Footer />
     </div>
