@@ -8,6 +8,7 @@ import ReviewsBands from "@/components/ReviewsBands";
 import RelatedArticles from "@/components/RelatedArticles";
 import { Globe, CheckCircle, Star, ArrowRight, Smartphone, Search, BarChart3, MessageSquare, Languages } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { usePageTitle } from "@/hooks/usePageTitle";
 
 /* ── tiny parallax hook (CSS-only, no framer-motion) ── */
 const useParallax = (speed = 0.3) => {
@@ -78,6 +79,7 @@ const ScrollProgress = () => {
 };
 
 const CreationSite = () => {
+  usePageTitle("Création de site internet");
   useEffect(() => {
     window.scrollTo(0, 0);
     const existingScript = document.querySelector('script[src="https://elfsightcdn.com/platform.js"]');

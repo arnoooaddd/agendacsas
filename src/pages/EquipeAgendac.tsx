@@ -5,6 +5,7 @@ import AnimatedSection from "@/components/AnimatedSection";
 import { Users } from "lucide-react";
 import { motion } from "framer-motion";
 import RelatedArticles from "@/components/RelatedArticles";
+import { usePageTitle } from "@/hooks/usePageTitle";
 
 import arnaudImg from "@/assets/team/arnaud-utille.webp";
 import kerimImg from "@/assets/team/kerim-jakupovic.webp";
@@ -38,6 +39,7 @@ const teamMembers = [
 ];
 
 const EquipeAgendac = () => {
+  usePageTitle("L'équipe Agendac");
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);

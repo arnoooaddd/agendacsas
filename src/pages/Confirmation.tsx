@@ -4,8 +4,10 @@ import Footer from "@/components/Footer";
 import GoogleReviews from "@/components/GoogleReviews";
 import AnimatedSection from "@/components/AnimatedSection";
 import { CheckCircle } from "lucide-react";
+import { usePageTitle } from "@/hooks/usePageTitle";
 
 const Confirmation = () => {
+  usePageTitle("Confirmation");
   useEffect(() => {
     window.scrollTo(0, 0);
     const meta = document.createElement("meta");

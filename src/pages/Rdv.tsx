@@ -4,8 +4,10 @@ import Footer from "@/components/Footer";
 import GoogleReviews from "@/components/GoogleReviews";
 import AnimatedSection from "@/components/AnimatedSection";
 import { CalendarCheck, Play } from "lucide-react";
+import { usePageTitle } from "@/hooks/usePageTitle";
 
 const Rdv = () => {
+  usePageTitle("Réserver un rendez-vous");
   useEffect(() => {
     window.scrollTo(0, 0);
     // noindex

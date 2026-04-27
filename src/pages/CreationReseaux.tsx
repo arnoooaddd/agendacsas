@@ -9,6 +9,7 @@ import RelatedArticles from "@/components/RelatedArticles";
 import { Share2, Facebook, Instagram, Youtube, Linkedin, MapPin, Settings, CheckCircle, Star, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
+import { usePageTitle } from "@/hooks/usePageTitle";
 
 const platforms = [
   { name: "Facebook", icon: Facebook },
@@ -20,6 +21,7 @@ const platforms = [
 ];
 
 const CreationReseaux = () => {
+  usePageTitle("Création de réseaux sociaux");
   useEffect(() => {
     window.scrollTo(0, 0);
     const existingScript = document.querySelector('script[src="https://elfsightcdn.com/platform.js"]');

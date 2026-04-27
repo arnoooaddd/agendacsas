@@ -10,8 +10,10 @@ import RelatedArticles from "@/components/RelatedArticles";
 import { Video, CheckCircle, Star, ArrowRight, FileText, Clock, Film, Repeat, Package } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
+import { usePageTitle } from "@/hooks/usePageTitle";
 
 const Tournage = () => {
+  usePageTitle("Tournage vidéo professionnel");
   useEffect(() => {
     window.scrollTo(0, 0);
     const existingScript = document.querySelector('script[src="https://elfsightcdn.com/platform.js"]');

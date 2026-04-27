@@ -10,8 +10,10 @@ import RelatedArticles from "@/components/RelatedArticles";
 import { CalendarCheck, CheckCircle, Star, ArrowRight, Shield, Target, Clock, Users, Zap, ThumbsUp } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
+import { usePageTitle } from "@/hooks/usePageTitle";
 
 const PriseRendezVous = () => {
+  usePageTitle("Prise de rendez-vous qualifiés");
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
