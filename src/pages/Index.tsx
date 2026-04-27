@@ -13,8 +13,10 @@ import CaseStudy from "@/components/CaseStudy";
 import ExemplesTournage from "@/components/ExemplesTournage";
 import RelatedArticles from "@/components/RelatedArticles";
 import Footer from "@/components/Footer";
+import { usePageTitle } from "@/hooks/usePageTitle";
 
 const Index = () => {
+  usePageTitle("Agence marketing rénovation de l'habitat");
   return (
     <div className="min-h-screen bg-background">
       <Header />

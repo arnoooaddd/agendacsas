@@ -6,8 +6,10 @@ import { blogArticles } from "@/data/blogArticles";
 import { ArrowRight, Clock, Calendar } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { getCoverImage } from "@/utils/blogImages";
+import { usePageTitle } from "@/hooks/usePageTitle";
 
 const Blog = () => {
+  usePageTitle("Blog");
   const featured = blogArticles.find((a) => a.featured);
   const others = blogArticles.filter((a) => !a.featured);
 

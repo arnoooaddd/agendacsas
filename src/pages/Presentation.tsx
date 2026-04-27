@@ -5,8 +5,10 @@ import GoogleReviews from "@/components/GoogleReviews";
 import AnimatedSection from "@/components/AnimatedSection";
 import { X, Check, Play, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { usePageTitle } from "@/hooks/usePageTitle";
 
 const Presentation = () => {
+  usePageTitle("Présentation");
   useEffect(() => {
     window.scrollTo(0, 0);
     const meta = document.createElement("meta");
