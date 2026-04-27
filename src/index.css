@@ -426,7 +426,9 @@
   padding: 8px 0;
   animation: reviews-scroll 60s linear infinite;
   will-change: transform;
-  transform: translateZ(0);
+  transform: translate3d(0, 0, 0);
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
 }
 
 .reviews-band-track.reverse {
@@ -444,6 +446,9 @@
 }
 
 @media (max-width: 768px) {
+  .reviews-band-wrapper {
+    min-height: 224px;
+  }
   .reviews-band-card {
     flex: 0 0 280px;
   }
@@ -451,6 +456,7 @@
     animation-duration: 90s;
   }
   .reviews-band-track.reverse {
+    animation-name: reviews-scroll;
     animation-duration: 90s;
   }
 }
