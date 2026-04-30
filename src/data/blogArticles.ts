@@ -14,6 +14,30 @@ export interface BlogArticle {
 
 export const blogArticles: BlogArticle[] = [
   {
+    slug: "landing-page-renovation-rendez-vous",
+    title: "Landing page rénovation : 9 éléments pour transformer plus de clics en rendez-vous",
+    metaDescription: "Landing page rénovation : découvrez les éléments clés pour rassurer vos prospects, améliorer votre taux de conversion et générer plus de rendez-vous qualifiés.",
+    excerpt: "Vous payez des clics mais la page ne transforme pas ? Voici les éléments concrets d'une landing page rénovation pensée pour convertir plus de demandes qualifiées en rendez-vous.",
+    coverImage: "marketing-renovation-habitat-generation-leads",
+    author: "Arnaud UTILLE",
+    date: "2026-04-30",
+    readTime: "7 min",
+    featured: false,
+    tags: ["Landing page", "Conversion", "Rénovation"],
+    keywords: [
+      "landing page rénovation",
+      "page d'atterrissage rénovation",
+      "conversion leads rénovation",
+      "landing page Google Ads rénovation",
+      "landing page Meta Ads rénovation",
+      "site internet rénovation conversion",
+      "génération de rendez-vous rénovation",
+      "taux de conversion rénovation",
+      "acquisition clients rénovation",
+      "landing page BTP"
+    ],
+  },
+  {
     slug: "branding-local-entreprise-renovation",
     title: "Branding local rénovation : comment devenir l'entreprise qu'on recommande avant même le devis",
     metaDescription: "Branding local rénovation : découvrez comment devenir la référence de votre zone, rassurer vos prospects et générer plus de rendez-vous qualifiés.",
