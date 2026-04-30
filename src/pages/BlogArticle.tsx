@@ -89,6 +89,7 @@ const articleComponents: Record<string, React.ComponentType> = {
   "retargeting-leads-perdus-renovation-habitat": lazy(() => import("@/components/blog/ArticleRetargetingProspectsRenovation")),
   "strategie-publicite-entreprise-renovation-2026": lazy(() => import("@/components/blog/ArticlePubliciteRenovation2026")),
   "generation-leads-fiables-entreprise-renovation": lazy(() => import("@/components/blog/ArticleSeDemarquerArnaquesRenovation")),
+  "marketing-local-entreprise-renovation": lazy(() => import("@/components/blog/ArticleMarketingLocalRenovation")),
 };
 
 // Redirects from old blog slugs to new SEO-optimized URLs
