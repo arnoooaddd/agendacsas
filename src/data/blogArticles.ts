@@ -14,6 +14,30 @@ export interface BlogArticle {
 
 export const blogArticles: BlogArticle[] = [
   {
+    slug: "branding-local-entreprise-renovation",
+    title: "Branding local rénovation : comment devenir l'entreprise qu'on recommande avant même le devis",
+    metaDescription: "Branding local rénovation : découvrez comment devenir la référence de votre zone, rassurer vos prospects et générer plus de rendez-vous qualifiés.",
+    excerpt: "Être visible ne suffit pas. En rénovation, le vrai levier est de devenir le nom qui rassure avant même le premier appel. Voici comment structurer un branding local qui renforce votre acquisition.",
+    coverImage: "generation-leads-fiables-entreprise-renovation",
+    author: "Arnaud UTILLE",
+    date: "2026-04-29",
+    readTime: "7 min",
+    featured: false,
+    tags: ["Branding", "Acquisition", "Rénovation"],
+    keywords: [
+      "branding local rénovation",
+      "acquisition clients rénovation",
+      "marketing BTP local",
+      "génération de rendez-vous rénovation",
+      "google ads rénovation",
+      "facebook ads rénovation",
+      "marque locale rénovation",
+      "visibilité locale entreprise rénovation",
+      "stratégie marketing rénovation",
+      "tunnel de vente rénovation"
+    ],
+  },
+  {
     slug: "generation-leads-fiables-entreprise-renovation",
     title: "Comment se démarquer des arnaques en rénovation : générer des leads fiables en 2026",
     metaDescription: "Arnaques, faux leads, prospects méfiants : découvrez comment bâtir un système d'acquisition clients rénovation fiable et vous démarquer de la concurrence.",
