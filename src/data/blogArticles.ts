@@ -14,6 +14,30 @@ export interface BlogArticle {
 
 export const blogArticles: BlogArticle[] = [
   {
+    slug: "site-internet-renovation-erreurs-demandes-devis",
+    title: "Site internet rénovation : 7 erreurs qui font perdre des demandes de devis",
+    metaDescription: "Site internet rénovation : les 7 erreurs qui font fuir vos prospects avant la demande de devis, et comment les corriger pour convertir davantage.",
+    excerpt: "Votre site reçoit du trafic mais pas assez de demandes de devis ? Voici les 7 erreurs les plus fréquentes qui bloquent la conversion en rénovation, et comment les corriger rapidement.",
+    coverImage: "site-internet-renovation-erreurs-demandes-devis",
+    author: "Arnaud UTILLE",
+    date: "2026-04-30",
+    readTime: "7 min",
+    featured: false,
+    tags: ["Site internet", "Conversion", "Rénovation"],
+    keywords: [
+      "site internet rénovation",
+      "site rénovation devis",
+      "conversion site rénovation",
+      "demandes de devis rénovation",
+      "site BTP conversion",
+      "landing page rénovation",
+      "site artisan rénovation",
+      "audit site internet rénovation",
+      "génération de devis rénovation",
+      "marketing rénovation"
+    ],
+  },
+  {
     slug: "landing-page-renovation-rendez-vous",
     title: "Landing page rénovation : 9 éléments pour transformer plus de clics en rendez-vous",
     metaDescription: "Landing page rénovation : découvrez les éléments clés pour rassurer vos prospects, améliorer votre taux de conversion et générer plus de rendez-vous qualifiés.",
