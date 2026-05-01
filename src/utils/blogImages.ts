@@ -15,6 +15,7 @@ import publiciteRenovation2026 from "@/assets/blog/publicite-renovation-2026.png
 import seDemarquerArnaques from "@/assets/blog/se-demarquer-arnaques-renovation.png";
 import siteInternetRenovationErreurs from "@/assets/blog/site-internet-renovation-erreurs-demandes-devis.png";
 import devisRenovationChantiersSignes from "@/assets/blog/devis-renovation-transformer-demandes-chantiers-signes.png";
+import leadRenovationDemandeQualifiee from "@/assets/blog/lead-renovation-demande-vraiment-qualifiee.png";
 
 const coverImages: Record<string, string> = {
   // Anciennes clés (compat)
@@ -35,6 +36,7 @@ const coverImages: Record<string, string> = {
   "niveaux-qualification-prospect-renovation": niveauxQualification,
 
   // Nouvelles clés (slugs SEO actuels)
+  "lead-renovation-demande-vraiment-qualifiee": leadRenovationDemandeQualifiee,
   "devis-renovation-transformer-demandes-chantiers-signes": devisRenovationChantiersSignes,
   "site-internet-renovation-erreurs-demandes-devis": siteInternetRenovationErreurs,
   "generation-leads-fiables-entreprise-renovation": seDemarquerArnaques,

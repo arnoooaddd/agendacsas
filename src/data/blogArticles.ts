@@ -14,6 +14,30 @@ export interface BlogArticle {
 
 export const blogArticles: BlogArticle[] = [
   {
+    slug: "lead-renovation-demande-vraiment-qualifiee",
+    title: "Lead rénovation : comment reconnaître une demande vraiment qualifiée",
+    metaDescription: "Lead rénovation : découvrez comment qualifier une demande avant de perdre du temps sur un devis inutile et améliorer votre taux de signature.",
+    excerpt: "Toutes les demandes ne méritent pas le même temps commercial. Voici comment reconnaître rapidement un lead rénovation vraiment qualifié avant de lancer un devis.",
+    coverImage: "lead-renovation-demande-vraiment-qualifiee",
+    author: "Arnaud UTILLE",
+    date: "2026-04-30",
+    readTime: "7 min",
+    featured: false,
+    tags: ["Lead", "Qualification", "Rénovation"],
+    keywords: [
+      "lead rénovation",
+      "lead qualifié rénovation",
+      "qualification lead rénovation",
+      "demande devis rénovation",
+      "prospect rénovation qualifié",
+      "prise de rendez-vous rénovation",
+      "taux de signature rénovation",
+      "filtrer lead rénovation",
+      "lead BTP qualifié",
+      "marketing rénovation"
+    ],
+  },
+  {
     slug: "devis-renovation-transformer-demandes-chantiers-signes",
     title: "Devis rénovation : comment transformer plus de demandes en chantiers signés",
     metaDescription: "Devis rénovation : comment mieux qualifier, rappeler, rassurer et relancer pour transformer davantage de demandes en chantiers signés.",
