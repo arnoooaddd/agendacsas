@@ -14,6 +14,30 @@ export interface BlogArticle {
 
 export const blogArticles: BlogArticle[] = [
   {
+    slug: "devis-renovation-transformer-demandes-chantiers-signes",
+    title: "Devis rénovation : comment transformer plus de demandes en chantiers signés",
+    metaDescription: "Devis rénovation : comment mieux qualifier, rappeler, rassurer et relancer pour transformer davantage de demandes en chantiers signés.",
+    excerpt: "Vous recevez des demandes de devis mais trop peu finissent en chantier signé ? Voici comment améliorer chaque étape du parcours pour augmenter votre taux de transformation.",
+    coverImage: "devis-renovation-transformer-demandes-chantiers-signes",
+    author: "Arnaud UTILLE",
+    date: "2026-04-30",
+    readTime: "7 min",
+    featured: false,
+    tags: ["Devis", "Conversion", "Rénovation"],
+    keywords: [
+      "devis rénovation",
+      "transformation devis rénovation",
+      "demande de devis rénovation",
+      "prise de rendez-vous rénovation",
+      "qualification lead rénovation",
+      "suivi devis rénovation",
+      "chantier signé rénovation",
+      "taux de transformation devis",
+      "landing page rénovation",
+      "marketing rénovation"
+    ],
+  },
+  {
     slug: "site-internet-renovation-erreurs-demandes-devis",
     title: "Site internet rénovation : 7 erreurs qui font perdre des demandes de devis",
     metaDescription: "Site internet rénovation : les 7 erreurs qui font fuir vos prospects avant la demande de devis, et comment les corriger pour convertir davantage.",
