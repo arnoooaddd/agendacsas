@@ -11,6 +11,10 @@ import RelatedService, { type ServiceKey } from "@/components/RelatedService";
 
 // Mapping article slug → most relevant Agendac service
 const articleToService: Record<string, { service: ServiceKey; intro?: string }> = {
+  "devis-renovation-transformer-demandes-chantiers-signes": {
+    service: "prise-rendez-vous",
+    intro: "Transformez plus de demandes de devis en rendez-vous utiles et en chantiers signés.",
+  },
   "site-internet-renovation-erreurs-demandes-devis": {
     service: "creation-site-internet",
     intro: "Corrigez les erreurs qui bloquent vos demandes de devis avec un site pensé pour convertir.",
@@ -86,6 +90,7 @@ const articleToService: Record<string, { service: ServiceKey; intro?: string }> 
 };
 
 const articleComponents: Record<string, React.ComponentType> = {
+  "devis-renovation-transformer-demandes-chantiers-signes": lazy(() => import("@/components/blog/ArticleDevisRenovationChantiersSignes")),
   "site-internet-renovation-erreurs-demandes-devis": lazy(() => import("@/components/blog/ArticleSiteInternetRenovationErreurs")),
   "landing-page-renovation-rendez-vous": lazy(() => import("@/components/blog/ArticleLandingPageRenovation")),
   "branding-local-entreprise-renovation": lazy(() => import("@/components/blog/ArticleBrandingLocalRenovation")),
