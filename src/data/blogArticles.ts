@@ -546,7 +546,7 @@ export const blogArticles: BlogArticle[] = [
     title: "Référencement BTP 2026 : comment rester visible sur Google et dans les moteurs IA",
     metaDescription: "Référencement BTP 2026 : découvrez comment structurer votre visibilité sur Google, Google Maps et les moteurs IA pour générer des demandes qualifiées.",
     excerpt: "Google ne suffit plus à lui seul. Voici comment une entreprise de rénovation peut structurer son référencement pour remonter sur Google, dans le local et dans les réponses IA.",
-    coverImage: "marketing-renovation-habitat-generation-leads",
+    coverImage: "referencement-btp-google-ia-generatives-2026",
     author: "Arnaud UTILLE",
     date: "2026-05-02",
     readTime: "7 min",
