@@ -4,7 +4,7 @@ import Footer from "@/components/Footer";
 import { blogArticles } from "@/data/blogArticles";
 import { Badge } from "@/components/ui/badge";
 import { ArrowLeft, Clock, Calendar } from "lucide-react";
-import { useEffect, lazy, Suspense } from "react";
+import { useEffect, lazy, Suspense, useRef, useState } from "react";
 import { getCoverImage } from "@/utils/blogImages";
 import arnaudImg from "@/assets/team/arnaud-utille.webp";
 import kerimImg from "@/assets/team/kerim-jakupovic.webp";
@@ -325,8 +325,8 @@ const BlogArticleContent = ({ slug }: { slug: string | undefined }) => {
           </Link>
         </div>
 
-        <article className="container mx-auto px-4 max-w-4xl">
-          <header className="mb-10">
+        <div className="container mx-auto px-4 max-w-6xl">
+          <header className="mb-10 max-w-3xl">
             <div className="flex flex-wrap gap-2 mb-4">
               {article.tags.map((tag) => (
                 <Badge key={tag} variant="outline" className="text-primary border-primary/30">{tag}</Badge>
@@ -353,23 +353,29 @@ const BlogArticleContent = ({ slug }: { slug: string | undefined }) => {
             </div>
           </header>
 
-          <div className="rounded-2xl overflow-hidden mb-12 aspect-[16/8]">
+          <div className="rounded-2xl overflow-hidden mb-12 aspect-[16/8] max-w-4xl">
             <img src={cover} alt={article.title} className="w-full h-full object-cover" />
           </div>
 
-          {ArticleContent && (
-            <Suspense fallback={<div className="text-center py-12 text-muted-foreground">Chargement…</div>}>
-              <ArticleContent />
-            </Suspense>
-          )}
+          <div className="grid grid-cols-1 lg:grid-cols-[minmax(0,1fr)_240px] gap-10 lg:gap-14">
+            <article>
+              {ArticleContent && (
+                <Suspense fallback={<div className="text-center py-12 text-muted-foreground">Chargement…</div>}>
+                  <ArticleContent />
+                </Suspense>
+              )}
 
-          {slug && articleToService[slug] && (
-            <RelatedService
-              service={articleToService[slug].service}
-              intro={articleToService[slug].intro}
-            />
-          )}
-        </article>
+              {slug && articleToService[slug] && (
+                <RelatedService
+                  service={articleToService[slug].service}
+                  intro={articleToService[slug].intro}
+                />
+              )}
+            </article>
+
+            <ArticleTOC slug={slug} />
+          </div>
+        </div>
       </main>
       <Footer />
     </div>
