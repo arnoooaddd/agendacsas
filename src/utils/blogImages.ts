@@ -16,6 +16,7 @@ import seDemarquerArnaques from "@/assets/blog/se-demarquer-arnaques-renovation.
 import siteInternetRenovationErreurs from "@/assets/blog/site-internet-renovation-erreurs-demandes-devis.png";
 import devisRenovationChantiersSignes from "@/assets/blog/devis-renovation-transformer-demandes-chantiers-signes.png";
 import leadRenovationDemandeQualifiee from "@/assets/blog/lead-renovation-demande-vraiment-qualifiee.png";
+import strategieMarketingBtpFeuilleRoute2026 from "@/assets/blog/strategie-marketing-btp-feuille-route-2026-demandes-rentables.png";
 
 const coverImages: Record<string, string> = {
   // Anciennes clés (compat)
@@ -36,6 +37,7 @@ const coverImages: Record<string, string> = {
   "niveaux-qualification-prospect-renovation": niveauxQualification,
 
   // Nouvelles clés (slugs SEO actuels)
+  "strategie-marketing-btp-feuille-route-2026-demandes-rentables": strategieMarketingBtpFeuilleRoute2026,
   "lead-renovation-demande-vraiment-qualifiee": leadRenovationDemandeQualifiee,
   "devis-renovation-transformer-demandes-chantiers-signes": devisRenovationChantiersSignes,
   "site-internet-renovation-erreurs-demandes-devis": siteInternetRenovationErreurs,
