@@ -4,13 +4,14 @@ import Footer from "@/components/Footer";
 import { blogArticles } from "@/data/blogArticles";
 import { Badge } from "@/components/ui/badge";
 import { ArrowLeft, Clock, Calendar } from "lucide-react";
-import { useEffect, lazy, Suspense, useRef, useState } from "react";
+import { useEffect, lazy, Suspense } from "react";
 import { getCoverImage } from "@/utils/blogImages";
 import arnaudImg from "@/assets/team/arnaud-utille.webp";
 import kerimImg from "@/assets/team/kerim-jakupovic.webp";
 import rachadImg from "@/assets/team/rachad-ait-hamou.webp";
 import omarImg from "@/assets/team/omar-troussi.webp";
 import RelatedService, { type ServiceKey } from "@/components/RelatedService";
+import ArticleTOC from "@/components/blog/ArticleTOC";
 
 const authorProfiles: Record<string, { image: string; role: string }> = {
   "Arnaud UTILLE": { image: arnaudImg, role: "Président" },
