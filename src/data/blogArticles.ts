@@ -114,7 +114,7 @@ export const blogArticles: BlogArticle[] = [
     title: "Landing page rénovation : 9 éléments pour transformer plus de clics en rendez-vous",
     metaDescription: "Landing page rénovation : découvrez les éléments clés pour rassurer vos prospects, améliorer votre taux de conversion et générer plus de rendez-vous qualifiés.",
     excerpt: "Vous payez des clics mais la page ne transforme pas ? Voici les éléments concrets d'une landing page rénovation pensée pour convertir plus de demandes qualifiées en rendez-vous.",
-    coverImage: "marketing-renovation-habitat-generation-leads",
+    coverImage: "site-web-btp-erreurs-coutent-demandes-devis-2026",
     author: "Arnaud UTILLE",
     date: "2026-04-30",
     readTime: "7 min",
