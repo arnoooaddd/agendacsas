@@ -14,6 +14,30 @@ export interface BlogArticle {
 
 export const blogArticles: BlogArticle[] = [
   {
+    slug: "strategie-marketing-btp-feuille-route-2026-demandes-rentables",
+    title: "Stratégie marketing BTP : la feuille de route 2026 pour générer des demandes sérieuses et rentables",
+    metaDescription: "Stratégie marketing BTP : découvrez la feuille de route 2026 pour structurer l’acquisition, qualifier les demandes et améliorer la rentabilité commerciale.",
+    excerpt: "Comment repositionner le marketing BTP comme levier de croissance en 2026 ? Voici la feuille de route pour relier acquisition, qualification commerciale et rentabilité.",
+    coverImage: "strategie-marketing-btp-feuille-route-2026-demandes-rentables",
+    author: "Arnaud UTILLE",
+    date: "2026-05-01",
+    readTime: "8 min",
+    featured: false,
+    tags: ["Stratégie", "BTP", "Acquisition"],
+    keywords: [
+      "stratégie marketing BTP",
+      "acquisition clients BTP",
+      "structurer l’acquisition client dans le BTP",
+      "marketing digital bâtiment",
+      "coût d’acquisition client en rénovation",
+      "génération de leads BTP",
+      "trouver des clients BTP",
+      "rentabilité marketing rénovation",
+      "suivi commercial BTP",
+      "feuille de route marketing BTP 2026"
+    ],
+  },
+  {
     slug: "lead-renovation-demande-vraiment-qualifiee",
     title: "Lead rénovation : comment reconnaître une demande vraiment qualifiée",
     metaDescription: "Lead rénovation : découvrez comment qualifier une demande avant de perdre du temps sur un devis inutile et améliorer votre taux de signature.",
