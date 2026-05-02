@@ -589,4 +589,26 @@ export const blogArticles: BlogArticle[] = [
       "structurer acquisition client BTP",
     ],
   },
+  {
+    slug: "lead-nurturing-renovation-convertir-demandes-chantiers-2026",
+    title: "Lead nurturing rénovation : comment convertir plus de demandes en chantiers signés en 2026",
+    metaDescription: "Lead nurturing rénovation : la méthode pour mieux relancer, rassurer et transformer plus de demandes en rendez-vous utiles puis en chantiers signés.",
+    excerpt: "Recevoir une demande ne suffit pas. Voici comment structurer un lead nurturing simple et rentable pour faire progresser plus de prospects rénovation jusqu'au chantier signé.",
+    coverImage: "lead-nurturing-renovation-convertir-demandes-chantiers-2026",
+    author: "Omar TROUSSI",
+    date: "2026-05-02",
+    readTime: "7 min",
+    featured: false,
+    tags: ["Lead nurturing", "Conversion", "Rénovation"],
+    keywords: [
+      "lead nurturing rénovation",
+      "lead nurturing BTP",
+      "relance prospect rénovation",
+      "conversion demande devis rénovation",
+      "qualification prospect rénovation",
+      "prise de rendez-vous rénovation",
+      "suivi commercial rénovation",
+      "transformer leads en clients rénovation"
+    ],
+  },
 ];
