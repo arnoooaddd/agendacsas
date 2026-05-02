@@ -19,6 +19,7 @@ import leadRenovationDemandeQualifiee from "@/assets/blog/lead-renovation-demand
 import strategieMarketingBtpFeuilleRoute2026 from "@/assets/blog/strategie-marketing-btp-feuille-route-2026-demandes-rentables.png";
 import referencementBtpGoogleIa2026 from "@/assets/blog/referencement-btp-google-ia-2026.png";
 import siteWebRenovationLevierCommercial2026 from "@/assets/blog/site-web-renovation-levier-commercial-2026.png";
+import siteWebBtpErreursDemandesDevis2026 from "@/assets/blog/site-web-btp-erreurs-coutent-demandes-devis-2026.png";
 
 const coverImages: Record<string, string> = {
   // Anciennes clés (compat)
@@ -60,6 +61,7 @@ const coverImages: Record<string, string> = {
   "achat-leads-renovation-mauvaise-strategie": leadsRenovation,
   "referencement-btp-google-ia-generatives-2026": referencementBtpGoogleIa2026,
   "site-web-renovation-levier-commercial-2026": siteWebRenovationLevierCommercial2026,
+  "site-web-btp-erreurs-coutent-demandes-devis-2026": siteWebBtpErreursDemandesDevis2026,
 };
 
 export const getCoverImage = (key: string): string => {
