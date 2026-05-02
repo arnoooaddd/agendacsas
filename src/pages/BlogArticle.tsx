@@ -172,30 +172,79 @@ const BlogArticleContent = ({ slug }: { slug: string | undefined }) => {
     window.scrollTo(0, 0);
   }, [slug]);
 
+  const cover = article ? getCoverImage(article.coverImage) : "";
+
   useEffect(() => {
-    if (article) {
-      document.title = article.title + " | Agendac";
-      const metaDesc = document.querySelector('meta[name="description"]');
-      if (metaDesc) metaDesc.setAttribute("content", article.metaDescription);
-      else {
-        const meta = document.createElement("meta");
-        meta.name = "description";
-        meta.content = article.metaDescription;
-        document.head.appendChild(meta);
+    if (!article) return;
+
+    const origin = typeof window !== "undefined" ? window.location.origin : "https://agendac.fr";
+    const absoluteCover = cover.startsWith("http") ? cover : `${origin}${cover}`;
+    const canonicalUrl = `https://agendac.fr/blog/${article.slug}`;
+    const fullTitle = `${article.title} | Agendac`;
+
+    const setMeta = (selector: string, attr: "name" | "property", key: string, content: string) => {
+      let el = document.head.querySelector<HTMLMetaElement>(selector);
+      if (!el) {
+        el = document.createElement("meta");
+        el.setAttribute(attr, key);
+        document.head.appendChild(el);
       }
-      const metaKw = document.querySelector('meta[name="keywords"]');
-      if (metaKw) metaKw.setAttribute("content", article.keywords.join(", "));
-      else {
-        const meta = document.createElement("meta");
-        meta.name = "keywords";
-        meta.content = article.keywords.join(", ");
-        document.head.appendChild(meta);
-      }
-    }
-    return () => {
-      document.title = "Agendac - Agence marketing rénovation habitat";
+      el.setAttribute("content", content);
     };
-  }, [article]);
+
+    const setLink = (rel: string, href: string) => {
+      let el = document.head.querySelector<HTMLLinkElement>(`link[rel="${rel}"]`);
+      if (!el) {
+        el = document.createElement("link");
+        el.setAttribute("rel", rel);
+        document.head.appendChild(el);
+      }
+      el.setAttribute("href", href);
+    };
+
+    document.title = fullTitle;
+    setMeta('meta[name="title"]', "name", "title", fullTitle);
+    setMeta('meta[name="description"]', "name", "description", article.metaDescription);
+    setMeta('meta[name="keywords"]', "name", "keywords", article.keywords.join(", "));
+
+    // Open Graph
+    setMeta('meta[property="og:type"]', "property", "og:type", "article");
+    setMeta('meta[property="og:url"]', "property", "og:url", canonicalUrl);
+    setMeta('meta[property="og:title"]', "property", "og:title", fullTitle);
+    setMeta('meta[property="og:description"]', "property", "og:description", article.metaDescription);
+    setMeta('meta[property="og:image"]', "property", "og:image", absoluteCover);
+    setMeta('meta[property="og:image:secure_url"]', "property", "og:image:secure_url", absoluteCover);
+    setMeta('meta[property="og:image:alt"]', "property", "og:image:alt", article.title);
+
+    // Twitter
+    setMeta('meta[name="twitter:card"]', "name", "twitter:card", "summary_large_image");
+    setMeta('meta[name="twitter:url"]', "name", "twitter:url", canonicalUrl);
+    setMeta('meta[name="twitter:title"]', "name", "twitter:title", fullTitle);
+    setMeta('meta[name="twitter:description"]', "name", "twitter:description", article.metaDescription);
+    setMeta('meta[name="twitter:image"]', "name", "twitter:image", absoluteCover);
+
+    setLink("canonical", canonicalUrl);
+
+    return () => {
+      // Restore generic site metadata when leaving the article
+      const genericTitle = "Agendac | Accélérateur de Croissance N°1 - Rénovation de l'Habitat";
+      const genericDesc = "Agendac accompagne les entreprises de rénovation de l'habitat à bâtir une présence digitale solide et à générer une croissance prévisible et durable.";
+      const genericImage = "https://agendacsas.lovable.app/og-image.png";
+      const genericUrl = "https://agendacsas.lovable.app/";
+      document.title = genericTitle;
+      setMeta('meta[name="title"]', "name", "title", genericTitle);
+      setMeta('meta[name="description"]', "name", "description", genericDesc);
+      setMeta('meta[property="og:type"]', "property", "og:type", "website");
+      setMeta('meta[property="og:url"]', "property", "og:url", genericUrl);
+      setMeta('meta[property="og:title"]', "property", "og:title", genericTitle);
+      setMeta('meta[property="og:description"]', "property", "og:description", genericDesc);
+      setMeta('meta[property="og:image"]', "property", "og:image", genericImage);
+      setMeta('meta[name="twitter:title"]', "name", "twitter:title", genericTitle);
+      setMeta('meta[name="twitter:description"]', "name", "twitter:description", genericDesc);
+      setMeta('meta[name="twitter:image"]', "name", "twitter:image", genericImage);
+      setLink("canonical", genericUrl);
+    };
+  }, [article, cover]);
 
   if (!article) {
     return (
@@ -218,7 +267,6 @@ const BlogArticleContent = ({ slug }: { slug: string | undefined }) => {
     });
 
   const ArticleContent = slug ? articleComponents[slug] : null;
-  const cover = getCoverImage(article.coverImage);
 
   return (
     <div className="min-h-screen bg-background">
