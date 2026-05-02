@@ -18,7 +18,7 @@ const ArticleSiteWebRenovationLevierCommercial2026 = () => (
 
     <section className="mb-12">
       <div className="bg-muted/50 border border-border rounded-xl p-6">
-        <h2 className="text-lg font-bold text-foreground font-display mb-4">📑 Sommaire</h2>
+        <h2 className="text-lg font-bold text-foreground font-display mb-4">Sommaire</h2>
         <nav>
           <ol className="space-y-2 text-muted-foreground text-sm">
             <li><a href="#site-pas-vitrine" className="hover:text-primary transition-colors">1. Pourquoi un site ne peut plus rester une simple vitrine</a></li>
