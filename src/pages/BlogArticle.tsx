@@ -7,7 +7,17 @@ import { ArrowLeft, Clock, Calendar } from "lucide-react";
 import { useEffect, lazy, Suspense } from "react";
 import { getCoverImage } from "@/utils/blogImages";
 import arnaudImg from "@/assets/team/arnaud-utille.webp";
+import kerimImg from "@/assets/team/kerim-jakupovic.webp";
+import rachadImg from "@/assets/team/rachad-ait-hamou.webp";
+import omarImg from "@/assets/team/omar-troussi.webp";
 import RelatedService, { type ServiceKey } from "@/components/RelatedService";
+
+const authorProfiles: Record<string, { image: string; role: string }> = {
+  "Arnaud UTILLE": { image: arnaudImg, role: "Président" },
+  "Kerim JAKUPOVIC": { image: kerimImg, role: "Directeur général" },
+  "Rachad AIT HAMOU": { image: rachadImg, role: "Responsable communication" },
+  "Omar TROUSSI": { image: omarImg, role: "Monteur vidéo" },
+};
 
 // Mapping article slug → most relevant Agendac service
 const articleToService: Record<string, { service: ServiceKey; intro?: string }> = {
@@ -58,6 +68,10 @@ const articleToService: Record<string, { service: ServiceKey; intro?: string }> 
   "referencement-btp-google-ia-generatives-2026": {
     service: "creation-site-internet",
     intro: "Le référencement rentable commence par des pages utiles, locales et pensées pour la conversion.",
+  },
+  "site-web-renovation-levier-commercial-2026": {
+    service: "creation-site-internet",
+    intro: "Un site utile commercialement aide vos équipes à convertir mieux, pas seulement à être jolies en ligne.",
   },
   "google-ads-vs-facebook-ads-renovation-habitat": {
     service: "prise-rendez-vous",
@@ -129,6 +143,7 @@ const articleComponents: Record<string, React.ComponentType> = {
   "generation-leads-fiables-entreprise-renovation": lazy(() => import("@/components/blog/ArticleSeDemarquerArnaquesRenovation")),
   "site-web-btp-erreurs-coutent-demandes-devis-2026": lazy(() => import("@/components/blog/ArticleSiteWebBtpErreursDemandesDevis2026")),
   "referencement-btp-google-ia-generatives-2026": lazy(() => import("@/components/blog/ArticleReferencementBtpGoogleIa2026")),
+  "site-web-renovation-levier-commercial-2026": lazy(() => import("@/components/blog/ArticleSiteWebRenovationLevierCommercial2026")),
 };
 
 // Redirects from old blog slugs to new SEO-optimized URLs
@@ -167,6 +182,7 @@ const BlogArticleRedirectGuard = () => {
 
 const BlogArticleContent = ({ slug }: { slug: string | undefined }) => {
   const article = blogArticles.find((a) => a.slug === slug);
+  const authorProfile = article ? (authorProfiles[article.author] || authorProfiles["Arnaud UTILLE"]) : authorProfiles["Arnaud UTILLE"];
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -283,8 +299,8 @@ const BlogArticleContent = ({ slug }: { slug: string | undefined }) => {
             image: cover,
             author: {
               "@type": "Person",
-              name: "Arnaud UTILLE",
-              jobTitle: "Président",
+              name: article.author,
+              jobTitle: authorProfile.role,
               worksFor: { "@type": "Organization", name: "Agendac" },
             },
             datePublished: article.date,
@@ -326,13 +342,13 @@ const BlogArticleContent = ({ slug }: { slug: string | undefined }) => {
             {/* Author card */}
             <div className="flex items-center gap-4 p-4 rounded-xl bg-muted/50 border border-border">
               <img
-                src={arnaudImg}
-                alt="Arnaud UTILLE, Président d'Agendac"
+                src={authorProfile.image}
+                alt={`${article.author}, ${authorProfile.role} d'Agendac`}
                 className="w-14 h-14 rounded-full object-cover border-2 border-primary/20"
               />
               <div>
-                <p className="font-semibold text-foreground">Arnaud UTILLE</p>
-                <p className="text-sm text-muted-foreground">Président d'Agendac — <Link to="/" className="text-primary hover:underline">Agence marketing rénovation</Link></p>
+                <p className="font-semibold text-foreground">{article.author}</p>
+                <p className="text-sm text-muted-foreground">{authorProfile.role} d'Agendac — <Link to="/" className="text-primary hover:underline">Agence marketing rénovation</Link></p>
               </div>
             </div>
           </header>
