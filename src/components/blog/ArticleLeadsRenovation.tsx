@@ -18,7 +18,7 @@ const ArticleLeadsRenovation = () => (
     {/* Sommaire */}
     <section className="mb-12">
       <div className="bg-muted/50 border border-border rounded-xl p-6">
-        <h2 className="text-lg font-bold text-foreground font-display mb-4">📑 Sommaire</h2>
+        <h2 className="text-lg font-bold text-foreground font-display mb-4">Sommaire</h2>
         <nav>
           <ol className="space-y-2 text-muted-foreground text-sm">
             <li><a href="#interets-non-alignes" className="hover:text-primary transition-colors">1. Vos intérêts ne sont pas alignés avec votre fournisseur de leads</a></li>

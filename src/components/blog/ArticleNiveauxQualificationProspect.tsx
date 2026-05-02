@@ -17,7 +17,7 @@ const ArticleNiveauxQualificationProspect = () => (
     {/* Sommaire */}
     <section className="mb-12">
       <div className="bg-muted/50 border border-border rounded-xl p-6">
-        <h2 className="text-lg font-bold text-foreground font-display mb-4">📑 Sommaire</h2>
+        <h2 className="text-lg font-bold text-foreground font-display mb-4">Sommaire</h2>
         <nav>
           <ol className="space-y-2 text-muted-foreground text-sm">
             <li><a href="#niveau-3" className="hover:text-primary transition-colors">1. Les 3 % prêts à acheter : conversion directe</a></li>
