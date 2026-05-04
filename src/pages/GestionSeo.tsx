@@ -110,9 +110,9 @@ const GestionSeo = () => {
 
         <RelatedArticles
           slugs={[
-            "referencement-btp-google-ia-2026",
+            "referencement-btp-google-ia-generatives-2026",
             "strategie-marketing-btp-feuille-route-2026-demandes-rentables",
-            "marketing-renovation",
+            "marketing-renovation-habitat-generation-leads",
           ]}
           subtitle="Approfondissez votre stratégie de référencement organique en rénovation."
         />
