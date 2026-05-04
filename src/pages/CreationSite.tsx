@@ -276,7 +276,7 @@ const CreationSite = () => {
             <div className="text-center max-w-3xl mx-auto mb-16">
               <AnimatedSection>
                 <h2 className="text-3xl sm:text-4xl font-bold text-foreground mb-6 tracking-tight">
-                  Tarifs & <span className="text-gradient-warm">conditions</span>
+                  Étapes du <span className="text-gradient-warm">projet</span>
                 </h2>
               </AnimatedSection>
             </div>
@@ -286,22 +286,7 @@ const CreationSite = () => {
                 <div className="glass-card p-8 border-gradient glow-primary">
                   <div className="text-center mb-8">
                     <h3 className="text-2xl font-bold text-foreground mb-2">Site internet professionnel</h3>
-                    <div className="text-4xl font-bold text-primary">5 000 € <span className="text-sm font-normal text-muted-foreground">HT</span></div>
-                  </div>
-
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-8">
-                    <AnimatedSection delay={0.2} direction="left">
-                      <div className="p-4 bg-muted/50 rounded-xl hover:bg-muted/70 transition-colors duration-300">
-                        <p className="text-sm font-medium text-foreground mb-1">Hébergement</p>
-                        <p className="text-muted-foreground text-sm">~25 € / mois (réglé directement par le client)</p>
-                      </div>
-                    </AnimatedSection>
-                    <AnimatedSection delay={0.25} direction="right">
-                      <div className="p-4 bg-muted/50 rounded-xl hover:bg-muted/70 transition-colors duration-300">
-                        <p className="text-sm font-medium text-foreground mb-1">Modifications</p>
-                        <p className="text-muted-foreground text-sm">Année 1 : 39 €/h — Puis : 49 €/h</p>
-                      </div>
-                    </AnimatedSection>
+                    <p className="text-muted-foreground text-sm">Tarif sur devis — défini lors de l'appel de cadrage selon vos besoins</p>
                   </div>
 
                   <div>
