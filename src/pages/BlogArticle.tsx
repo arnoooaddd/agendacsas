@@ -16,8 +16,8 @@ import ArticleTOC from "@/components/blog/ArticleTOC";
 const authorProfiles: Record<string, { image: string; role: string }> = {
   "Arnaud UTILLE": { image: arnaudImg, role: "Président" },
   "Kerim JAKUPOVIC": { image: kerimImg, role: "Directeur général" },
-  "Rachad AIT HAMOU": { image: rachadImg, role: "Responsable communication" },
-  "Omar TROUSSI": { image: omarImg, role: "Monteur vidéo" },
+  "Rachad AIT HAMOU": { image: rachadImg, role: "Rachad AIT HAMOU" },
+  "Omar TROUSSI": { image: omarImg, role: "Responsable publicités" },
 };
 
 // Mapping article slug → most relevant Agendac service
@@ -89,6 +89,10 @@ const articleToService: Record<string, { service: ServiceKey; intro?: string }> 
   "combiner-seo-publicite-generer-demandes-devis-renovation-2026": {
     service: "gestion-seo",
     intro: "Faites travailler référencement local et acquisition payante ensemble pour capter plus de demandes qualifiées.",
+  },
+  "fiche-google-maps-site-internet-referencement-local-2026": {
+    service: "gestion-seo",
+    intro: "Reliez votre fiche Google Maps et vos pages clés pour renforcer votre visibilité locale et convertir plus de recherches de proximité.",
   },
   "google-ads-vs-facebook-ads-renovation-habitat": {
     service: "prise-rendez-vous",
@@ -165,6 +169,7 @@ const articleComponents: Record<string, React.ComponentType> = {
   "actions-marketing-btp-generer-demandes-qualifiees-2026": lazy(() => import("@/components/blog/ArticleActionsMarketingBtpDemandesQualifiees2026")),
   "inbound-marketing-btp-automation-abm-developper-business-2026": lazy(() => import("@/components/blog/ArticleInboundMarketingBtpAutomationAbm2026")),
   "combiner-seo-publicite-generer-demandes-devis-renovation-2026": lazy(() => import("@/components/blog/ArticleCombinerSeoPubliciteDemandesDevis2026")),
+  "fiche-google-maps-site-internet-referencement-local-2026": lazy(() => import("@/components/blog/ArticleFicheGoogleMapsSiteInternetReferencementLocal2026")),
 };
 
 // Redirects from old blog slugs to new SEO-optimized URLs
