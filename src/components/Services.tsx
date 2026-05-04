@@ -15,14 +15,14 @@ const services = [
     title: "Prise de rendez-vous qualifiés",
     desc: "Agendac gère votre communication, qualifie les prospects par téléphone et prend rendez-vous. Vous ne payez que lorsqu'un devis est envoyé.",
     href: "/prise-rendez-vous",
-    star: true,
+    star: false,
   },
   {
     icon: Video,
     title: "Tournage professionnel",
     desc: "Scripts, tournage sur site, montage et livraison — 100 % internalisé. Des vidéos pensées pour la publicité et les réseaux sociaux.",
     href: "/tournage",
-    star: true,
+    star: false,
   },
   {
     icon: Search,
