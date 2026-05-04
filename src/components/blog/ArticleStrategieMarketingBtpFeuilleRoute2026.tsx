@@ -194,21 +194,6 @@ const ArticleStrategieMarketingBtpFeuilleRoute2026 = () => (
         </div>
       </section>
     </div>
-
-    <aside className="hidden lg:block">
-      <div className="sticky top-28 rounded-xl border border-border bg-background p-5">
-        <p className="mb-4 text-sm font-semibold uppercase tracking-wide text-foreground">Sommaire</p>
-        <nav>
-          <ol className="space-y-2 text-sm text-muted-foreground">
-            {toc.map((item, index) => (
-              <li key={item.id}>
-                <a href={`#${item.id}`} className="hover:text-primary transition-colors">{index + 1}. {item.label}</a>
-              </li>
-            ))}
-          </ol>
-        </nav>
-      </div>
-    </aside>
   </div>
 );
 
