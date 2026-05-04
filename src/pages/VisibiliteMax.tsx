@@ -9,7 +9,7 @@ import Clients from "@/components/Clients";
 import Interviews from "@/components/Interviews";
 import RelatedArticles from "@/components/RelatedArticles";
 import { Button } from "@/components/ui/button";
-import { Star, ArrowRight, Sparkles, Megaphone, Brain, Layers, Search, Video, CalendarCheck, CheckCircle, Facebook, Linkedin, Youtube, Globe } from "lucide-react";
+import { Star, ArrowRight, Sparkles, Megaphone, Brain, Layers, Search, Video, CalendarCheck, Facebook, Linkedin, Globe } from "lucide-react";
 import { usePageTitle } from "@/hooks/usePageTitle";
 
 const VisibiliteMax = () => {
