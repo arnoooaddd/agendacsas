@@ -19,6 +19,8 @@ import PriseRendezVous from "./pages/PriseRendezVous";
 import EquipeAgendac from "./pages/EquipeAgendac";
 import Presentation from "./pages/Presentation";
 import Confirmation from "./pages/Confirmation";
+import VisibiliteMax from "./pages/VisibiliteMax";
+import GestionSeo from "./pages/GestionSeo";
 
 const queryClient = new QueryClient();
 
@@ -42,6 +44,10 @@ const App = () => (
           <Route path="/creation-reseaux-sociaux" element={<CreationReseaux />} />
           <Route path="/creation-site-internet" element={<CreationSite />} />
           <Route path="/tournage" element={<Tournage />} />
+          <Route path="/visibilite-max" element={<VisibiliteMax />} />
+          <Route path="/gestion-communication" element={<VisibiliteMax />} />
+          <Route path="/gestion-seo" element={<GestionSeo />} />
+          <Route path="/seo" element={<GestionSeo />} />
           <Route path="/prise-rendez-vous" element={<PriseRendezVous />} />
           <Route path="/equipe-agendac" element={<EquipeAgendac />} />
           <Route path="/presentation" element={<Presentation />} />
