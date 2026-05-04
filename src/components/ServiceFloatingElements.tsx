@@ -32,11 +32,11 @@ const ServiceFloatingElements = ({ variant = "site" }: ServiceFloatingElementsPr
     ],
     communication: [
       { icon: Eye, label: "+357 000 vues", sublabel: "Ce mois-ci", color: "bg-primary/20", textColor: "text-primary", pos: "top-32 left-[5%]", anim: "animate-bounce-soft" },
-      { icon: FileSignature, label: "Nouvelle signature", sublabel: "+12 500 €", color: "bg-green-500/20", textColor: "text-green-500", pos: "top-48 right-[8%]", anim: "animate-float" },
+      { icon: FileSignature, label: "Nouvelle signature", sublabel: "+12 500 €", color: "bg-green-500/20", textColor: "text-green-500", pos: "top-32 right-[5%]", anim: "animate-float" },
       { icon: Phone, label: "Appel entrant", sublabel: "Demande de devis", color: "bg-secondary/20", textColor: "text-secondary", pos: "top-[60%] left-[3%]", anim: "animate-bounce-soft", delay: "1s", xl: true },
-      { icon: Mail, label: "Nouveau lead", sublabel: "Formulaire reçu", color: "bg-primary/20", textColor: "text-primary", pos: "top-[35%] right-[12%]", anim: "animate-float", delay: "1.2s", xl: true },
+      { icon: Mail, label: "Nouveau lead", sublabel: "Formulaire reçu", color: "bg-primary/20", textColor: "text-primary", pos: "top-[58%] right-[5%]", anim: "animate-float", delay: "1.2s", xl: true },
       { icon: Heart, label: "+248 interactions", sublabel: "Sur vos réseaux", color: "bg-pink-500/20", textColor: "text-pink-500", pos: "bottom-[40%] left-[10%]", anim: "animate-float", delay: "0.6s", xl: true },
-      { icon: Megaphone, label: "Campagne live", sublabel: "Meta · Google · YT", color: "bg-yellow-500/20", textColor: "text-yellow-500", pos: "bottom-[35%] right-[10%]", anim: "animate-bounce-soft", delay: "2s", xl: true },
+      { icon: Megaphone, label: "Campagne live", sublabel: "Meta · Google · YT", color: "bg-yellow-500/20", textColor: "text-yellow-500", pos: "bottom-[15%] right-[8%]", anim: "animate-bounce-soft", delay: "2s", xl: true },
     ],
   };
 
