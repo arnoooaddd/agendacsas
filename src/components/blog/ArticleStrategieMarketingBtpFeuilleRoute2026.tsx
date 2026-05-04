@@ -192,8 +192,7 @@ const ArticleStrategieMarketingBtpFeuilleRoute2026 = () => (
           </div>
         </div>
       </section>
-    </div>
-  </div>
+  </>
 );
 
 export default ArticleStrategieMarketingBtpFeuilleRoute2026;
