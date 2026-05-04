@@ -15,7 +15,7 @@ const ArticleSeDemarquerArnaquesRenovation = () => (
     </section>
 
     {/* Sommaire */}
-    <section className="mb-12">
+    <section className="mb-12 lg:hidden">
       <div className="bg-muted/50 border border-border rounded-xl p-6">
         <h2 className="text-lg font-bold text-foreground font-display mb-4">Sommaire</h2>
         <nav>
