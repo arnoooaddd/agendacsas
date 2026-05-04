@@ -40,11 +40,11 @@ const VisibiliteMax = () => {
                 <span className="text-sm font-medium text-foreground/80">Service phare Agendac · Formule Visibilité Max</span>
               </div>
               <h1 className="text-3xl sm:text-5xl lg:text-6xl font-bold text-foreground mb-6 leading-[1.1] tracking-tight animate-slide-up">
-                Agendac pilote votre{" "}
+                L'agence qui pilote votre{" "}
                 <span className="text-gradient">communication digitale payante</span>
               </h1>
               <p className="text-muted-foreground text-lg max-w-3xl mx-auto mb-8 animate-fade-in">
-                On gère votre budget pub sur Facebook, Instagram, Google et YouTube pour vous apporter plus de demandes de devis chaque mois. Vous gardez la main sur le chantier, on s'occupe de remplir votre planning.
+                Agendac gère votre budget publicitaire sur tous les réseaux sociaux pour vous apporter plus de visibilité et plus d'opportunités commerciales chaque mois. Profitez de tous les avantages d'un directeur marketing ayant déjà dépensé +570 000 € en publicité et généré +7,4M € pour des entreprises de la rénovation de l'habitat.
               </p>
               <div className="flex flex-col sm:flex-row items-center justify-center gap-4 animate-scale-in">
                 <Button onClick={scrollToContact} variant="secondary" size="lg" className="group glow-secondary">
@@ -115,17 +115,14 @@ const VisibiliteMax = () => {
         {/* Clients en cours */}
         <Clients />
 
-        {/* Highlights vidéo résultats partenaires */}
-        <Interviews />
-
-        {/* Options complémentaires */}
+        {/* Services complémentaires */}
         <section className="py-24 relative overflow-hidden bg-[#DFF1FF]">
           <div className="absolute inset-0 gradient-mesh opacity-30" />
           <div className="container mx-auto px-4 relative z-10">
             <div className="text-center max-w-3xl mx-auto mb-16">
               <AnimatedSection>
                 <h2 className="text-3xl sm:text-4xl font-bold text-foreground mb-6 tracking-tight">
-                  Options <span className="text-gradient-warm">complémentaires</span>
+                  Services <span className="text-gradient-warm">complémentaires</span>
                 </h2>
               </AnimatedSection>
               <AnimatedSection delay={0.1}>
@@ -135,12 +132,11 @@ const VisibiliteMax = () => {
               </AnimatedSection>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-5xl mx-auto">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto">
               {[
                 { icon: CalendarCheck, title: "Prise de rendez-vous qualifiés", desc: "Nos équipes contactent et qualifient vos prospects par téléphone. Un RDV est qualifié uniquement quand un devis a été envoyé. Vous ne payez qu'au résultat.", href: "/prise-rendez-vous" },
                 { icon: Video, title: "Tournage professionnel", desc: "Scripts conversion, tournage sur site, montage performance. 100% internalisé, livraison rapide.", href: "/tournage" },
                 { icon: Globe, title: "Gestion SEO complète", desc: "Référencement organique local sur Google, Bing, ChatGPT, Gemini, Claude. Sortez premier dans votre zone de chalandise.", href: "/gestion-seo" },
-                { icon: Sparkles, title: "Création site & réseaux", desc: "Site internet conçu pour la conversion + paramétrage complet de vos plateformes Meta, Google, LinkedIn.", href: "/creation-site-internet" },
               ].map((item, i) => (
                 <AnimatedSection key={i} delay={i * 0.08} direction="scale">
                   <a href={item.href} className="block h-full">
@@ -158,6 +154,9 @@ const VisibiliteMax = () => {
             </div>
           </div>
         </section>
+
+        {/* Highlights vidéo résultats partenaires */}
+        <Interviews />
 
         <RelatedArticles
           slugs={[
