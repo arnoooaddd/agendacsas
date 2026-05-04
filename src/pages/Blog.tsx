@@ -1,17 +1,75 @@
 import { Link } from "react-router-dom";
+import { useMemo, useState } from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import AnimatedSection from "@/components/AnimatedSection";
 import { blogArticles } from "@/data/blogArticles";
-import { ArrowRight, Clock, Calendar } from "lucide-react";
+import { ArrowRight, Clock, Calendar, Search, X } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
+import { Input } from "@/components/ui/input";
+import { Button } from "@/components/ui/button";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
 import { getCoverImage } from "@/utils/blogImages";
 import { usePageTitle } from "@/hooks/usePageTitle";
 
 const Blog = () => {
   usePageTitle("Blog");
-  const featured = blogArticles.find((a) => a.featured);
-  const others = blogArticles.filter((a) => !a.featured);
+  const [query, setQuery] = useState("");
+  const [selectedTag, setSelectedTag] = useState<string>("all");
+  const [sortBy, setSortBy] = useState<string>("recent");
+
+  const allTags = useMemo(() => {
+    const set = new Set<string>();
+    blogArticles.forEach((a) => a.tags.forEach((t) => set.add(t)));
+    return Array.from(set).sort((a, b) => a.localeCompare(b, "fr"));
+  }, []);
+
+  const filtered = useMemo(() => {
+    const q = query.trim().toLowerCase();
+    let list = blogArticles.filter((a) => {
+      const matchesTag = selectedTag === "all" || a.tags.includes(selectedTag);
+      if (!matchesTag) return false;
+      if (!q) return true;
+      const haystack = [
+        a.title,
+        a.excerpt,
+        a.metaDescription,
+        a.tags.join(" "),
+        a.keywords.join(" "),
+      ]
+        .join(" ")
+        .toLowerCase();
+      return haystack.includes(q);
+    });
+
+    list = [...list].sort((a, b) => {
+      if (sortBy === "recent") return b.date.localeCompare(a.date);
+      if (sortBy === "oldest") return a.date.localeCompare(b.date);
+      if (sortBy === "title") return a.title.localeCompare(b.title, "fr");
+      return 0;
+    });
+    return list;
+  }, [query, selectedTag, sortBy]);
+
+  const isFiltering =
+    query.trim() !== "" || selectedTag !== "all" || sortBy !== "recent";
+
+  const featured = !isFiltering ? blogArticles.find((a) => a.featured) : undefined;
+  const others = isFiltering
+    ? filtered
+    : filtered.filter((a) => !a.featured);
+
+  const resetFilters = () => {
+    setQuery("");
+    setSelectedTag("all");
+    setSortBy("recent");
+  };
 
   const formatDate = (dateStr: string) =>
     new Date(dateStr).toLocaleDateString("fr-FR", {
@@ -37,6 +95,68 @@ const Blog = () => {
               <p className="text-lg text-muted-foreground">
                 Stratégies d'acquisition, marketing digital et conseils pour les entreprises de rénovation.
               </p>
+            </div>
+          </AnimatedSection>
+        </section>
+
+        {/* Search & Filters */}
+        <section className="container mx-auto px-4 mb-12">
+          <AnimatedSection delay={0.05}>
+            <div className="rounded-2xl border border-border bg-card/60 backdrop-blur-sm p-4 md:p-6 shadow-card">
+              <div className="grid gap-3 md:grid-cols-[1fr_auto_auto_auto] md:items-center">
+                <div className="relative">
+                  <Search
+                    size={16}
+                    className="absolute left-3 top-1/2 -translate-y-1/2 text-muted-foreground"
+                  />
+                  <Input
+                    type="search"
+                    value={query}
+                    onChange={(e) => setQuery(e.target.value)}
+                    placeholder="Rechercher un article, un mot-clé…"
+                    className="pl-9 h-11"
+                    aria-label="Rechercher dans le blog"
+                  />
+                </div>
+                <Select value={selectedTag} onValueChange={setSelectedTag}>
+                  <SelectTrigger className="h-11 md:w-52" aria-label="Filtrer par thématique">
+                    <SelectValue placeholder="Thématique" />
+                  </SelectTrigger>
+                  <SelectContent className="bg-popover">
+                    <SelectItem value="all">Toutes les thématiques</SelectItem>
+                    {allTags.map((tag) => (
+                      <SelectItem key={tag} value={tag}>
+                        {tag}
+                      </SelectItem>
+                    ))}
+                  </SelectContent>
+                </Select>
+                <Select value={sortBy} onValueChange={setSortBy}>
+                  <SelectTrigger className="h-11 md:w-44" aria-label="Trier les articles">
+                    <SelectValue placeholder="Trier" />
+                  </SelectTrigger>
+                  <SelectContent className="bg-popover">
+                    <SelectItem value="recent">Plus récents</SelectItem>
+                    <SelectItem value="oldest">Plus anciens</SelectItem>
+                    <SelectItem value="title">Titre (A-Z)</SelectItem>
+                  </SelectContent>
+                </Select>
+                {isFiltering && (
+                  <Button
+                    variant="ghost"
+                    onClick={resetFilters}
+                    className="h-11"
+                  >
+                    <X size={16} /> Réinitialiser
+                  </Button>
+                )}
+              </div>
+              {isFiltering && (
+                <p className="text-sm text-muted-foreground mt-4">
+                  {filtered.length} article{filtered.length > 1 ? "s" : ""} trouvé
+                  {filtered.length > 1 ? "s" : ""}
+                </p>
+              )}
             </div>
           </AnimatedSection>
         </section>
@@ -93,7 +213,9 @@ const Blog = () => {
         {/* Other articles grid */}
         {others.length > 0 && (
           <section className="container mx-auto px-4">
-            <h2 className="text-2xl font-bold text-foreground mb-8 font-display">Tous les articles</h2>
+            <h2 className="text-2xl font-bold text-foreground mb-8 font-display">
+              {isFiltering ? "Résultats" : "Tous les articles"}
+            </h2>
             <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
               {others.map((article, i) => (
                 <AnimatedSection key={article.slug} delay={i * 0.1}>
@@ -134,6 +256,22 @@ const Blog = () => {
                   </Link>
                 </AnimatedSection>
               ))}
+            </div>
+          </section>
+        )}
+
+        {isFiltering && others.length === 0 && (
+          <section className="container mx-auto px-4">
+            <div className="text-center py-16 border border-dashed border-border rounded-2xl">
+              <p className="text-lg text-foreground font-semibold mb-2">
+                Aucun article trouvé
+              </p>
+              <p className="text-muted-foreground mb-6">
+                Essayez d'autres mots-clés ou réinitialisez les filtres.
+              </p>
+              <Button onClick={resetFilters} variant="outline">
+                <X size={16} /> Réinitialiser les filtres
+              </Button>
             </div>
           </section>
         )}
