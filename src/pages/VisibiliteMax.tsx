@@ -163,7 +163,7 @@ const VisibiliteMax = () => {
           slugs={[
             "internaliser-externaliser-marketing-renovation-btp",
             "google-ads-vs-facebook-ads-renovation-habitat",
-            "strategie-marketing-btp-feuille-route-2026",
+            "strategie-marketing-btp-feuille-route-2026-demandes-rentables",
           ]}
           subtitle="Pour aller plus loin sur la gestion de votre communication digitale en rénovation."
         />
