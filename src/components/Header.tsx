@@ -32,7 +32,7 @@ const Header = () => {
   ];
 
   const serviceLinks = [
-    { label: "Gestion de communication", href: "/visibilite-max", star: true },
+    { label: "Gestion de communication", href: "/gestion-communication", star: true },
     { label: "Prise de rendez-vous qualifiés", href: "/prise-rendez-vous", star: false },
     { label: "Tournage professionnel", href: "/tournage", star: false },
     { label: "Gestion SEO", href: "/gestion-seo", star: false },

@@ -2,7 +2,7 @@ import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
 import Resultats from "./pages/Resultats";
@@ -44,8 +44,8 @@ const App = () => (
           <Route path="/creation-reseaux-sociaux" element={<CreationReseaux />} />
           <Route path="/creation-site-internet" element={<CreationSite />} />
           <Route path="/tournage" element={<Tournage />} />
-          <Route path="/visibilite-max" element={<VisibiliteMax />} />
           <Route path="/gestion-communication" element={<VisibiliteMax />} />
+          <Route path="/visibilite-max" element={<Navigate to="/gestion-communication" replace />} />
           <Route path="/gestion-seo" element={<GestionSeo />} />
           <Route path="/seo" element={<GestionSeo />} />
           <Route path="/prise-rendez-vous" element={<PriseRendezVous />} />
