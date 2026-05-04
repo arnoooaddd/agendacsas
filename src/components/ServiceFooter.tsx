@@ -1,20 +1,13 @@
-import { Youtube, Linkedin, Heart, Mail, ExternalLink, MessageCircle } from "lucide-react";
-import { Button } from "./ui/button";
-import { useEffect } from "react";
+import Footer from "./Footer";
 
-const ServiceFooter = () => {
+// ServiceFooter is unified with the main Footer to ensure the Typeform contact
+// form is present on every service page (same UX as the main page).
+const ServiceFooter = () => <Footer />;
+
+export default ServiceFooter;
+
+const _Unused = () => {
   const currentYear = new Date().getFullYear();
-
-  useEffect(() => {
-    const existingElfsight = document.querySelector('script[src="https://elfsightcdn.com/platform.js"]');
-    if (!existingElfsight) {
-      const elfsightScript = document.createElement("script");
-      elfsightScript.src = "https://elfsightcdn.com/platform.js";
-      elfsightScript.async = true;
-      document.body.appendChild(elfsightScript);
-    }
-  }, []);
-
   return (
     <footer id="contact" className="relative overflow-hidden border-t border-border/30 bg-muted/30">
       <div className="absolute inset-0 gradient-mesh opacity-30" />
