@@ -14,6 +14,30 @@ export interface BlogArticle {
 
 export const blogArticles: BlogArticle[] = [
   {
+    slug: "combiner-seo-publicite-generer-demandes-devis-renovation-2026",
+    title: "Comment combiner SEO et publicité pour générer plus de demandes de devis en rénovation en 2026",
+    metaDescription: "SEO et publicité ne s'opposent pas. Découvrez comment les combiner pour générer plus de demandes de devis qualifiées et améliorer la rentabilité de votre acquisition en rénovation.",
+    excerpt: "Le SEO construit la visibilité durable, la publicité accélère les résultats. Voici comment les faire travailler ensemble pour générer plus de demandes de devis qualifiées.",
+    coverImage: "combiner-seo-publicite-generer-demandes-devis-renovation-2026",
+    author: "Arnaud UTILLE",
+    date: "2026-05-04",
+    readTime: "8 min",
+    featured: false,
+    tags: ["SEO", "Publicité", "Acquisition"],
+    keywords: [
+      "seo et publicité rénovation",
+      "générer des demandes de devis rénovation",
+      "référencement local rénovation",
+      "google ads rénovation",
+      "publicité rénovation",
+      "acquisition clients rénovation",
+      "landing page rénovation",
+      "stratégie marketing rénovation",
+      "gestion seo rénovation",
+      "gestion communication rénovation"
+    ],
+  },
+  {
     slug: "inbound-marketing-btp-automation-abm-developper-business-2026",
     title: "Inbound marketing BTP : comment combiner contenu, automation et ABM pour développer votre business en 2026",
     metaDescription: "Inbound marketing BTP : découvrez comment articuler contenu, marketing automation et ABM pour générer des demandes plus mûres et soutenir votre développement commercial.",

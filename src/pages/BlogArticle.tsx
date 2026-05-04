@@ -86,6 +86,10 @@ const articleToService: Record<string, { service: ServiceKey; intro?: string }> 
     service: "gestion-communication",
     intro: "Reliez contenu, automation et acquisition payante dans une logique business enfin pilotable.",
   },
+  "combiner-seo-publicite-generer-demandes-devis-renovation-2026": {
+    service: "gestion-seo",
+    intro: "Faites travailler référencement local et acquisition payante ensemble pour capter plus de demandes qualifiées.",
+  },
   "google-ads-vs-facebook-ads-renovation-habitat": {
     service: "prise-rendez-vous",
     intro: "Agendac orchestre Google Ads et Meta Ads pour vous — payable au RDV qualifié.",
@@ -160,6 +164,7 @@ const articleComponents: Record<string, React.ComponentType> = {
   "site-web-renovation-levier-commercial-2026": lazy(() => import("@/components/blog/ArticleSiteWebRenovationLevierCommercial2026")),
   "actions-marketing-btp-generer-demandes-qualifiees-2026": lazy(() => import("@/components/blog/ArticleActionsMarketingBtpDemandesQualifiees2026")),
   "inbound-marketing-btp-automation-abm-developper-business-2026": lazy(() => import("@/components/blog/ArticleInboundMarketingBtpAutomationAbm2026")),
+  "combiner-seo-publicite-generer-demandes-devis-renovation-2026": lazy(() => import("@/components/blog/ArticleCombinerSeoPubliciteDemandesDevis2026")),
 };
 
 // Redirects from old blog slugs to new SEO-optimized URLs
