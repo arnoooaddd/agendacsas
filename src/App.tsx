@@ -44,8 +44,8 @@ const App = () => (
           <Route path="/creation-reseaux-sociaux" element={<CreationReseaux />} />
           <Route path="/creation-site-internet" element={<CreationSite />} />
           <Route path="/tournage" element={<Tournage />} />
-          <Route path="/visibilite-max" element={<VisibiliteMax />} />
           <Route path="/gestion-communication" element={<VisibiliteMax />} />
+          <Route path="/visibilite-max" element={<Navigate to="/gestion-communication" replace />} />
           <Route path="/gestion-seo" element={<GestionSeo />} />
           <Route path="/seo" element={<GestionSeo />} />
           <Route path="/prise-rendez-vous" element={<PriseRendezVous />} />
