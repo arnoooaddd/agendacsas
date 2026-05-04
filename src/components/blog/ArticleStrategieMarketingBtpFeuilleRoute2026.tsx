@@ -14,14 +14,13 @@ const toc = [
 ];
 
 const ArticleStrategieMarketingBtpFeuilleRoute2026 = () => (
-  <div className="grid gap-10 lg:grid-cols-[minmax(0,1fr)_260px]">
-    <div className="min-w-0">
-      <div className="mb-8 rounded-xl border border-border bg-muted/30 p-5 md:p-6">
+  <>
+    <div className="mb-8 rounded-xl border border-border bg-muted/30 p-5 md:p-6">
         <p className="mb-3 text-sm font-semibold uppercase tracking-wide text-primary">En bref</p>
         <p className="text-base leading-relaxed text-foreground">
           En 2026, une stratégie marketing BTP rentable ne se résume pas à produire plus de visibilité. Elle relie acquisition, qualification commerciale, suivi des opportunités et rentabilité des chantiers.
-        </p>
-      </div>
+      </p>
+    </div>
 
       <div className="mb-8 lg:hidden rounded-xl border border-border bg-background p-5">
         <p className="mb-4 text-sm font-semibold uppercase tracking-wide text-foreground">Sommaire</p>
