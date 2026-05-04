@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
-import { ArrowRight, CalendarCheck, Video, Globe, Share2, type LucideIcon } from "lucide-react";
+import { ArrowRight, CalendarCheck, Video, Globe, Share2, Megaphone, Search, type LucideIcon } from "lucide-react";
 
-export type ServiceKey = "prise-rendez-vous" | "tournage" | "creation-site-internet" | "creation-reseaux-sociaux";
+export type ServiceKey = "prise-rendez-vous" | "tournage" | "creation-site-internet" | "creation-reseaux-sociaux" | "gestion-communication" | "gestion-seo";
 
 interface ServiceConfig {
   title: string;
@@ -48,6 +48,24 @@ const services: Record<ServiceKey, ServiceConfig> = {
     cta: "Voir l'offre réseaux sociaux",
     href: "/creation-reseaux-sociaux",
     icon: Share2,
+  },
+  "gestion-communication": {
+    title: "Gestion de communication globale",
+    badge: "Communication digitale payante",
+    description:
+      "Agendac pilote votre acquisition payante, vos contenus utiles et votre visibilité digitale pour transformer la communication en levier business mesurable.",
+    cta: "Voir l'offre gestion de communication",
+    href: "/gestion-communication",
+    icon: Megaphone,
+  },
+  "gestion-seo": {
+    title: "Gestion SEO complète",
+    badge: "Référencement organique local",
+    description:
+      "Structure SEO, contenus, maillage et visibilité locale : un socle organique pensé pour générer des demandes qualifiées sur Google et les moteurs IA.",
+    cta: "Voir l'offre gestion SEO",
+    href: "/gestion-seo",
+    icon: Search,
   },
 };
 

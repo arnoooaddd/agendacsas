@@ -14,6 +14,30 @@ export interface BlogArticle {
 
 export const blogArticles: BlogArticle[] = [
   {
+    slug: "inbound-marketing-btp-automation-abm-developper-business-2026",
+    title: "Inbound marketing BTP : comment combiner contenu, automation et ABM pour développer votre business en 2026",
+    metaDescription: "Inbound marketing BTP : découvrez comment articuler contenu, marketing automation et ABM pour générer des demandes plus mûres et soutenir votre développement commercial.",
+    excerpt: "Le contenu attire, l'automation fait mûrir, l'ABM concentre l'effort sur les bons comptes. Voici comment structurer ces 3 leviers sans usine à gaz dans le BTP.",
+    coverImage: "inbound-marketing-btp-automation-abm-developper-business-2026",
+    author: "Arnaud UTILLE",
+    date: "2026-05-04",
+    readTime: "8 min",
+    featured: false,
+    tags: ["Inbound marketing", "BTP", "Acquisition"],
+    keywords: [
+      "inbound marketing BTP",
+      "stratégie marketing BTP",
+      "marketing automation BTP",
+      "ABM BTP",
+      "développer son business dans le bâtiment",
+      "acquisition clients BTP",
+      "génération de leads BTP",
+      "structurer marketing rénovation",
+      "communication digitale BTP",
+      "CRM et marketing automation BTP"
+    ],
+  },
+  {
     slug: "strategie-marketing-btp-feuille-route-2026-demandes-rentables",
     title: "Stratégie marketing BTP : la feuille de route 2026 pour générer des demandes sérieuses et rentables",
     metaDescription: "Stratégie marketing BTP : découvrez la feuille de route 2026 pour structurer l’acquisition, qualifier les demandes et améliorer la rentabilité commerciale.",

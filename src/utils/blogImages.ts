@@ -22,6 +22,7 @@ import siteWebRenovationLevierCommercial2026 from "@/assets/blog/site-web-renova
 import siteWebBtpErreursDemandesDevis2026 from "@/assets/blog/site-web-btp-erreurs-coutent-demandes-devis-2026.png";
 import leadNurturingRenovation2026 from "@/assets/blog/lead-nurturing-renovation-convertir-demandes-chantiers-2026.png";
 import actionsMarketingBtpDemandesQualifiees2026 from "@/assets/blog/actions-marketing-btp-generer-demandes-qualifiees-2026.png";
+import inboundMarketingBtpAutomationAbm2026 from "@/assets/blog/inbound-marketing-btp-automation-abm-developper-business-2026.png";
 
 const coverImages: Record<string, string> = {
   // Anciennes clés (compat)
@@ -66,6 +67,7 @@ const coverImages: Record<string, string> = {
   "site-web-btp-erreurs-coutent-demandes-devis-2026": siteWebBtpErreursDemandesDevis2026,
   "lead-nurturing-renovation-convertir-demandes-chantiers-2026": leadNurturingRenovation2026,
   "actions-marketing-btp-generer-demandes-qualifiees-2026": actionsMarketingBtpDemandesQualifiees2026,
+  "inbound-marketing-btp-automation-abm-developper-business-2026": inboundMarketingBtpAutomationAbm2026,
 };
 
 export const getCoverImage = (key: string): string => {
