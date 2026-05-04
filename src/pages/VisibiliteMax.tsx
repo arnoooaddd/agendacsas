@@ -40,11 +40,11 @@ const VisibiliteMax = () => {
                 <span className="text-sm font-medium text-foreground/80">Service phare Agendac · Formule Visibilité Max</span>
               </div>
               <h1 className="text-3xl sm:text-5xl lg:text-6xl font-bold text-foreground mb-6 leading-[1.1] tracking-tight animate-slide-up">
-                Agendac pilote votre{" "}
+                L'agence qui pilote votre{" "}
                 <span className="text-gradient">communication digitale payante</span>
               </h1>
               <p className="text-muted-foreground text-lg max-w-3xl mx-auto mb-8 animate-fade-in">
-                On gère votre budget pub sur Facebook, Instagram, Google et YouTube pour vous apporter plus de demandes de devis chaque mois. Vous gardez la main sur le chantier, on s'occupe de remplir votre planning.
+                Agendac gère votre budget publicitaire sur tous les réseaux sociaux pour vous apporter plus de visibilité et plus d'opportunités commerciales chaque mois. Profitez de tous les avantages d'un directeur marketing ayant déjà dépensé +570 000 € en publicité et généré +7,4M € pour des entreprises de la rénovation de l'habitat.
               </p>
               <div className="flex flex-col sm:flex-row items-center justify-center gap-4 animate-scale-in">
                 <Button onClick={scrollToContact} variant="secondary" size="lg" className="group glow-secondary">
