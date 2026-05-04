@@ -8,6 +8,7 @@ import Stats from "@/components/Stats";
 import Clients from "@/components/Clients";
 import Interviews from "@/components/Interviews";
 import RelatedArticles from "@/components/RelatedArticles";
+import ServiceFloatingElements from "@/components/ServiceFloatingElements";
 import { Button } from "@/components/ui/button";
 import { Star, ArrowRight, Sparkles, Megaphone, Brain, Layers, Search, Video, CalendarCheck, Facebook, Linkedin, Globe } from "lucide-react";
 import { usePageTitle } from "@/hooks/usePageTitle";
@@ -32,6 +33,7 @@ const VisibiliteMax = () => {
           <div className="absolute inset-0 gradient-mesh opacity-100" />
           <div className="absolute top-20 left-10 w-96 h-96 bg-primary/10 rounded-full blur-3xl animate-pulse-soft" />
           <div className="absolute bottom-10 right-10 w-80 h-80 bg-secondary/8 rounded-full blur-3xl animate-pulse-soft" style={{ animationDelay: "1.5s" }} />
+          <ServiceFloatingElements variant="communication" />
 
           <div className="container mx-auto px-4 relative z-10">
             <div className="max-w-4xl mx-auto text-center">
