@@ -1,8 +1,15 @@
-import { CalendarCheck, Video, Globe, Share2, ArrowRight, Star } from "lucide-react";
+import { CalendarCheck, Video, Globe, Share2, ArrowRight, Star, Megaphone, Search } from "lucide-react";
 import AnimatedSection from "./AnimatedSection";
 import { Button } from "./ui/button";
 
 const services = [
+  {
+    icon: Megaphone,
+    title: "Gestion de communication",
+    desc: "Nous pilotons toute votre communication (Meta, Google, LinkedIn, organique) en facture mensuelle. Comme un directeur marketing expérimenté, internalisé chez Agendac.",
+    href: "/visibilite-max",
+    star: true,
+  },
   {
     icon: CalendarCheck,
     title: "Prise de rendez-vous qualifiés",
@@ -16,6 +23,13 @@ const services = [
     desc: "Scripts, tournage sur site, montage et livraison — 100 % internalisé. Des vidéos pensées pour la publicité et les réseaux sociaux.",
     href: "/tournage",
     star: true,
+  },
+  {
+    icon: Search,
+    title: "Gestion SEO",
+    desc: "Référencement local et optimisation pour les moteurs IA (ChatGPT, Claude, Gemini) afin de capter la demande qualifiée sur votre zone.",
+    href: "/gestion-seo",
+    star: false,
   },
   {
     icon: Globe,
