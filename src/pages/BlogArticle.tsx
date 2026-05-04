@@ -78,6 +78,10 @@ const articleToService: Record<string, { service: ServiceKey; intro?: string }> 
     service: "creation-site-internet",
     intro: "Un site utile commercialement aide vos équipes à convertir mieux, pas seulement à être jolies en ligne.",
   },
+  "actions-marketing-btp-generer-demandes-qualifiees-2026": {
+    service: "prise-rendez-vous",
+    intro: "Structurez vos actions marketing BTP pour obtenir plus de demandes vraiment exploitables par vos équipes.",
+  },
   "google-ads-vs-facebook-ads-renovation-habitat": {
     service: "prise-rendez-vous",
     intro: "Agendac orchestre Google Ads et Meta Ads pour vous — payable au RDV qualifié.",
@@ -150,6 +154,7 @@ const articleComponents: Record<string, React.ComponentType> = {
   "site-web-btp-erreurs-coutent-demandes-devis-2026": lazy(() => import("@/components/blog/ArticleSiteWebBtpErreursDemandesDevis2026")),
   "referencement-btp-google-ia-generatives-2026": lazy(() => import("@/components/blog/ArticleReferencementBtpGoogleIa2026")),
   "site-web-renovation-levier-commercial-2026": lazy(() => import("@/components/blog/ArticleSiteWebRenovationLevierCommercial2026")),
+  "actions-marketing-btp-generer-demandes-qualifiees-2026": lazy(() => import("@/components/blog/ArticleActionsMarketingBtpDemandesQualifiees2026")),
 };
 
 // Redirects from old blog slugs to new SEO-optimized URLs

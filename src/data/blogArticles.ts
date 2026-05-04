@@ -611,4 +611,28 @@ export const blogArticles: BlogArticle[] = [
       "transformer leads en clients rénovation"
     ],
   },
+  {
+    slug: "actions-marketing-btp-generer-demandes-qualifiees-2026",
+    title: "6 actions marketing BTP à renforcer en 2026 pour générer plus de demandes qualifiées",
+    metaDescription: "Découvrez 6 actions marketing BTP à renforcer en 2026 pour générer plus de demandes qualifiées, mieux convertir vos contacts et piloter votre acquisition.",
+    excerpt: "Google Ads, site web, preuves chantier, nurturing, CRM et pilotage : les 6 actions marketing les plus utiles pour générer des demandes qualifiées dans le BTP en 2026.",
+    coverImage: "actions-marketing-btp-generer-demandes-qualifiees-2026",
+    author: "Rachad AIT HAMOU",
+    date: "2026-05-04",
+    readTime: "8 min",
+    featured: false,
+    tags: ["Marketing", "BTP", "Acquisition"],
+    keywords: [
+      "stratégie marketing BTP",
+      "génération de leads BTP",
+      "acquisition clients BTP",
+      "publicité BTP",
+      "trouver des clients BTP",
+      "structurer l’acquisition client dans le BTP",
+      "marketing digital bâtiment",
+      "système génération de leads rénovation",
+      "campagnes publicitaires rénovation",
+      "demandes qualifiées BTP"
+    ],
+  },
 ];
