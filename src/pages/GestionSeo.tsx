@@ -33,6 +33,46 @@ const GestionSeo = () => {
           <div className="absolute top-20 left-10 w-96 h-96 bg-primary/10 rounded-full blur-3xl animate-pulse-soft" />
           <div className="absolute bottom-10 right-10 w-80 h-80 bg-secondary/8 rounded-full blur-3xl animate-pulse-soft" style={{ animationDelay: "1.5s" }} />
 
+          {/* Background SEO growth chart */}
+          <svg
+            aria-hidden="true"
+            viewBox="0 0 800 400"
+            preserveAspectRatio="none"
+            className="absolute inset-0 w-full h-full opacity-[0.18] pointer-events-none"
+          >
+            <defs>
+              <linearGradient id="seoArea" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0%" stopColor="hsl(var(--primary))" stopOpacity="0.55" />
+                <stop offset="100%" stopColor="hsl(var(--primary))" stopOpacity="0" />
+              </linearGradient>
+            </defs>
+            {/* grid */}
+            {[80, 160, 240, 320].map((y) => (
+              <line key={y} x1="0" y1={y} x2="800" y2={y} stroke="hsl(var(--primary))" strokeOpacity="0.12" strokeDasharray="4 6" />
+            ))}
+            {/* area under curve */}
+            <path
+              d="M0,360 C120,340 200,310 280,270 S420,170 520,130 660,80 800,40 L800,400 L0,400 Z"
+              fill="url(#seoArea)"
+            />
+            {/* growth line */}
+            <path
+              d="M0,360 C120,340 200,310 280,270 S420,170 520,130 660,80 800,40"
+              fill="none"
+              stroke="hsl(var(--primary))"
+              strokeWidth="3"
+              strokeLinecap="round"
+            />
+            {/* arrow head at end */}
+            <polygon points="800,40 770,30 776,55" fill="hsl(var(--primary))" />
+            {/* impression dots */}
+            {[
+              [120, 338], [240, 290], [360, 230], [480, 160], [600, 100], [720, 60],
+            ].map(([cx, cy], i) => (
+              <circle key={i} cx={cx} cy={cy} r="5" fill="hsl(var(--background))" stroke="hsl(var(--primary))" strokeWidth="2.5" />
+            ))}
+          </svg>
+
           <div className="container mx-auto px-4 relative z-10">
             <div className="max-w-4xl mx-auto text-center">
               <div className="inline-flex items-center gap-2 glass-card px-5 py-2.5 mb-6 border-gradient animate-fade-in">
@@ -41,10 +81,10 @@ const GestionSeo = () => {
               </div>
               <h1 className="text-3xl sm:text-5xl lg:text-6xl font-bold text-foreground mb-6 leading-[1.1] tracking-tight animate-slide-up">
                 Gestion locale de votre{" "}
-                <span className="text-gradient">référencement organique</span>
+                <span className="text-gradient">référencement organique (SEO)</span>
               </h1>
               <p className="text-muted-foreground text-lg max-w-3xl mx-auto mb-8 animate-fade-in">
-                Sortez premier dans votre zone de chalandise sur <strong className="text-foreground">Google, Bing, ChatGPT, Gemini et Claude</strong>. Une équipe dédiée à votre référencement organique, en forfait mensuel.
+                Sortez premier dans votre zone de chalandise sur <strong className="text-foreground">Google, Google Maps, Bing, ChatGPT, Gemini, Claude et Grok</strong>. Une équipe dédiée à votre référencement organique, en forfait mensuel.
               </p>
               <div className="flex flex-col sm:flex-row items-center justify-center gap-4 animate-scale-in">
                 <Button onClick={scrollToContact} variant="secondary" size="lg" className="group glow-secondary">
