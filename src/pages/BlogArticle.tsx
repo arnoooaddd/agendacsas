@@ -306,8 +306,8 @@ const BlogArticleContent = ({ slug }: { slug: string | undefined }) => {
       // Restore generic site metadata when leaving the article
       const genericTitle = "Agendac | Accélérateur de Croissance N°1 - Rénovation de l'Habitat";
       const genericDesc = "Agendac accompagne les entreprises de rénovation de l'habitat à bâtir une présence digitale solide et à générer une croissance prévisible et durable.";
-      const genericImage = "https://agendacsas.lovable.app/og-image.png";
-      const genericUrl = "https://agendacsas.lovable.app/";
+      const genericImage = "https://agendac.fr/og-image.png";
+      const genericUrl = "https://agendac.fr/";
       document.title = genericTitle;
       setMeta('meta[name="title"]', "name", "title", genericTitle);
       setMeta('meta[name="description"]', "name", "description", genericDesc);
