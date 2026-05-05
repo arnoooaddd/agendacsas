@@ -22,6 +22,10 @@ const authorProfiles: Record<string, { image: string; role: string }> = {
 
 // Mapping article slug → most relevant Agendac service
 const articleToService: Record<string, { service: ServiceKey; intro?: string }> = {
+  "contacter-prospects-rendez-vous-renovation-2026": {
+    service: "prise-rendez-vous",
+    intro: "Structurez le rappel et la qualification de vos demandes pour obtenir plus de rendez-vous vraiment exploitables.",
+  },
   "lead-nurturing-renovation-convertir-demandes-chantiers-2026": {
     service: "prise-rendez-vous",
     intro: "Mieux relancer vos demandes pour transformer plus d'intérêt en rendez-vous vraiment exploitables.",
@@ -157,6 +161,7 @@ const articleToService: Record<string, { service: ServiceKey; intro?: string }> 
 };
 
 const articleComponents: Record<string, React.ComponentType> = {
+  "contacter-prospects-rendez-vous-renovation-2026": lazy(() => import("@/components/blog/ArticleContacterProspectsRendezVous2026")),
   "lead-nurturing-renovation-convertir-demandes-chantiers-2026": lazy(() => import("@/components/blog/ArticleLeadNurturingRenovation2026")),
   "strategie-marketing-btp-feuille-route-2026-demandes-rentables": lazy(() => import("@/components/blog/ArticleStrategieMarketingBtpFeuilleRoute2026")),
   "lead-renovation-demande-vraiment-qualifiee": lazy(() => import("@/components/blog/ArticleLeadRenovationDemandeQualifiee")),

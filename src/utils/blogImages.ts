@@ -9,6 +9,7 @@ import choisirAgence from "@/assets/blog/choisir-agence-marketing-renovation.png
 import externaliserRdv from "@/assets/blog/externaliser-prise-rdv-renovation-new.png";
 import niveauxQualification from "@/assets/blog/niveaux-qualification-prospect-renovation.png";
 import contacterLeads from "@/assets/blog/contacter-leads-reseaux-sociaux.png";
+import contacterProspectsRendezVousRenovation2026 from "@/assets/blog/contacter-prospects-rendez-vous-renovation-2026.png";
 import plateformePublicite from "@/assets/blog/plateforme-publicite-renovation.png";
 import retargetingProspects from "@/assets/blog/retargeting-prospects-renovation.png";
 import publiciteRenovation2026 from "@/assets/blog/publicite-renovation-2026.png";
@@ -58,6 +59,7 @@ const coverImages: Record<string, string> = {
   "retargeting-leads-perdus-renovation-habitat": retargetingProspects,
   "google-ads-meta-ads-entreprise-renovation": plateformePublicite,
   "contacter-leads-facebook-ads-renovation-rdv": contacterLeads,
+  "contacter-prospects-rendez-vous-renovation-2026": contacterProspectsRendezVousRenovation2026,
   "qualification-prospect-tunnel-vente-renovation": niveauxQualification,
   "externaliser-prise-rdv-entreprise-renovation": externaliserRdv,
   "choisir-agence-marketing-renovation-btp": choisirAgence,

@@ -14,6 +14,27 @@ export interface BlogArticle {
 
 export const blogArticles: BlogArticle[] = [
   {
+    slug: "contacter-prospects-rendez-vous-renovation-2026",
+    title: "Comment contacter ses prospects pour obtenir plus de rendez-vous en rénovation en 2026",
+    metaDescription: "Découvrez comment contacter vos prospects plus vite et plus efficacement pour obtenir plus de rendez-vous qualifiés en rénovation en 2026.",
+    excerpt: "Vitesse de rappel, cadence de relance, messages de suivi et qualification : la méthode pour transformer plus de demandes en rendez-vous utiles.",
+    coverImage: "contacter-prospects-rendez-vous-renovation-2026",
+    author: "Omar TROUSSI",
+    date: "2026-05-05",
+    readTime: "7 min",
+    featured: false,
+    tags: ["Prise de rendez-vous", "Rénovation", "Conversion"],
+    keywords: [
+      "prise de rendez-vous rénovation",
+      "génération de leads rénovation",
+      "comment générer des leads rénovation",
+      "acquisition clients rénovation",
+      "système acquisition client rénovation",
+      "tunnel de vente rénovation",
+      "structurer acquisition client BTP"
+    ],
+  },
+  {
     slug: "visibilite-site-internet-google-2026",
     title: "Comment améliorer la visibilité de son site internet sur Google en 2026",
     metaDescription: "Découvrez comment améliorer la visibilité de votre site internet sur Google en 2026 avec une vraie logique SEO pour les entreprises de rénovation et du bâtiment.",
