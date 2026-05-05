@@ -42,6 +42,10 @@ const articleToService: Record<string, { service: ServiceKey; intro?: string }> 
     service: "gestion-communication",
     intro: "Transformez votre communication BTP en levier plus mesurable, mieux aligné avec vos objectifs commerciaux.",
   },
+  "communication-btob-btp-strategie-utile-2026": {
+    service: "gestion-communication",
+    intro: "Structurez une communication BtoB qui soutient vraiment votre crédibilité, votre qualification commerciale et votre acquisition dans le BTP.",
+  },
   "isolation-strategie-marketing-2026": {
     service: "gestion-communication",
     intro: "Structurez vos leviers d’acquisition pour transformer vos demandes isolation en chantiers plus rentables.",
@@ -195,6 +199,7 @@ const articleComponents: Record<string, React.ComponentType> = {
   "extensions-google-ads-visibilite-clics-qualifies-renovation": lazy(() => import("@/components/blog/ArticleExtensionsGoogleAdsVisibiliteClicsQualifiesRenovation")),
   "crm-marketing-automation-btp-2026": lazy(() => import("@/components/blog/ArticleCrmMarketingAutomationBtp2026")),
   "prioriser-marketing-btp-donnees-2026": lazy(() => import("@/components/blog/ArticlePrioriserMarketingBtpDonnees2026")),
+  "communication-btob-btp-strategie-utile-2026": lazy(() => import("@/components/blog/ArticleCommunicationBtobBtpStrategieUtile2026")),
   "lead-nurturing-renovation-convertir-demandes-chantiers-2026": lazy(() => import("@/components/blog/ArticleLeadNurturingRenovation2026")),
   "strategie-marketing-btp-feuille-route-2026-demandes-rentables": lazy(() => import("@/components/blog/ArticleStrategieMarketingBtpFeuilleRoute2026")),
   "lead-renovation-demande-vraiment-qualifiee": lazy(() => import("@/components/blog/ArticleLeadRenovationDemandeQualifiee")),

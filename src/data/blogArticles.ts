@@ -966,4 +966,26 @@ export const blogArticles: BlogArticle[] = [
       "demandes qualifiées BTP"
     ],
   },
+  {
+    slug: "communication-btob-btp-strategie-utile-2026",
+    title: "Communication BtoB dans le BTP : comment structurer une stratégie vraiment utile en 2026",
+    metaDescription: "Communication BtoB dans le BTP : la méthode pour aligner visibilité, réassurance, acquisition et suivi commercial dans une entreprise du bâtiment en 2026.",
+    excerpt: "Une stratégie de communication BtoB utile dans le BTP doit soutenir la crédibilité, la qualification des demandes et le développement commercial réel en 2026.",
+    coverImage: "communication-btob-btp-strategie-utile-2026",
+    author: "Kerim JAKUPOVIC",
+    date: "2026-05-05",
+    readTime: "8 min",
+    featured: false,
+    tags: ["Communication", "BTP", "BtoB"],
+    keywords: [
+      "stratégie marketing BTP",
+      "agence communication BTP",
+      "acquisition clients BTP",
+      "marketing digital bâtiment",
+      "structurer acquisition client BTP",
+      "trouver des clients BTP",
+      "agence marketing BTP",
+      "communication BtoB BTP"
+    ],
+  },
 ];
