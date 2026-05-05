@@ -14,24 +14,23 @@ export interface BlogArticle {
 
 export const blogArticles: BlogArticle[] = [
   {
-    slug: "google-keyword-planner-btp-google-ads",
-    title: "Google Keyword Planner : comment l’utiliser pour rentabiliser vos campagnes Google Ads dans le BTP",
-    metaDescription: "Découvrez comment utiliser le Google Keyword Planner pour choisir des mots-clés plus rentables, mieux cadrer vos budgets Google Ads et générer des demandes plus qualifiées dans le BTP.",
-    excerpt: "Le Keyword Planner ne sert pas juste à trouver des idées. Il aide surtout les entreprises du BTP à arbitrer entre volume, coût et vraie intention commerciale.",
-    coverImage: "extensions-google-ads-visibilite-clics-qualifies-renovation",
-    author: "Kerim JAKUPOVIC",
+    slug: "google-ads-keyword-planner-renovation",
+    title: "Google Ads Keyword Planner : comment trouver des mots-clés rentables pour une entreprise de rénovation en 2026",
+    metaDescription: "Découvrez comment utiliser Google Ads Keyword Planner pour choisir des mots-clés plus rentables, mieux cadrer vos campagnes et générer des demandes sérieuses en rénovation.",
+    excerpt: "Le Keyword Planner aide à arbitrer entre volume, coût et intention réelle pour construire des campagnes Google Ads plus rentables en rénovation.",
+    coverImage: "google-ads-keyword-planner-renovation",
+    author: "Rachad AIT HAMOU",
     date: "2026-05-05",
-    readTime: "7 min",
+    readTime: "8 min",
     featured: false,
-    tags: ["Google Ads", "BTP", "Acquisition"],
+    tags: ["Google Ads", "Rénovation", "Acquisition"],
     keywords: [
       "google ads rénovation",
-      "publicité BTP",
+      "stratégie marketing rénovation",
       "acquisition clients rénovation",
-      "acquisition client bâtiment",
-      "marketing digital bâtiment",
+      "trouver des clients rénovation",
       "campagnes publicitaires rénovation",
-      "agence marketing BTP"
+      "système acquisition client rénovation"
     ],
   },
   {
