@@ -14,6 +14,27 @@ export interface BlogArticle {
 
 export const blogArticles: BlogArticle[] = [
   {
+    slug: "communication-btp-levier-strategique-positionnement",
+    title: "Communication BTP : pourquoi elle reste un levier stratégique pour défendre votre positionnement en 2026",
+    metaDescription: "Découvrez pourquoi la communication BTP reste un levier stratégique en 2026 pour protéger votre positionnement, renforcer la preuve commerciale et défendre vos marges.",
+    excerpt: "Quand le marché se tend, la communication BTP ne sert pas à faire joli : elle aide à défendre le positionnement, soutenir les commerciaux et sécuriser des demandes plus qualifiées.",
+    coverImage: "communication-btp-levier-strategique-positionnement",
+    author: "Kerim JAKUPOVIC",
+    date: "2026-05-05",
+    readTime: "8 min",
+    featured: false,
+    tags: ["Communication BTP", "Positionnement", "Marketing stratégique"],
+    keywords: [
+      "agence communication BTP",
+      "stratégie marketing BTP",
+      "marketing digital bâtiment",
+      "acquisition clients BTP",
+      "structurer acquisition client BTP",
+      "structurer marketing rénovation",
+      "agence marketing bâtiment"
+    ],
+  },
+  {
     slug: "reseaux-sociaux-btp-b2b-2026",
     title: "Quels réseaux sociaux choisir en 2026 pour une entreprise du BTP ?",
     metaDescription: "Découvrez quels réseaux sociaux prioriser en 2026 pour une entreprise du BTP selon vos objectifs : crédibilité B2B, réassurance locale, preuve chantier et acquisition.",
