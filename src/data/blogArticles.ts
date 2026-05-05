@@ -14,6 +14,28 @@ export interface BlogArticle {
 
 export const blogArticles: BlogArticle[] = [
   {
+    slug: "marketing-btp-levier-croissance-2026",
+    title: "Marketing BTP en 2026 : comment en faire un vrai levier de croissance",
+    metaDescription: "Marketing BTP : découvrez comment relier visibilité, acquisition, qualification commerciale et CRM pour en faire un vrai levier de croissance en 2026.",
+    excerpt: "Le marketing BTP devient rentable quand il aide à générer, qualifier et faire avancer de vraies opportunités commerciales. Voici la feuille de route à suivre en 2026.",
+    coverImage: "marketing-btp-levier-croissance-2026",
+    author: "Rachad AIT HAMOU",
+    date: "2026-05-05",
+    readTime: "8 min",
+    featured: false,
+    tags: ["Marketing BTP", "Croissance", "Acquisition"],
+    keywords: [
+      "stratégie marketing BTP",
+      "acquisition clients BTP",
+      "structurer acquisition client BTP",
+      "marketing digital bâtiment",
+      "génération de leads BTP",
+      "trouver des clients BTP",
+      "rentabilité marketing rénovation",
+      "gestion communication BTP"
+    ],
+  },
+  {
     slug: "pourquoi-certaines-entreprises-batiment-dominent-google-2026",
     title: "Pourquoi certaines entreprises du bâtiment dominent Google en 2026 et d’autres restent invisibles",
     metaDescription: "Pourquoi certaines entreprises du bâtiment dominent Google en 2026 ? Voici les leviers concrets de référencement local qui transforment la visibilité en demandes qualifiées.",

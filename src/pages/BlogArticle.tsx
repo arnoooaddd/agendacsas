@@ -102,6 +102,10 @@ const articleToService: Record<string, { service: ServiceKey; intro?: string }> 
     service: "gestion-seo",
     intro: "Structurez vos signaux locaux pour apparaître plus souvent sur Google et transformer cette visibilité en demandes vraiment utiles.",
   },
+  "marketing-btp-levier-croissance-2026": {
+    service: "gestion-communication",
+    intro: "Reliez visibilité, acquisition et traitement commercial pour faire du marketing un vrai levier de croissance.",
+  },
   "google-ads-vs-facebook-ads-renovation-habitat": {
     service: "prise-rendez-vous",
     intro: "Agendac orchestre Google Ads et Meta Ads pour vous — payable au RDV qualifié.",
@@ -180,6 +184,7 @@ const articleComponents: Record<string, React.ComponentType> = {
   "fiche-google-maps-site-internet-referencement-local-2026": lazy(() => import("@/components/blog/ArticleFicheGoogleMapsSiteInternetReferencementLocal2026")),
   "pourquoi-acheter-des-prospects-fausse-bonne-idee": lazy(() => import("@/components/blog/ArticleAchatProspectsAutonomie")),
   "pourquoi-certaines-entreprises-batiment-dominent-google-2026": lazy(() => import("@/components/blog/ArticlePourquoiEntreprisesBatimentDominentGoogle2026")),
+  "marketing-btp-levier-croissance-2026": lazy(() => import("@/components/blog/ArticleMarketingBtpLevierCroissance2026")),
 };
 
 // Redirects from old blog slugs to new SEO-optimized URLs
