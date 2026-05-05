@@ -22,6 +22,10 @@ const authorProfiles: Record<string, { image: string; role: string }> = {
 
 // Mapping article slug → most relevant Agendac service
 const articleToService: Record<string, { service: ServiceKey; intro?: string }> = {
+  "crm-marketing-automation-btp-2026": {
+    service: "gestion-communication",
+    intro: "Reliez qualification, relances et suivi CRM pour transformer plus proprement vos demandes entrantes.",
+  },
   "prioriser-marketing-btp-donnees-2026": {
     service: "gestion-communication",
     intro: "Reliez enfin vos indicateurs marketing aux vraies décisions business pour arbitrer plus proprement vos budgets et vos priorités.",
@@ -157,6 +161,7 @@ const articleToService: Record<string, { service: ServiceKey; intro?: string }> 
 };
 
 const articleComponents: Record<string, React.ComponentType> = {
+  "crm-marketing-automation-btp-2026": lazy(() => import("@/components/blog/ArticleCrmMarketingAutomationBtp2026")),
   "prioriser-marketing-btp-donnees-2026": lazy(() => import("@/components/blog/ArticlePrioriserMarketingBtpDonnees2026")),
   "lead-nurturing-renovation-convertir-demandes-chantiers-2026": lazy(() => import("@/components/blog/ArticleLeadNurturingRenovation2026")),
   "strategie-marketing-btp-feuille-route-2026-demandes-rentables": lazy(() => import("@/components/blog/ArticleStrategieMarketingBtpFeuilleRoute2026")),
