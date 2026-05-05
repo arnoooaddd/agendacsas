@@ -22,6 +22,10 @@ const authorProfiles: Record<string, { image: string; role: string }> = {
 
 // Mapping article slug → most relevant Agendac service
 const articleToService: Record<string, { service: ServiceKey; intro?: string }> = {
+  "menuiserie-exterieure-strategie-marketing-2026": {
+    service: "gestion-communication",
+    intro: "Reliez SEO local, site et campagnes pour générer plus de demandes qualifiées en menuiserie extérieure.",
+  },
   "isolation-strategie-marketing-2026": {
     service: "gestion-communication",
     intro: "Structurez vos leviers d’acquisition pour transformer vos demandes isolation en chantiers plus rentables.",
@@ -205,6 +209,7 @@ const articleComponents: Record<string, React.ComponentType> = {
   "pourquoi-certaines-entreprises-batiment-dominent-google-2026": lazy(() => import("@/components/blog/ArticlePourquoiEntreprisesBatimentDominentGoogle2026")),
   "marketing-btp-levier-croissance-2026": lazy(() => import("@/components/blog/ArticleMarketingBtpLevierCroissance2026")),
   "isolation-strategie-marketing-2026": lazy(() => import("@/components/blog/ArticleIsolationStrategieMarketing2026")),
+  "menuiserie-exterieure-strategie-marketing-2026": lazy(() => import("@/components/blog/ArticleMenuiserieExterieureStrategieMarketing2026")),
 };
 
 // Redirects from old blog slugs to new SEO-optimized URLs
