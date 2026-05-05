@@ -14,6 +14,27 @@ export interface BlogArticle {
 
 export const blogArticles: BlogArticle[] = [
   {
+    slug: "extensions-google-ads-visibilite-clics-qualifies-renovation",
+    title: "Extensions Google Ads : comment gagner en visibilité sans attirer plus de clics inutiles",
+    metaDescription: "Extensions Google Ads : découvrez comment mieux occuper la page de résultats, clarifier votre offre et attirer des clics plus qualifiés dans une entreprise de rénovation.",
+    excerpt: "Les extensions Google Ads aident une entreprise de rénovation à mieux présenter son offre, renforcer sa visibilité et filtrer une partie des clics peu utiles.",
+    coverImage: "extensions-google-ads-visibilite-clics-qualifies-renovation",
+    author: "Omar TROUSSI",
+    date: "2026-05-05",
+    readTime: "7 min",
+    featured: false,
+    tags: ["Google Ads", "Publicité BTP", "Acquisition"],
+    keywords: [
+      "publicité BTP",
+      "google ads rénovation",
+      "campagnes publicitaires rénovation",
+      "marketing digital bâtiment",
+      "acquisition clients rénovation",
+      "stratégie marketing rénovation",
+      "roi publicité rénovation"
+    ],
+  },
+  {
     slug: "crm-marketing-automation-btp-2026",
     title: "Comment coupler CRM et marketing automation dans le BTP en 2026",
     metaDescription: "Découvrez comment relier CRM et marketing automation dans le BTP pour mieux qualifier les demandes, accélérer les relances et améliorer la conversion commerciale en 2026.",
