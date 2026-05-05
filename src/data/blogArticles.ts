@@ -14,6 +14,28 @@ export interface BlogArticle {
 
 export const blogArticles: BlogArticle[] = [
   {
+    slug: "prioriser-marketing-btp-donnees-2026",
+    title: "Marketing BTP : quelles données suivre pour prioriser les bonnes actions en 2026 ?",
+    metaDescription: "Marketing BTP : découvrez quelles données suivre pour prioriser les bonnes actions, mieux arbitrer vos budgets et relier enfin marketing, CRM et performance commerciale en 2026.",
+    excerpt: "Trafic, clics, formulaires, rendez-vous, signatures : voici les données vraiment utiles pour prioriser votre marketing BTP sans piloter à l’intuition.",
+    coverImage: "prioriser-marketing-btp-donnees-2026",
+    author: "Kerim JAKUPOVIC",
+    date: "2026-05-05",
+    readTime: "8 min",
+    featured: false,
+    tags: ["Marketing BTP", "Data", "Pilotage commercial"],
+    keywords: [
+      "stratégie marketing BTP",
+      "structurer acquisition client BTP",
+      "marketing digital bâtiment",
+      "acquisition clients BTP",
+      "génération de leads BTP",
+      "rentabilité marketing rénovation",
+      "structurer marketing rénovation",
+      "gestion communication BTP"
+    ],
+  },
+  {
     slug: "marketing-btp-levier-croissance-2026",
     title: "Marketing BTP en 2026 : comment en faire un vrai levier de croissance",
     metaDescription: "Marketing BTP : découvrez comment relier visibilité, acquisition, qualification commerciale et CRM pour en faire un vrai levier de croissance en 2026.",
