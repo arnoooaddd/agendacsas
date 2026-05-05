@@ -30,6 +30,10 @@ const articleToService: Record<string, { service: ServiceKey; intro?: string }> 
     service: "gestion-communication",
     intro: "Reliez enfin vos indicateurs marketing aux vraies décisions business pour arbitrer plus proprement vos budgets et vos priorités.",
   },
+  "crise-batiment-communication-2026": {
+    service: "gestion-communication",
+    intro: "Reprenez votre communication en période de tension avec des arbitrages plus utiles pour la visibilité, la confiance et la rentabilité.",
+  },
   "lead-nurturing-renovation-convertir-demandes-chantiers-2026": {
     service: "prise-rendez-vous",
     intro: "Mieux relancer vos demandes pour transformer plus d'intérêt en rendez-vous vraiment exploitables.",
@@ -195,6 +199,7 @@ const articleComponents: Record<string, React.ComponentType> = {
   "pourquoi-acheter-des-prospects-fausse-bonne-idee": lazy(() => import("@/components/blog/ArticleAchatProspectsAutonomie")),
   "pourquoi-certaines-entreprises-batiment-dominent-google-2026": lazy(() => import("@/components/blog/ArticlePourquoiEntreprisesBatimentDominentGoogle2026")),
   "marketing-btp-levier-croissance-2026": lazy(() => import("@/components/blog/ArticleMarketingBtpLevierCroissance2026")),
+  "crise-batiment-communication-2026": lazy(() => import("@/components/blog/ArticleCriseBatimentCommunication2026")),
 };
 
 // Redirects from old blog slugs to new SEO-optimized URLs
