@@ -5,6 +5,7 @@ import { blogArticles } from "@/data/blogArticles";
 import { Badge } from "@/components/ui/badge";
 import { ArrowLeft, Clock, Calendar } from "lucide-react";
 import { useEffect, lazy, Suspense } from "react";
+import reseauxSociauxBtpCanaux2026 from "@/assets/blog/reseaux-sociaux-btp-canaux-2026.png";
 import { getCoverImage } from "@/utils/blogImages";
 import arnaudImg from "@/assets/team/arnaud-utille.webp";
 import kerimImg from "@/assets/team/kerim-jakupovic.webp";
@@ -22,6 +23,10 @@ const authorProfiles: Record<string, { image: string; role: string }> = {
 
 // Mapping article slug → most relevant Agendac service
 const articleToService: Record<string, { service: ServiceKey; intro?: string }> = {
+  "reseaux-sociaux-btp-canaux-choisir-2026": {
+    service: "gestion-communication",
+    intro: "Choisissez les bons canaux sociaux selon vos objectifs business et reliez-les à une vraie stratégie de communication pilotée.",
+  },
   "contacter-prospects-rendez-vous-renovation-2026": {
     service: "prise-rendez-vous",
     intro: "Structurez le rappel et la qualification de vos demandes pour obtenir plus de rendez-vous vraiment exploitables.",
@@ -161,6 +166,7 @@ const articleToService: Record<string, { service: ServiceKey; intro?: string }> 
 };
 
 const articleComponents: Record<string, React.ComponentType> = {
+  "reseaux-sociaux-btp-canaux-choisir-2026": lazy(() => import("@/components/blog/ArticleReseauxSociauxBtpCanaux2026")),
   "contacter-prospects-rendez-vous-renovation-2026": lazy(() => import("@/components/blog/ArticleContacterProspectsRendezVous2026")),
   "lead-nurturing-renovation-convertir-demandes-chantiers-2026": lazy(() => import("@/components/blog/ArticleLeadNurturingRenovation2026")),
   "strategie-marketing-btp-feuille-route-2026-demandes-rentables": lazy(() => import("@/components/blog/ArticleStrategieMarketingBtpFeuilleRoute2026")),
@@ -198,6 +204,10 @@ const articleComponents: Record<string, React.ComponentType> = {
 };
 
 // Redirects from old blog slugs to new SEO-optimized URLs
+const staticArticleImages: Record<string, string> = {
+  "reseaux-sociaux-btp-canaux-choisir-2026": reseauxSociauxBtpCanaux2026,
+};
+
 const slugRedirects: Record<string, string> = {
   "se-demarquer-arnaques-renovation": "generation-leads-fiables-entreprise-renovation",
   "publicite-renovation-2026": "strategie-publicite-entreprise-renovation-2026",
@@ -239,7 +249,7 @@ const BlogArticleContent = ({ slug }: { slug: string | undefined }) => {
     window.scrollTo(0, 0);
   }, [slug]);
 
-  const cover = article ? getCoverImage(article.coverImage) : "";
+  const cover = article ? (staticArticleImages[article.slug] ?? getCoverImage(article.coverImage)) : "";
 
   useEffect(() => {
     if (!article) return;

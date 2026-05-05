@@ -14,6 +14,27 @@ export interface BlogArticle {
 
 export const blogArticles: BlogArticle[] = [
   {
+    slug: "reseaux-sociaux-btp-canaux-choisir-2026",
+    title: "Réseaux sociaux BTP : quels canaux choisir en 2026 pour développer votre activité ?",
+    metaDescription: "Découvrez quels réseaux sociaux prioriser en 2026 pour développer la visibilité, la réassurance et les demandes entrantes de votre entreprise du BTP.",
+    excerpt: "Facebook, Instagram, LinkedIn : voici comment choisir les bons réseaux sociaux selon votre objectif business dans le BTP en 2026.",
+    coverImage: "reseaux-sociaux-btp-canaux-2026",
+    author: "Kerim JAKUPOVIC",
+    date: "2026-05-05",
+    readTime: "7 min",
+    featured: false,
+    tags: ["Réseaux sociaux", "BTP", "Communication"],
+    keywords: [
+      "stratégie marketing BTP",
+      "marketing digital bâtiment",
+      "agence communication BTP",
+      "structurer marketing rénovation",
+      "acquisition clients BTP",
+      "trouver des clients BTP",
+      "gestion communication BTP"
+    ],
+  },
+  {
     slug: "contacter-prospects-rendez-vous-renovation-2026",
     title: "Comment contacter ses prospects pour obtenir plus de rendez-vous en rénovation en 2026",
     metaDescription: "Découvrez comment contacter vos prospects plus vite et plus efficacement pour obtenir plus de rendez-vous qualifiés en rénovation en 2026.",
