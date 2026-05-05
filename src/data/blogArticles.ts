@@ -14,6 +14,27 @@ export interface BlogArticle {
 
 export const blogArticles: BlogArticle[] = [
   {
+    slug: "communication-habitat-strategie-2026",
+    title: "Communication habitat : quelle stratégie adopter en 2026 ?",
+    metaDescription: "Découvrez quelle stratégie de communication adopter en 2026 pour une entreprise de l’habitat : visibilité locale, réassurance, contenus, SEO et conversion.",
+    excerpt: "Dans l’habitat, bien communiquer ne consiste plus à publier partout. Voici comment relier visibilité, preuves terrain et demandes sérieuses en 2026.",
+    coverImage: "communication-habitat-strategie-2026",
+    author: "Omar TROUSSI",
+    date: "2026-05-05",
+    readTime: "8 min",
+    featured: false,
+    tags: ["Communication", "Habitat", "Stratégie"],
+    keywords: [
+      "agence communication rénovation",
+      "agence communication BTP",
+      "stratégie marketing rénovation",
+      "marketing digital rénovation",
+      "structurer marketing rénovation",
+      "acquisition clients rénovation",
+      "comment trouver des clients en rénovation"
+    ],
+  },
+  {
     slug: "analyse-trafic-web-ga4-btp-2026",
     title: "Analyse du trafic web BTP : comment exploiter GA4 pour prendre de meilleures décisions marketing en 2026",
     metaDescription: "Découvrez comment exploiter Google Analytics 4 en 2026 pour mieux lire votre trafic web BTP, comprendre vos conversions et prendre de vraies décisions marketing.",
