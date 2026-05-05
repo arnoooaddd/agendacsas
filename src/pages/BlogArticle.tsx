@@ -23,6 +23,10 @@ const authorProfiles: Record<string, { image: string; role: string }> = {
 
 // Mapping article slug → most relevant Agendac service
 const articleToService: Record<string, { service: ServiceKey; intro?: string }> = {
+  "analyse-trafic-web-ga4-btp-2026": {
+    service: "gestion-communication",
+    intro: "Pilotez enfin vos campagnes, vos pages et vos conversions avec une lecture analytics reliée à la qualité réelle des demandes.",
+  },
   "inbound-marketing-btp-cycles-longs-2026": {
     service: "gestion-communication",
     intro: "Structurez un parcours qui nourrit vos prospects pendant les cycles de vente longs et transmette au commerce des demandes plus mûres.",
@@ -170,6 +174,7 @@ const articleToService: Record<string, { service: ServiceKey; intro?: string }> 
 };
 
 const articleComponents: Record<string, React.ComponentType> = {
+  "analyse-trafic-web-ga4-btp-2026": lazy(() => import("@/components/blog/ArticleAnalyseTraficWebGa4Btp2026")),
   "inbound-marketing-btp-cycles-longs-2026": lazy(() => import("@/components/blog/ArticleInboundMarketingBtpCyclesLongs2026")),
   "reseaux-sociaux-btp-canaux-choisir-2026": lazy(() => import("@/components/blog/ArticleReseauxSociauxBtpCanaux2026")),
   "contacter-prospects-rendez-vous-renovation-2026": lazy(() => import("@/components/blog/ArticleContacterProspectsRendezVous2026")),

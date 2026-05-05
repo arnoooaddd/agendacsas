@@ -14,6 +14,27 @@ export interface BlogArticle {
 
 export const blogArticles: BlogArticle[] = [
   {
+    slug: "analyse-trafic-web-ga4-btp-2026",
+    title: "Analyse du trafic web BTP : comment exploiter GA4 pour prendre de meilleures décisions marketing en 2026",
+    metaDescription: "Découvrez comment exploiter Google Analytics 4 en 2026 pour mieux lire votre trafic web BTP, comprendre vos conversions et prendre de vraies décisions marketing.",
+    excerpt: "GA4 ne sert pas seulement à compter les visites. Voici comment une entreprise du BTP peut l’utiliser pour relier trafic, qualité des demandes et décisions marketing utiles.",
+    coverImage: "analyse-trafic-web-ga4-btp-2026",
+    author: "Arnaud UTILLE",
+    date: "2026-05-05",
+    readTime: "8 min",
+    featured: false,
+    tags: ["Web analytics", "GA4", "BTP"],
+    keywords: [
+      "marketing digital bâtiment",
+      "stratégie marketing BTP",
+      "acquisition clients BTP",
+      "structurer acquisition client BTP",
+      "génération de leads BTP",
+      "trouver des clients BTP",
+      "problème génération leads BTP"
+    ],
+  },
+  {
     slug: "inbound-marketing-btp-cycles-longs-2026",
     title: "Inbound marketing BTP : pourquoi cette méthode fonctionne si bien sur des cycles de vente longs en 2026",
     metaDescription: "Découvrez pourquoi l’inbound marketing BTP fonctionne particulièrement bien sur des cycles de vente longs, et comment structurer une acquisition plus mûre en 2026.",
