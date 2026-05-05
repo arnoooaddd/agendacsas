@@ -5,6 +5,8 @@ export interface BlogArticle {
   excerpt: string;
   coverImage: string;
   author: string;
+  authorRole?: string;
+  authorImage?: string;
   date: string;
   readTime: string;
   featured: boolean;
@@ -13,6 +15,31 @@ export interface BlogArticle {
 }
 
 export const blogArticles: BlogArticle[] = [
+  {
+    slug: "optimiser-fiche-google-maps-local-pack-2026",
+    title: "Optimiser sa fiche Google Maps : 20 conseils utiles pour remonter dans le Local Pack en 2026",
+    metaDescription: "Découvrez 20 conseils concrets pour optimiser votre fiche Google Maps en 2026, améliorer votre référencement local et générer plus de demandes qualifiées en rénovation.",
+    excerpt: "Nom, catégories, avis, photos, pages locales et suivi commercial : voici les optimisations qui aident une entreprise de rénovation à mieux remonter dans le Local Pack en 2026.",
+    coverImage: "optimiser-fiche-google-maps-local-pack-2026",
+    author: "Kerim JAKUPOVIC",
+    authorRole: "Directeur général",
+    authorImage: "https://agendac.fr/assets/kerim-jakupovic-Cru9KA9O.webp",
+    date: "2026-05-04",
+    readTime: "8 min",
+    featured: false,
+    tags: ["SEO local", "Google Maps", "Rénovation"],
+    keywords: [
+      "optimiser fiche google maps",
+      "référencement local",
+      "google business profile",
+      "seo local rénovation",
+      "gestion seo",
+      "acquisition clients rénovation",
+      "fiche google maps rénovation",
+      "local pack 2026",
+      "trouver des clients rénovation"
+    ],
+  },
   {
     slug: "pourquoi-certaines-entreprises-batiment-dominent-google-2026",
     title: "Pourquoi certaines entreprises du bâtiment dominent Google en 2026 et d’autres restent invisibles",

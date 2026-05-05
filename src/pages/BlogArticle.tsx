@@ -13,11 +13,11 @@ import omarImg from "@/assets/team/omar-troussi.webp";
 import RelatedService, { type ServiceKey } from "@/components/RelatedService";
 import ArticleTOC from "@/components/blog/ArticleTOC";
 
-const authorProfiles: Record<string, { image: string; role: string }> = {
-  "Arnaud UTILLE": { image: arnaudImg, role: "Président" },
-  "Kerim JAKUPOVIC": { image: kerimImg, role: "Directeur général" },
-  "Rachad AIT HAMOU": { image: rachadImg, role: "Rachad AIT HAMOU" },
-  "Omar TROUSSI": { image: omarImg, role: "Responsable publicités" },
+const authorProfiles: Record<string, { image: string; role: string; imageUrl: string }> = {
+  "Arnaud UTILLE": { image: arnaudImg, role: "Président", imageUrl: "https://agendac.fr/assets/arnaud-utille-BXSpZUKD.webp" },
+  "Kerim JAKUPOVIC": { image: kerimImg, role: "Directeur général", imageUrl: "https://agendac.fr/assets/kerim-jakupovic-Cru9KA9O.webp" },
+  "Rachad AIT HAMOU": { image: rachadImg, role: "Rachad AIT HAMOU", imageUrl: "https://agendac.fr/assets/rachad-ait-hamou-DtrcmJVM.webp" },
+  "Omar TROUSSI": { image: omarImg, role: "Responsable publicités", imageUrl: "https://agendac.fr/assets/omar-troussi-B2HyCAOP.webp" },
 };
 
 // Mapping article slug → most relevant Agendac service
@@ -93,6 +93,10 @@ const articleToService: Record<string, { service: ServiceKey; intro?: string }> 
   "fiche-google-maps-site-internet-referencement-local-2026": {
     service: "gestion-seo",
     intro: "Reliez votre fiche Google Maps et vos pages clés pour renforcer votre visibilité locale et convertir plus de recherches de proximité.",
+  },
+  "optimiser-fiche-google-maps-local-pack-2026": {
+    service: "gestion-seo",
+    intro: "Pilotez votre fiche Google Business Profile comme un vrai levier SEO local pour générer plus de demandes utiles.",
   },
   "pourquoi-acheter-des-prospects-fausse-bonne-idee": {
     service: "gestion-communication",
@@ -178,6 +182,7 @@ const articleComponents: Record<string, React.ComponentType> = {
   "inbound-marketing-btp-automation-abm-developper-business-2026": lazy(() => import("@/components/blog/ArticleInboundMarketingBtpAutomationAbm2026")),
   "combiner-seo-publicite-generer-demandes-devis-renovation-2026": lazy(() => import("@/components/blog/ArticleCombinerSeoPubliciteDemandesDevis2026")),
   "fiche-google-maps-site-internet-referencement-local-2026": lazy(() => import("@/components/blog/ArticleFicheGoogleMapsSiteInternetReferencementLocal2026")),
+  "optimiser-fiche-google-maps-local-pack-2026": lazy(() => import("@/components/blog/ArticleOptimiserFicheGoogleMapsLocalPack2026")),
   "pourquoi-acheter-des-prospects-fausse-bonne-idee": lazy(() => import("@/components/blog/ArticleAchatProspectsAutonomie")),
   "pourquoi-certaines-entreprises-batiment-dominent-google-2026": lazy(() => import("@/components/blog/ArticlePourquoiEntreprisesBatimentDominentGoogle2026")),
 };
@@ -218,7 +223,11 @@ const BlogArticleRedirectGuard = () => {
 
 const BlogArticleContent = ({ slug }: { slug: string | undefined }) => {
   const article = blogArticles.find((a) => a.slug === slug);
-  const authorProfile = article ? (authorProfiles[article.author] || authorProfiles["Arnaud UTILLE"]) : authorProfiles["Arnaud UTILLE"];
+  const authorProfile = article
+    ? (article.authorImage && article.authorRole
+        ? { image: (authorProfiles[article.author]?.image || authorProfiles["Arnaud UTILLE"].image), role: article.authorRole, imageUrl: article.authorImage }
+        : (authorProfiles[article.author] || authorProfiles["Arnaud UTILLE"]))
+    : authorProfiles["Arnaud UTILLE"];
 
   useEffect(() => {
     window.scrollTo(0, 0);
