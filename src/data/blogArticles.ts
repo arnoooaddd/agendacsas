@@ -14,6 +14,28 @@ export interface BlogArticle {
 
 export const blogArticles: BlogArticle[] = [
   {
+    slug: "menuiserie-exterieure-strategie-marketing-2026",
+    title: "Menuiserie extérieure : quelle stratégie marketing pour générer plus de demandes qualifiées en 2026 ?",
+    metaDescription: "Découvrez comment une entreprise de menuiserie extérieure peut structurer son site, son SEO local et sa publicité pour générer plus de demandes qualifiées en 2026.",
+    excerpt: "Site, SEO local, fiche Google et suivi commercial : la bonne stratégie marketing pour transformer la visibilité d'une entreprise de menuiserie extérieure en devis rentables.",
+    coverImage: "menuiserie-exterieure-strategie-marketing-2026",
+    author: "Kerim JAKUPOVIC",
+    date: "2026-05-05",
+    readTime: "7 min",
+    featured: false,
+    tags: ["Menuiserie extérieure", "Marketing rénovation", "Acquisition"],
+    keywords: [
+      "stratégie marketing rénovation",
+      "acquisition clients rénovation",
+      "trouver des clients rénovation",
+      "génération de leads rénovation",
+      "structurer marketing rénovation",
+      "publicité rénovation",
+      "google ads rénovation",
+      "menuiserie extérieure"
+    ],
+  },
+  {
     slug: "isolation-strategie-marketing-2026",
     title: "Isolation : quelle stratégie marketing pour générer des demandes rentables en 2026 ?",
     metaDescription: "Découvrez quelle stratégie marketing mettre en place en 2026 pour une entreprise d’isolation afin de générer plus de demandes qualifiées et améliorer la rentabilité commerciale.",
