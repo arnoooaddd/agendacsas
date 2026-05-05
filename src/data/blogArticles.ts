@@ -14,6 +14,28 @@ export interface BlogArticle {
 
 export const blogArticles: BlogArticle[] = [
   {
+    slug: "crm-marketing-automation-btp-2026",
+    title: "Comment coupler CRM et marketing automation dans le BTP en 2026",
+    metaDescription: "Découvrez comment relier CRM et marketing automation dans le BTP pour mieux qualifier les demandes, accélérer les relances et améliorer la conversion commerciale en 2026.",
+    excerpt: "Le bon couplage CRM / marketing automation aide les entreprises du BTP à mieux traiter leurs leads, suivre leurs relances et transformer plus de demandes en opportunités réelles.",
+    coverImage: "crm-marketing-automation-btp-2026",
+    author: "Rachad AIT HAMOU",
+    date: "2026-05-05",
+    readTime: "8 min",
+    featured: false,
+    tags: ["CRM", "Marketing automation", "BTP"],
+    keywords: [
+      "crm et marketing automation BTP",
+      "structurer acquisition client BTP",
+      "génération de leads BTP",
+      "stratégie marketing BTP",
+      "marketing digital bâtiment",
+      "acquisition clients BTP",
+      "suivi commercial BTP",
+      "gestion communication BTP"
+    ],
+  },
+  {
     slug: "prioriser-marketing-btp-donnees-2026",
     title: "Marketing BTP : quelles données suivre pour prioriser les bonnes actions en 2026 ?",
     metaDescription: "Marketing BTP : découvrez quelles données suivre pour prioriser les bonnes actions, mieux arbitrer vos budgets et relier enfin marketing, CRM et performance commerciale en 2026.",
