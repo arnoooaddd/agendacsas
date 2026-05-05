@@ -12,11 +12,12 @@ import FAQ from "@/components/FAQ";
 import CaseStudy from "@/components/CaseStudy";
 import ExemplesTournage from "@/components/ExemplesTournage";
 import RelatedArticles from "@/components/RelatedArticles";
+import SeoIntro from "@/components/SeoIntro";
 import Footer from "@/components/Footer";
 import { usePageTitle } from "@/hooks/usePageTitle";
 
 const Index = () => {
-  usePageTitle("Agence marketing rénovation de l'habitat");
+  usePageTitle("Agence marketing rénovation & BTP");
   return (
     <div className="min-h-screen bg-background">
       <Header />
@@ -24,6 +25,7 @@ const Index = () => {
         <Hero />
         <GoogleReviews />
         <Services />
+        <SeoIntro />
         <Clients />
         <Interviews />
         <YouTubeShorts />
