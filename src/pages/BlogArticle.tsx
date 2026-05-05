@@ -98,6 +98,10 @@ const articleToService: Record<string, { service: ServiceKey; intro?: string }> 
     service: "gestion-communication",
     intro: "Réduisez votre dépendance aux plateformes de leads en structurant une acquisition plus rentable et mieux pilotée.",
   },
+  "pourquoi-certaines-entreprises-batiment-dominent-google-2026": {
+    service: "gestion-seo",
+    intro: "Structurez vos signaux locaux pour apparaître plus souvent sur Google et transformer cette visibilité en demandes vraiment utiles.",
+  },
   "google-ads-vs-facebook-ads-renovation-habitat": {
     service: "prise-rendez-vous",
     intro: "Agendac orchestre Google Ads et Meta Ads pour vous — payable au RDV qualifié.",
@@ -175,6 +179,7 @@ const articleComponents: Record<string, React.ComponentType> = {
   "combiner-seo-publicite-generer-demandes-devis-renovation-2026": lazy(() => import("@/components/blog/ArticleCombinerSeoPubliciteDemandesDevis2026")),
   "fiche-google-maps-site-internet-referencement-local-2026": lazy(() => import("@/components/blog/ArticleFicheGoogleMapsSiteInternetReferencementLocal2026")),
   "pourquoi-acheter-des-prospects-fausse-bonne-idee": lazy(() => import("@/components/blog/ArticleAchatProspectsAutonomie")),
+  "pourquoi-certaines-entreprises-batiment-dominent-google-2026": lazy(() => import("@/components/blog/ArticlePourquoiEntreprisesBatimentDominentGoogle2026")),
 };
 
 // Redirects from old blog slugs to new SEO-optimized URLs

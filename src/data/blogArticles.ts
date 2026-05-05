@@ -14,6 +14,29 @@ export interface BlogArticle {
 
 export const blogArticles: BlogArticle[] = [
   {
+    slug: "pourquoi-certaines-entreprises-batiment-dominent-google-2026",
+    title: "Pourquoi certaines entreprises du bâtiment dominent Google en 2026 et d’autres restent invisibles",
+    metaDescription: "Pourquoi certaines entreprises du bâtiment dominent Google en 2026 ? Voici les leviers concrets de référencement local qui transforment la visibilité en demandes qualifiées.",
+    excerpt: "Fiche Google, pages métiers, avis, contenus utiles, suivi commercial : voici pourquoi certaines entreprises du bâtiment captent la demande locale et d'autres restent invisibles.",
+    coverImage: "pourquoi-certaines-entreprises-batiment-dominent-google-2026",
+    author: "Omar TROUSSI",
+    date: "2026-05-04",
+    readTime: "8 min",
+    featured: false,
+    tags: ["SEO local", "BTP", "Visibilité Google"],
+    keywords: [
+      "référencement local",
+      "trouver des clients BTP",
+      "acquisition clients BTP",
+      "stratégie marketing BTP",
+      "référencement local entreprise bâtiment",
+      "google business profile BTP",
+      "visibilité google entreprise rénovation",
+      "gestion seo",
+      "comment trouver des clients en rénovation"
+    ],
+  },
+  {
     slug: "pourquoi-acheter-des-prospects-fausse-bonne-idee",
     title: "Pourquoi acheter des prospects est une fausse bonne idée pour une entreprise de rénovation en 2026",
     metaDescription: "Acheter des prospects peut sembler rapide, mais cela fragilise souvent la rentabilité commerciale. Voici comment une entreprise de rénovation peut reprendre la main sur son acquisition en 2026.",
