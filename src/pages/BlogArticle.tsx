@@ -22,6 +22,10 @@ const authorProfiles: Record<string, { image: string; role: string }> = {
 
 // Mapping article slug → most relevant Agendac service
 const articleToService: Record<string, { service: ServiceKey; intro?: string }> = {
+  "extensions-google-ads-visibilite-clics-qualifies-renovation": {
+    service: "gestion-communication",
+    intro: "Structurez vos campagnes Google Ads pour générer des demandes plus lisibles, mieux qualifiées et mieux traitées commercialement.",
+  },
   "crm-marketing-automation-btp-2026": {
     service: "gestion-communication",
     intro: "Reliez qualification, relances et suivi CRM pour transformer plus proprement vos demandes entrantes.",
@@ -161,6 +165,7 @@ const articleToService: Record<string, { service: ServiceKey; intro?: string }> 
 };
 
 const articleComponents: Record<string, React.ComponentType> = {
+  "extensions-google-ads-visibilite-clics-qualifies-renovation": lazy(() => import("@/components/blog/ArticleExtensionsGoogleAdsVisibiliteClicsQualifiesRenovation")),
   "crm-marketing-automation-btp-2026": lazy(() => import("@/components/blog/ArticleCrmMarketingAutomationBtp2026")),
   "prioriser-marketing-btp-donnees-2026": lazy(() => import("@/components/blog/ArticlePrioriserMarketingBtpDonnees2026")),
   "lead-nurturing-renovation-convertir-demandes-chantiers-2026": lazy(() => import("@/components/blog/ArticleLeadNurturingRenovation2026")),
