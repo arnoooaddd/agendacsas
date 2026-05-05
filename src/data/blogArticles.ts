@@ -14,6 +14,28 @@ export interface BlogArticle {
 
 export const blogArticles: BlogArticle[] = [
   {
+    slug: "inbound-marketing-btp-cycles-longs-2026",
+    title: "Inbound marketing BTP : pourquoi cette méthode fonctionne si bien sur des cycles de vente longs en 2026",
+    metaDescription: "Découvrez pourquoi l’inbound marketing BTP fonctionne particulièrement bien sur des cycles de vente longs, et comment structurer une acquisition plus mûre en 2026.",
+    excerpt: "Quand un prospect met plusieurs semaines à décider, l’enjeu n’est pas seulement d’attirer du trafic. Voici pourquoi l’inbound marketing aide à nourrir la demande jusqu’au bon moment.",
+    coverImage: "inbound-marketing-btp-cycles-longs-2026",
+    author: "Kerim JAKUPOVIC",
+    date: "2026-05-05",
+    readTime: "7 min",
+    featured: false,
+    tags: ["Inbound marketing", "BTP", "Acquisition"],
+    keywords: [
+      "inbound marketing BTP",
+      "stratégie marketing BTP",
+      "acquisition clients BTP",
+      "génération de leads BTP",
+      "structurer acquisition client BTP",
+      "marketing digital bâtiment",
+      "gestion communication BTP",
+      "CRM et marketing automation BTP"
+    ],
+  },
+  {
     slug: "reseaux-sociaux-btp-canaux-choisir-2026",
     title: "Réseaux sociaux BTP : quels canaux choisir en 2026 pour développer votre activité ?",
     metaDescription: "Découvrez quels réseaux sociaux prioriser en 2026 pour développer la visibilité, la réassurance et les demandes entrantes de votre entreprise du BTP.",

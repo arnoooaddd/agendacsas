@@ -23,6 +23,10 @@ const authorProfiles: Record<string, { image: string; role: string }> = {
 
 // Mapping article slug → most relevant Agendac service
 const articleToService: Record<string, { service: ServiceKey; intro?: string }> = {
+  "inbound-marketing-btp-cycles-longs-2026": {
+    service: "gestion-communication",
+    intro: "Structurez un parcours qui nourrit vos prospects pendant les cycles de vente longs et transmette au commerce des demandes plus mûres.",
+  },
   "reseaux-sociaux-btp-canaux-choisir-2026": {
     service: "gestion-communication",
     intro: "Choisissez les bons canaux sociaux selon vos objectifs business et reliez-les à une vraie stratégie de communication pilotée.",
@@ -166,6 +170,7 @@ const articleToService: Record<string, { service: ServiceKey; intro?: string }> 
 };
 
 const articleComponents: Record<string, React.ComponentType> = {
+  "inbound-marketing-btp-cycles-longs-2026": lazy(() => import("@/components/blog/ArticleInboundMarketingBtpCyclesLongs2026")),
   "reseaux-sociaux-btp-canaux-choisir-2026": lazy(() => import("@/components/blog/ArticleReseauxSociauxBtpCanaux2026")),
   "contacter-prospects-rendez-vous-renovation-2026": lazy(() => import("@/components/blog/ArticleContacterProspectsRendezVous2026")),
   "lead-nurturing-renovation-convertir-demandes-chantiers-2026": lazy(() => import("@/components/blog/ArticleLeadNurturingRenovation2026")),
