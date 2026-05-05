@@ -106,6 +106,10 @@ const articleToService: Record<string, { service: ServiceKey; intro?: string }> 
     service: "gestion-seo",
     intro: "Structurez vos signaux locaux pour apparaître plus souvent sur Google et transformer cette visibilité en demandes vraiment utiles.",
   },
+  "pourquoi-avis-clients-essentiels-entreprise-batiment-2026": {
+    service: "gestion-seo",
+    intro: "Transformez vos avis clients en levier de visibilité locale, de réassurance et de demandes plus sérieuses.",
+  },
   "google-ads-vs-facebook-ads-renovation-habitat": {
     service: "prise-rendez-vous",
     intro: "Agendac orchestre Google Ads et Meta Ads pour vous — payable au RDV qualifié.",
@@ -185,6 +189,7 @@ const articleComponents: Record<string, React.ComponentType> = {
   "optimiser-fiche-google-maps-local-pack-2026": lazy(() => import("@/components/blog/ArticleOptimiserFicheGoogleMapsLocalPack2026")),
   "pourquoi-acheter-des-prospects-fausse-bonne-idee": lazy(() => import("@/components/blog/ArticleAchatProspectsAutonomie")),
   "pourquoi-certaines-entreprises-batiment-dominent-google-2026": lazy(() => import("@/components/blog/ArticlePourquoiEntreprisesBatimentDominentGoogle2026")),
+  "pourquoi-avis-clients-essentiels-entreprise-batiment-2026": lazy(() => import("@/components/blog/ArticleAvisClientsBtpAcquisition2026")),
 };
 
 // Redirects from old blog slugs to new SEO-optimized URLs
