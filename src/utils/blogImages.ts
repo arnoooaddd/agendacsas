@@ -25,6 +25,7 @@ import actionsMarketingBtpDemandesQualifiees2026 from "@/assets/blog/actions-mar
 import inboundMarketingBtpAutomationAbm2026 from "@/assets/blog/inbound-marketing-btp-automation-abm-developper-business-2026.png";
 import combinerSeoPubliciteDemandesDevis2026 from "@/assets/blog/combiner-seo-publicite-generer-demandes-devis-renovation-2026.png";
 import ficheGoogleMapsSiteInternetReferencementLocal2026 from "@/assets/blog/fiche-google-maps-site-internet-referencement-local-2026.png";
+import pourquoiAcheterDesProspectsFausseBonneIdee from "@/assets/blog/pourquoi-acheter-des-prospects-fausse-bonne-idee.png";
 
 const coverImages: Record<string, string> = {
   // Anciennes clés (compat)
@@ -72,6 +73,7 @@ const coverImages: Record<string, string> = {
   "inbound-marketing-btp-automation-abm-developper-business-2026": inboundMarketingBtpAutomationAbm2026,
   "combiner-seo-publicite-generer-demandes-devis-renovation-2026": combinerSeoPubliciteDemandesDevis2026,
   "fiche-google-maps-site-internet-referencement-local-2026": ficheGoogleMapsSiteInternetReferencementLocal2026,
+  "pourquoi-acheter-des-prospects-fausse-bonne-idee": pourquoiAcheterDesProspectsFausseBonneIdee,
 };
 
 export const getCoverImage = (key: string): string => {

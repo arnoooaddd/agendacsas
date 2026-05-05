@@ -14,6 +14,28 @@ export interface BlogArticle {
 
 export const blogArticles: BlogArticle[] = [
   {
+    slug: "pourquoi-acheter-des-prospects-fausse-bonne-idee",
+    title: "Pourquoi acheter des prospects est une fausse bonne idée pour une entreprise de rénovation en 2026",
+    metaDescription: "Acheter des prospects peut sembler rapide, mais cela fragilise souvent la rentabilité commerciale. Voici comment une entreprise de rénovation peut reprendre la main sur son acquisition en 2026.",
+    excerpt: "Acheter des prospects remplit parfois l'agenda, mais crée rarement une acquisition stable. Découvrez comment réduire cette dépendance et construire un système plus rentable.",
+    coverImage: "pourquoi-acheter-des-prospects-fausse-bonne-idee",
+    author: "Kerim JAKUPOVIC",
+    date: "2026-05-04",
+    readTime: "8 min",
+    featured: false,
+    tags: ["Acquisition", "Leads", "Rénovation"],
+    keywords: [
+      "achat leads rénovation",
+      "acquisition clients rénovation",
+      "comment trouver des clients en rénovation",
+      "système acquisition client rénovation",
+      "génération de leads rénovation",
+      "coût lead rénovation",
+      "rentabilité marketing rénovation",
+      "structurer acquisition client BTP"
+    ],
+  },
+  {
     slug: "fiche-google-maps-site-internet-referencement-local-2026",
     title: "Fiche Google Maps et site internet : la stratégie gagnante pour votre référencement local en 2026",
     metaDescription: "Découvrez comment relier votre fiche Google Maps à votre site internet pour renforcer votre référencement local, capter plus de clics qualifiés et générer plus de demandes en rénovation.",

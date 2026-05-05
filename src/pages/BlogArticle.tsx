@@ -94,6 +94,10 @@ const articleToService: Record<string, { service: ServiceKey; intro?: string }> 
     service: "gestion-seo",
     intro: "Reliez votre fiche Google Maps et vos pages clés pour renforcer votre visibilité locale et convertir plus de recherches de proximité.",
   },
+  "pourquoi-acheter-des-prospects-fausse-bonne-idee": {
+    service: "gestion-communication",
+    intro: "Réduisez votre dépendance aux plateformes de leads en structurant une acquisition plus rentable et mieux pilotée.",
+  },
   "google-ads-vs-facebook-ads-renovation-habitat": {
     service: "prise-rendez-vous",
     intro: "Agendac orchestre Google Ads et Meta Ads pour vous — payable au RDV qualifié.",
@@ -170,6 +174,7 @@ const articleComponents: Record<string, React.ComponentType> = {
   "inbound-marketing-btp-automation-abm-developper-business-2026": lazy(() => import("@/components/blog/ArticleInboundMarketingBtpAutomationAbm2026")),
   "combiner-seo-publicite-generer-demandes-devis-renovation-2026": lazy(() => import("@/components/blog/ArticleCombinerSeoPubliciteDemandesDevis2026")),
   "fiche-google-maps-site-internet-referencement-local-2026": lazy(() => import("@/components/blog/ArticleFicheGoogleMapsSiteInternetReferencementLocal2026")),
+  "pourquoi-acheter-des-prospects-fausse-bonne-idee": lazy(() => import("@/components/blog/ArticleAchatProspectsAutonomie")),
 };
 
 // Redirects from old blog slugs to new SEO-optimized URLs
