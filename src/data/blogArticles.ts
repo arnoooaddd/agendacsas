@@ -14,6 +14,18 @@ export interface BlogArticle {
 
 export const blogArticles: BlogArticle[] = [
   {
+    slug: "barometre-2026-priorites-marketing-entreprises-batiment",
+    title: "Baromètre 2026 : les priorités marketing des entreprises du bâtiment qui veulent rester visibles et rentables",
+    excerpt: "Les priorités marketing 2026 des entreprises du bâtiment pour rester visibles, utiles commercialement et plus rentables.",
+    metaDescription: "Découvrez les priorités marketing 2026 des entreprises du bâtiment : ROI, acquisition, preuve, CRM et structuration commerciale.",
+    date: "5 mai 2026",
+    readTime: "6 min",
+    coverImage: "barometre-2026-priorites-marketing-entreprises-batiment",
+    keywords: ["stratégie marketing BTP", "acquisition clients BTP", "structurer marketing rénovation", "trouver des clients BTP"],
+    tags: ["marketing BTP", "acquisition", "rénovation", "communication"],
+    author: "Rachad AIT HAMOU",
+  },
+  {
     slug: "communication-btp-tendances-2026-entreprises-habitat",
     title: "Communication BTP en 2026 : les tendances qui comptent vraiment pour les entreprises de l’habitat",
     metaDescription: "Découvrez les tendances de communication BTP à suivre en 2026 pour mieux piloter vos budgets, produire de vraies preuves et générer des demandes plus qualifiées.",

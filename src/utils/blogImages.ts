@@ -34,6 +34,7 @@ import extensionsGoogleAdsVisibiliteClicsQualifiesRenovation from "@/assets/blog
 import isolationStrategieMarketing2026 from "@/assets/blog/isolation-strategie-marketing-2026.png";
 import menuiserieExterieureStrategieMarketing2026 from "@/assets/blog/menuiserie-exterieure-strategie-marketing-2026.png";
 import communicationBtpTendances2026EntreprisesHabitat from "@/assets/blog/communication-btp-tendances-2026-entreprises-habitat.png";
+import barometre_2026_priorites_marketing_entreprises_batiment from '@/assets/blog/barometre-2026-priorites-marketing-entreprises-batiment.png';
 
 const coverImages: Record<string, string> = {
   // Anciennes clés (compat)

@@ -22,6 +22,10 @@ const authorProfiles: Record<string, { image: string; role: string }> = {
 
 // Mapping article slug → most relevant Agendac service
 const articleToService: Record<string, { service: ServiceKey; intro?: string }> = {
+  "barometre-2026-priorites-marketing-entreprises-batiment": {
+    service: "gestion-communication",
+    intro: "Reliez vos actions marketing à un vrai système d’acquisition et de suivi commercial dans le bâtiment.",
+  },
   "menuiserie-exterieure-strategie-marketing-2026": {
     service: "gestion-communication",
     intro: "Reliez SEO local, site et campagnes pour générer plus de demandes qualifiées en menuiserie extérieure.",
@@ -177,6 +181,7 @@ const articleToService: Record<string, { service: ServiceKey; intro?: string }> 
 };
 
 const articleComponents: Record<string, React.ComponentType> = {
+  "barometre-2026-priorites-marketing-entreprises-batiment": lazy(() => import("@/components/blog/ArticleBarometre2026PrioritesMarketingEntreprisesBatiment")),
   "extensions-google-ads-visibilite-clics-qualifies-renovation": lazy(() => import("@/components/blog/ArticleExtensionsGoogleAdsVisibiliteClicsQualifiesRenovation")),
   "crm-marketing-automation-btp-2026": lazy(() => import("@/components/blog/ArticleCrmMarketingAutomationBtp2026")),
   "prioriser-marketing-btp-donnees-2026": lazy(() => import("@/components/blog/ArticlePrioriserMarketingBtpDonnees2026")),
