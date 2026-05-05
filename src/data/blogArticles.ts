@@ -14,6 +14,28 @@ export interface BlogArticle {
 
 export const blogArticles: BlogArticle[] = [
   {
+    slug: "communication-btp-tendances-2026-entreprises-habitat",
+    title: "Communication BTP en 2026 : les tendances qui comptent vraiment pour les entreprises de l’habitat",
+    metaDescription: "Découvrez les tendances de communication BTP à suivre en 2026 pour mieux piloter vos budgets, produire de vraies preuves et générer des demandes plus qualifiées.",
+    excerpt: "ROI, preuve, segmentation, SEO, LinkedIn, CRM : les tendances de communication qui comptent vraiment pour une entreprise de rénovation ou d’habitat en 2026.",
+    coverImage: "communication-btp-tendances-2026-entreprises-habitat",
+    author: "Omar TROUSSI",
+    date: "2026-05-05",
+    readTime: "8 min",
+    featured: false,
+    tags: ["Communication BTP", "Habitat", "Marketing stratégique"],
+    keywords: [
+      "stratégie marketing BTP",
+      "agence communication BTP",
+      "structurer acquisition client BTP",
+      "structurer marketing rénovation",
+      "système acquisition client rénovation",
+      "marketing digital bâtiment",
+      "acquisition clients BTP",
+      "communication habitat"
+    ],
+  },
+  {
     slug: "menuiserie-exterieure-strategie-marketing-2026",
     title: "Menuiserie extérieure : quelle stratégie marketing pour générer plus de demandes qualifiées en 2026 ?",
     metaDescription: "Découvrez comment une entreprise de menuiserie extérieure peut structurer son site, son SEO local et sa publicité pour générer plus de demandes qualifiées en 2026.",

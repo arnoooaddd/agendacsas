@@ -26,6 +26,10 @@ const articleToService: Record<string, { service: ServiceKey; intro?: string }> 
     service: "gestion-communication",
     intro: "Reliez SEO local, site et campagnes pour générer plus de demandes qualifiées en menuiserie extérieure.",
   },
+  "communication-btp-tendances-2026-entreprises-habitat": {
+    service: "gestion-communication",
+    intro: "Transformez votre communication BTP en levier plus mesurable, mieux aligné avec vos objectifs commerciaux.",
+  },
   "isolation-strategie-marketing-2026": {
     service: "gestion-communication",
     intro: "Structurez vos leviers d’acquisition pour transformer vos demandes isolation en chantiers plus rentables.",
@@ -210,6 +214,7 @@ const articleComponents: Record<string, React.ComponentType> = {
   "marketing-btp-levier-croissance-2026": lazy(() => import("@/components/blog/ArticleMarketingBtpLevierCroissance2026")),
   "isolation-strategie-marketing-2026": lazy(() => import("@/components/blog/ArticleIsolationStrategieMarketing2026")),
   "menuiserie-exterieure-strategie-marketing-2026": lazy(() => import("@/components/blog/ArticleMenuiserieExterieureStrategieMarketing2026")),
+  "communication-btp-tendances-2026-entreprises-habitat": lazy(() => import("@/components/blog/ArticleCommunicationBtpTendances2026EntreprisesHabitat")),
 };
 
 // Redirects from old blog slugs to new SEO-optimized URLs
