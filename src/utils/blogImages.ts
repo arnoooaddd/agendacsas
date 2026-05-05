@@ -28,6 +28,7 @@ import ficheGoogleMapsSiteInternetReferencementLocal2026 from "@/assets/blog/fic
 import pourquoiAcheterDesProspectsFausseBonneIdee from "@/assets/blog/pourquoi-acheter-des-prospects-fausse-bonne-idee.png";
 import pourquoiEntreprisesBatimentDominentGoogle2026 from "@/assets/blog/pourquoi-certaines-entreprises-batiment-dominent-google-2026.png";
 import marketingBtpLevierCroissance2026 from "@/assets/blog/marketing-btp-levier-croissance-2026.png";
+import prioriserMarketingBtpDonnees2026 from "@/assets/blog/prioriser-marketing-btp-donnees-2026.png";
 
 const coverImages: Record<string, string> = {
   // Anciennes clés (compat)
@@ -78,6 +79,7 @@ const coverImages: Record<string, string> = {
   "pourquoi-acheter-des-prospects-fausse-bonne-idee": pourquoiAcheterDesProspectsFausseBonneIdee,
   "pourquoi-certaines-entreprises-batiment-dominent-google-2026": pourquoiEntreprisesBatimentDominentGoogle2026,
   "marketing-btp-levier-croissance-2026": marketingBtpLevierCroissance2026,
+  "prioriser-marketing-btp-donnees-2026": prioriserMarketingBtpDonnees2026,
 };
 
 export const getCoverImage = (key: string): string => {
