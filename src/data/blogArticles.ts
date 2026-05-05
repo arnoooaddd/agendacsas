@@ -14,6 +14,27 @@ export interface BlogArticle {
 
 export const blogArticles: BlogArticle[] = [
   {
+    slug: "referencer-blog-entreprise-btp-2026",
+    title: "Comment bien référencer un blog d’entreprise dans le BTP en 2026",
+    metaDescription: "Découvrez les bonnes pratiques SEO pour bien référencer un blog d’entreprise dans le BTP en 2026 : choix des sujets, architecture, maillage interne et cadence utile.",
+    excerpt: "Pour qu’un blog d’entreprise remonte vraiment sur Google, il faut plus qu’une simple cadence de publication : il faut une structure éditoriale pensée pour la visibilité et l’acquisition.",
+    coverImage: "referencer-blog-entreprise-btp-2026",
+    author: "Arnaud UTILLE",
+    date: "2026-05-05",
+    readTime: "8 min",
+    featured: false,
+    tags: ["SEO", "Blog d’entreprise", "BTP"],
+    keywords: [
+      "stratégie marketing BTP",
+      "structurer marketing rénovation",
+      "marketing digital bâtiment",
+      "trouver des clients BTP",
+      "acquisition clients BTP",
+      "gestion seo",
+      "comment trouver des clients en rénovation"
+    ],
+  },
+  {
     slug: "crm-marketing-automation-btp-2026",
     title: "Comment coupler CRM et marketing automation dans le BTP en 2026",
     metaDescription: "Découvrez comment relier CRM et marketing automation dans le BTP pour mieux qualifier les demandes, accélérer les relances et améliorer la conversion commerciale en 2026.",
