@@ -106,6 +106,10 @@ const articleToService: Record<string, { service: ServiceKey; intro?: string }> 
     service: "gestion-communication",
     intro: "Reliez visibilité, acquisition et traitement commercial pour faire du marketing un vrai levier de croissance.",
   },
+  "visibilite-site-internet-google-2026": {
+    service: "gestion-seo",
+    intro: "Renforcez la visibilité de vos pages métier sur Google avec une structure SEO pensée pour attirer des demandes qualifiées.",
+  },
   "google-ads-vs-facebook-ads-renovation-habitat": {
     service: "prise-rendez-vous",
     intro: "Agendac orchestre Google Ads et Meta Ads pour vous — payable au RDV qualifié.",
@@ -185,6 +189,7 @@ const articleComponents: Record<string, React.ComponentType> = {
   "pourquoi-acheter-des-prospects-fausse-bonne-idee": lazy(() => import("@/components/blog/ArticleAchatProspectsAutonomie")),
   "pourquoi-certaines-entreprises-batiment-dominent-google-2026": lazy(() => import("@/components/blog/ArticlePourquoiEntreprisesBatimentDominentGoogle2026")),
   "marketing-btp-levier-croissance-2026": lazy(() => import("@/components/blog/ArticleMarketingBtpLevierCroissance2026")),
+  "visibilite-site-internet-google-2026": lazy(() => import("@/components/blog/ArticleVisibiliteSiteInternetGoogle2026")),
 };
 
 // Redirects from old blog slugs to new SEO-optimized URLs

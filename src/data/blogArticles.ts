@@ -14,6 +14,28 @@ export interface BlogArticle {
 
 export const blogArticles: BlogArticle[] = [
   {
+    slug: "visibilite-site-internet-google-2026",
+    title: "Comment améliorer la visibilité de son site internet sur Google en 2026",
+    metaDescription: "Découvrez comment améliorer la visibilité de votre site internet sur Google en 2026 avec une vraie logique SEO pour les entreprises de rénovation et du bâtiment.",
+    excerpt: "Structure, pages métier, contenus utiles, maillage interne et conversion : voici comment rendre votre site vraiment plus visible sur Google.",
+    coverImage: "visibilite-site-internet-google-2026",
+    author: "Kerim JAKUPOVIC",
+    date: "2026-05-05",
+    readTime: "8 min",
+    featured: false,
+    tags: ["SEO", "Visibilité Google", "Site internet"],
+    keywords: [
+      "améliorer la visibilité de son site internet sur Google",
+      "référencement naturel BTP",
+      "gestion seo",
+      "site internet rénovation",
+      "trouver des clients BTP",
+      "comment trouver des clients en rénovation",
+      "acquisition clients rénovation",
+      "stratégie marketing rénovation"
+    ],
+  },
+  {
     slug: "marketing-btp-levier-croissance-2026",
     title: "Marketing BTP en 2026 : comment en faire un vrai levier de croissance",
     metaDescription: "Marketing BTP : découvrez comment relier visibilité, acquisition, qualification commerciale et CRM pour en faire un vrai levier de croissance en 2026.",
