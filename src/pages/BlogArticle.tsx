@@ -22,6 +22,10 @@ const authorProfiles: Record<string, { image: string; role: string }> = {
 
 // Mapping article slug → most relevant Agendac service
 const articleToService: Record<string, { service: ServiceKey; intro?: string }> = {
+  "isolation-strategie-marketing-2026": {
+    service: "gestion-communication",
+    intro: "Structurez vos leviers d’acquisition pour transformer vos demandes isolation en chantiers plus rentables.",
+  },
   "extensions-google-ads-visibilite-clics-qualifies-renovation": {
     service: "gestion-communication",
     intro: "Structurez vos campagnes Google Ads pour générer des demandes plus lisibles, mieux qualifiées et mieux traitées commercialement.",
@@ -200,6 +204,7 @@ const articleComponents: Record<string, React.ComponentType> = {
   "pourquoi-acheter-des-prospects-fausse-bonne-idee": lazy(() => import("@/components/blog/ArticleAchatProspectsAutonomie")),
   "pourquoi-certaines-entreprises-batiment-dominent-google-2026": lazy(() => import("@/components/blog/ArticlePourquoiEntreprisesBatimentDominentGoogle2026")),
   "marketing-btp-levier-croissance-2026": lazy(() => import("@/components/blog/ArticleMarketingBtpLevierCroissance2026")),
+  "isolation-strategie-marketing-2026": lazy(() => import("@/components/blog/ArticleIsolationStrategieMarketing2026")),
 };
 
 // Redirects from old blog slugs to new SEO-optimized URLs

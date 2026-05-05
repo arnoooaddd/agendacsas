@@ -14,6 +14,28 @@ export interface BlogArticle {
 
 export const blogArticles: BlogArticle[] = [
   {
+    slug: "isolation-strategie-marketing-2026",
+    title: "Isolation : quelle stratégie marketing pour générer des demandes rentables en 2026 ?",
+    metaDescription: "Découvrez quelle stratégie marketing mettre en place en 2026 pour une entreprise d’isolation afin de générer plus de demandes qualifiées et améliorer la rentabilité commerciale.",
+    excerpt: "SEO local, Google Ads, pages métiers, preuve chantier, CRM : la bonne stratégie marketing isolation relie visibilité et rentabilité commerciale.",
+    coverImage: "isolation-strategie-marketing-2026",
+    author: "Arnaud UTILLE",
+    date: "2026-05-05",
+    readTime: "8 min",
+    featured: false,
+    tags: ["Isolation", "Marketing digital", "Rénovation énergétique"],
+    keywords: [
+      "stratégie marketing rénovation",
+      "acquisition clients rénovation",
+      "trouver des clients rénovation",
+      "marketing digital rénovation",
+      "google ads rénovation",
+      "rentabilité marketing rénovation",
+      "système acquisition client rénovation",
+      "agence marketing rénovation"
+    ],
+  },
+  {
     slug: "extensions-google-ads-visibilite-clics-qualifies-renovation",
     title: "Extensions Google Ads : comment gagner en visibilité sans attirer plus de clics inutiles",
     metaDescription: "Extensions Google Ads : découvrez comment mieux occuper la page de résultats, clarifier votre offre et attirer des clics plus qualifiés dans une entreprise de rénovation.",
