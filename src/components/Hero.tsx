@@ -45,10 +45,10 @@ const Hero = () => {
 
           {/* Headline */}
           <h1 className="text-center text-[2rem] sm:text-5xl lg:text-7xl font-bold text-foreground mb-4 sm:mb-6 leading-[1.1] tracking-tight animate-slide-up" style={{ animationDelay: "0.2s" }}>
-            <span className="text-gradient">Agence marketing</span>{" "}
-            <span className="text-gradient-warm">rénovation &amp; BTP</span>
+            <span className="text-gradient">l'Agence de communication</span>{" "}
+            <span className="text-gradient-warm">N°1</span>
             <br />
-            spécialisée en génération de leads
+            des sociétés de rénovation de l'habitat
           </h1>
 
           {/* Subtitle */}
