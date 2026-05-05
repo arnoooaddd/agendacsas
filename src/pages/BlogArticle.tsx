@@ -183,6 +183,10 @@ const articleToService: Record<string, { service: ServiceKey; intro?: string }> 
     service: "gestion-seo",
     intro: "Construisez une présence mémorisable qui renforce à la fois votre visibilité organique et la confiance avant prise de contact.",
   },
+  "strategie-contenu-btp-valoriser-entreprise-2026": {
+    service: "gestion-seo",
+    intro: "Structurez vos contenus pour qu’ils renforcent votre visibilité organique, votre réassurance commerciale et la qualité des demandes entrantes.",
+  },
 };
 
 const articleComponents: Record<string, React.ComponentType> = {
@@ -226,6 +230,7 @@ const articleComponents: Record<string, React.ComponentType> = {
   "marketing-btp-levier-croissance-2026": lazy(() => import("@/components/blog/ArticleMarketingBtpLevierCroissance2026")),
   "visibilite-site-internet-google-2026": lazy(() => import("@/components/blog/ArticleVisibiliteSiteInternetGoogle2026")),
   "notoriete-marque-btp-visibilite-solide-2026": lazy(() => import("@/components/blog/ArticleNotorieteMarqueBtp2026")),
+  "strategie-contenu-btp-valoriser-entreprise-2026": lazy(() => import("@/components/blog/ArticleStrategieContenuBtpValoriserEntreprise2026")),
 };
 
 // Redirects from old blog slugs to new SEO-optimized URLs

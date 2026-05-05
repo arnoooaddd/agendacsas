@@ -14,6 +14,27 @@ export interface BlogArticle {
 
 export const blogArticles: BlogArticle[] = [
   {
+    slug: "strategie-contenu-btp-valoriser-entreprise-2026",
+    title: "Stratégie de contenu BTP : comment valoriser votre entreprise sans publier dans le vide en 2026",
+    metaDescription: "Découvrez comment structurer une stratégie de contenu BTP en 2026 pour améliorer votre visibilité, rassurer vos prospects et soutenir votre acquisition client.",
+    excerpt: "Le contenu BTP devient rentable quand il sert à la fois le référencement, la réassurance commerciale et la qualité des demandes entrantes.",
+    coverImage: "marketing-btp-levier-croissance-2026",
+    author: "Rachad AIT HAMOU",
+    date: "2026-05-05",
+    readTime: "8 min",
+    featured: false,
+    tags: ["Contenu", "BTP", "Acquisition"],
+    keywords: [
+      "stratégie marketing BTP",
+      "structurer marketing rénovation",
+      "acquisition clients BTP",
+      "marketing digital bâtiment",
+      "génération de leads BTP",
+      "trouver des clients BTP",
+      "structurer acquisition client BTP"
+    ],
+  },
+  {
     slug: "rediger-articles-blog-batiment-2026",
     title: "Comment rédiger des articles de blog dans le bâtiment en 2026",
     metaDescription: "Découvrez comment rédiger des articles de blog bâtiment en 2026 pour améliorer votre visibilité, rassurer vos prospects et soutenir votre acquisition client.",
