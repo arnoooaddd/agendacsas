@@ -22,6 +22,10 @@ const authorProfiles: Record<string, { image: string; role: string }> = {
 
 // Mapping article slug → most relevant Agendac service
 const articleToService: Record<string, { service: ServiceKey; intro?: string }> = {
+  "communication-btp-levier-strategique-positionnement": {
+    service: "gestion-communication",
+    intro: "Renforcez votre positionnement avec une communication plus claire, plus cohérente et mieux reliée à vos enjeux commerciaux.",
+  },
   "reseaux-sociaux-btp-b2b-2026": {
     service: "creation-reseaux-sociaux",
     intro: "Choisissez les plateformes sociales qui renforcent vraiment votre crédibilité, votre preuve terrain et votre acquisition commerciale.",
@@ -185,6 +189,7 @@ const articleToService: Record<string, { service: ServiceKey; intro?: string }> 
 };
 
 const articleComponents: Record<string, React.ComponentType> = {
+  "communication-btp-levier-strategique-positionnement": lazy(() => import("@/components/blog/ArticleCommunicationBtpLevierStrategiquePositionnement")),
   "reseaux-sociaux-btp-b2b-2026": lazy(() => import("@/components/blog/ArticleReseauxSociauxBtpB2b2026")),
   "google-ads-keyword-planner-renovation": lazy(() => import("@/components/blog/ArticleGoogleAdsKeywordPlannerRenovation")),
   "extensions-google-ads-visibilite-clics-qualifies-renovation": lazy(() => import("@/components/blog/ArticleExtensionsGoogleAdsVisibiliteClicsQualifiesRenovation")),
