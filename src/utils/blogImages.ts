@@ -31,6 +31,7 @@ import marketingBtpLevierCroissance2026 from "@/assets/blog/marketing-btp-levier
 import prioriserMarketingBtpDonnees2026 from "@/assets/blog/prioriser-marketing-btp-donnees-2026.png";
 import crmMarketingAutomationBtp2026 from "@/assets/blog/crm-marketing-automation-btp-2026.png";
 import extensionsGoogleAdsVisibiliteClicsQualifiesRenovation from "@/assets/blog/extensions-google-ads-visibilite-clics-qualifies-renovation.png";
+import isolationStrategieMarketing2026 from "@/assets/blog/isolation-strategie-marketing-2026.png";
 
 const coverImages: Record<string, string> = {
   // Anciennes clés (compat)
@@ -84,6 +85,7 @@ const coverImages: Record<string, string> = {
   "prioriser-marketing-btp-donnees-2026": prioriserMarketingBtpDonnees2026,
   "crm-marketing-automation-btp-2026": crmMarketingAutomationBtp2026,
   "extensions-google-ads-visibilite-clics-qualifies-renovation": extensionsGoogleAdsVisibiliteClicsQualifiesRenovation,
+  "isolation-strategie-marketing-2026": isolationStrategieMarketing2026,
 };
 
 export const getCoverImage = (key: string): string => {
