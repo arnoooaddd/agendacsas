@@ -32,6 +32,8 @@ const App = () => (
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Index />} />
+          <Route path="/accueil" element={<Navigate to="/" replace />} />
+          <Route path="/com" element={<Navigate to="/gestion-communication" replace />} />
           <Route path="/resultats-clients-agendac" element={<Results />} />
           <Route path="/resultats" element={<Resultats />} />
           <Route path="/resultat" element={<Resultats />} />
