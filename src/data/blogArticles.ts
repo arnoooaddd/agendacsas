@@ -14,6 +14,27 @@ export interface BlogArticle {
 
 export const blogArticles: BlogArticle[] = [
   {
+    slug: "google-keyword-planner-btp-google-ads",
+    title: "Google Keyword Planner : comment l’utiliser pour rentabiliser vos campagnes Google Ads dans le BTP",
+    metaDescription: "Découvrez comment utiliser le Google Keyword Planner pour choisir des mots-clés plus rentables, mieux cadrer vos budgets Google Ads et générer des demandes plus qualifiées dans le BTP.",
+    excerpt: "Le Keyword Planner ne sert pas juste à trouver des idées. Il aide surtout les entreprises du BTP à arbitrer entre volume, coût et vraie intention commerciale.",
+    coverImage: "extensions-google-ads-visibilite-clics-qualifies-renovation",
+    author: "Kerim JAKUPOVIC",
+    date: "2026-05-05",
+    readTime: "7 min",
+    featured: false,
+    tags: ["Google Ads", "BTP", "Acquisition"],
+    keywords: [
+      "google ads rénovation",
+      "publicité BTP",
+      "acquisition clients rénovation",
+      "acquisition client bâtiment",
+      "marketing digital bâtiment",
+      "campagnes publicitaires rénovation",
+      "agence marketing BTP"
+    ],
+  },
+  {
     slug: "communication-btp-tendances-2026-entreprises-habitat",
     title: "Communication BTP en 2026 : les tendances qui comptent vraiment pour les entreprises de l’habitat",
     metaDescription: "Découvrez les tendances de communication BTP à suivre en 2026 pour mieux piloter vos budgets, produire de vraies preuves et générer des demandes plus qualifiées.",
