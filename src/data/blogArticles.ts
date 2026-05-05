@@ -817,4 +817,26 @@ export const blogArticles: BlogArticle[] = [
       "demandes qualifiées BTP"
     ],
   },
+  {
+    slug: "crise-batiment-communication-2026",
+    title: "Crise du bâtiment : 4 chantiers de communication à lancer en 2026 pour préparer la reprise",
+    metaDescription: "Crise du bâtiment : découvrez 4 chantiers de communication à lancer en 2026 pour protéger votre visibilité, vos demandes qualifiées et préparer la reprise.",
+    excerpt: "Quand le marché ralentit, la bonne réponse n’est pas de couper toute communication. Voici 4 chantiers concrets pour traverser la crise et préparer le rebond.",
+    coverImage: "crise-batiment-communication-2026",
+    author: "Kerim JAKUPOVIC",
+    date: "2026-05-05",
+    readTime: "8 min",
+    featured: false,
+    tags: ["Communication", "BTP", "Stratégie marketing"],
+    keywords: [
+      "stratégie marketing BTP",
+      "acquisition clients rénovation",
+      "structurer acquisition client BTP",
+      "marketing digital bâtiment",
+      "communication BTP",
+      "trouver des clients BTP",
+      "gestion communication BTP",
+      "rentabilité marketing rénovation"
+    ],
+  },
 ];
