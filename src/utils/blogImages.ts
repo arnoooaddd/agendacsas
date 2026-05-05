@@ -33,6 +33,7 @@ import visibiliteSiteInternetGoogle2026 from "@/assets/blog/visibilite-site-inte
 import inboundMarketingBtpCyclesLongs2026 from "@/assets/blog/inbound-marketing-btp-cycles-longs-2026.png";
 import analyseTraficWebGa4Btp2026 from "@/assets/blog/analyse-trafic-web-ga4-btp-2026.png";
 import communicationHabitatStrategie2026 from "@/assets/blog/communication-habitat-strategie-2026.png";
+import redigerArticlesBlogBatiment2026 from "@/assets/blog/rediger-articles-blog-batiment-2026.png";
 
 const coverImages: Record<string, string> = {
   // Anciennes clés (compat)
@@ -88,6 +89,7 @@ const coverImages: Record<string, string> = {
   "inbound-marketing-btp-cycles-longs-2026": inboundMarketingBtpCyclesLongs2026,
   "communication-habitat-strategie-2026": communicationHabitatStrategie2026,
   "analyse-trafic-web-ga4-btp-2026": analyseTraficWebGa4Btp2026,
+  "rediger-articles-blog-batiment-2026": redigerArticlesBlogBatiment2026,
 };
 
 export const getCoverImage = (key: string): string => {

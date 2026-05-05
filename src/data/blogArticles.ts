@@ -14,6 +14,27 @@ export interface BlogArticle {
 
 export const blogArticles: BlogArticle[] = [
   {
+    slug: "rediger-articles-blog-batiment-2026",
+    title: "Comment rédiger des articles de blog dans le bâtiment en 2026",
+    metaDescription: "Découvrez comment rédiger des articles de blog bâtiment en 2026 pour améliorer votre visibilité, rassurer vos prospects et soutenir votre acquisition client.",
+    excerpt: "Un bon article BTP ne sert pas seulement à publier. Il doit répondre à une vraie recherche, rassurer avant devis et soutenir la conversion.",
+    coverImage: "rediger-articles-blog-batiment-2026",
+    author: "Arnaud UTILLE",
+    date: "2026-05-05",
+    readTime: "8 min",
+    featured: false,
+    tags: ["Contenu", "SEO", "BTP"],
+    keywords: [
+      "stratégie marketing BTP",
+      "marketing digital bâtiment",
+      "structurer marketing rénovation",
+      "acquisition clients BTP",
+      "trouver des clients BTP",
+      "comment trouver des clients en rénovation",
+      "génération de leads BTP"
+    ],
+  },
+  {
     slug: "communication-habitat-strategie-2026",
     title: "Communication habitat : quelle stratégie adopter en 2026 ?",
     metaDescription: "Découvrez quelle stratégie de communication adopter en 2026 pour une entreprise de l’habitat : visibilité locale, réassurance, contenus, SEO et conversion.",
