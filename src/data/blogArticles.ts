@@ -14,6 +14,27 @@ export interface BlogArticle {
 
 export const blogArticles: BlogArticle[] = [
   {
+    slug: "reseaux-sociaux-btp-b2b-2026",
+    title: "Quels réseaux sociaux choisir en 2026 pour une entreprise du BTP ?",
+    metaDescription: "Découvrez quels réseaux sociaux prioriser en 2026 pour une entreprise du BTP selon vos objectifs : crédibilité B2B, réassurance locale, preuve chantier et acquisition.",
+    excerpt: "LinkedIn, Facebook, Instagram, YouTube, TikTok : voici comment choisir les bons réseaux sociaux quand on dirige une entreprise de rénovation ou de travaux déjà structurée.",
+    coverImage: "communication-btp-tendances-2026-entreprises-habitat",
+    author: "Arnaud UTILLE",
+    date: "2026-05-05",
+    readTime: "8 min",
+    featured: false,
+    tags: ["Réseaux sociaux", "BTP", "Communication"],
+    keywords: [
+      "stratégie marketing BTP",
+      "agence communication BTP",
+      "marketing digital bâtiment",
+      "acquisition clients BTP",
+      "structurer acquisition client BTP",
+      "structurer marketing rénovation",
+      "agence marketing bâtiment"
+    ],
+  },
+  {
     slug: "google-ads-keyword-planner-renovation",
     title: "Google Ads Keyword Planner : comment trouver des mots-clés rentables pour une entreprise de rénovation en 2026",
     metaDescription: "Découvrez comment utiliser Google Ads Keyword Planner pour choisir des mots-clés plus rentables, mieux cadrer vos campagnes et générer des demandes sérieuses en rénovation.",

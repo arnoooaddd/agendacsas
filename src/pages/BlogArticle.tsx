@@ -22,6 +22,10 @@ const authorProfiles: Record<string, { image: string; role: string }> = {
 
 // Mapping article slug → most relevant Agendac service
 const articleToService: Record<string, { service: ServiceKey; intro?: string }> = {
+  "reseaux-sociaux-btp-b2b-2026": {
+    service: "creation-reseaux-sociaux",
+    intro: "Choisissez les plateformes sociales qui renforcent vraiment votre crédibilité, votre preuve terrain et votre acquisition commerciale.",
+  },
   "google-ads-keyword-planner-renovation": {
     service: "gestion-communication",
     intro: "Structurez vos campagnes Google Ads à partir de mots-clés plus rentables pour éviter les clics coûteux et les demandes mal qualifiées.",
@@ -181,6 +185,7 @@ const articleToService: Record<string, { service: ServiceKey; intro?: string }> 
 };
 
 const articleComponents: Record<string, React.ComponentType> = {
+  "reseaux-sociaux-btp-b2b-2026": lazy(() => import("@/components/blog/ArticleReseauxSociauxBtpB2b2026")),
   "google-ads-keyword-planner-renovation": lazy(() => import("@/components/blog/ArticleGoogleAdsKeywordPlannerRenovation")),
   "extensions-google-ads-visibilite-clics-qualifies-renovation": lazy(() => import("@/components/blog/ArticleExtensionsGoogleAdsVisibiliteClicsQualifiesRenovation")),
   "crm-marketing-automation-btp-2026": lazy(() => import("@/components/blog/ArticleCrmMarketingAutomationBtp2026")),
