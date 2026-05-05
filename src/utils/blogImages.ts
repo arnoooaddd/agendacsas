@@ -34,6 +34,7 @@ import extensionsGoogleAdsVisibiliteClicsQualifiesRenovation from "@/assets/blog
 import isolationStrategieMarketing2026 from "@/assets/blog/isolation-strategie-marketing-2026.png";
 import menuiserieExterieureStrategieMarketing2026 from "@/assets/blog/menuiserie-exterieure-strategie-marketing-2026.png";
 import communicationBtpTendances2026EntreprisesHabitat from "@/assets/blog/communication-btp-tendances-2026-entreprises-habitat.png";
+import googleAdsKeywordPlannerRenovation from "@/assets/blog/google-ads-keyword-planner-renovation.png";
 
 const coverImages: Record<string, string> = {
   // Anciennes clés (compat)
@@ -90,6 +91,7 @@ const coverImages: Record<string, string> = {
   "isolation-strategie-marketing-2026": isolationStrategieMarketing2026,
   "menuiserie-exterieure-strategie-marketing-2026": menuiserieExterieureStrategieMarketing2026,
   "communication-btp-tendances-2026-entreprises-habitat": communicationBtpTendances2026EntreprisesHabitat,
+  "google-ads-keyword-planner-renovation": googleAdsKeywordPlannerRenovation,
 };
 
 export const getCoverImage = (key: string): string => {

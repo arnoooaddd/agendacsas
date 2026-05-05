@@ -22,9 +22,9 @@ const authorProfiles: Record<string, { image: string; role: string }> = {
 
 // Mapping article slug → most relevant Agendac service
 const articleToService: Record<string, { service: ServiceKey; intro?: string }> = {
-  "google-keyword-planner-btp-google-ads": {
+  "google-ads-keyword-planner-renovation": {
     service: "gestion-communication",
-    intro: "Structurez vos campagnes Google Ads à partir des bons mots-clés pour éviter les clics coûteux et les demandes mal qualifiées.",
+    intro: "Structurez vos campagnes Google Ads à partir de mots-clés plus rentables pour éviter les clics coûteux et les demandes mal qualifiées.",
   },
   "menuiserie-exterieure-strategie-marketing-2026": {
     service: "gestion-communication",
@@ -181,7 +181,7 @@ const articleToService: Record<string, { service: ServiceKey; intro?: string }> 
 };
 
 const articleComponents: Record<string, React.ComponentType> = {
-  "google-keyword-planner-btp-google-ads": lazy(() => import("@/components/blog/ArticleGoogleKeywordPlannerBtpGoogleAds")),
+  "google-ads-keyword-planner-renovation": lazy(() => import("@/components/blog/ArticleGoogleAdsKeywordPlannerRenovation")),
   "extensions-google-ads-visibilite-clics-qualifies-renovation": lazy(() => import("@/components/blog/ArticleExtensionsGoogleAdsVisibiliteClicsQualifiesRenovation")),
   "crm-marketing-automation-btp-2026": lazy(() => import("@/components/blog/ArticleCrmMarketingAutomationBtp2026")),
   "prioriser-marketing-btp-donnees-2026": lazy(() => import("@/components/blog/ArticlePrioriserMarketingBtpDonnees2026")),
