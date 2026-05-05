@@ -880,4 +880,25 @@ export const blogArticles: BlogArticle[] = [
       "demandes qualifiées BTP"
     ],
   },
+  {
+    slug: "notoriete-marque-btp-visibilite-solide-2026",
+    title: "Notoriété marque BTP : comment construire une visibilité solide en 2026",
+    metaDescription: "Découvrez comment construire une notoriété de marque solide dans le BTP en 2026 pour gagner en visibilité, en crédibilité et en efficacité commerciale.",
+    excerpt: "Site web, contenus, preuves terrain, SEO et suivi commercial : la méthode pour construire une notoriété utile dans le BTP en 2026.",
+    coverImage: "branding-local-entreprise-renovation",
+    author: "Rachad AIT HAMOU",
+    date: "2026-05-05",
+    readTime: "8 min",
+    featured: false,
+    tags: ["Notoriété", "BTP", "Visibilité"],
+    keywords: [
+      "stratégie marketing BTP",
+      "acquisition clients BTP",
+      "marketing digital bâtiment",
+      "structurer acquisition client BTP",
+      "trouver des clients BTP",
+      "agence communication BTP",
+      "structurer marketing rénovation"
+    ],
+  },
 ];
