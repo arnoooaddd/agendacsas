@@ -14,6 +14,26 @@ export interface BlogArticle {
 
 export const blogArticles: BlogArticle[] = [
   {
+    slug: "video-drone-btp-visibilite-reassurance",
+    title: "Vidéo et drone dans le BTP : comment transformer vos chantiers en levier de visibilité et de réassurance",
+    metaDescription: "Découvrez comment la vidéo de chantier et les prises de vue drone aident une entreprise du BTP à renforcer sa crédibilité, sa réassurance et sa performance commerciale en 2026.",
+    excerpt: "Bien utilisés, la vidéo et le drone ne servent pas seulement à faire joli : ils renforcent la confiance, les pages métiers et les échanges commerciaux dans le BTP.",
+    coverImage: "video-drone-btp-visibilite-reassurance",
+    author: "Rachad AIT HAMOU",
+    date: "2026-05-05",
+    readTime: "7 min",
+    featured: false,
+    tags: ["Communication BTP", "Vidéo", "Chantier"],
+    keywords: [
+      "agence communication BTP",
+      "stratégie marketing BTP",
+      "marketing digital bâtiment",
+      "acquisition clients BTP",
+      "stratégie marketing rénovation",
+      "structurer acquisition client BTP"
+    ],
+  },
+  {
     slug: "strategie-marketing-couverture-2026",
     title: "Entreprise de couverture : quelle stratégie marketing adopter en 2026 pour générer des demandes rentables ?",
     metaDescription: "Découvrez comment une entreprise de couverture peut structurer son site, son référencement local, sa publicité et son suivi commercial pour générer des demandes rentables en 2026.",
