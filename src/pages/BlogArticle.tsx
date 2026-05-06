@@ -26,10 +26,6 @@ const articleToService: Record<string, { service: ServiceKey; intro?: string }> 
     service: "gestion-communication",
     intro: "Reliez contenu, ciblage et suivi commercial pour approcher vos comptes stratégiques avec une mécanique plus crédible et plus exploitable.",
   },
-  "abm-btp-cibler-grands-comptes-opportunites-2026": {
-    service: "gestion-communication",
-    intro: "Ciblez mieux vos comptes stratégiques avec une mécanique ABM plus claire, plus crédible et mieux reliée à vos enjeux commerciaux.",
-  },
   "video-drone-btp-visibilite-reassurance": {
     service: "tournage",
     intro: "Montrez vos chantiers avec des contenus vidéo qui renforcent la réassurance et soutiennent vraiment le parcours commercial.",
@@ -210,7 +206,6 @@ const articleToService: Record<string, { service: ServiceKey; intro?: string }> 
 
 const articleComponents: Record<string, React.ComponentType> = {
   "attirer-comptes-cles-btp-inbound-abm-2026": lazy(() => import("@/components/blog/ArticleAttirerComptesClesBtpInboundAbm2026")),
-  "abm-btp-cibler-grands-comptes-opportunites-2026": lazy(() => import("@/components/blog/ArticleAbmBtpCiblerGrandsComptesOpportunites2026")),
   "video-drone-btp-visibilite-reassurance": lazy(() => import("@/components/blog/ArticleVideoDroneBtpVisibiliteReassurance")),
   "communication-btp-levier-strategique-positionnement": lazy(() => import("@/components/blog/ArticleCommunicationBtpLevierStrategiquePositionnement")),
   "reseaux-sociaux-btp-b2b-2026": lazy(() => import("@/components/blog/ArticleReseauxSociauxBtpB2b2026")),

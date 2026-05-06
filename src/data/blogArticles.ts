@@ -34,26 +34,6 @@ export const blogArticles: BlogArticle[] = [
     ],
   },
   {
-    slug: "abm-btp-cibler-grands-comptes-opportunites-2026",
-    title: "ABM BTP : comment cibler les grands comptes sans disperser vos équipes commerciales en 2026",
-    metaDescription: "Découvrez comment structurer une stratégie ABM BTP pour cibler les grands comptes, aligner marketing et commerce, et ouvrir des opportunités plus qualifiées en 2026.",
-    excerpt: "L’ABM aide les entreprises du BTP à concentrer leurs efforts sur les comptes stratégiques avec un meilleur ciblage, plus de preuve et une progression commerciale plus structurée.",
-    coverImage: "abm-btp-cibler-grands-comptes-opportunites-2026",
-    author: "Kerim JAKUPOVIC",
-    date: "2026-05-06",
-    readTime: "8 min",
-    featured: false,
-    tags: ["ABM", "BTP", "Acquisition"],
-    keywords: [
-      "acquisition clients BTP",
-      "génération de leads BTP",
-      "stratégie marketing BTP",
-      "structurer acquisition client BTP",
-      "agence marketing BTP",
-      "trouver des clients BTP"
-    ],
-  },
-  {
     slug: "video-drone-btp-visibilite-reassurance",
     title: "Vidéo et drone dans le BTP : comment transformer vos chantiers en levier de visibilité et de réassurance",
     metaDescription: "Découvrez comment la vidéo de chantier et les prises de vue drone aident une entreprise du BTP à renforcer sa crédibilité, sa réassurance et sa performance commerciale en 2026.",
