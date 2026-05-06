@@ -14,6 +14,28 @@ export interface BlogArticle {
 
 export const blogArticles: BlogArticle[] = [
   {
+    slug: "strategie-marketing-couverture-2026",
+    title: "Entreprise de couverture : quelle stratégie marketing adopter en 2026 pour générer des demandes rentables ?",
+    metaDescription: "Découvrez comment une entreprise de couverture peut structurer son site, son référencement local, sa publicité et son suivi commercial pour générer des demandes rentables en 2026.",
+    excerpt: "Site, SEO local, preuve chantier, publicité ciblée et suivi des devis : la méthode pour transformer la visibilité d’une entreprise de couverture en demandes vraiment rentables.",
+    coverImage: "strategie-marketing-couverture-2026",
+    author: "Omar TROUSSI",
+    date: "2026-05-05",
+    readTime: "8 min",
+    featured: false,
+    tags: ["Couverture", "Marketing digital", "Rénovation"],
+    keywords: [
+      "stratégie marketing rénovation",
+      "acquisition clients rénovation",
+      "trouver des clients BTP",
+      "génération de leads rénovation",
+      "stratégie marketing BTP",
+      "système acquisition client rénovation",
+      "marketing digital bâtiment",
+      "publicité rénovation"
+    ],
+  },
+  {
     slug: "communication-btp-levier-strategique-positionnement",
     title: "Communication BTP : pourquoi elle reste un levier stratégique pour défendre votre positionnement en 2026",
     metaDescription: "Découvrez pourquoi la communication BTP reste un levier stratégique en 2026 pour protéger votre positionnement, renforcer la preuve commerciale et défendre vos marges.",
