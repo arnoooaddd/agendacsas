@@ -5,6 +5,7 @@ import { Button } from "./ui/button";
 
 const exemplesVideos = [
   { url: "https://www.youtube.com/embed/jtxqj3Mm4WM?rel=0&modestbranding=1", title: "Pergola 4 Saisons | Agendac Exemple", isShort: true },
+  { url: "https://www.youtube.com/embed/lj1n0VSNT2s?rel=0&modestbranding=1", title: "Exemple Agendac", isShort: true },
   { url: "https://www.youtube.com/embed/aDHl-oZJ-Uk?rel=0&modestbranding=1", title: "La Boutique du Menuisier 72 | Agendac Exemple", isShort: true },
   { url: "https://www.youtube.com/embed/MDHWvOjH0Ac?rel=0&modestbranding=1", title: "Interview client | Exemple Agendac", isShort: true },
   { url: "https://www.youtube.com/embed/keR0F0VJNsk?rel=0&modestbranding=1", title: "ESF | Exemple Agendac", isShort: false },
