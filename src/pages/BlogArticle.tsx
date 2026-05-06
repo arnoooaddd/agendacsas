@@ -22,6 +22,10 @@ const authorProfiles: Record<string, { image: string; role: string }> = {
 
 // Mapping article slug → most relevant Agendac service
 const articleToService: Record<string, { service: ServiceKey; intro?: string }> = {
+  "video-drone-btp-visibilite-reassurance": {
+    service: "tournage",
+    intro: "Montrez vos chantiers avec des contenus vidéo qui renforcent la réassurance et soutiennent vraiment le parcours commercial.",
+  },
   "communication-btp-levier-strategique-positionnement": {
     service: "gestion-communication",
     intro: "Renforcez votre positionnement avec une communication plus claire, plus cohérente et mieux reliée à vos enjeux commerciaux.",
@@ -197,6 +201,7 @@ const articleToService: Record<string, { service: ServiceKey; intro?: string }> 
 };
 
 const articleComponents: Record<string, React.ComponentType> = {
+  "video-drone-btp-visibilite-reassurance": lazy(() => import("@/components/blog/ArticleVideoDroneBtpVisibiliteReassurance")),
   "communication-btp-levier-strategique-positionnement": lazy(() => import("@/components/blog/ArticleCommunicationBtpLevierStrategiquePositionnement")),
   "reseaux-sociaux-btp-b2b-2026": lazy(() => import("@/components/blog/ArticleReseauxSociauxBtpB2b2026")),
   "google-ads-keyword-planner-renovation": lazy(() => import("@/components/blog/ArticleGoogleAdsKeywordPlannerRenovation")),
