@@ -13,7 +13,7 @@ import { motion } from "framer-motion";
 import { usePageTitle } from "@/hooks/usePageTitle";
 
 const Tournage = () => {
-  usePageTitle("Tournage vidéo professionnel");
+  usePageTitle("Réalisation d'un tournage professionnel pour votre société de rénovation de l'habitat");
   useEffect(() => {
     window.scrollTo(0, 0);
     const existingScript = document.querySelector('script[src="https://elfsightcdn.com/platform.js"]');
@@ -52,13 +52,13 @@ const Tournage = () => {
               <motion.h1 initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.1 }}
                 className="text-3xl sm:text-5xl lg:text-6xl font-bold text-foreground mb-6 leading-[1.1] tracking-tight"
               >
-                Tournage{" "}
+                Réalisation d'un tournage{" "}
                 <span className="text-gradient">professionnel</span>
               </motion.h1>
               <motion.p initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.2 }}
                 className="text-muted-foreground text-lg max-w-2xl mx-auto mb-10"
               >
-                Réalisation d'un tournage professionnel orienté prise de contact. Scripts, tournage sur site, montage et livraison — 100 % internalisé.
+                Pour votre société de rénovation de l'habitat. Scripts sur-mesure, tournage sur site, montage et livraison — 100 % internalisé.
               </motion.p>
               <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.3 }}
                 className="flex flex-col sm:flex-row items-center justify-center gap-4"
