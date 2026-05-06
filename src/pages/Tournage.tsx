@@ -7,7 +7,7 @@ import ServiceFloatingElements from "@/components/ServiceFloatingElements";
 import ExemplesTournage from "@/components/ExemplesTournage";
 import ReviewsBands from "@/components/ReviewsBands";
 import RelatedArticles from "@/components/RelatedArticles";
-import { Video, CheckCircle, Star, ArrowRight, FileText, Clock, Film, Repeat, Package } from "lucide-react";
+import { Video, CheckCircle, Star, ArrowRight, FileText, Clock, Film, Repeat, Package, Building2, HelpCircle, Megaphone, MessageCircle, HardHat, ClipboardList, ArrowLeftRight, Layers, Target, Award } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
 import { usePageTitle } from "@/hooks/usePageTitle";
