@@ -18,10 +18,10 @@ const ServiceFloatingElements = ({ variant = "site" }: ServiceFloatingElementsPr
     ],
     tournage: [
       { icon: Camera, label: "Tournage programmé", sublabel: "Mardi 9h sur site", color: "bg-primary/20", textColor: "text-primary", pos: "top-32 left-[5%]", anim: "animate-bounce-soft" },
-      { icon: Clapperboard, label: "Script validé", sublabel: "Prêt à tourner", color: "bg-secondary/20", textColor: "text-secondary", pos: "top-48 right-[8%]", anim: "animate-float" },
+      { icon: Clapperboard, label: "Script validé", sublabel: "Prêt à tourner", color: "bg-secondary/20", textColor: "text-secondary", pos: "top-32 right-[5%]", anim: "animate-float" },
       { icon: Video, label: "12 vidéos livrées", sublabel: "Cette semaine", color: "bg-green-500/20", textColor: "text-green-500", pos: "top-[60%] left-[3%]", anim: "animate-bounce-soft", delay: "1s", xl: true },
-      { icon: Calendar, label: "Planning organisé", sublabel: "De A à Z", color: "bg-primary/20", textColor: "text-primary", pos: "top-[35%] right-[12%]", anim: "animate-float", delay: "1.2s", xl: true },
-      { icon: Star, label: "Qualité pro", sublabel: "100% internalisé", color: "bg-yellow-500/20", textColor: "text-yellow-500", pos: "bottom-[35%] right-[10%]", anim: "animate-bounce-soft", delay: "2s", xl: true },
+      { icon: Calendar, label: "Planning organisé", sublabel: "De A à Z", color: "bg-primary/20", textColor: "text-primary", pos: "top-[55%] right-[4%]", anim: "animate-float", delay: "1.2s", xl: true },
+      { icon: Star, label: "Qualité pro", sublabel: "100% internalisé", color: "bg-yellow-500/20", textColor: "text-yellow-500", pos: "bottom-[15%] right-[8%]", anim: "animate-bounce-soft", delay: "2s", xl: true },
     ],
     rdv: [
       { icon: PhoneCall, label: "RDV confirmé", sublabel: "Lundi 14h", color: "bg-primary/20", textColor: "text-primary", pos: "top-32 left-[5%]", anim: "animate-bounce-soft" },
