@@ -14,6 +14,26 @@ export interface BlogArticle {
 
 export const blogArticles: BlogArticle[] = [
   {
+    slug: "attirer-comptes-cles-btp-inbound-abm-2026",
+    title: "Comment attirer les comptes clés dans le BTP en combinant inbound marketing et ABM",
+    metaDescription: "Découvrez comment combiner inbound marketing et account-based marketing pour attirer des comptes clés dans le BTP, mieux qualifier vos cibles et ouvrir de vraies opportunités commerciales en 2026.",
+    excerpt: "Associer inbound marketing et ABM aide les entreprises du BTP à transformer une prospection grands comptes trop diffuse en mécanique plus ciblée, plus crédible et mieux suivie commercialement.",
+    coverImage: "abm-btp-cibler-grands-comptes-opportunites-2026",
+    author: "Arnaud UTILLE",
+    date: "2026-05-06",
+    readTime: "8 min",
+    featured: false,
+    tags: ["ABM", "Inbound marketing", "BTP"],
+    keywords: [
+      "acquisition clients BTP",
+      "génération de leads BTP",
+      "stratégie marketing BTP",
+      "structurer acquisition client BTP",
+      "trouver des clients BTP",
+      "agence marketing BTP"
+    ],
+  },
+  {
     slug: "abm-btp-cibler-grands-comptes-opportunites-2026",
     title: "ABM BTP : comment cibler les grands comptes sans disperser vos équipes commerciales en 2026",
     metaDescription: "Découvrez comment structurer une stratégie ABM BTP pour cibler les grands comptes, aligner marketing et commerce, et ouvrir des opportunités plus qualifiées en 2026.",
