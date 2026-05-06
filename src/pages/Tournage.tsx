@@ -224,7 +224,11 @@ const Tournage = () => {
         </section>
 
         <RelatedArticles
-          slugs={["generation-leads-fiables-entreprise-renovation"]}
+          slugs={[
+            "video-drone-btp-visibilite-reassurance",
+            "branding-local-entreprise-renovation",
+            "generation-leads-fiables-entreprise-renovation",
+          ]}
           subtitle="Construisez une image de marque qui rassure et démarquez-vous des arnaques en rénovation."
         />
       </main>
