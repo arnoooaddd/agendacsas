@@ -38,6 +38,7 @@ import googleAdsKeywordPlannerRenovation from "@/assets/blog/google-ads-keyword-
 import communicationBtpLevierStrategiquePositionnement from "@/assets/blog/communication-btp-levier-strategique-positionnement.png";
 import strategieMarketingCouverture2026 from "@/assets/blog/strategie-marketing-couverture-2026.png";
 import videoDroneBtpVisibiliteReassurance from "@/assets/blog/video-drone-btp-visibilite-reassurance.png";
+import abmBtpCiblerGrandsComptesOpportunites2026 from "@/assets/blog/abm-btp-cibler-grands-comptes-opportunites-2026.png";
 
 const coverImages: Record<string, string> = {
   // Anciennes clés (compat)
@@ -98,6 +99,7 @@ const coverImages: Record<string, string> = {
   "communication-btp-levier-strategique-positionnement": communicationBtpLevierStrategiquePositionnement,
   "strategie-marketing-couverture-2026": strategieMarketingCouverture2026,
   "video-drone-btp-visibilite-reassurance": videoDroneBtpVisibiliteReassurance,
+  "abm-btp-cibler-grands-comptes-opportunites-2026": abmBtpCiblerGrandsComptesOpportunites2026,
 };
 
 export const getCoverImage = (key: string): string => {
