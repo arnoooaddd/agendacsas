@@ -14,6 +14,26 @@ export interface BlogArticle {
 
 export const blogArticles: BlogArticle[] = [
   {
+    slug: "relations-presse-seo-btp-autorite-2026",
+    title: "Relations presse et SEO dans le BTP : comment gagner en autorité sans dépendre uniquement de votre site",
+    metaDescription: "Découvrez comment les relations presse renforcent le SEO d’une entreprise du BTP grâce aux backlinks, aux mentions de marque et aux signaux d’autorité en 2026.",
+    excerpt: "Les relations presse peuvent renforcer l’autorité SEO d’une entreprise du BTP quand elles sont reliées aux bons sujets, aux bonnes pages et aux objectifs d’acquisition.",
+    coverImage: "referencement-btp-google-ia-2026",
+    author: "Omar TROUSSI",
+    date: "2026-05-06",
+    readTime: "7 min",
+    featured: false,
+    tags: ["SEO", "Relations presse", "BTP"],
+    keywords: [
+      "stratégie marketing BTP",
+      "marketing digital bâtiment",
+      "acquisition clients BTP",
+      "trouver des clients BTP",
+      "référencement BTP",
+      "stratégie marketing rénovation"
+    ],
+  },
+  {
     slug: "attirer-comptes-cles-btp-inbound-abm-2026",
     title: "Comment attirer les comptes clés dans le BTP en combinant inbound marketing et ABM",
     metaDescription: "Découvrez comment combiner inbound marketing et account-based marketing pour attirer des comptes clés dans le BTP, mieux qualifier vos cibles et ouvrir de vraies opportunités commerciales en 2026.",
