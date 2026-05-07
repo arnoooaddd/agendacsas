@@ -12,6 +12,7 @@ const exemplesVideos = [
   { url: "https://www.youtube.com/embed/hJmqIx0JmM8?rel=0&modestbranding=1", title: "Solaire 2F | Exemple Agendac", isShort: true },
   { url: "https://www.youtube.com/embed/48gviholwLc?rel=0&modestbranding=1", title: "Maisolia | Exemple Agendac", isShort: true },
   { url: "https://www.youtube.com/embed/5DVM6h5Nkaw?rel=0&modestbranding=1", title: "Exemple Agendac", isShort: true },
+  { url: "https://www.youtube.com/embed/o_nC1OQoGCc?rel=0&modestbranding=1", title: "Exemple Agendac", isShort: true },
 ];
 
 interface ExemplesTournageProps {
