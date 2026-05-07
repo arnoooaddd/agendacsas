@@ -14,6 +14,26 @@ export interface BlogArticle {
 
 export const blogArticles: BlogArticle[] = [
   {
+    slug: "strategie-marketing-maconnerie-2026",
+    title: "Entreprise de maçonnerie : quelle stratégie marketing adopter en 2026 pour générer des chantiers rentables ?",
+    metaDescription: "Découvrez comment une entreprise de maçonnerie peut structurer son positionnement, son site, son SEO local et son suivi commercial pour générer des chantiers rentables en 2026.",
+    excerpt: "Positionnement chantier, site utile, SEO local, preuve terrain et suivi commercial : la méthode pour transformer la communication d’une entreprise de maçonnerie en demandes qualifiées.",
+    coverImage: "strategie-marketing-maconnerie-2026",
+    author: "Kerim JAKUPOVIC",
+    date: "2026-05-06",
+    readTime: "8 min",
+    featured: false,
+    tags: ["Maçonnerie", "Marketing BTP", "Acquisition"],
+    keywords: [
+      "stratégie marketing BTP",
+      "acquisition clients BTP",
+      "trouver des clients BTP",
+      "marketing digital bâtiment",
+      "générer des leads rénovation",
+      "stratégie marketing rénovation"
+    ],
+  },
+  {
     slug: "relations-presse-seo-btp-autorite-2026",
     title: "Relations presse et SEO dans le BTP : comment gagner en autorité sans dépendre uniquement de votre site",
     metaDescription: "Découvrez comment les relations presse renforcent le SEO d’une entreprise du BTP grâce aux backlinks, aux mentions de marque et aux signaux d’autorité en 2026.",
