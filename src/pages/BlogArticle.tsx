@@ -22,6 +22,10 @@ const authorProfiles: Record<string, { image: string; role: string }> = {
 
 // Mapping article slug → most relevant Agendac service
 const articleToService: Record<string, { service: ServiceKey; intro?: string }> = {
+  "relations-presse-seo-btp-autorite-2026": {
+    service: "gestion-seo",
+    intro: "Renforcez votre autorité SEO avec des contenus, mentions et liens alignés sur vos pages stratégiques et vos objectifs d’acquisition.",
+  },
   "attirer-comptes-cles-btp-inbound-abm-2026": {
     service: "gestion-communication",
     intro: "Reliez contenu, ciblage et suivi commercial pour approcher vos comptes stratégiques avec une mécanique plus crédible et plus exploitable.",
@@ -205,6 +209,7 @@ const articleToService: Record<string, { service: ServiceKey; intro?: string }> 
 };
 
 const articleComponents: Record<string, React.ComponentType> = {
+  "relations-presse-seo-btp-autorite-2026": lazy(() => import("@/components/blog/ArticleRelationsPresseSeoBtpAutorite2026")),
   "attirer-comptes-cles-btp-inbound-abm-2026": lazy(() => import("@/components/blog/ArticleAttirerComptesClesBtpInboundAbm2026")),
   "video-drone-btp-visibilite-reassurance": lazy(() => import("@/components/blog/ArticleVideoDroneBtpVisibiliteReassurance")),
   "communication-btp-levier-strategique-positionnement": lazy(() => import("@/components/blog/ArticleCommunicationBtpLevierStrategiquePositionnement")),
