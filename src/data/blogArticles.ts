@@ -14,26 +14,6 @@ export interface BlogArticle {
 
 export const blogArticles: BlogArticle[] = [
   {
-    slug: "strategie-marketing-electricite-2026",
-    title: "Électricien : quelle stratégie marketing adopter en 2026 pour générer des demandes qualifiées ?",
-    metaDescription: "Découvrez comment une entreprise d’électricité peut structurer son positionnement, son site, son SEO local, sa preuve chantier et son suivi commercial pour générer des demandes qualifiées.",
-    excerpt: "Spécialisation, visibilité locale, preuve chantier et suivi rapide : la méthode pour transformer la communication d’un électricien en demandes qualifiées et rentables.",
-    coverImage: "strategie-marketing-electricite-2026",
-    author: "Rachad AIT HAMOU",
-    date: "2026-05-07",
-    readTime: "8 min",
-    featured: false,
-    tags: ["Électricité", "Marketing BTP", "SEO local"],
-    keywords: [
-      "stratégie marketing BTP",
-      "marketing digital bâtiment",
-      "acquisition clients BTP",
-      "trouver des clients BTP",
-      "stratégie marketing rénovation",
-      "générer des leads rénovation"
-    ],
-  },
-  {
     slug: "strategie-marketing-maconnerie-2026",
     title: "Entreprise de maçonnerie : quelle stratégie marketing adopter en 2026 pour générer des chantiers rentables ?",
     metaDescription: "Découvrez comment une entreprise de maçonnerie peut structurer son positionnement, son site, son SEO local et son suivi commercial pour générer des chantiers rentables en 2026.",
@@ -58,7 +38,7 @@ export const blogArticles: BlogArticle[] = [
     title: "Relations presse et SEO dans le BTP : comment gagner en autorité sans dépendre uniquement de votre site",
     metaDescription: "Découvrez comment les relations presse renforcent le SEO d’une entreprise du BTP grâce aux backlinks, aux mentions de marque et aux signaux d’autorité en 2026.",
     excerpt: "Les relations presse peuvent renforcer l’autorité SEO d’une entreprise du BTP quand elles sont reliées aux bons sujets, aux bonnes pages et aux objectifs d’acquisition.",
-    coverImage: "referencement-btp-google-ia-2026",
+    coverImage: "relations-presse-seo-btp-autorite-2026",
     author: "Omar TROUSSI",
     date: "2026-05-06",
     readTime: "7 min",
