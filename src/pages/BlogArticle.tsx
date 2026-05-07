@@ -22,6 +22,10 @@ const authorProfiles: Record<string, { image: string; role: string }> = {
 
 // Mapping article slug → most relevant Agendac service
 const articleToService: Record<string, { service: ServiceKey; intro?: string }> = {
+  "strategie-marketing-maconnerie-2026": {
+    service: "gestion-communication",
+    intro: "Structurez votre communication, votre preuve chantier et votre suivi commercial pour générer des demandes de maçonnerie plus qualifiées.",
+  },
   "relations-presse-seo-btp-autorite-2026": {
     service: "gestion-seo",
     intro: "Renforcez votre autorité SEO avec des contenus, mentions et liens alignés sur vos pages stratégiques et vos objectifs d’acquisition.",
@@ -209,6 +213,7 @@ const articleToService: Record<string, { service: ServiceKey; intro?: string }> 
 };
 
 const articleComponents: Record<string, React.ComponentType> = {
+  "strategie-marketing-maconnerie-2026": lazy(() => import("@/components/blog/ArticleStrategieMarketingMaconnerie2026")),
   "relations-presse-seo-btp-autorite-2026": lazy(() => import("@/components/blog/ArticleRelationsPresseSeoBtpAutorite2026")),
   "attirer-comptes-cles-btp-inbound-abm-2026": lazy(() => import("@/components/blog/ArticleAttirerComptesClesBtpInboundAbm2026")),
   "video-drone-btp-visibilite-reassurance": lazy(() => import("@/components/blog/ArticleVideoDroneBtpVisibiliteReassurance")),
