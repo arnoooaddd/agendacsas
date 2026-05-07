@@ -14,6 +14,26 @@ export interface BlogArticle {
 
 export const blogArticles: BlogArticle[] = [
   {
+    slug: "revetements-sols-leads-2026",
+    title: "Comment générer des leads pour une entreprise de revêtements de sols en 2026 ?",
+    metaDescription: "Découvrez comment une entreprise de revêtements de sols peut structurer son site, son SEO local, ses campagnes et son suivi commercial pour générer plus de demandes qualifiées en 2026.",
+    excerpt: "SEO local, pages métiers, preuve chantier, Google Ads et relance commerciale : la méthode pour transformer la visibilité d’une entreprise de revêtements de sols en chantiers rentables.",
+    coverImage: "revetements-sols-leads-2026",
+    author: "Omar TROUSSI",
+    date: "2026-05-07",
+    readTime: "8 min",
+    featured: false,
+    tags: ["Revêtements de sols", "Marketing rénovation", "Acquisition"],
+    keywords: [
+      "générer des leads rénovation",
+      "revêtements de sols",
+      "acquisition clients rénovation",
+      "marketing digital rénovation",
+      "trouver des clients rénovation",
+      "système acquisition client rénovation"
+    ],
+  },
+  {
     slug: "strategie-marketing-maconnerie-2026",
     title: "Entreprise de maçonnerie : quelle stratégie marketing adopter en 2026 pour générer des chantiers rentables ?",
     metaDescription: "Découvrez comment une entreprise de maçonnerie peut structurer son positionnement, son site, son SEO local et son suivi commercial pour générer des chantiers rentables en 2026.",

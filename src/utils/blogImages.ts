@@ -41,6 +41,7 @@ import videoDroneBtpVisibiliteReassurance from "@/assets/blog/video-drone-btp-vi
 import abmBtpCiblerGrandsComptesOpportunites2026 from "@/assets/blog/abm-btp-cibler-grands-comptes-opportunites-2026.png";
 import strategieMarketingMaconnerie2026 from "@/assets/blog/strategie-marketing-maconnerie-2026.png";
 import relationsPresseSeoBtpAutorite2026 from "@/assets/blog/relations-presse-seo-btp-autorite-2026.png";
+import revetementsSolsLeads2026 from "@/assets/blog/revetements-sols-leads-2026.png";
 
 const coverImages: Record<string, string> = {
   // Anciennes clés (compat)
@@ -104,6 +105,7 @@ const coverImages: Record<string, string> = {
   "abm-btp-cibler-grands-comptes-opportunites-2026": abmBtpCiblerGrandsComptesOpportunites2026,
   "strategie-marketing-maconnerie-2026": strategieMarketingMaconnerie2026,
   "relations-presse-seo-btp-autorite-2026": relationsPresseSeoBtpAutorite2026,
+  "revetements-sols-leads-2026": revetementsSolsLeads2026,
 };
 
 export const getCoverImage = (key: string): string => {
