@@ -14,6 +14,27 @@ export interface BlogArticle {
 
 export const blogArticles: BlogArticle[] = [
   {
+    slug: "communication-domotique-trouver-clients-2026",
+    title: "Communication domotique : comment trouver plus de clients en 2026",
+    metaDescription: "Découvrez comment une entreprise de domotique peut structurer sa communication, son site et son SEO pour générer plus de demandes qualifiées en 2026.",
+    excerpt: "Promesse claire, pages utiles, SEO local et suivi commercial : la méthode pour transformer la communication domotique en demandes qualifiées.",
+    coverImage: "communication-domotique-trouver-clients-2026",
+    author: "Rachad AIT HAMOU",
+    date: "2026-05-08",
+    readTime: "8 min",
+    featured: false,
+    tags: ["Domotique", "Communication", "Acquisition"],
+    keywords: [
+      "communication domotique",
+      "trouver des clients rénovation",
+      "acquisition clients rénovation",
+      "stratégie marketing rénovation",
+      "marketing digital rénovation",
+      "système génération de leads rénovation"
+    ],
+  },
+
+  {
     slug: "revetements-sols-leads-2026",
     title: "Comment générer des leads pour une entreprise de revêtements de sols en 2026 ?",
     metaDescription: "Découvrez comment une entreprise de revêtements de sols peut structurer son site, son SEO local, ses campagnes et son suivi commercial pour générer plus de demandes qualifiées en 2026.",
