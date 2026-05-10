@@ -14,6 +14,26 @@ export interface BlogArticle {
 
 export const blogArticles: BlogArticle[] = [
   {
+    slug: "strategie-marketing-btp-services-differenciation-2026",
+    title: "Stratégie marketing BTP : pourquoi vos services doivent redevenir un vrai levier de différenciation en 2026",
+    metaDescription: "Découvrez comment structurer, marketer et communiquer vos services pour renforcer l’expérience client, mieux différencier votre entreprise du BTP et soutenir la performance commerciale en 2026.",
+    excerpt: "Dans le BTP, les services utiles font souvent la différence bien avant le prix : ils rassurent, fluidifient le parcours client et renforcent la valeur perçue.",
+    coverImage: "strategie-marketing-btp-services-differenciation-2026",
+    author: "Rachad AIT HAMOU",
+    date: "2026-05-09",
+    readTime: "8 min",
+    featured: false,
+    tags: ["Stratégie marketing BTP", "Expérience client", "Différenciation"],
+    keywords: [
+      "stratégie marketing BTP",
+      "marketing digital bâtiment",
+      "acquisition clients BTP",
+      "structurer acquisition client BTP",
+      "agence communication BTP",
+      "stratégie marketing rénovation"
+    ],
+  },
+  {
     slug: "communication-domotique-trouver-clients-2026",
     title: "Communication domotique : comment trouver plus de clients en 2026",
     metaDescription: "Découvrez comment une entreprise de domotique peut structurer sa communication, son site et son SEO pour générer plus de demandes qualifiées en 2026.",
