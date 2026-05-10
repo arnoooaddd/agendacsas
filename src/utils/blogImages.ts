@@ -43,6 +43,7 @@ import strategieMarketingMaconnerie2026 from "@/assets/blog/strategie-marketing-
 import relationsPresseSeoBtpAutorite2026 from "@/assets/blog/relations-presse-seo-btp-autorite-2026.png";
 import revetementsSolsLeads2026 from "@/assets/blog/revetements-sols-leads-2026.png";
 import communicationDomotiqueTrouverClients2026 from "@/assets/blog/communication-domotique-trouver-clients-2026.png";
+import strategieMarketingBtpServicesDifferenciation2026 from "@/assets/blog/strategie-marketing-btp-services-differenciation-2026.png";
 
 const coverImages: Record<string, string> = {
   // Anciennes clés (compat)
@@ -108,6 +109,7 @@ const coverImages: Record<string, string> = {
   "relations-presse-seo-btp-autorite-2026": relationsPresseSeoBtpAutorite2026,
   "revetements-sols-leads-2026": revetementsSolsLeads2026,
   "communication-domotique-trouver-clients-2026": communicationDomotiqueTrouverClients2026,
+  "strategie-marketing-btp-services-differenciation-2026": strategieMarketingBtpServicesDifferenciation2026,
 };
 
 export const getCoverImage = (key: string): string => {
