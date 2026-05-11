@@ -1151,4 +1151,26 @@ export const blogArticles: BlogArticle[] = [
       "communication BtoB BTP"
     ],
   },
+  {
+    slug: "renovation-marche-porteur-strategie-acquisition-2026",
+    title: "Rénovation 2026 : comment les entreprises du bâtiment peuvent capter le marché porteur",
+    metaDescription: "Rénovation 2026 : stratégie marketing et acquisition pour les entreprises du bâtiment qui veulent capter le marché porteur de la rénovation de l'habitat.",
+    excerpt: "Face au boom de la rénovation, les entreprises du bâtiment doivent structurer leur communication et leur acquisition pour capter ce marché porteur. Les trois piliers d'une stratégie efficace.",
+    coverImage: "renovation-marche-porteur-strategie-acquisition-2026",
+    author: "Omar TROUSSI",
+    date: "2026-05-10",
+    readTime: "7 min",
+    featured: false,
+    tags: ["Rénovation", "Marketing", "Acquisition"],
+    keywords: [
+      "stratégie marketing rénovation",
+      "génération de leads rénovation",
+      "acquisition clients rénovation",
+      "trouver des clients rénovation",
+      "marketing digital rénovation",
+      "coût acquisition client rénovation",
+      "système acquisition client rénovation",
+      "publicité rénovation"
+    ],
+  },
 ];
