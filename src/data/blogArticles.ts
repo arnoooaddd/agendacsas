@@ -1194,4 +1194,25 @@ export const blogArticles: BlogArticle[] = [
       "trouver des clients rénovation"
     ],
   },
+  {
+    slug: "site-electricien-generer-prospects-2026",
+    title: "Site pour électricien : comment générer des prospects en 2026",
+    metaDescription: "Découvrez comment un site web optimisé peut générer des prospects qualifiés pour votre entreprise d'électricité en rénovation : portfolio chantier, SEO local, formulaire de devis et système de suivi commercial.",
+    excerpt: "Un site bien conçu est le levier le plus rentable pour générer des demandes qualifiées dans l'électricité en rénovation. Guide complet pour un site qui convertit.",
+    coverImage: "site-electricien-generer-prospects-2026",
+    author: "Rachad AIT HAMOU",
+    date: "2026-05-11",
+    readTime: "6 min",
+    featured: false,
+    tags: ["Électricité", "Site web", "Génération de prospects"],
+    keywords: [
+      "génération de leads rénovation",
+      "acquisition clients rénovation",
+      "comment générer des leads rénovation",
+      "système acquisition client rénovation",
+      "trouver des clients rénovation",
+      "SEO local électricien",
+      "site web professionnel électricien"
+    ],
+  },
 ];

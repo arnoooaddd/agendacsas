@@ -26,6 +26,10 @@ const articleToService: Record<string, { service: ServiceKey; intro?: string }> 
     service: "gestion-communication",
     intro: "Transformez les périodes de ralentissement en opportunité d'acquisition en structurant une communication marketing BTP cohérente et continue.",
   },
+  "site-electricien-generer-prospects-2026": {
+    service: "gestion-communication",
+    intro: "Structurez votre site et votre visibilité locale pour générer plus de demandes qualifiées en électricité rénovation.",
+  },
   "renovation-marche-porteur-strategie-acquisition-2026": {
     service: "gestion-communication",
     intro: "Structurez une stratégie marketing rénovation qui relie vraiment visibilité, acquisition et traitement commercial pour capter ce marché porteur.",
@@ -234,6 +238,7 @@ const articleToService: Record<string, { service: ServiceKey; intro?: string }> 
 
 const articleComponents: Record<string, React.ComponentType> = {
   "crise-batiment-opportunite-communication-2026": lazy(() => import("@/components/blog/ArticleCriseBatimentOpportuniteCommunication2026")),
+  "site-electricien-generer-prospects-2026": lazy(() => import("@/components/blog/ArticleSiteElectricienGenererProspects2026")),
   "renovation-marche-porteur-strategie-acquisition-2026": lazy(() => import("@/components/blog/ArticleRenovationMarchePorteurStrategieAcquisition2026")),
   "strategie-marketing-btp-services-differenciation-2026": lazy(() => import("@/components/blog/ArticleStrategieMarketingBtpServicesDifferenciation2026")),
   "communication-domotique-trouver-clients-2026": lazy(() => import("@/components/blog/ArticleCommunicationDomotiqueTrouverClients2026")),
