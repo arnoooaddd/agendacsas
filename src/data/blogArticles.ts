@@ -1173,4 +1173,25 @@ export const blogArticles: BlogArticle[] = [
       "publicité rénovation"
     ],
   },
+  {
+    slug: "crise-batiment-opportunite-communication-2026",
+    title: "Crise du bâtiment : pourquoi c'est le meilleur moment pour muscler votre communication",
+    metaDescription: "Découvrez pourquoi les crises du bâtiment sont des opportunités marketing pour les entreprises de rénovation et du BTP : coût d'acquisition réduit, concurrence moins forte, notoriété renforcée.",
+    excerpt: "En période de crise, les entreprises qui continuent à communiquer en ressortent plus fortes : coût d'acquisition réduit, prospects plus qualifiés, positionnement renforcé.",
+    coverImage: "crise-batiment-opportunite-communication-2026",
+    author: "Kerim JAKUPOVIC",
+    date: "2026-05-10",
+    readTime: "8 min",
+    featured: false,
+    tags: ["Crise bâtiment", "Stratégie marketing BTP", "Acquisition clients"],
+    keywords: [
+      "crise du bâtiment communication",
+      "stratégie marketing BTP",
+      "acquisition clients BTP",
+      "coût acquisition client rénovation",
+      "marketing digital bâtiment",
+      "publicité BTP",
+      "trouver des clients rénovation"
+    ],
+  },
 ];
