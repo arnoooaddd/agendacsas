@@ -1337,4 +1337,18 @@ export const blogArticles: BlogArticle[] = [
       "marketing digital bâtiment"
     ],
   },
-];
+];,
+  {
+    slug: "communication-rse-btp-sans-greenwashing",
+    title: "Communication RSE dans le BTP : valoriser ses engagements sans greenwashing",
+    metaDescription: "Comment structurer une communication RSE crédible dans le BTP, sans greenwashing.",
+    excerpt: "RE2020, déchet de chantier, certifications : comment les entreprises de rénovation communiquent sur leur RSE.",
+    coverImage: "communication-rse-btp-sans-greenwashing",
+    author: "Kerim JAKUPOVIC",
+    date: "2026-05-12",
+    readTime: "4 min",
+    featured: false,
+    tags: ["RSE", "BTP", "Communication"],
+    keywords: ["communication RSE BTP", "stratégie marketing BTP", "acquisition clients BTP"],
+  },
+]

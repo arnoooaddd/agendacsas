@@ -307,6 +307,7 @@ const articleComponents: Record<string, React.ComponentType> = {
   "numerique-btp-nouvelles-pratiques-2026": lazy(() => import("@/components/blog/ArticleNumeriqueBtpPratiques2026")),
   "btob-btp-leads-commerciaux-2026": lazy(() => import("@/components/blog/ArticleBtobBtpLeads2026")),
   "strategie-communication-prescripteurs-btp": lazy(() => import("@/components/blog/ArticlePrescripteursBtp2026")),
+  "communication-rse-btp-sans-greenwashing": lazy(() => import("@/components/blog/ArticleRseBtpCommunication2026")),
   "site-web-plombier-erreurs-devis-2026": lazy(() => import("@/components/blog/ArticleSiteWebPlombierErreursDevis2026")),
 };
 
