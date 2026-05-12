@@ -38,6 +38,7 @@ import googleAdsKeywordPlannerRenovation from "@/assets/blog/google-ads-keyword-
 import communicationBtpLevierStrategiquePositionnement from "@/assets/blog/communication-btp-levier-strategique-positionnement.png";
 import strategieMarketingCouverture2026 from "@/assets/blog/strategie-marketing-couverture-2026.png";
 import videoDroneBtpVisibiliteReassurance from "@/assets/blog/video-drone-btp-visibilite-reassurance.png";
+import siteWebPlombierErreursDevis2026 from "@/assets/blog/site-web-plombier-erreurs-devis-2026.png";
 import abmBtpCiblerGrandsComptesOpportunites2026 from "@/assets/blog/abm-btp-cibler-grands-comptes-opportunites-2026.png";
 import strategieMarketingMaconnerie2026 from "@/assets/blog/strategie-marketing-maconnerie-2026.png";
 import relationsPresseSeoBtpAutorite2026 from "@/assets/blog/relations-presse-seo-btp-autorite-2026.png";
@@ -115,6 +116,7 @@ const coverImages: Record<string, string> = {
   "crise-batiment-opportunite-communication-2026": criseBatimentOpportuniteCommunication2026,
   "site-electricien-generer-prospects-2026": siteElectricienGenererProspects2026,
   "site-web-couvreur-confiance-devis-2026": siteElectricienGenererProspects2026,
+  "site-web-plombier-erreurs-devis-2026": siteWebPlombierErreursDevis2026,
 };
 
 export const getCoverImage = (key: string): string => {
