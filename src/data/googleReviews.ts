@@ -107,9 +107,9 @@ export const googleReviews: GoogleReview[] = [
     initials: "AP",
     company: "Stores et Fenêtres du Golfe",
     rating: 5,
-    date: "Retour partenaire",
+    date: "Mai 2026",
     text:
-      "11 signatures sur 18 RDV de mon premier pack Agendac. Demandes régulières, prospects vraiment qualifiés. Du sérieux pour du haut de gamme.",
+      "J'ai actuellement le plaisir de pouvoir collaborer avec Agendac et je ne peux que mettre en avant leur travail exceptionnel. L'identité de cette agence de communication se repose sur des bases saines et solides. Dès le premier contact, l'ambiance s'est révélée à la fois dynamique et conviviale, ce qui rend chaque échange agréable. Leurs compétences ont été cruciales pour donner vie à mes demandes : ils allient créativité, rigueur et une vraie expertise stratégique. Le suivi est irréprochable. Je recommande cette agence les yeux fermés.",
   },
   {
     author: "La Boutique du Menuisier",
