@@ -1215,4 +1215,25 @@ export const blogArticles: BlogArticle[] = [
       "site web professionnel électricien"
     ],
   },
+  {
+    slug: "site-web-couvreur-confiance-devis-2026",
+    title: "Site web couvreur : comment créer un site qui inspire confiance et génère des devis",
+    metaDescription: "Découvrez comment un site web de couvreur peut inspirer confiance et générer des demandes de devis qualifiées : photos chantier, avis clients, assurance décennale, SEO local et appel à l'action.",
+    excerpt: "Un site bien construit ne se contente pas d'être beau : il rassure, il prouve, et il convertit. Guide complet pour un site web de couvreur qui génère des demandes de devis régulières.",
+    coverImage: "site-web-couvreur-confiance-devis-2026",
+    author: "Omar TROUSSI",
+    date: "2026-05-11",
+    readTime: "7 min",
+    featured: false,
+    tags: ["Couverture", "Site web", "Génération de devis"],
+    keywords: [
+      "génération de leads rénovation",
+      "acquisition clients rénovation",
+      "comment générer des leads rénovation",
+      "site web professionnel couvreur",
+      "trouver des clients couverture",
+      "SEO local couvreur",
+      "site de couvreur performant"
+    ],
+  },
 ];
