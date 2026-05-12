@@ -47,6 +47,7 @@ import communicationDomotiqueTrouverClients2026 from "@/assets/blog/communicatio
 import strategieMarketingBtpServicesDifferenciation2026 from "@/assets/blog/strategie-marketing-btp-services-differenciation-2026.png";
 import criseBatimentOpportuniteCommunication2026 from "@/assets/blog/crise-batiment-opportunite-communication-2026.png";
 import renovationErreursSiteDevis2026 from "@/assets/blog/renovation-erreurs-site-devis-2026.png";
+import strategieCommunicationPrescripteursBtp from "@/assets/blog/strategie-communication-prescripteurs-btp.png";
 import siteElectricienGenererProspects2026 from "@/assets/blog/site-electricien-generer-prospects-2026.png";
 import btobBtpLeadsCommerciaux2026 from "@/assets/blog/btob-btp-leads-commerciaux-2026.png";
 import numeriqueBtpNouvellesPratiques2026 from "@/assets/blog/numerique-btp-nouvelles-pratiques-2026.png";
@@ -123,6 +124,7 @@ const coverImages: Record<string, string> = {
   "site-web-plombier-erreurs-devis-2026": siteWebPlombierErreursDevis2026,
   "numerique-btp-nouvelles-pratiques-2026": numeriqueBtpNouvellesPratiques2026,
   "btob-btp-leads-commerciaux-2026": btobBtpLeadsCommerciaux2026,
+  "strategie-communication-prescripteurs-btp": strategieCommunicationPrescripteursBtp,
 };
 
 export const getCoverImage = (key: string): string => {
