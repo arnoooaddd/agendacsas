@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { Star, ArrowRight } from "lucide-react";
+import anthonyProperzioPhoto from "@/assets/anthony-properzio.png";
 
 const SeoIntro = () => {
   return (
@@ -21,9 +22,12 @@ const SeoIntro = () => {
               <span className="text-xs font-medium text-muted-foreground">Avis Google vérifié</span>
             </div>
             <div className="flex items-center gap-3 mb-3">
-              <div className="w-10 h-10 rounded-full bg-primary text-primary-foreground flex items-center justify-center text-sm font-bold flex-shrink-0">
-                AP
-              </div>
+              <img
+                src={anthonyProperzioPhoto}
+                alt="Anthony PROPERZIO"
+                className="w-10 h-10 rounded-full object-cover flex-shrink-0"
+                loading="lazy"
+              />
               <div className="min-w-0 flex-1">
                 <p className="text-sm font-semibold text-foreground truncate">Anthony PROPERZIO</p>
                 <p className="text-xs text-muted-foreground">Stores et Fenêtres du Golfe · Mai 2026</p>
