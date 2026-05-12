@@ -15,8 +15,7 @@ const PhoneWebhookTrigger = () => {
     const digits = p.replace(/\D/g, "");
     if (!digits) return;
 
-    const normalized = digits.startsWith("0") ? digits.slice(1) : digits;
-    const phone = `+33${normalized}`;
+    const phone = digits.startsWith("+") ? digits : `+${digits}`;
 
     try {
       const already = sessionStorage.getItem(STORAGE_KEY);
