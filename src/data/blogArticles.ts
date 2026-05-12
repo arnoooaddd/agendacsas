@@ -1257,4 +1257,26 @@ export const blogArticles: BlogArticle[] = [
       "site de plombier performant"
     ],
   },
+  {
+    slug: "numerique-btp-nouvelles-pratiques-2026",
+    title: "Numérique dans le BTP : les nouvelles pratiques qui transforment l'acquisition clients en 2026",
+    metaDescription: "Découvrez comment les entreprises du BTP adoptent le numérique en 2026 : site internet, campagnes publicitaires, CRM et nouvelles pratiques pour structurer l'acquisition clients.",
+    excerpt: "Site optimisé, campagnes ciblées et CRM : les trois piliers de la transformation numérique qui permettent aux entreprises de rénovation de structurer leur acquisition clients en 2026.",
+    coverImage: "numerique-btp-nouvelles-pratiques-2026",
+    author: "Arnaud UTILLE",
+    date: "2026-05-12",
+    readTime: "7 min",
+    featured: false,
+    tags: ["Numérique", "BTP", "Acquisition clients", "Transformation digitale"],
+    keywords: [
+      "transformation numérique BTP",
+      "acquisition clients BTP",
+      "marketing digital bâtiment",
+      "génération de leads BTP",
+      "structurer acquisition client BTP",
+      "stratégie marketing BTP",
+      "système acquisition client rénovation"
+    ],
+  },
 ];
+

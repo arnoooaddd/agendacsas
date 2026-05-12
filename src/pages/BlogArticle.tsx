@@ -235,6 +235,7 @@ const articleToService: Record<string, { service: ServiceKey; intro?: string }> 
     intro: "Crédibilité en ligne : la première arme pour vous démarquer des arnaques.",
   },
   "site-web-couvreur-confiance-devis-2026": {
+  "numerique-btp-nouvelles-pratiques-2026": lazy(() => import("@/components/blog/ArticleNumeriqueBtpPratiques2026")),
     service: "creation-site-internet",
     intro: "Un site de couvreur orienté confiance et conversion pour générer des demandes de devis qualifiées.",
   },
@@ -299,6 +300,7 @@ const articleComponents: Record<string, React.ComponentType> = {
   "menuiserie-exterieure-strategie-marketing-2026": lazy(() => import("@/components/blog/ArticleMenuiserieExterieureStrategieMarketing2026")),
   "communication-btp-tendances-2026-entreprises-habitat": lazy(() => import("@/components/blog/ArticleCommunicationBtpTendances2026EntreprisesHabitat")),
   "site-web-couvreur-confiance-devis-2026": lazy(() => import("@/components/blog/ArticleSiteWebCouvreurConfianceDevis2026")),
+  "numerique-btp-nouvelles-pratiques-2026": lazy(() => import("@/components/blog/ArticleNumeriqueBtpPratiques2026")),
   "site-web-plombier-erreurs-devis-2026": lazy(() => import("@/components/blog/ArticleSiteWebPlombierErreursDevis2026")),
 };
 
