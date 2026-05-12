@@ -1318,4 +1318,23 @@ export const blogArticles: BlogArticle[] = [
       "structurer acquisition client BTP"
     ],
   },
-]
+  {
+    slug: "strategie-communication-prescripteurs-btp",
+    title: "Stratégie de communication prescripteurs BTP : comment être choisi en amont des projets",
+    metaDescription: "Architectes, bureaux d'études, économistes : comment structurer une stratégie de communication pour être prescrit et intégré en amont des projets BTP.",
+    excerpt: "LinkedIn, fiches projets, salons et relations presse : les clés pour être identifié par les prescripteurs du BTP avant l'appel d'offres.",
+    coverImage: "strategie-communication-prescripteurs-btp",
+    author: "Omar TROUSSI",
+    date: "2026-05-12",
+    readTime: "5 min",
+    featured: false,
+    tags: ["Prescripteurs", "BTP", "Communication", "Stratégie"],
+    keywords: [
+      "communication prescripteurs BTP",
+      "stratégie marketing BTP",
+      "génération de leads BTP",
+      "acquisition clients BTP",
+      "marketing digital bâtiment"
+    ],
+  },
+];
