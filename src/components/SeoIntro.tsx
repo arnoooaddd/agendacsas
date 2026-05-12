@@ -41,7 +41,7 @@ const SeoIntro = () => {
               ))}
             </div>
             <p className="text-sm text-foreground/85 leading-relaxed flex-1">
-              J'ai actuellement le plaisir de pouvoir collaborer avec Agendac et je ne peux que mettre en avant leur travail exceptionnel. L'identité de cette agence repose sur des bases saines et solides. Leurs compétences allient créativité, rigueur et expertise stratégique. Je remercie Arnaud, Kérim, Omar et tout particulièrement Manon. Je recommande cette agence les yeux fermés.
+              J'ai actuellement le plaisir de pouvoir collaborer avec Agendac et je ne peux que mettre en avant leur travail exceptionnel. L'identité de cette agence de communication se repose sur des bases saines et solides. Dès le premier contact, l'ambiance s'est révélée à la fois dynamique et conviviale, ce qui rend chaque échange agréable. Leurs compétences ont été cruciales pour donner vie à mes demandes : ils allient créativité, rigueur et une vraie expertise stratégique. Le suivi est irréprochable : ils prennent le temps de comprendre chaque besoin, restent disponibles et assurent une proximité rassurante. Je remercie Arnaud, Kérim, Omar et tout particulièrement Manon, qui, avec moi, passe du temps à sans cesse améliorer les différents points importants de notre collaboration pour booster le rendement de l'entreprise. Je recommande donc cette agence les yeux fermés à quiconque cherche un partenaire fiable, créatif et à l'écoute.
             </p>
             <Link
               to="/resultats-clients-agendac"
