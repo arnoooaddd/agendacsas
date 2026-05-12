@@ -21,6 +21,7 @@ import Presentation from "./pages/Presentation";
 import Confirmation from "./pages/Confirmation";
 import VisibiliteMax from "./pages/VisibiliteMax";
 import GestionSeo from "./pages/GestionSeo";
+import PhoneWebhookTrigger from "./components/PhoneWebhookTrigger";
 
 const queryClient = new QueryClient();
 
@@ -30,6 +31,7 @@ const App = () => (
       <Toaster />
       <Sonner />
       <BrowserRouter>
+        <PhoneWebhookTrigger />
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/accueil" element={<Navigate to="/" replace />} />
