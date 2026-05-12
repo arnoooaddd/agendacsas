@@ -1298,5 +1298,24 @@ export const blogArticles: BlogArticle[] = [
       "erreurs site web rénovation"
     ],
   },
+  {
+    slug: "btob-btp-leads-commerciaux-2026",
+    title: "Actions marketing BtoB pour le BTP : comment générer des leads commerciaux qualifiés en 2026",
+    metaDescription: "Marketing BtoB dans le BTP : ciblage, contenu, canaux et suivi CRM pour générer des leads commerciaux qualifiés auprès des professionnels du bâtiment.",
+    excerpt: "Ciblage, contenu adapté, LinkedIn, Google Ads et CRM : les leviers du marketing BtoB BTP pour générer des rendez-vous commerciaux qualifiés.",
+    coverImage: "btob-btp-leads-commerciaux-2026",
+    author: "Omar TROUSSI",
+    date: "2026-05-12",
+    readTime: "5 min",
+    featured: false,
+    tags: ["Marketing BtoB", "BTP", "Leads commerciaux", "Acquisition"],
+    keywords: [
+      "marketing BtoB BTP",
+      "génération de leads BTP",
+      "acquisition clients BTP",
+      "marketing digital bâtiment",
+      "trouver des clients BTP",
+      "structurer acquisition client BTP"
+    ],
+  },
 ]
-

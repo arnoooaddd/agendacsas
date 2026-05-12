@@ -241,6 +241,7 @@ const articleToService: Record<string, { service: ServiceKey; intro?: string }> 
   "site-web-couvreur-confiance-devis-2026": {
   "renovation-erreurs-site-devis-2026": lazy(() => import("@/components/blog/ArticleRenovationErreursSiteDevis2026")),
   "numerique-btp-nouvelles-pratiques-2026": lazy(() => import("@/components/blog/ArticleNumeriqueBtpPratiques2026")),
+  "btob-btp-leads-commerciaux-2026": lazy(() => import("@/components/blog/ArticleBtobBtpLeads2026")),
     service: "creation-site-internet",
     intro: "Un site de couvreur orienté confiance et conversion pour générer des demandes de devis qualifiées.",
   },
@@ -307,6 +308,7 @@ const articleComponents: Record<string, React.ComponentType> = {
   "site-web-couvreur-confiance-devis-2026": lazy(() => import("@/components/blog/ArticleSiteWebCouvreurConfianceDevis2026")),
   "renovation-erreurs-site-devis-2026": lazy(() => import("@/components/blog/ArticleRenovationErreursSiteDevis2026")),
   "numerique-btp-nouvelles-pratiques-2026": lazy(() => import("@/components/blog/ArticleNumeriqueBtpPratiques2026")),
+  "btob-btp-leads-commerciaux-2026": lazy(() => import("@/components/blog/ArticleBtobBtpLeads2026")),
   "site-web-plombier-erreurs-devis-2026": lazy(() => import("@/components/blog/ArticleSiteWebPlombierErreursDevis2026")),
 };
 
