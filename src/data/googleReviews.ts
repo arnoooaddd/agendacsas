@@ -87,7 +87,7 @@ export const googleReviews: GoogleReview[] = [
   {
     author: "Camille BAS",
     initials: "CB",
-    company: "Avenir Energie",
+    company: "BAS Construction",
     rating: 5,
     date: "Nov. 2025",
     text: "Une équipe au top, fiable et à l'écoute. Je recommande vivement !",
@@ -101,7 +101,22 @@ export const googleReviews: GoogleReview[] = [
     text:
       "Une équipe au top, de vrais professionnels. Ça fait longtemps que je me procurais les services de gens incompétents — des sommes astronomiques dépensées. Je recommande vivement Agendac. Je ne suis qu'au 3ème mois mais j'ai déjà une forte hausse du chiffre d'affaires.",
   },
-  // Retours partenaires (cas clients) sans avis Google déposé
+  {
+    author: "Entreprise Rénovation Avignon",
+    initials: "ER",
+    rating: 5,
+    date: "Mai 2026",
+    text:
+      "Une équipe très professionnelle avec des conseils extrêmement pertinents, ils ont su parfaitement comprendre nos besoins et nous orienter efficacement.",
+  },
+  {
+    author: "Steev OTK",
+    initials: "SO",
+    rating: 5,
+    date: "Mai 2026",
+    text:
+      "On a à faire à de vrais Pros sincèrement. Leur système est bien huilé ; Arnaud Utille au Top et Sophia Laleg également RDV avec un réel intérêt et nous attendent de pied ferme.",
+  },
   {
     author: "Anthony PROPERZIO",
     initials: "AP",
@@ -109,8 +124,9 @@ export const googleReviews: GoogleReview[] = [
     rating: 5,
     date: "Mai 2026",
     text:
-      "J'ai actuellement le plaisir de pouvoir collaborer avec Agendac et je ne peux que mettre en avant leur travail exceptionnel. L'identité de cette agence de communication se repose sur des bases saines et solides. Dès le premier contact, l'ambiance s'est révélée à la fois dynamique et conviviale, ce qui rend chaque échange agréable. Leurs compétences ont été cruciales pour donner vie à mes demandes : ils allient créativité, rigueur et une vraie expertise stratégique. Le suivi est irréprochable. Je recommande cette agence les yeux fermés.",
+      "J'ai actuellement le plaisir de pouvoir collaborer avec Agendac et je ne peux que mettre en avant leur travail exceptionnel. L'identité de cette agence de communication se repose sur des bases saines et solides. Dès le premier contact, l'ambiance s'est révélée à la fois dynamique et conviviale, ce qui rend chaque échange agréable. Leurs compétences ont été cruciales pour donner vie à mes demandes : ils allient créativité, rigueur et une vraie expertise stratégique. Le suivi est irréprochable : ils prennent le temps de comprendre chaque besoin, restent disponibles et assurent une proximité rassurante. Je remercie Arnaud, Kérim, Omar et tout particulièrement Manon, qui, avec moi, passe du temps à sans cesse améliorer les différents points importants de notre collaboration pour booster le rendement de l'entreprise. Je recommande donc cette agence les yeux fermés à quiconque cherche un partenaire fiable, créatif et à l'écoute.",
   },
+  // Retours partenaires (cas clients) sans avis Google déposé
   {
     author: "La Boutique du Menuisier",
     initials: "LM",
