@@ -1236,4 +1236,25 @@ export const blogArticles: BlogArticle[] = [
       "site de couvreur performant"
     ],
   },
+  {
+    slug: "site-web-plombier-erreurs-devis-2026",
+    title: "Site web plombier : les 6 erreurs qui font perdre des devis (et comment les corriger)",
+    metaDescription: "Découvrez les 6 erreurs les plus fréquentes sur les sites de plombiers qui font fuir les prospects et perdre des devis : urgence, contact, discours technique, réassurance, SEO local et appel à l'action.",
+    excerpt: "Un site de plombier bien construit peut doubler ou tripler le nombre de demandes de devis. Découvrez les 6 erreurs bloquantes et comment les corriger simplement.",
+    coverImage: "site-web-plombier-erreurs-devis-2026",
+    author: "Arnaud UTILLE",
+    date: "2026-05-12",
+    readTime: "7 min",
+    featured: false,
+    tags: ["Plomberie", "Site web", "Génération de devis"],
+    keywords: [
+      "génération de leads rénovation",
+      "acquisition clients rénovation",
+      "site web professionnel plombier",
+      "trouver des clients plomberie",
+      "comment générer des leads rénovation",
+      "SEO local plombier",
+      "site de plombier performant"
+    ],
+  },
 ];
