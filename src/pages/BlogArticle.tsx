@@ -234,6 +234,10 @@ const articleToService: Record<string, { service: ServiceKey; intro?: string }> 
     service: "creation-reseaux-sociaux",
     intro: "Crédibilité en ligne : la première arme pour vous démarquer des arnaques.",
   },
+  "site-web-couvreur-confiance-devis-2026": {
+    service: "creation-site-internet",
+    intro: "Un site de couvreur orienté confiance et conversion pour générer des demandes de devis qualifiées.",
+  },
 };
 
 const articleComponents: Record<string, React.ComponentType> = {
@@ -290,6 +294,7 @@ const articleComponents: Record<string, React.ComponentType> = {
   "isolation-strategie-marketing-2026": lazy(() => import("@/components/blog/ArticleIsolationStrategieMarketing2026")),
   "menuiserie-exterieure-strategie-marketing-2026": lazy(() => import("@/components/blog/ArticleMenuiserieExterieureStrategieMarketing2026")),
   "communication-btp-tendances-2026-entreprises-habitat": lazy(() => import("@/components/blog/ArticleCommunicationBtpTendances2026EntreprisesHabitat")),
+  "site-web-couvreur-confiance-devis-2026": lazy(() => import("@/components/blog/ArticleSiteWebCouvreurConfianceDevis2026")),
 };
 
 // Redirects from old blog slugs to new SEO-optimized URLs

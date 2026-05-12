@@ -114,6 +114,7 @@ const coverImages: Record<string, string> = {
   "strategie-marketing-btp-services-differenciation-2026": strategieMarketingBtpServicesDifferenciation2026,
   "crise-batiment-opportunite-communication-2026": criseBatimentOpportuniteCommunication2026,
   "site-electricien-generer-prospects-2026": siteElectricienGenererProspects2026,
+  "site-web-couvreur-confiance-devis-2026": siteElectricienGenererProspects2026,
 };
 
 export const getCoverImage = (key: string): string => {
