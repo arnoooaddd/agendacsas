@@ -1236,4 +1236,26 @@ export const blogArticles: BlogArticle[] = [
       "site de couvreur performant"
     ],
   },
+  {
+    slug: "renovation-erreurs-site-devis-2026",
+    title: "Site internet rénovation : les erreurs fréquentes qui font perdre des demandes de devis",
+    metaDescription: "Découvrez les 6 erreurs les plus fréquentes sur les sites internet d'entreprises de rénovation qui font perdre des devis, et comment les corriger pour générer plus de demandes qualifiées.",
+    excerpt: "Site invisible, numéro caché, discours trop technique : les 6 erreurs qui empêchent votre site de rénovation de générer des demandes de devis, avec des solutions concrètes.",
+    coverImage: "renovation-erreurs-site-devis-2026",
+    author: "Omar TROUSSI",
+    date: "2026-05-12",
+    readTime: "7 min",
+    featured: false,
+    tags: ["Site internet", "Rénovation", "Erreurs", "Génération de devis"],
+    keywords: [
+      "site internet rénovation",
+      "génération de leads rénovation",
+      "acquisition clients rénovation",
+      "comment générer des leads rénovation",
+      "trouver des clients rénovation",
+      "site web entreprise bâtiment",
+      "erreurs site web rénovation"
+    ],
+  },
 ];
+

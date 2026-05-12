@@ -126,6 +126,10 @@ const articleToService: Record<string, { service: ServiceKey; intro?: string }> 
     service: "creation-site-internet",
     intro: "Corrigez les erreurs qui bloquent vos demandes de devis avec un site pensé pour convertir.",
   },
+  "renovation-erreurs-site-devis-2026": {
+    service: "creation-site-internet",
+    intro: "Évitez les 6 erreurs qui font perdre des devis sur votre site internet de rénovation, et transformez vos visiteurs en demandes qualifiées.",
+  },
   "landing-page-renovation-rendez-vous": {
     service: "creation-site-internet",
     intro: "Transformez vos clics en demandes qualifiées avec une landing page pensée pour la rénovation.",
@@ -295,6 +299,7 @@ const articleComponents: Record<string, React.ComponentType> = {
   "menuiserie-exterieure-strategie-marketing-2026": lazy(() => import("@/components/blog/ArticleMenuiserieExterieureStrategieMarketing2026")),
   "communication-btp-tendances-2026-entreprises-habitat": lazy(() => import("@/components/blog/ArticleCommunicationBtpTendances2026EntreprisesHabitat")),
   "site-web-couvreur-confiance-devis-2026": lazy(() => import("@/components/blog/ArticleSiteWebCouvreurConfianceDevis2026")),
+  "renovation-erreurs-site-devis-2026": lazy(() => import("@/components/blog/ArticleRenovationErreursSiteDevis2026")),
 };
 
 // Redirects from old blog slugs to new SEO-optimized URLs
