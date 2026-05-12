@@ -25,6 +25,13 @@ interface CaseStudy {
   loomId?: string;
   elfsightReviewId?: string;
   googleReviewLink?: string;
+  manualReview?: {
+    author: string;
+    initials: string;
+    date?: string;
+    rating?: number;
+    text: string;
+  };
   photos: { src: string; caption: string }[];
 }
 
@@ -41,8 +48,8 @@ const caseStudies: CaseStudy[] = [
   {
     name: "Camille BAS",
     headline: "47% de transformation",
-    company: "Avenir Energie SAS",
-    siren: "922344551",
+    company: "BAS Construction",
+    siren: "952429967",
     before: "Dépendance au bouche-à-oreille, pas de croissance maîtrisée.",
     after: "x7,2 sur son investissement initial en 32 jours.",
     loomId: "486a59765db8471e9175bc7dc26ee5dc",
@@ -86,6 +93,15 @@ const caseStudies: CaseStudy[] = [
     before: "Entrants liés uniquement au bouche-à-oreille, dans un secteur premium très concurrentiel (pergolas et menuiseries haut de gamme dans le Golfe de Saint-Tropez).",
     after: "11/18 signés sur son premier pack de rendez-vous Agendac. Demandes régulières et prospects vraiment qualifiés. Collaboration lancée en décembre 2025.",
     loomId: "1f323a8804894ab886bcccc0aee2d361",
+    googleReviewLink: "https://share.google/TJder8Nu6I4vCLpJs",
+    manualReview: {
+      author: "Anthony PROPERZIO",
+      initials: "AP",
+      date: "Mai 2026",
+      rating: 5,
+      text:
+        "J'ai actuellement le plaisir de pouvoir collaborer avec Agendac et je ne peux que mettre en avant leur travail exceptionnel. L'identité de cette agence de communication se repose sur des bases saines et solides. Dès le premier contact, l'ambiance s'est révélée à la fois dynamique et conviviale, ce qui rend chaque échange agréable. Leurs compétences ont été cruciales pour donner vie à mes demandes : ils allient créativité, rigueur et une vraie expertise stratégique. Le suivi est irréprochable : ils prennent le temps de comprendre chaque besoin, restent disponibles et assurent une proximité rassurante. Je remercie Arnaud, Kérim, Omar et tout particulièrement Manon, qui, avec moi, passe du temps à sans cesse améliorer les différents points importants de notre collaboration pour booster le rendement de l'entreprise. Je recommande donc cette agence les yeux fermés à quiconque cherche un partenaire fiable, créatif et à l'écoute.",
+    },
     photos: [],
   },
   {
@@ -308,6 +324,41 @@ const Results = () => {
                             <span className="text-xs font-medium text-muted-foreground">Avis Google vérifié</span>
                           </div>
                           <div className={`elfsight-app-${study.elfsightReviewId}`} data-elfsight-app-lazy />
+                        </div>
+                      )}
+
+                      {/* Manual Google review (when no Elfsight widget) */}
+                      {!study.elfsightReviewId && study.manualReview && (
+                        <div className="rounded-2xl border border-border/30 p-5 bg-background shadow-sm">
+                          <div className="flex items-center gap-2 mb-3">
+                            <Star size={14} className="text-yellow-500 fill-yellow-500" />
+                            <span className="text-xs font-medium text-muted-foreground">Avis Google vérifié</span>
+                          </div>
+                          <div className="flex items-center gap-3 mb-3">
+                            <div className="w-10 h-10 rounded-full bg-primary text-primary-foreground flex items-center justify-center text-sm font-bold flex-shrink-0">
+                              {study.manualReview.initials}
+                            </div>
+                            <div className="min-w-0 flex-1">
+                              <p className="text-sm font-semibold text-foreground truncate">{study.manualReview.author}</p>
+                              {study.manualReview.date && (
+                                <p className="text-xs text-muted-foreground">{study.manualReview.date}</p>
+                              )}
+                            </div>
+                            <img
+                              src="https://www.gstatic.com/images/branding/product/1x/googleg_48dp.png"
+                              alt="Google"
+                              className="w-5 h-5 flex-shrink-0"
+                              loading="lazy"
+                            />
+                          </div>
+                          <div className="flex items-center gap-1 mb-3">
+                            {Array.from({ length: study.manualReview.rating ?? 5 }).map((_, i) => (
+                              <Star key={i} size={14} className="fill-yellow-500 text-yellow-500" />
+                            ))}
+                          </div>
+                          <p className="text-sm text-foreground/85 leading-relaxed whitespace-pre-line">
+                            {study.manualReview.text}
+                          </p>
                         </div>
                       )}
 
