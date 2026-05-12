@@ -239,10 +239,6 @@ const articleToService: Record<string, { service: ServiceKey; intro?: string }> 
     intro: "Crédibilité en ligne : la première arme pour vous démarquer des arnaques.",
   },
   "site-web-couvreur-confiance-devis-2026": {
-  "renovation-erreurs-site-devis-2026": lazy(() => import("@/components/blog/ArticleRenovationErreursSiteDevis2026")),
-  "numerique-btp-nouvelles-pratiques-2026": lazy(() => import("@/components/blog/ArticleNumeriqueBtpPratiques2026")),
-  "btob-btp-leads-commerciaux-2026": lazy(() => import("@/components/blog/ArticleBtobBtpLeads2026")),
-  "strategie-communication-prescripteurs-btp": lazy(() => import("@/components/blog/ArticlePrescripteursBtp2026")),
     service: "creation-site-internet",
     intro: "Un site de couvreur orienté confiance et conversion pour générer des demandes de devis qualifiées.",
   },
