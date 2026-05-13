@@ -108,6 +108,8 @@ const Header = () => {
               <a
                 key={link.label}
                 href={link.href}
+                target={link.external ? "_blank" : undefined}
+                rel={link.external ? "noopener noreferrer" : undefined}
                 className="px-3 py-2 text-foreground/70 hover:text-foreground text-sm font-medium transition-colors rounded-lg hover:bg-muted/30"
               >
                 {link.label}
