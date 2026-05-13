@@ -258,10 +258,15 @@ const articleToService: Record<string, { service: ServiceKey; intro?: string }> 
     service: "prise-rendez-vous",
     intro: "Vous dirigez une entreprise de rénovation et souhaitez générer plus de prospects qualifiés et de rendez-vous ? Découvrez comment AGENDAC peut structurer votre acquisition client.",
   },
+  "diversification-tertiaire-btp-croissance": {
+    service: "gestion-communication",
+    intro: "Structurez votre positionnement et votre système d'acquisition pour ouvrir le marché tertiaire avec une approche commerciale adaptée aux cycles longs.",
+  },
 };
 
 const articleComponents: Record<string, React.ComponentType> = {
   "meilleure-agence-marketing-renovation-habitat": lazy(() => import("@/components/blog/ArticleMeilleureAgenceMarketingRenovationHabitat")),
+  "diversification-tertiaire-btp-croissance": lazy(() => import("@/components/blog/ArticleDiversificationTertiaireBtpCroissance")),
   "crise-batiment-opportunite-communication-2026": lazy(() => import("@/components/blog/ArticleCriseBatimentOpportuniteCommunication2026")),
   "site-electricien-generer-prospects-2026": lazy(() => import("@/components/blog/ArticleSiteElectricienGenererProspects2026")),
   "renovation-marche-porteur-strategie-acquisition-2026": lazy(() => import("@/components/blog/ArticleRenovationMarchePorteurStrategieAcquisition2026")),

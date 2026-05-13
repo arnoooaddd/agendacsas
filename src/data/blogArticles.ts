@@ -1410,4 +1410,25 @@ export const blogArticles: BlogArticle[] = [
       "acquisition clients rénovation"
     ],
   },
+  {
+    slug: "diversification-tertiaire-btp-croissance",
+    title: "Diversification tertiaire BTP : pourquoi le secteur résidentiel ne suffit plus pour assurer votre croissance",
+    metaDescription: "Découvrez pourquoi le marché tertiaire (hôtels, cliniques, écoles, bureaux) est le prochain relais de croissance pour les entreprises de rénovation et du BTP, et comment structurer votre acquisition clients sur ce segment.",
+    excerpt: "Face à la crise du résidentiel, le tertiaire offre 996 millions de m² à rénover. Mais conquérir ce segment exige une stratégie d'acquisition clients BTP adaptée à des cycles longs et des critères exigeants.",
+    coverImage: "diversification-tertiaire-btp-croissance",
+    author: "Arnaud UTILLE",
+    date: "2026-05-13",
+    readTime: "9 min",
+    featured: false,
+    tags: ["Diversification BTP", "Marché tertiaire", "Acquisition clients BTP", "Stratégie marketing"],
+    keywords: [
+      "diversification tertiaire BTP",
+      "acquisition clients BTP",
+      "génération de leads BTP",
+      "trouver des clients BTP",
+      "marketing digital bâtiment",
+      "stratégie marketing BTP",
+      "structurer acquisition client BTP"
+    ],
+  },
 ];
