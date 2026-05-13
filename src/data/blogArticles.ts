@@ -1372,4 +1372,24 @@ export const blogArticles: BlogArticle[] = [
       "marketing digital bâtiment"
     ],
   },
+  {
+    slug: "valoriser-procede-constructif-linkedin-2026",
+    title: "Comment valoriser un procédé constructif sur LinkedIn en 2026",
+    metaDescription: "Découvrez comment valoriser un procédé constructif sur LinkedIn en 2026 : stratégie de contenu BTP, formats qui fonctionnent, calendrier éditorial et indicateurs de performance.",
+    excerpt: "LinkedIn est le canal prioritaire pour valoriser un procédé constructif. Guide complet pour structurer votre stratégie éditoriale BTP : contenus chantier, témoignages prescripteurs et animation quotidienne.",
+    coverImage: "valoriser-procede-constructif-linkedin-2026",
+    author: "Omar TROUSSI",
+    date: "2026-05-13",
+    readTime: "6 min",
+    featured: false,
+    tags: ["LinkedIn", "Procédé constructif", "Marketing BTP"],
+    keywords: [
+      "valoriser procédé constructif LinkedIn",
+      "stratégie marketing BTP",
+      "marketing digital bâtiment",
+      "communication BTP",
+      "LinkedIn BTP",
+      "acquisition clients BTP"
+    ],
+  },
 ];
