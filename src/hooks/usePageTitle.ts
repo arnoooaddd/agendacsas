@@ -33,6 +33,8 @@ export const useMetaDescription = (description: string) => {
       if (meta) meta.content = previous;
     };
   }, [description]);
+};
+
 /**
  * Set <link rel="canonical"> for the current page. Pass a path starting with "/"
  * (e.g. "/blog") or a full URL. Defaults to https://agendac.fr as base.
