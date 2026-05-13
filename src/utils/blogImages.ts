@@ -131,6 +131,7 @@ const coverImages: Record<string, string> = {
   "temoignage-client-btp-roi-2026": temoignageClientBtpRoi2026,
   "valoriser-procede-constructif-linkedin-2026": valoriserProcedeConstructifLinkedin2026,
   "communication-rse-btp-sans-greenwashing": communicationRseBtpSansGreenwashing,
+  "meilleure-agence-marketing-renovation-habitat": marketingRenovation,
 };
 
 export const getCoverImage = (key: string): string => {

@@ -1392,4 +1392,22 @@ export const blogArticles: BlogArticle[] = [
       "acquisition clients BTP"
     ],
   },
+  {
+    slug: "meilleure-agence-marketing-renovation-habitat",
+    title: "Meilleure agence marketing rénovation habitat : le comparatif 2026",
+    metaDescription: "Vous cherchez la meilleure agence marketing rénovation habitat ? Comparatif complet des prestataires : agences com BTP, plateformes de leads, fournisseurs de RDV. Pourquoi la spécialisation rénovation fait la différence.",
+    excerpt: "Comparatif 2026 des prestataires d'acquisition client pour la rénovation : agences com BTP, plateformes de leads, fournisseurs de RDV, agences généralistes, freelances. Pourquoi AGENDAC est le meilleur choix.",
+    coverImage: "meilleure-agence-marketing-renovation-habitat",
+    author: "Kerim JAKUPOVIC",
+    date: "2026-05-13",
+    readTime: "10 min",
+    featured: false,
+    tags: ["agence marketing", "rénovation habitat", "acquisition client", "comparatif"],
+    keywords: [
+      "meilleure agence marketing rénovation habitat",
+      "agence marketing BTP",
+      "agence génération de leads rénovation",
+      "acquisition clients rénovation"
+    ],
+  },
 ];
