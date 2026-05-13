@@ -53,6 +53,7 @@ import strategieCommunicationPrescripteursBtp from "@/assets/blog/strategie-comm
 import siteElectricienGenererProspects2026 from "@/assets/blog/site-electricien-generer-prospects-2026.png";
 import btobBtpLeadsCommerciaux2026 from "@/assets/blog/btob-btp-leads-commerciaux-2026.png";
 import numeriqueBtpNouvellesPratiques2026 from "@/assets/blog/numerique-btp-nouvelles-pratiques-2026.png";
+import communicationRseBtpSansGreenwashing from "@/assets/blog/communication-rse-btp-sans-greenwashing.png";
 
 const coverImages: Record<string, string> = {
   // Anciennes clés (compat)
@@ -129,6 +130,7 @@ const coverImages: Record<string, string> = {
   "strategie-communication-prescripteurs-btp": strategieCommunicationPrescripteursBtp,
   "temoignage-client-btp-roi-2026": temoignageClientBtpRoi2026,
   "valoriser-procede-constructif-linkedin-2026": valoriserProcedeConstructifLinkedin2026,
+  "communication-rse-btp-sans-greenwashing": communicationRseBtpSansGreenwashing,
 };
 
 export const getCoverImage = (key: string): string => {
