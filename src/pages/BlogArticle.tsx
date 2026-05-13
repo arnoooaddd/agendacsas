@@ -246,6 +246,10 @@ const articleToService: Record<string, { service: ServiceKey; intro?: string }> 
     service: "creation-site-internet",
     intro: "Un site de plombier orienté urgence et conversion pour générer des demandes de devis qualifiées.",
   },
+  "temoignage-client-btp-roi-2026": {
+    service: "tournage",
+    intro: "Transformez vos chantiers terminés en preuves commerciales diffusables avec des témoignages clients et des vidéos de chantier qui renforcent votre crédibilité et votre conversion.",
+  },
 };
 
 const articleComponents: Record<string, React.ComponentType> = {
@@ -309,6 +313,7 @@ const articleComponents: Record<string, React.ComponentType> = {
   "strategie-communication-prescripteurs-btp": lazy(() => import("@/components/blog/ArticlePrescripteursBtp2026")),
   "communication-rse-btp-sans-greenwashing": lazy(() => import("@/components/blog/ArticleRseBtpCommunication2026")),
   "site-web-plombier-erreurs-devis-2026": lazy(() => import("@/components/blog/ArticleSiteWebPlombierErreursDevis2026")),
+  "temoignage-client-btp-roi-2026": lazy(() => import("@/components/blog/ArticleTemoignageClientBtpRoi2026")),
 };
 
 // Redirects from old blog slugs to new SEO-optimized URLs

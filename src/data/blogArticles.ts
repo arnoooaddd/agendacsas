@@ -1277,7 +1277,8 @@ export const blogArticles: BlogArticle[] = [
       "stratégie marketing BTP",
       "système acquisition client rénovation"
     ],
-  },  {
+  },
+  {
     slug: "renovation-erreurs-site-devis-2026",
     title: "Site internet rénovation : les erreurs fréquentes qui font perdre des demandes de devis",
     metaDescription: "Découvrez les 6 erreurs les plus fréquentes sur les sites internet d'entreprises de rénovation qui font perdre des devis, et comment les corriger pour générer plus de demandes qualifiées.",
@@ -1337,7 +1338,6 @@ export const blogArticles: BlogArticle[] = [
       "marketing digital bâtiment"
     ],
   },
-];,
   {
     slug: "communication-rse-btp-sans-greenwashing",
     title: "Communication RSE dans le BTP : valoriser ses engagements sans greenwashing",
@@ -1351,4 +1351,25 @@ export const blogArticles: BlogArticle[] = [
     tags: ["RSE", "BTP", "Communication"],
     keywords: ["communication RSE BTP", "stratégie marketing BTP", "acquisition clients BTP"],
   },
-]
+  {
+    slug: "temoignage-client-btp-roi-2026",
+    title: "Témoignages clients et chantiers de référence : le contenu au meilleur ROI pour les entreprises du bâtiment en 2026",
+    metaDescription: "Découvrez pourquoi les témoignages clients et les chantiers de référence sont le contenu au meilleur ROI pour les entreprises du BTP et de la rénovation en 2026 : règles de production, canaux de diffusion et accompagnement.",
+    excerpt: "Les témoignages clients et chantiers de référence sont les actifs marketing au meilleur retour sur investissement pour les entreprises du bâtiment. Guide complet pour les produire et les diffuser.",
+    coverImage: "temoignage-client-btp-roi-2026",
+    author: "Kerim JAKUPOVIC",
+    date: "2026-05-13",
+    readTime: "7 min",
+    featured: false,
+    tags: ["Témoignage client", "Contenu BTP", "Marketing BTP"],
+    keywords: [
+      "témoignage client BTP",
+      "chantier de référence BTP",
+      "contenu ROI BTP",
+      "stratégie marketing BTP",
+      "génération de leads BTP",
+      "acquisition clients rénovation",
+      "marketing digital bâtiment"
+    ],
+  },
+];
