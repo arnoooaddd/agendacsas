@@ -1,4 +1,4 @@
-import { Youtube, Linkedin, Heart, Mail, ExternalLink, MessageCircle, Calendar } from "lucide-react";
+import { Youtube, Linkedin, Heart, Mail, ExternalLink, MessageCircle, Calendar, Briefcase } from "lucide-react";
 import { Button } from "./ui/button";
 import { useEffect } from "react";
 
@@ -80,6 +80,14 @@ const Footer = () => {
                   <Linkedin size={20} className="text-[#0A66C2]" />
                   <span className="font-medium text-foreground">Suivez-nous sur LinkedIn</span>
                   <ExternalLink size={16} className="ml-auto text-muted-foreground" />
+                </a>
+              </Button>
+
+              <Button asChild variant="secondary" size="lg" className="w-full justify-start glow-secondary">
+                <a href="https://form.typeform.com/to/uoPR6EY1" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3">
+                  <Briefcase size={20} />
+                  <span className="font-medium">Postuler chez Agendac</span>
+                  <ExternalLink size={16} className="ml-auto" />
                 </a>
               </Button>
             </div>
