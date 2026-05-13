@@ -8,7 +8,7 @@ import ReviewsBands from "@/components/ReviewsBands";
 import RelatedArticles from "@/components/RelatedArticles";
 import { Globe, CheckCircle, Star, ArrowRight, Smartphone, Search, BarChart3, MessageSquare, Languages } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { usePageTitle } from "@/hooks/usePageTitle";
+import { usePageTitle, useCanonical, useMetaDescription } from "@/hooks/usePageTitle";
 
 /* ── tiny parallax hook (CSS-only, no framer-motion) ── */
 const useParallax = (speed = 0.3) => {

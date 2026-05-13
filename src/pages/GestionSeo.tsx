@@ -10,7 +10,7 @@ import Interviews from "@/components/Interviews";
 import RelatedArticles from "@/components/RelatedArticles";
 import { Button } from "@/components/ui/button";
 import { Search, ArrowRight, MapPin, Bot, TrendingUp, Globe, Star, FileText, BarChart3 } from "lucide-react";
-import { usePageTitle } from "@/hooks/usePageTitle";
+import { usePageTitle, useCanonical, useMetaDescription } from "@/hooks/usePageTitle";
 
 const GestionSeo = () => {
   usePageTitle("Gestion SEO local — Référencement organique");

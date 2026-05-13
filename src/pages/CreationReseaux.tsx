@@ -9,7 +9,7 @@ import RelatedArticles from "@/components/RelatedArticles";
 import { Share2, Facebook, Instagram, Youtube, Linkedin, MapPin, Settings, CheckCircle, Star, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
-import { usePageTitle } from "@/hooks/usePageTitle";
+import { usePageTitle, useCanonical, useMetaDescription } from "@/hooks/usePageTitle";
 
 const platforms = [
   { name: "Facebook", icon: Facebook },

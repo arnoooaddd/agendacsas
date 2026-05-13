@@ -11,7 +11,7 @@ import RelatedArticles from "@/components/RelatedArticles";
 import ServiceFloatingElements from "@/components/ServiceFloatingElements";
 import { Button } from "@/components/ui/button";
 import { Star, ArrowRight, Sparkles, Megaphone, Brain, Layers, Search, Video, CalendarCheck, Facebook, Linkedin, Globe } from "lucide-react";
-import { usePageTitle } from "@/hooks/usePageTitle";
+import { usePageTitle, useCanonical, useMetaDescription } from "@/hooks/usePageTitle";
 
 const VisibiliteMax = () => {
   usePageTitle("Visibilité Max — Gestion de communication globale");

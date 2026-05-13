@@ -11,7 +11,7 @@ import ServiceFloatingElements from "@/components/ServiceFloatingElements";
 import { CalendarCheck, CheckCircle, Star, ArrowRight, Shield, Target, Clock, Users, Zap, ThumbsUp } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
-import { usePageTitle } from "@/hooks/usePageTitle";
+import { usePageTitle, useCanonical, useMetaDescription } from "@/hooks/usePageTitle";
 
 const PriseRendezVous = () => {
   usePageTitle("Prise de rendez-vous qualifiés");
