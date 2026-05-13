@@ -16,25 +16,21 @@ export const usePageTitle = (label: string) => {
 };
 
 /**
- * Set <link rel="canonical"> for the current page. Pass a path starting with "/"
- * (e.g. "/blog") or a full URL. Defaults to https://agendac.fr as base.
+ * Set <meta name="description"> for the current page.
+ * Restores the previous description on unmount.
  */
-export const useCanonical = (pathOrUrl: string) => {
+export const useMetaDescription = (description: string) => {
   useEffect(() => {
-    const base = "https://agendac.fr";
-    const href = pathOrUrl.startsWith("http")
-      ? pathOrUrl
-      : `${base}${pathOrUrl.startsWith("/") ? pathOrUrl : `/${pathOrUrl}`}`;
-    let link = document.querySelector<HTMLLinkElement>('link[rel="canonical"]');
-    const previous = link?.href ?? null;
-    if (!link) {
-      link = document.createElement("link");
-      link.setAttribute("rel", "canonical");
-      document.head.appendChild(link);
+    let meta = document.querySelector<HTMLMetaElement>('meta[name="description"]');
+    const previous = meta?.content ?? "";
+    if (!meta) {
+      meta = document.createElement("meta");
+      meta.setAttribute("name", "description");
+      document.head.appendChild(meta);
     }
-    link.href = href;
+    meta.content = description;
     return () => {
-      if (link && previous !== null) link.href = previous;
+      if (meta) meta.content = previous;
     };
-  }, [pathOrUrl]);
+  }, [description]);
 };
