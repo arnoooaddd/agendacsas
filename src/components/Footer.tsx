@@ -1,4 +1,4 @@
-import { Youtube, Linkedin, Heart, Mail, ExternalLink, MessageCircle, Calendar } from "lucide-react";
+import { Youtube, Linkedin, Heart, Mail, ExternalLink, MessageCircle, Calendar, Briefcase } from "lucide-react";
 import { Button } from "./ui/button";
 import { useEffect } from "react";
 
