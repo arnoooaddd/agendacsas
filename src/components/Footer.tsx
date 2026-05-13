@@ -82,6 +82,14 @@ const Footer = () => {
                   <ExternalLink size={16} className="ml-auto text-muted-foreground" />
                 </a>
               </Button>
+
+              <Button asChild variant="secondary" size="lg" className="w-full justify-start glow-secondary">
+                <a href="https://form.typeform.com/to/uoPR6EY1" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3">
+                  <Briefcase size={20} />
+                  <span className="font-medium">Postuler chez Agendac</span>
+                  <ExternalLink size={16} className="ml-auto" />
+                </a>
+              </Button>
             </div>
           </div>
         </div>
