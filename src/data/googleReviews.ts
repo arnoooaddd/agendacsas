@@ -126,6 +126,14 @@ export const googleReviews: GoogleReview[] = [
     text:
       "J'ai actuellement le plaisir de pouvoir collaborer avec Agendac et je ne peux que mettre en avant leur travail exceptionnel. L'identité de cette agence de communication se repose sur des bases saines et solides. Dès le premier contact, l'ambiance s'est révélée à la fois dynamique et conviviale, ce qui rend chaque échange agréable. Leurs compétences ont été cruciales pour donner vie à mes demandes : ils allient créativité, rigueur et une vraie expertise stratégique. Le suivi est irréprochable : ils prennent le temps de comprendre chaque besoin, restent disponibles et assurent une proximité rassurante. Je remercie Arnaud, Kérim, Omar et tout particulièrement Manon, qui, avec moi, passe du temps à sans cesse améliorer les différents points importants de notre collaboration pour booster le rendement de l'entreprise. Je recommande donc cette agence les yeux fermés à quiconque cherche un partenaire fiable, créatif et à l'écoute.",
   },
+  {
+    author: "Atmos Énergie",
+    initials: "AÉ",
+    rating: 5,
+    date: "Mai 2026",
+    text:
+      "Super équipe, réactive et professionnelle. J'ai régulièrement Manon au téléphone pour la prise de rendez-vous : elle gère les demandes avec précision et efficacité, ce qui permet un excellent ciblage des besoins et évite les déplacements inutiles. Merci à Arnaud et à toute son équipe pour leur sérieux et leur organisation.",
+  },
   // Retours partenaires (cas clients) sans avis Google déposé
   {
     author: "La Boutique du Menuisier",
