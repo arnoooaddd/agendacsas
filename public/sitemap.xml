@@ -4,45 +4,81 @@
     <loc>https://agendac.fr/</loc>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
-  <url>
-    <loc>https://agendac.fr/accueil</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://agendac.fr/com</loc>
+    <loc>https://agendac.fr/services</loc>
     <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
+    <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://agendac.fr/resultats</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
+    <loc>https://agendac.fr/blog</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://agendac.fr/resultat</loc>
+    <loc>https://agendac.fr/contact</loc>
     <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
+    <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://agendac.fr/résultat</loc>
+    <loc>https://agendac.fr/prise-rendez-vous</loc>
     <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
+    <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://agendac.fr/resultats-clients-agendac</loc>
+    <loc>https://agendac.fr/agence-marketing-renovation</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://agendac.fr/agence-marketing-renovation-energetique</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://agendac.fr/simulateur</loc>
+    <loc>https://agendac.fr/agence-marketing-btp</loc>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://agendac.fr/rdv</loc>
+    <loc>https://agendac.fr/agence-communication-renovation</loc>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://agendac.fr/agence-generation-leads-renovation</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://agendac.fr/agence-generation-leads-btp</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://agendac.fr/generation-leads-renovation</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://agendac.fr/publicite-renovation</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://agendac.fr/seo-renovation</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://agendac.fr/site-internet-renovation</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://agendac.fr/tournage-video-renovation</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
   </url>
   <url>
     <loc>https://agendac.fr/creation-reseaux-sociaux</loc>
@@ -60,14 +96,9 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://agendac.fr/prise-rendez-vous</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
     <loc>https://agendac.fr/gestion-communication</loc>
     <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://agendac.fr/gestion-seo</loc>
@@ -80,9 +111,24 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://agendac.fr/blog</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
+    <loc>https://agendac.fr/resultats-clients-agendac</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://agendac.fr/simulateur</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://agendac.fr/rdv</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://agendac.fr/presentation</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://agendac.fr/blog/communication-domotique-trouver-clients-2026</loc>
@@ -374,6 +420,8 @@
   </url>
   <url>
     <loc>https://agendac.fr/blog/communication-btob-btp-strategie-utile-2026</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://agendac.fr/blog/strategie-marketing-couverture-2026</loc>
@@ -389,12 +437,18 @@
   </url>
   <url>
     <loc>https://agendac.fr/blog/strategie-marketing-btp-services-differenciation-2026</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://agendac.fr/blog/renovation-marche-porteur-strategie-acquisition-2026</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://agendac.fr/blog/crise-batiment-opportunite-communication-2026</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://agendac.fr/blog/site-electricien-generer-prospects-2026</loc>

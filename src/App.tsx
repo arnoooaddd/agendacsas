@@ -22,6 +22,7 @@ import Confirmation from "./pages/Confirmation";
 import VisibiliteMax from "./pages/VisibiliteMax";
 import GestionSeo from "./pages/GestionSeo";
 import PhoneWebhookTrigger from "./components/PhoneWebhookTrigger";
+import SeoPageRoute from "./pages/seo/SeoPageRoute";
 
 const queryClient = new QueryClient();
 
@@ -60,6 +61,18 @@ const App = () => (
           <Route path="/blog/:slug" element={<BlogArticle />} />
           <Route path="/services" element={<HashRedirect hash="hero" />} />
           <Route path="/service" element={<HashRedirect hash="hero" />} />
+          <Route path="/contact" element={<Navigate to="/prise-rendez-vous" replace />} />
+          <Route path="/agence-marketing-renovation" element={<SeoPageRoute slug="agence-marketing-renovation" />} />
+          <Route path="/agence-marketing-renovation-energetique" element={<SeoPageRoute slug="agence-marketing-renovation-energetique" />} />
+          <Route path="/agence-marketing-btp" element={<SeoPageRoute slug="agence-marketing-btp" />} />
+          <Route path="/agence-communication-renovation" element={<SeoPageRoute slug="agence-communication-renovation" />} />
+          <Route path="/agence-generation-leads-renovation" element={<SeoPageRoute slug="agence-generation-leads-renovation" />} />
+          <Route path="/agence-generation-leads-btp" element={<SeoPageRoute slug="agence-generation-leads-btp" />} />
+          <Route path="/generation-leads-renovation" element={<SeoPageRoute slug="generation-leads-renovation" />} />
+          <Route path="/publicite-renovation" element={<SeoPageRoute slug="publicite-renovation" />} />
+          <Route path="/seo-renovation" element={<SeoPageRoute slug="seo-renovation" />} />
+          <Route path="/site-internet-renovation" element={<SeoPageRoute slug="site-internet-renovation" />} />
+          <Route path="/tournage-video-renovation" element={<SeoPageRoute slug="tournage-video-renovation" />} />
           <Route path="/merci" element={<NotFound />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
