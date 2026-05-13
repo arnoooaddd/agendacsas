@@ -33,4 +33,26 @@ export const useMetaDescription = (description: string) => {
       if (meta) meta.content = previous;
     };
   }, [description]);
+/**
+ * Set <link rel="canonical"> for the current page. Pass a path starting with "/"
+ * (e.g. "/blog") or a full URL. Defaults to https://agendac.fr as base.
+ */
+export const useCanonical = (pathOrUrl: string) => {
+  useEffect(() => {
+    const base = "https://agendac.fr";
+    const href = pathOrUrl.startsWith("http")
+      ? pathOrUrl
+      : `${base}${pathOrUrl.startsWith("/") ? pathOrUrl : `/${pathOrUrl}`}`;
+    let link = document.querySelector<HTMLLinkElement>('link[rel="canonical"]');
+    const previous = link?.href ?? null;
+    if (!link) {
+      link = document.createElement("link");
+      link.setAttribute("rel", "canonical");
+      document.head.appendChild(link);
+    }
+    link.href = href;
+    return () => {
+      if (link && previous !== null) link.href = previous;
+    };
+  }, [pathOrUrl]);
 };
