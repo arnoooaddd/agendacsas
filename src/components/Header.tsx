@@ -28,6 +28,7 @@ const Header = () => {
 
   const navLinks = [
     { label: "Blog", href: "/blog" },
+    { label: "Postuler", href: "https://form.typeform.com/to/uoPR6EY1", external: true },
     { label: "Nous contacter", href: "#contact" },
   ];
 
