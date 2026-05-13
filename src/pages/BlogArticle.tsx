@@ -254,9 +254,14 @@ const articleToService: Record<string, { service: ServiceKey; intro?: string }> 
     service: "creation-reseaux-sociaux",
     intro: "Valorisez vos procédés constructifs sur LinkedIn avec une stratégie éditoriale professionnelle : contenus chantier, témoignages prescripteurs et animation quotidienne.",
   },
+  "meilleure-agence-marketing-renovation-habitat": {
+    service: "prise-rendez-vous",
+    intro: "Vous dirigez une entreprise de rénovation et souhaitez générer plus de prospects qualifiés et de rendez-vous ? Découvrez comment AGENDAC peut structurer votre acquisition client.",
+  },
 };
 
 const articleComponents: Record<string, React.ComponentType> = {
+  "meilleure-agence-marketing-renovation-habitat": lazy(() => import("@/components/blog/ArticleMeilleureAgenceMarketingRenovationHabitat")),
   "crise-batiment-opportunite-communication-2026": lazy(() => import("@/components/blog/ArticleCriseBatimentOpportuniteCommunication2026")),
   "site-electricien-generer-prospects-2026": lazy(() => import("@/components/blog/ArticleSiteElectricienGenererProspects2026")),
   "renovation-marche-porteur-strategie-acquisition-2026": lazy(() => import("@/components/blog/ArticleRenovationMarchePorteurStrategieAcquisition2026")),
