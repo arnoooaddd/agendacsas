@@ -250,6 +250,10 @@ const articleToService: Record<string, { service: ServiceKey; intro?: string }> 
     service: "tournage",
     intro: "Transformez vos chantiers terminés en preuves commerciales diffusables avec des témoignages clients et des vidéos de chantier qui renforcent votre crédibilité et votre conversion.",
   },
+  "valoriser-procede-constructif-linkedin-2026": {
+    service: "creation-reseaux-sociaux",
+    intro: "Valorisez vos procédés constructifs sur LinkedIn avec une stratégie éditoriale professionnelle : contenus chantier, témoignages prescripteurs et animation quotidienne.",
+  },
 };
 
 const articleComponents: Record<string, React.ComponentType> = {
@@ -314,6 +318,7 @@ const articleComponents: Record<string, React.ComponentType> = {
   "communication-rse-btp-sans-greenwashing": lazy(() => import("@/components/blog/ArticleRseBtpCommunication2026")),
   "site-web-plombier-erreurs-devis-2026": lazy(() => import("@/components/blog/ArticleSiteWebPlombierErreursDevis2026")),
   "temoignage-client-btp-roi-2026": lazy(() => import("@/components/blog/ArticleTemoignageClientBtpRoi2026")),
+  "valoriser-procede-constructif-linkedin-2026": lazy(() => import("@/components/blog/ArticleValoriserProcedeConstructifLinkedin2026")),
 };
 
 // Redirects from old blog slugs to new SEO-optimized URLs
