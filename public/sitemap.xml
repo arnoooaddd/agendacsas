@@ -4,6 +4,30 @@
     <loc>https://agendac.fr/</loc>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
+  <url>
+    <loc>https://agendac.fr/accueil</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://agendac.fr/com</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://agendac.fr/resultats</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://agendac.fr/resultat</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://agendac.fr/résultat</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
   </url>
   <url>
     <loc>https://agendac.fr/resultats-clients-agendac</loc>
