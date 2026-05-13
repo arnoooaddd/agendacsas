@@ -1,43 +1,54 @@
 import { useEffect } from "react";
 
+const upsertMeta = (selector: string, attr: "name" | "property", key: string, value: string) => {
+  let el = document.querySelector<HTMLMetaElement>(selector);
+  const previous = el?.content ?? null;
+  if (!el) {
+    el = document.createElement("meta");
+    el.setAttribute(attr, key);
+    document.head.appendChild(el);
+  }
+  el.content = value;
+  return { el, previous };
+};
+
 /**
- * Set the document.title for a route. Pass a short label like "Blog" or
- * "Prise de rendez-vous" — it will be formatted as "Agendac | <label>".
- * Restores the default site title on unmount.
+ * Set the document.title and og:title / twitter:title for a route. Pass a short label like "Blog" —
+ * it will be formatted as "Agendac | <label>". Restores previous values on unmount.
  */
 export const usePageTitle = (label: string) => {
   useEffect(() => {
-    const previous = document.title;
-    document.title = `Agendac | ${label}`;
+    const fullTitle = `Agendac | ${label}`;
+    const previousDoc = document.title;
+    document.title = fullTitle;
+    const og = upsertMeta('meta[property="og:title"]', "property", "og:title", fullTitle);
+    const tw = upsertMeta('meta[name="twitter:title"]', "name", "twitter:title", fullTitle);
     return () => {
-      document.title = previous;
+      document.title = previousDoc;
+      if (og.el && og.previous !== null) og.el.content = og.previous;
+      if (tw.el && tw.previous !== null) tw.el.content = tw.previous;
     };
   }, [label]);
 };
 
 /**
- * Set <meta name="description"> for the current page.
- * Restores the previous description on unmount.
+ * Set <meta name="description"> + og:description / twitter:description for the current page.
  */
 export const useMetaDescription = (description: string) => {
   useEffect(() => {
-    let meta = document.querySelector<HTMLMetaElement>('meta[name="description"]');
-    const previous = meta?.content ?? "";
-    if (!meta) {
-      meta = document.createElement("meta");
-      meta.setAttribute("name", "description");
-      document.head.appendChild(meta);
-    }
-    meta.content = description;
+    const desc = upsertMeta('meta[name="description"]', "name", "description", description);
+    const og = upsertMeta('meta[property="og:description"]', "property", "og:description", description);
+    const tw = upsertMeta('meta[name="twitter:description"]', "name", "twitter:description", description);
     return () => {
-      if (meta) meta.content = previous;
+      if (desc.el && desc.previous !== null) desc.el.content = desc.previous;
+      if (og.el && og.previous !== null) og.el.content = og.previous;
+      if (tw.el && tw.previous !== null) tw.el.content = tw.previous;
     };
   }, [description]);
 };
 
 /**
- * Set <link rel="canonical"> for the current page. Pass a path starting with "/"
- * (e.g. "/blog") or a full URL. Defaults to https://agendac.fr as base.
+ * Set <link rel="canonical"> + og:url / twitter:url for the current page.
  */
 export const useCanonical = (pathOrUrl: string) => {
   useEffect(() => {
@@ -53,8 +64,12 @@ export const useCanonical = (pathOrUrl: string) => {
       document.head.appendChild(link);
     }
     link.href = href;
+    const og = upsertMeta('meta[property="og:url"]', "property", "og:url", href);
+    const tw = upsertMeta('meta[name="twitter:url"]', "name", "twitter:url", href);
     return () => {
       if (link && previous !== null) link.href = previous;
+      if (og.el && og.previous !== null) og.el.content = og.previous;
+      if (tw.el && tw.previous !== null) tw.el.content = tw.previous;
     };
   }, [pathOrUrl]);
 };
