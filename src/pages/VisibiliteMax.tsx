@@ -11,10 +11,12 @@ import RelatedArticles from "@/components/RelatedArticles";
 import ServiceFloatingElements from "@/components/ServiceFloatingElements";
 import { Button } from "@/components/ui/button";
 import { Star, ArrowRight, Sparkles, Megaphone, Brain, Layers, Search, Video, CalendarCheck, Facebook, Linkedin, Globe } from "lucide-react";
-import { usePageTitle } from "@/hooks/usePageTitle";
+import { usePageTitle, useCanonical, useMetaDescription } from "@/hooks/usePageTitle";
 
 const VisibiliteMax = () => {
-  usePageTitle("Visibilité Max — Gestion de communication globale");
+  usePageTitle("Gestion communication digitale");
+  useMetaDescription("Gestion de votre communication digitale : Meta Ads, Google Ads, LinkedIn, posts organiques. Forfait mensuel, équipe dédiée, reporting transparent.");
+  useCanonical("/gestion-communication");
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);

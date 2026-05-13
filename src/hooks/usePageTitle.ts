@@ -16,6 +16,26 @@ export const usePageTitle = (label: string) => {
 };
 
 /**
+ * Set <meta name="description"> for the current page.
+ * Restores the previous description on unmount.
+ */
+export const useMetaDescription = (description: string) => {
+  useEffect(() => {
+    let meta = document.querySelector<HTMLMetaElement>('meta[name="description"]');
+    const previous = meta?.content ?? "";
+    if (!meta) {
+      meta = document.createElement("meta");
+      meta.setAttribute("name", "description");
+      document.head.appendChild(meta);
+    }
+    meta.content = description;
+    return () => {
+      if (meta) meta.content = previous;
+    };
+  }, [description]);
+};
+
+/**
  * Set <link rel="canonical"> for the current page. Pass a path starting with "/"
  * (e.g. "/blog") or a full URL. Defaults to https://agendac.fr as base.
  */

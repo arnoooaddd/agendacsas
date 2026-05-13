@@ -10,10 +10,12 @@ import Interviews from "@/components/Interviews";
 import RelatedArticles from "@/components/RelatedArticles";
 import { Button } from "@/components/ui/button";
 import { Search, ArrowRight, MapPin, Bot, TrendingUp, Globe, Star, FileText, BarChart3 } from "lucide-react";
-import { usePageTitle } from "@/hooks/usePageTitle";
+import { usePageTitle, useCanonical, useMetaDescription } from "@/hooks/usePageTitle";
 
 const GestionSeo = () => {
-  usePageTitle("Gestion SEO local — Référencement organique");
+  usePageTitle("Gestion SEO & référencement");
+  useMetaDescription("Référencement organique local pour entreprises de rénovation. SEO Google, Google Maps, Bing et IA. Audit, contenu, suivi des positions.");
+  useCanonical("/gestion-seo");
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);

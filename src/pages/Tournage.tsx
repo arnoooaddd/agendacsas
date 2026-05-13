@@ -10,10 +10,12 @@ import RelatedArticles from "@/components/RelatedArticles";
 import { Video, CheckCircle, Star, ArrowRight, FileText, Clock, Film, Repeat, Package, Building2, HelpCircle, Megaphone, MessageCircle, HardHat, ClipboardList, ArrowLeftRight, Layers, Target, Award } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
-import { usePageTitle } from "@/hooks/usePageTitle";
+import { usePageTitle, useCanonical, useMetaDescription } from "@/hooks/usePageTitle";
 
 const Tournage = () => {
-  usePageTitle("Réalisation d'un tournage professionnel pour votre société de rénovation de l'habitat");
+  usePageTitle("Tournage vidéo pour rénovation");
+  useMetaDescription("Tournage vidéo professionnel pour entreprises de rénovation. Scripts sur-mesure, tournage sur site, montage performance. 8 à 20 vidéos livrées.");
+  useCanonical("/tournage");
   useEffect(() => {
     window.scrollTo(0, 0);
     const existingScript = document.querySelector('script[src="https://elfsightcdn.com/platform.js"]');
