@@ -1,3 +1,11 @@
+import SectionCTA from "@/components/SectionCTA";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
+
 const ArticleRseBtpCommunication2026 = () => (
   <div className="prose-custom">
     <section className="mb-10">
