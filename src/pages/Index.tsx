@@ -15,10 +15,12 @@ import RelatedArticles from "@/components/RelatedArticles";
 import SeoIntro from "@/components/SeoIntro";
 import AiContextSection from "@/components/AiContextSection";
 import Footer from "@/components/Footer";
-import { usePageTitle } from "@/hooks/usePageTitle";
+import { usePageTitle, useMetaDescription, useCanonical } from "@/hooks/usePageTitle";
 
 const Index = () => {
   usePageTitle("Agence marketing rénovation & BTP");
+  useMetaDescription("Agendac, agence marketing spécialisée pour les sociétés de rénovation de l'habitat et du BTP. Génération de demandes qualifiées, publicité, SEO, sites web et tournages.");
+  useCanonical("/");
   return (
     <div className="min-h-screen bg-background">
       <Header />
