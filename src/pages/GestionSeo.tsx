@@ -13,7 +13,9 @@ import { Search, ArrowRight, MapPin, Bot, TrendingUp, Globe, Star, FileText, Bar
 import { usePageTitle, useCanonical, useMetaDescription } from "@/hooks/usePageTitle";
 
 const GestionSeo = () => {
-  usePageTitle("Gestion SEO local — Référencement organique");
+  usePageTitle("Gestion SEO & référencement");
+  useMetaDescription("Référencement organique local pour entreprises de rénovation. SEO Google, Google Maps, Bing et IA. Audit, contenu, suivi des positions.");
+  useCanonical("/gestion-seo");
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);

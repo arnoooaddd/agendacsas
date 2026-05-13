@@ -80,6 +80,8 @@ const ScrollProgress = () => {
 
 const CreationSite = () => {
   usePageTitle("Création de site internet");
+  useMetaDescription("Création de site internet pour entreprises de rénovation. Design moderne, SEO local, responsive, multilingue. Livraison clé en main.");
+  useCanonical("/creation-site-internet");
   useEffect(() => {
     window.scrollTo(0, 0);
     const existingScript = document.querySelector('script[src="https://elfsightcdn.com/platform.js"]');

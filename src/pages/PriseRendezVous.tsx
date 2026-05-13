@@ -15,6 +15,8 @@ import { usePageTitle, useCanonical, useMetaDescription } from "@/hooks/usePageT
 
 const PriseRendezVous = () => {
   usePageTitle("Prise de rendez-vous qualifiés");
+  useMetaDescription("Prise de rendez-vous qualifiés pour entreprises de rénovation. Prospection, qualification téléphonique, RDV dans votre agenda. Paiement au résultat.");
+  useCanonical("/prise-rendez-vous");
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);

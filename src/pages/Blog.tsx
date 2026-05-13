@@ -20,6 +20,8 @@ import { usePageTitle, useCanonical, useMetaDescription } from "@/hooks/usePageT
 
 const Blog = () => {
   usePageTitle("Blog");
+  useMetaDescription("Articles, stratégies et insights marketing pour les entreprises de rénovation, d'habitat et du BTP. Acquisition, publicité, SEO et conversion.");
+  useCanonical("/blog");
   const [query, setQuery] = useState("");
   const [selectedTag, setSelectedTag] = useState<string>("all");
   const [sortBy, setSortBy] = useState<string>("recent");

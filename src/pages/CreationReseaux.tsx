@@ -22,6 +22,8 @@ const platforms = [
 
 const CreationReseaux = () => {
   usePageTitle("Création de réseaux sociaux");
+  useMetaDescription("Création et paramétrage de vos réseaux sociaux : Facebook, Instagram, YouTube, LinkedIn, Google Business Profile. Formules à partir de 397 € HT.");
+  useCanonical("/creation-reseaux-sociaux");
   useEffect(() => {
     window.scrollTo(0, 0);
     const existingScript = document.querySelector('script[src="https://elfsightcdn.com/platform.js"]');
