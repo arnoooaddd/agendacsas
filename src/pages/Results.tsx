@@ -5,7 +5,7 @@ import AnimatedSection from "@/components/AnimatedSection";
 import SectionCTA from "@/components/SectionCTA";
 import RelatedArticles from "@/components/RelatedArticles";
 import { TrendingUp, ExternalLink, Star, Camera, Trophy, Play } from "lucide-react";
-import { usePageTitle } from "@/hooks/usePageTitle";
+import { usePageTitle, useMetaDescription, useCanonical } from "@/hooks/usePageTitle";
 
 import lbdmPhoto from "@/assets/results/lbdm.webp";
 import basRencontre from "@/assets/results/bas-rencontre.webp";
@@ -181,6 +181,8 @@ const caseStudies: CaseStudy[] = [
 
 const Results = () => {
   usePageTitle("Résultats partenaires");
+  useMetaDescription("Découvrez les résultats concrets de nos partenaires : études de cas, témoignages vidéo et chiffres d'acquisition pour les entreprises de rénovation et du BTP.");
+  useCanonical("/resultats-clients-agendac");
   useEffect(() => {
     const existingScript = document.querySelector('script[src*="elfsightcdn.com/platform.js"], script[src*="elfsight.com/platform/platform.js"]');
     if (!existingScript) {
