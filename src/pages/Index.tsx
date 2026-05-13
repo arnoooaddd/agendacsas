@@ -13,6 +13,7 @@ import CaseStudy from "@/components/CaseStudy";
 import ExemplesTournage from "@/components/ExemplesTournage";
 import RelatedArticles from "@/components/RelatedArticles";
 import SeoIntro from "@/components/SeoIntro";
+import AiContextSection from "@/components/AiContextSection";
 import Footer from "@/components/Footer";
 import { usePageTitle } from "@/hooks/usePageTitle";
 
@@ -35,6 +36,7 @@ const Index = () => {
         <Gallery />
         <FAQ />
         <CaseStudy />
+        <AiContextSection />
         <RelatedArticles
           slugs={[
             "internaliser-externaliser-marketing-renovation-btp",
