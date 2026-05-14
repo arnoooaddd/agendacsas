@@ -1431,4 +1431,25 @@ export const blogArticles: BlogArticle[] = [
       "structurer acquisition client BTP"
     ],
   },
+  {
+    slug: "creer-site-paysagiste-donne-envie-2026",
+    title: "Créer un site web de paysagiste qui donne envie dès la première visite",
+    metaDescription: "Découvrez comment créer un site web de paysagiste qui inspire, rassure et convertit : visuels forts, storytelling, ton inspirant et appel à l'action pour générer plus de demandes de devis.",
+    excerpt: "Un site de paysagiste doit donner envie, inspirer, rassurer et guider vers le contact. Voici comment structurer le vôtre pour transformer l'inspiration en demandes de devis.",
+    coverImage: "creer-site-paysagiste-donne-envie-2026",
+    author: "Arnaud UTILLE",
+    date: "2026-05-14",
+    readTime: "7 min",
+    featured: false,
+    tags: ["Paysagisme", "Site web", "Conversion"],
+    keywords: [
+      "site web paysagiste",
+      "créer site paysagiste",
+      "générer des leads rénovation",
+      "acquisition clients rénovation",
+      "marketing digital rénovation",
+      "trouver des clients rénovation",
+      "stratégie marketing rénovation"
+    ],
+  },
 ];
