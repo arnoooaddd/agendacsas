@@ -1496,4 +1496,25 @@ export const blogArticles: BlogArticle[] = [
       "générer des leads BTP"
     ],
   },
+  {
+    slug: "podcasts-btp-communication-notoriete-2026",
+    title: "Podcasts dans le BTP : un outil de communication puissant pour d\u00e9velopper votre notori\u00e9t\u00e9 en 2026",
+    metaDescription: "D\u00e9couvrez comment les podcasts dans le BTP peuvent devenir un levier de communication, de notori\u00e9t\u00e9 et de cr\u00e9dibilit\u00e9 pour votre entreprise du b\u00e2timent en 2026.",
+    excerpt: "Podcast, radio, contenu audio : comment les entreprises du BTP peuvent utiliser le podcast comme levier de communication pour construire leur notori\u00e9t\u00e9 et attirer des prescripteurs.",
+    coverImage: "podcasts-btp-communication-notoriete-2026",
+    author: "Omar TROUSSI",
+    date: "2026-05-15",
+    readTime: "7 min",
+    featured: false,
+    tags: ["Podcast", "Communication BTP", "Strat\u00e9gie digitale", "Notori\u00e9t\u00e9"],
+    keywords: [
+      "podcast BTP",
+      "communication BTP",
+      "notori\u00e9t\u00e9 BTP",
+      "strat\u00e9gie de communication BTP",
+      "marketing digital b\u00e2timent",
+      "podcast entreprise b\u00e2timent",
+      "contenu audio BTP"
+    ],
+  },
 ];

@@ -274,6 +274,10 @@ const articleToService: Record<string, { service: ServiceKey; intro?: string }> 
     service: "gestion-communication",
     intro: "Le marketing d'influence dans le BTP est un levier puissant pour développer votre notoriété et générer des opportunités qualifiées via des créateurs de contenu experts de leur métier.",
   },
+  "podcasts-btp-communication-notoriete-2026": {
+    service: "gestion-communication",
+    intro: "Le podcast est un format de contenu qui permet de démontrer votre expertise et de créer une relation durable avec les prescripteurs du bâtiment. Intégrez-le à votre communication digitale.",
+  },
 };
 
 const articleComponents: Record<string, React.ComponentType> = {
@@ -344,6 +348,7 @@ const articleComponents: Record<string, React.ComponentType> = {
   "creer-site-paysagiste-donne-envie-2026": lazy(() => import("@/components/blog/ArticleCreerSitePaysagisteDonneEnvie2026")),
   "creer-site-macon-valorise-savoir-faire-2026": lazy(() => import("@/components/blog/ArticleCreerSiteMaconValoriseSavoirFaire2026")),
   "influenceurs-btp-createurs-contenu-2026": lazy(() => import("@/components/blog/ArticleInfluenceursBtpCreateursContenu2026")),
+  "podcasts-btp-communication-notoriete-2026": lazy(() => import("@/components/blog/ArticlePodcastsBtpCommunicationNotoriete2026")),
 };
 
 // Redirects from old blog slugs to new SEO-optimized URLs
