@@ -1474,4 +1474,26 @@ export const blogArticles: BlogArticle[] = [
       "site internet maçonnerie"
     ],
   },
+  {
+    slug: "influenceurs-btp-createurs-contenu-2026",
+    title: "Influenceurs BTP : pourquoi et comment collaborer avec les créateurs de contenu du bâtiment",
+    metaDescription: "Découvrez pourquoi et comment les entreprises du BTP peuvent collaborer avec les influenceurs et créateurs de contenu du bâtiment pour développer leur notoriété et générer des leads qualifiés.",
+    excerpt: "Artisans, experts métier, créateurs de contenu : le marketing d'influence dans le BTP gagne du terrain. Les clés pour une stratégie gagnante et des exemples concrets.",
+    coverImage: "influenceurs-btp-createurs-contenu-2026",
+    author: "Rachad AIT HAMOU",
+    date: "2026-05-15",
+    readTime: "8 min",
+    featured: false,
+    tags: ["Marketing d'influence", "Stratégie digitale", "BTP", "Réseaux sociaux"],
+    keywords: [
+      "influenceurs BTP",
+      "créateurs de contenu bâtiment",
+      "marketing d'influence construction",
+      "collaboration influenceurs BTP",
+      "stratégie influence bâtiment",
+      "communication digitale BTP",
+      "artisans influenceurs",
+      "générer des leads BTP"
+    ],
+  },
 ];
