@@ -14,6 +14,26 @@ export interface BlogArticle {
 
 export const blogArticles: BlogArticle[] = [
   {
+    slug: "club-pro-btp-fidelisation-prescription-2026",
+    title: "Club PRO dans le BTP : pourquoi créer une communauté de prescripteurs en 2026",
+    metaDescription: "Découvrez pourquoi créer un club PRO dans le BTP pour animer vos prescripteurs, générer des recommandations et mieux suivre vos opportunités en 2026.",
+    excerpt: "Un club PRO bien animé transforme votre réseau de partenaires et prescripteurs en actif commercial mesurable pour générer des opportunités plus qualifiées.",
+    coverImage: "club-pro-btp-fidelisation-prescription-2026",
+    author: "Arnaud UTILLE",
+    date: "2026-05-15",
+    readTime: "7 min",
+    featured: false,
+    tags: ["Communication BTP", "Prescription", "Acquisition"],
+    keywords: [
+      "club PRO BTP",
+      "prescripteurs BTP",
+      "communication BTP",
+      "acquisition clients BTP",
+      "stratégie marketing BTP",
+      "génération de leads BTP"
+    ],
+  },
+  {
     slug: "strategie-marketing-btp-services-differenciation-2026",
     title: "Stratégie marketing BTP : pourquoi vos services doivent redevenir un vrai levier de différenciation en 2026",
     metaDescription: "Découvrez comment structurer, marketer et communiquer vos services pour renforcer l’expérience client, mieux différencier votre entreprise du BTP et soutenir la performance commerciale en 2026.",
