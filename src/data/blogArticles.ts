@@ -1452,4 +1452,26 @@ export const blogArticles: BlogArticle[] = [
       "stratégie marketing rénovation"
     ],
   },
+  {
+    slug: "creer-site-macon-valorise-savoir-faire-2026",
+    title: "Créer un site web de maçon qui valorise votre savoir-faire",
+    metaDescription: "Découvrez comment créer un site web de maçon qui inspire confiance, met en valeur vos réalisations et génère plus de demandes de devis qualifiées en 2026.",
+    excerpt: "Photos chantier, prestations claires, process transparent, avis clients : la méthode pour créer un site de maçon qui rassure et convertit en demandes de devis.",
+    coverImage: "creer-site-macon-valorise-savoir-faire-2026",
+    author: "Arnaud UTILLE",
+    date: "2026-05-14",
+    readTime: "7 min",
+    featured: false,
+    tags: ["Maçonnerie", "Site web", "Conversion"],
+    keywords: [
+      "site web maçon",
+      "créer site maçon",
+      "générer des leads rénovation",
+      "acquisition clients rénovation",
+      "marketing digital rénovation",
+      "trouver des clients BTP",
+      "stratégie marketing rénovation",
+      "site internet maçonnerie"
+    ],
+  },
 ];

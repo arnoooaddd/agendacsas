@@ -266,6 +266,10 @@ const articleToService: Record<string, { service: ServiceKey; intro?: string }> 
     service: "creation-site-internet",
     intro: "Un site de paysagiste bien structuré, avec des visuels forts et une navigation fluide, transforme l'inspiration en demandes de devis qualifiées.",
   },
+  "creer-site-macon-valorise-savoir-faire-2026": {
+    service: "creation-site-internet",
+    intro: "Un site de maçon bien structuré, avec des réalisations mises en avant et un process transparent, transforme la crédibilité en demandes de devis qualifiées.",
+  },
 };
 
 const articleComponents: Record<string, React.ComponentType> = {
@@ -334,6 +338,7 @@ const articleComponents: Record<string, React.ComponentType> = {
   "temoignage-client-btp-roi-2026": lazy(() => import("@/components/blog/ArticleTemoignageClientBtpRoi2026")),
   "valoriser-procede-constructif-linkedin-2026": lazy(() => import("@/components/blog/ArticleValoriserProcedeConstructifLinkedin2026")),
   "creer-site-paysagiste-donne-envie-2026": lazy(() => import("@/components/blog/ArticleCreerSitePaysagisteDonneEnvie2026")),
+  "creer-site-macon-valorise-savoir-faire-2026": lazy(() => import("@/components/blog/ArticleCreerSiteMaconValoriseSavoirFaire2026")),
 };
 
 // Redirects from old blog slugs to new SEO-optimized URLs
