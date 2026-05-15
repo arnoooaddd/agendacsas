@@ -22,6 +22,10 @@ const authorProfiles: Record<string, { image: string; role: string }> = {
 
 // Mapping article slug → most relevant Agendac service
 const articleToService: Record<string, { service: ServiceKey; intro?: string }> = {
+  "club-pro-btp-fidelisation-prescription-2026": {
+    service: "gestion-communication",
+    intro: "Structurez votre communication et votre réseau de prescripteurs pour transformer vos relations partenaires en opportunités commerciales suivies.",
+  },
   "crise-batiment-opportunite-communication-2026": {
     service: "gestion-communication",
     intro: "Transformez les périodes de ralentissement en opportunité d'acquisition en structurant une communication marketing BTP cohérente et continue.",
@@ -281,6 +285,7 @@ const articleToService: Record<string, { service: ServiceKey; intro?: string }> 
 };
 
 const articleComponents: Record<string, React.ComponentType> = {
+  "club-pro-btp-fidelisation-prescription-2026": lazy(() => import("@/components/blog/ArticleClubProBtpFidelisationPrescription2026")),
   "meilleure-agence-marketing-renovation-habitat": lazy(() => import("@/components/blog/ArticleMeilleureAgenceMarketingRenovationHabitat")),
   "diversification-tertiaire-btp-croissance": lazy(() => import("@/components/blog/ArticleDiversificationTertiaireBtpCroissance")),
   "crise-batiment-opportunite-communication-2026": lazy(() => import("@/components/blog/ArticleCriseBatimentOpportuniteCommunication2026")),
