@@ -58,6 +58,7 @@ import diversificationtertiairebtpcroissance from "@/assets/blog/diversification
 import creerSitePaysagisteDonneEnvie2026 from "@/assets/blog/creer-site-paysagiste-donne-envie-2026.png";
 import creerSiteMaconValoriseSavoirFaire2026 from "@/assets/blog/creer-site-macon-valorise-savoir-faire-2026.png";
 import influenceursbtpcreateurscontenu2026 from "@/assets/blog/influenceurs-btp-createurs-contenu-2026.png";
+import podcastsbtpcommunicationnotoriete2026 from "@/assets/blog/podcasts-btp-communication-notoriete-2026.png";
 
 const coverImages: Record<string, string> = {
   // Anciennes clés (compat)
@@ -140,6 +141,7 @@ const coverImages: Record<string, string> = {
   "creer-site-paysagiste-donne-envie-2026": creerSitePaysagisteDonneEnvie2026,
   "creer-site-macon-valorise-savoir-faire-2026": creerSiteMaconValoriseSavoirFaire2026,
   "influenceurs-btp-createurs-contenu-2026": influenceursbtpcreateurscontenu2026,
+  "podcasts-btp-communication-notoriete-2026": podcastsbtpcommunicationnotoriete2026,
 };
 
 export const getCoverImage = (key: string): string => {
