@@ -207,6 +207,7 @@ const Results = () => {
                       study={study}
                       isLast={idx === filtered.length - 1}
                       onIndustryClick={handleIndustryChange}
+                      selectedIndustry={selectedIndustry}
                     />
                   ))}
                 </div>
