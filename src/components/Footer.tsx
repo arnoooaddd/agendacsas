@@ -163,7 +163,7 @@ const Footer = () => {
             </p>
           </div>
 
-          <div className="mt-6 hidden md:flex justify-center">
+          <div className="mt-6 flex justify-center">
             <div className="elfsight-app-e948bbb4-7d30-4bcc-951a-aa1f0959fa52" data-elfsight-app-lazy style={{ minWidth: '90px', minHeight: '40px' }} />
           </div>
         </div>
