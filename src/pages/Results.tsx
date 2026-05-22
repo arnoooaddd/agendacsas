@@ -262,6 +262,7 @@ const Results = () => {
 export default Results;
 
 const extractYouTubeId = (url: string): string | null => {
+  if (url.includes("loom.com")) return null;
   const m = url.match(/(?:shorts\/|watch\?v=|embed\/|youtu\.be\/)([A-Za-z0-9_-]{6,})/);
   return m ? m[1] : null;
 };
