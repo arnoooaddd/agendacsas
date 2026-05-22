@@ -79,7 +79,7 @@ export const caseStudies: CaseStudy[] = [
     mainResult: "+2 commerciaux embauchés en 90 jours",
     siren: "811662766",
     website: "https://laboutiquedumenuisier.fr",
-    loomId: "c62dc9c3f6394a5c896c8234c396ae6a",
+    loomId: "c16266ef4214491eae19d087e0e02eea",
     youtubeEmbedUrl: "https://www.youtube.com/embed/aDHl-oZJ-Uk?rel=0&modestbranding=1",
     problem:
       "Difficulté à générer un volume constant de demandes qualifiées pour alimenter l'équipe commerciale dans un secteur menuiseries très concurrentiel.",
@@ -573,6 +573,7 @@ export const caseStudies: CaseStudy[] = [
     photos: [],
     videos: [
       { url: "https://www.youtube.com/shorts/keR0F0VJNsk", format: "9:16", industry: "Photovoltaïque", label: "Vidéo client - Photovoltaïque" },
+      { url: "https://www.youtube.com/watch?v=Pj6KHKCk6D8", format: "16:9", industry: "Photovoltaïque", label: "Interview client - Photovoltaïque" },
     ],
   },
   {
@@ -592,14 +593,15 @@ export const caseStudies: CaseStudy[] = [
     slug: "maisolia",
     name: "Maisolia",
     company: "Maisolia",
-    industries: ["IRVE", "B2B"],
-    headline: "Témoignage vidéo - IRVE & B2B",
-    summary: "Spécialiste IRVE / mobilité électrique : retours terrain sur la collaboration avec Agendac.",
+    industries: ["IRVE", "B2B", "Photovoltaïque"],
+    headline: "Témoignage vidéo - IRVE, B2B & Photovoltaïque",
+    summary: "Spécialiste IRVE / mobilité électrique et photovoltaïque : retours terrain sur la collaboration avec Agendac.",
     mainResult: "Vidéos clients tournées sur site",
     photos: [],
     videos: [
       { url: "https://www.youtube.com/shorts/48gviholwLc", format: "9:16", industry: "IRVE", label: "Vidéo client - IRVE" },
       { url: "https://youtube.com/shorts/zskLiLCaaDc", format: "9:16", industry: "B2B", label: "Vidéo client - B2B" },
+      { url: "https://youtu.be/hVNLIbd4dVE", format: "16:9", industry: "Photovoltaïque", label: "Interview client - Photovoltaïque" },
     ],
   },
   {
@@ -622,10 +624,12 @@ export const caseStudies: CaseStudy[] = [
     industries: ["Cuisine"],
     headline: "Témoignage vidéo - Cuisine",
     summary: "Cuisiniste : retour terrain sur la collaboration avec Agendac.",
-    mainResult: "Vidéo client tournée sur site",
+    mainResult: "Vidéos clients tournées sur site",
     photos: [],
     videos: [
       { url: "https://youtube.com/shorts/sc6NEY9I84Q", format: "9:16", industry: "Cuisine", label: "Vidéo client - Cuisine" },
+      { url: "https://youtu.be/zui-YQQwKvc", format: "16:9", industry: "Cuisine", label: "Interview client - Cuisine" },
+      { url: "https://youtube.com/shorts/_nk7KDhOVlg", format: "9:16", industry: "Cuisine", label: "Vidéo client - Cuisine" },
     ],
   },
   {
@@ -640,6 +644,8 @@ export const caseStudies: CaseStudy[] = [
     videos: [
       { url: "https://youtube.com/shorts/8ME7lZ1QcHE", format: "9:16", industry: "Piscine", label: "Vidéo client - Piscine" },
       { url: "https://youtube.com/shorts/_-n1jSy-Ps4", format: "9:16", industry: "Piscine", label: "Vidéo client - Piscine" },
+      { url: "https://youtube.com/shorts/eGUxyZvcLqs", format: "9:16", industry: "Piscine", label: "Vidéo client - Piscine" },
+      { url: "https://youtube.com/shorts/gztLQ92fDMs", format: "9:16", industry: "Piscine", label: "Vidéo client - Piscine" },
     ],
   },
 ];
