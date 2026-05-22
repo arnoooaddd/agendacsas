@@ -282,7 +282,7 @@ export const caseStudies: CaseStudy[] = [
     slug: "dorian-perreaut-climeco-plomberie",
     name: "Dorian Perreaut",
     company: "Climeco Plomberie SASU",
-    industries: ["Salle de bain", "Autre"],
+    industries: ["Plomberie", "Climatisation", "Pompe à chaleur", "Salle de bain"],
     headline: "Premiers résultats sous 15 jours de lancement",
     summary:
       "Plomberie et peinture : sortie des solutions inefficaces (Pages Jaunes, Solocal, flyers) pour une acquisition Google maîtrisée.",
