@@ -499,7 +499,6 @@ export const caseStudies: CaseStudy[] = [
     photos: [],
   },
 ];
-];
 
 export const getCaseStudyBySlug = (slug: string) =>
   caseStudies.find((c) => c.slug === slug);
