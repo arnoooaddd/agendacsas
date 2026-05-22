@@ -334,6 +334,16 @@
   width: 100% !important;
 }
 
+/* Hide floating Elfsight Google reviews badge on mobile */
+@media (max-width: 767px) {
+  .eapps-google-reviews-badge,
+  [class*="eapps-google-reviews-badge"],
+  [class*="GoogleReviewsBadge"],
+  div[class*="elfsight"][style*="position: fixed"][style*="bottom"][style*="left"] {
+    display: none !important;
+  }
+}
+
 /* Infinite Video Slider */
 .infinite-slider-wrapper {
   overflow: hidden;
