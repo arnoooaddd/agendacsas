@@ -290,6 +290,7 @@ interface CaseStudyBlockProps {
 const CaseStudyBlock = ({ study, isLast, onIndustryClick }: CaseStudyBlockProps) => {
   const review = study.googleReview ?? study.manualReview;
   const hasMedia = !!(study.youtubeEmbedUrl || study.loomId || study.photos[0]);
+  const videos = study.videos ?? [];
   const scrollToContact = () => {
     const el = document.getElementById("contact");
     if (el) el.scrollIntoView({ behavior: "smooth" });
