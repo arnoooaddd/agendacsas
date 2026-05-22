@@ -72,7 +72,7 @@ export const caseStudies: CaseStudy[] = [
     slug: "la-boutique-du-menuisier-72",
     name: "La Boutique du Menuisier 72",
     company: "La Boutique du Menuisier",
-    industries: ["Menuiseries"],
+    industries: ["Menuiseries", "Pompe à chaleur"],
     headline: "+2 commerciaux embauchés en 90 jours pour suivre la demande",
     summary:
       "Réseau spécialisé fenêtres, portes, coulissants, volets, portails et menuiseries sur mesure : volume de demandes maîtrisé et embauches commerciales pour absorber la croissance.",
@@ -91,12 +91,17 @@ export const caseStudies: CaseStudy[] = [
       "Marque locale renforcée sur le secteur 72",
     ],
     photos: [{ src: lbdmPhoto, caption: "Rencontre avec les gérants — Janvier 2026" }],
+    videos: [
+      { url: "https://www.youtube.com/shorts/aDHl-oZJ-Uk", format: "9:16", industry: "Menuiseries", label: "Vidéo client - Menuiseries" },
+      { url: "https://youtube.com/shorts/0ik5tpNjrCw", format: "9:16", industry: "Menuiseries", label: "Vidéo client - Menuiseries" },
+      { url: "https://youtube.com/shorts/ABp_30VVboE", format: "9:16", industry: "Pompe à chaleur", label: "Vidéo client - Pompe à chaleur" },
+    ],
   },
   {
     slug: "camille-bas-construction",
     name: "Camille BAS",
     company: "BAS Construction",
-    industries: ["Autre"],
+    industries: ["Photovoltaïque", "B2B"],
     headline: "47% de transformation",
     summary:
       "Sortie de la dépendance au bouche-à-oreille pour construire une acquisition prédictible et rentable.",
@@ -131,6 +136,9 @@ export const caseStudies: CaseStudy[] = [
     photos: [
       { src: basRencontre, caption: "Rencontre avec Camille — Janvier 2025" },
       { src: basEquipe, caption: "Équipe de 10 personnes au total" },
+    ],
+    videos: [
+      { url: "https://youtube.com/shorts/-6EfAAw6_A0", format: "9:16", industry: "B2B", label: "Vidéo client - B2B" },
     ],
   },
   {
