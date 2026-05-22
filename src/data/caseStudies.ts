@@ -92,9 +92,9 @@ export const caseStudies: CaseStudy[] = [
     ],
     photos: [{ src: lbdmPhoto, caption: "Rencontre avec les gérants — Janvier 2026" }],
     videos: [
-      { url: "https://www.youtube.com/shorts/aDHl-oZJ-Uk", format: "9:16", industry: "Menuiseries", label: "Vidéo client - Menuiseries" },
-      { url: "https://youtube.com/shorts/0ik5tpNjrCw", format: "9:16", industry: "Menuiseries", label: "Vidéo client - Menuiseries" },
-      { url: "https://youtube.com/shorts/ABp_30VVboE", format: "9:16", industry: "Pompe à chaleur", label: "Vidéo client - Pompe à chaleur" },
+      { url: "https://www.youtube.com/shorts/aDHl-oZJ-Uk", format: "9:16", industry: "Menuiseries", label: "Interview client - Menuiseries" },
+      { url: "https://youtube.com/shorts/0ik5tpNjrCw", format: "9:16", industry: "Menuiseries", label: "Interview client - Menuiseries" },
+      { url: "https://youtube.com/shorts/ABp_30VVboE", format: "9:16", industry: "Pompe à chaleur", label: "Interview client - Pompe à chaleur" },
     ],
   },
   {
@@ -137,9 +137,9 @@ export const caseStudies: CaseStudy[] = [
       { src: basRencontre, caption: "Rencontre avec Camille — Janvier 2025" },
     ],
     videos: [
-      { url: "https://youtube.com/shorts/-6EfAAw6_A0", format: "9:16", industry: "B2B", label: "Vidéo client - B2B" },
-      { url: "https://youtu.be/nNGLXcxBOoI", format: "9:16", industry: "Photovoltaïque", label: "Vidéo client - Photovoltaïque" },
-      { url: "https://youtu.be/alEKDT9NnHI", format: "9:16", industry: "Photovoltaïque", label: "Vidéo client - Photovoltaïque" },
+      { url: "https://youtube.com/shorts/-6EfAAw6_A0", format: "9:16", industry: "B2B", label: "Interview client - B2B" },
+      { url: "https://youtu.be/nNGLXcxBOoI", format: "9:16", industry: "Photovoltaïque", label: "Interview client - Photovoltaïque" },
+      { url: "https://youtu.be/alEKDT9NnHI", format: "9:16", industry: "Photovoltaïque", label: "Interview client - Photovoltaïque" },
     ],
   },
   {
@@ -183,9 +183,9 @@ export const caseStudies: CaseStudy[] = [
     },
     photos: [{ src: lynergiePhoto, caption: "Rencontre avec Stéphane — Janvier 2025" }],
     videos: [
-      { url: "https://youtu.be/UF24gg-nUkU", format: "9:16", industry: "Pompe à chaleur", label: "Vidéo client - Pompe à chaleur" },
+      { url: "https://youtu.be/ANGX3NSQXog", format: "9:16", industry: "Pompe à chaleur", label: "Interview client - Pompe à chaleur" },
       { url: "https://youtu.be/HljnI1oC9Sc", format: "9:16", industries: ["Pompe à chaleur", "Photovoltaïque"], label: "Interview client - PAC & Photovoltaïque" },
-      { url: "https://youtube.com/shorts/Jnfp0iIXNM8", format: "9:16", industries: ["Photovoltaïque", "Pompe à chaleur", "Climatisation", "IRVE"], label: "Vidéo client - Multi-énergie" },
+      { url: "https://youtube.com/shorts/Jnfp0iIXNM8", format: "9:16", industries: ["Photovoltaïque", "Pompe à chaleur", "Climatisation", "IRVE"], label: "Interview client - Multi-énergie" },
     ],
   },
   {
@@ -228,6 +228,11 @@ export const caseStudies: CaseStudy[] = [
         "Une équipe au top, de vrai professionnels, ca fait longtemps que je me procurais les services de gens incompétent. Des sommes astronomique dépensées. Je recommande vivement Agendac. Je ne suis qu au 3 eme mois mais j ai deja une forte hausse du chiffre d affaire.",
     },
     photos: [],
+    videos: [
+      { url: "https://youtube.com/shorts/9bU-1VGjP0o", format: "9:16", industry: "Photovoltaïque", label: "Interview client - Photovoltaïque" },
+      { url: "https://youtube.com/shorts/bPNHGWc5qpM", format: "9:16", industry: "Pompe à chaleur", label: "Interview client - Pompe à chaleur" },
+      { url: "https://youtube.com/shorts/wx8sK6T6J0o", format: "9:16", industry: "Isolation", label: "Interview client - Isolation" },
+    ],
   },
   {
     slug: "anthony-properzio-stores-fenetres-golfe",
@@ -268,11 +273,6 @@ export const caseStudies: CaseStudy[] = [
         "J'ai actuellement le plaisir de pouvoir collaborer avec Agendac et je ne peux que mettre en avant leur travail exceptionnel. L'identité de cette agence de communication se repose sur des bases saines et solides. Dès le premier contact, l'ambiance s'est révélée à la fois dynamique et conviviale, ce qui rend chaque échange agréable. Leurs compétences ont été cruciales pour donner vie à mes demandes : ils allient créativité, rigueur et une vraie expertise stratégique. Le suivi est irréprochable : ils prennent le temps de comprendre chaque besoin, restent disponibles et assurent une proximité rassurante. Je remercie Arnaud, Kérim, Omar et tout particulièrement Manon, qui, avec moi, passe du temps à sans cesse améliorer les différents points importants de notre collaboration pour booster le rendement de l'entreprise. Je recommande donc cette agence les yeux fermés à quiconque cherche un partenaire fiable, créatif et à l'écoute.",
     },
     photos: [],
-    videos: [
-      { url: "https://youtube.com/shorts/9bU-1VGjP0o", format: "9:16", industry: "Photovoltaïque", label: "Vidéo client - Photovoltaïque" },
-      { url: "https://youtube.com/shorts/bPNHGWc5qpM", format: "9:16", industry: "Pompe à chaleur", label: "Vidéo client - Pompe à chaleur" },
-      { url: "https://youtube.com/shorts/wx8sK6T6J0o", format: "9:16", industry: "Isolation", label: "Vidéo client - Isolation" },
-    ],
   },
   {
     slug: "fabio-valero-avenir-energie",
@@ -313,7 +313,7 @@ export const caseStudies: CaseStudy[] = [
     },
     photos: [],
     videos: [
-      { url: "https://youtube.com/shorts/LLzJBh9n21E", format: "9:16", industry: "Climatisation", label: "Vidéo client - Climatisation" },
+      { url: "https://youtube.com/shorts/LLzJBh9n21E", format: "9:16", industry: "Climatisation", label: "Interview client - Climatisation" },
     ],
   },
   {
@@ -354,6 +354,10 @@ export const caseStudies: CaseStudy[] = [
         "Je suis très content de travailler avec Arno, je suis très satisfait. Franchement il fait du bon boulot. Je suis très content de travailler avec lui.",
     },
     photos: [{ src: plainePhoto, caption: "Rencontre avec M. Unalan à Veauche — Août 2025" }],
+    videos: [
+      { url: "https://youtube.com/shorts/o5U1Qe3yfHU", format: "9:16", industry: "Photovoltaïque", label: "Interview client - Photovoltaïque" },
+      { url: "https://youtu.be/glU-1xmleZI", format: "9:16", industry: "Photovoltaïque", label: "Interview client - Photovoltaïque" },
+    ],
   },
   {
     slug: "dorian-perreaut-climeco-plomberie",
@@ -435,7 +439,7 @@ export const caseStudies: CaseStudy[] = [
   },
   {
     slug: "france-habitat-enr",
-    name: "Steev OTK",
+    name: "Steve Miranda",
     company: "France Habitat ENR",
     industries: ["Menuiseries", "Photovoltaïque"],
     headline: "Système d'acquisition bien huilé",
@@ -443,8 +447,8 @@ export const caseStudies: CaseStudy[] = [
       "Menuiseries et photovoltaïque : un process Agendac structuré et des RDV avec un réel intérêt.",
     mainResult: "RDV qualifiés avec intérêt confirmé",
     googleReview: {
-      author: "Steev OTK",
-      initials: "SO",
+      author: "Steve Miranda",
+      initials: "SM",
       date: "il y a 2 semaines",
       rating: 5,
       text:
@@ -470,6 +474,10 @@ export const caseStudies: CaseStudy[] = [
         "Super équipe, réactive et professionnelle. J'ai régulièrement Manon au téléphone pour la prise de rendez-vous : elle gère les demandes avec précision et efficacité, ce qui permet un excellent ciblage des besoins et évite les déplacements inutiles. Merci à Arnaud et à toute son équipe pour leur sérieux et leur organisation.",
     },
     photos: [],
+    videos: [
+      { url: "https://youtube.com/shorts/V0ao7ZeP2Kw", format: "9:16", industry: "Photovoltaïque", label: "Interview client - Photovoltaïque" },
+      { url: "https://youtu.be/NxF3Dxcdiao", format: "9:16", industry: "Photovoltaïque", label: "Interview client - Photovoltaïque" },
+    ],
   },
   {
     slug: "ncen-jacques-passerat",
