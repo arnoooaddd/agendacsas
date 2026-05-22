@@ -281,6 +281,11 @@ const Results = () => {
 
 export default Results;
 
+const extractYouTubeId = (url: string): string | null => {
+  const m = url.match(/(?:shorts\/|watch\?v=|embed\/|youtu\.be\/)([A-Za-z0-9_-]{6,})/);
+  return m ? m[1] : null;
+};
+
 interface CaseStudyBlockProps {
   study: CaseStudy;
   isLast: boolean;
