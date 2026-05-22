@@ -136,17 +136,18 @@ export const caseStudies: CaseStudy[] = [
     },
     photos: [
       { src: basRencontre, caption: "Rencontre avec Camille — Janvier 2025" },
-      { src: basEquipe, caption: "Équipe de 10 personnes au total" },
     ],
     videos: [
       { url: "https://youtube.com/shorts/-6EfAAw6_A0", format: "9:16", industry: "B2B", label: "Vidéo client - B2B" },
+      { url: "https://youtu.be/nNGLXcxBOoI", format: "9:16", industry: "Photovoltaïque", label: "Vidéo client - Photovoltaïque" },
+      { url: "https://youtu.be/alEKDT9NnHI", format: "9:16", industry: "Photovoltaïque", label: "Vidéo client - Photovoltaïque" },
     ],
   },
   {
     slug: "stephane-viard-lynergie",
     name: "Stéphane VIARD",
     company: "Lynergie SARL",
-    industries: ["Photovoltaïque", "Pompe à chaleur", "Isolation"],
+    industries: ["Photovoltaïque", "Pompe à chaleur", "Climatisation", "IRVE"],
     headline: "+2 embauches après 6 mois de collaboration",
     summary:
       "Spécialiste rénovation énergétique (photovoltaïque, PAC, isolation) qui passe d'une acquisition 100% bouche-à-oreille à une acquisition digitale maîtrisée.",
@@ -182,6 +183,11 @@ export const caseStudies: CaseStudy[] = [
         "Une experience de plusieurs mois déjà et les résultats sont excellents sur les campagnes google, facebook, site internet… Arnaud et son equipe, sont hyper reactifs et disponibles. Ils m'accompagnent dans mon dévellopement (1 embauche pour ma part après 3 mois de collaboration) et le meilleur est a venir. Je recommande fortement !",
     },
     photos: [{ src: lynergiePhoto, caption: "Rencontre avec Stéphane — Janvier 2025" }],
+    videos: [
+      { url: "https://youtu.be/UF24gg-nUkU", format: "9:16", industry: "Pompe à chaleur", label: "Vidéo client - Pompe à chaleur" },
+      { url: "https://youtu.be/HljnI1oC9Sc", format: "9:16", industries: ["Pompe à chaleur", "Photovoltaïque"], label: "Interview client - PAC & Photovoltaïque" },
+      { url: "https://youtube.com/shorts/Jnfp0iIXNM8", format: "9:16", industries: ["Photovoltaïque", "Pompe à chaleur", "Climatisation", "IRVE"], label: "Vidéo client - Multi-énergie" },
+    ],
   },
   {
     slug: "olivier-tubeuf-avenir-conseils-habitat",
@@ -263,12 +269,17 @@ export const caseStudies: CaseStudy[] = [
         "J'ai actuellement le plaisir de pouvoir collaborer avec Agendac et je ne peux que mettre en avant leur travail exceptionnel. L'identité de cette agence de communication se repose sur des bases saines et solides. Dès le premier contact, l'ambiance s'est révélée à la fois dynamique et conviviale, ce qui rend chaque échange agréable. Leurs compétences ont été cruciales pour donner vie à mes demandes : ils allient créativité, rigueur et une vraie expertise stratégique. Le suivi est irréprochable : ils prennent le temps de comprendre chaque besoin, restent disponibles et assurent une proximité rassurante. Je remercie Arnaud, Kérim, Omar et tout particulièrement Manon, qui, avec moi, passe du temps à sans cesse améliorer les différents points importants de notre collaboration pour booster le rendement de l'entreprise. Je recommande donc cette agence les yeux fermés à quiconque cherche un partenaire fiable, créatif et à l'écoute.",
     },
     photos: [],
+    videos: [
+      { url: "https://youtube.com/shorts/9bU-1VGjP0o", format: "9:16", industry: "Photovoltaïque", label: "Vidéo client - Photovoltaïque" },
+      { url: "https://youtube.com/shorts/bPNHGWc5qpM", format: "9:16", industry: "Pompe à chaleur", label: "Vidéo client - Pompe à chaleur" },
+      { url: "https://youtube.com/shorts/wx8sK6T6J0o", format: "9:16", industry: "Isolation", label: "Vidéo client - Isolation" },
+    ],
   },
   {
     slug: "fabio-valero-avenir-energie",
     name: "Fabio VALERO",
     company: "Avenir Énergie",
-    industries: ["Photovoltaïque", "Pompe à chaleur", "Isolation"],
+    industries: ["Photovoltaïque", "Pompe à chaleur", "Isolation", "Climatisation"],
     headline: "100% des demandes qualifiées",
     summary:
       "Énergies renouvelables : passage d'un sourcing de leads inefficace à un pipeline 100% qualifié.",
@@ -302,6 +313,9 @@ export const caseStudies: CaseStudy[] = [
         "Nous étions en pleine réflexion pour savoir comment obtenir du prospect de qualité, nous avons tout essayé ! les fichiers commandés, du data à traiter etc... Un de mes collaborateurs ma mis en relation avec Agendac et ca été un second souffle pour l'entreprise du rdv 100% qualifié tout en respectant notre cahier décharge. Aucune mauvaises surprises, une équipe plus qu'à l'écoute avec le respect du client ! J'ai une confiance total avec Agendac et aujourd'hui c'est un partenariat essentiel pour notre structure. Je recommande à 100% leurs services un grand merci encore à cette équipe jeune et dynamique qui travail sans relâche dans le but d'obtenir de très bon résultats.",
     },
     photos: [],
+    videos: [
+      { url: "https://youtube.com/shorts/LLzJBh9n21E", format: "9:16", industry: "Climatisation", label: "Vidéo client - Climatisation" },
+    ],
   },
   {
     slug: "burhan-unalan-plaine-solaire",
