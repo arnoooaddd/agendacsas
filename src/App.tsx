@@ -13,6 +13,7 @@ import CreationReseaux from "./pages/CreationReseaux";
 import CreationSite from "./pages/CreationSite";
 import Tournage from "./pages/Tournage";
 import Results from "./pages/Results";
+import CaseStudyPage from "./pages/CaseStudyPage";
 import Blog from "./pages/Blog";
 import BlogArticle from "./pages/BlogArticle";
 import PriseRendezVous from "./pages/PriseRendezVous";
@@ -38,6 +39,7 @@ const App = () => (
           <Route path="/accueil" element={<Navigate to="/" replace />} />
           <Route path="/com" element={<Navigate to="/gestion-communication" replace />} />
           <Route path="/resultats-clients-agendac" element={<Results />} />
+          <Route path="/resultats-clients-agendac/:slug" element={<CaseStudyPage />} />
           <Route path="/resultats" element={<Resultats />} />
           <Route path="/resultat" element={<Resultats />} />
           <Route path="/résultat" element={<Resultats />} />
