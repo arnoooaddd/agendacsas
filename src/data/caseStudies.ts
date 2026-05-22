@@ -1,6 +1,5 @@
 import lbdmPhoto from "@/assets/results/lbdm.webp";
 import basRencontre from "@/assets/results/bas-rencontre.webp";
-import basEquipe from "@/assets/results/bas-equipe.webp";
 import lynergiePhoto from "@/assets/results/lynergie.webp";
 import plainePhoto from "@/assets/results/plaine-solaire.webp";
 import dorianPhoto from "@/assets/results/dorian-climeco.webp";
