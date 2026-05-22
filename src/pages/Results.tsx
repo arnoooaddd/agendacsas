@@ -466,6 +466,54 @@ const CaseStudyBlock = ({ study, isLast, onIndustryClick }: CaseStudyBlockProps)
           </div>
         </div>
 
+        {videos.length > 0 && (
+          <div className="mt-8 pt-6 border-t border-border/40">
+            <div className="flex items-baseline justify-between flex-wrap gap-2 mb-4">
+              <h4 className="text-lg sm:text-xl font-bold text-foreground tracking-tight">
+                Vidéos tournées avec {study.company}
+              </h4>
+              <span className="text-xs text-muted-foreground">{videos.length} vidéo{videos.length > 1 ? "s" : ""}</span>
+            </div>
+            <div className="flex gap-4 overflow-x-auto sm:grid sm:grid-cols-2 lg:grid-cols-4 sm:overflow-visible snap-x snap-mandatory pb-2 -mx-2 px-2 sm:mx-0 sm:px-0">
+              {videos.map((v, i) => {
+                const id = extractYouTubeId(v.url);
+                const isPortrait = v.format !== "16:9";
+                return (
+                  <div key={`${study.slug}-vid-${i}`} className="snap-start flex-shrink-0 w-[70%] sm:w-auto">
+                    <div
+                      className={`relative rounded-2xl overflow-hidden bg-muted shadow-md border border-border/40 ${
+                        isPortrait ? "aspect-[9/16]" : "aspect-video"
+                      }`}
+                    >
+                      {id ? (
+                        <iframe
+                          src={`https://www.youtube.com/embed/${id}?rel=0&modestbranding=1`}
+                          loading="lazy"
+                          allowFullScreen
+                          title={v.label || `${study.name} vidéo ${i + 1}`}
+                          className="absolute inset-0 w-full h-full"
+                        />
+                      ) : null}
+                    </div>
+                    <div className="mt-2 flex items-center justify-between gap-2">
+                      <span className="text-xs text-foreground/70 truncate">{v.label}</span>
+                      {v.industry && (
+                        <button
+                          type="button"
+                          onClick={() => onIndustryClick(v.industry as Industry)}
+                          className="text-[10px] font-semibold uppercase tracking-wider px-2 py-0.5 rounded-full bg-primary/10 text-primary hover:bg-primary hover:text-primary-foreground transition-colors flex-shrink-0"
+                        >
+                          {v.industry}
+                        </button>
+                      )}
+                    </div>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+        )}
+
         {/* Footer: cross-filter + CTA */}
         <div className="mt-8 pt-6 border-t border-border/40 flex flex-wrap items-center justify-between gap-4">
           <div className="flex flex-wrap items-center gap-2 text-sm">
