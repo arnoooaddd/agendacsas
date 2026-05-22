@@ -28,6 +28,13 @@ export interface CaseStudyPhoto {
   caption: string;
 }
 
+export interface CaseStudyVideo {
+  url: string;
+  format?: "9:16" | "16:9";
+  industry?: Industry;
+  label?: string;
+}
+
 export interface CaseStudyReview {
   author: string;
   initials: string;
@@ -57,6 +64,7 @@ export interface CaseStudy {
   manualReview?: CaseStudyReview;
   googleReview?: CaseStudyReview;
   photos: CaseStudyPhoto[];
+  videos?: CaseStudyVideo[];
 }
 
 export const caseStudies: CaseStudy[] = [
@@ -64,7 +72,7 @@ export const caseStudies: CaseStudy[] = [
     slug: "la-boutique-du-menuisier-72",
     name: "La Boutique du Menuisier 72",
     company: "La Boutique du Menuisier",
-    industries: ["Menuiseries"],
+    industries: ["Menuiseries", "Pompe à chaleur"],
     headline: "+2 commerciaux embauchés en 90 jours pour suivre la demande",
     summary:
       "Réseau spécialisé fenêtres, portes, coulissants, volets, portails et menuiseries sur mesure : volume de demandes maîtrisé et embauches commerciales pour absorber la croissance.",
@@ -83,12 +91,17 @@ export const caseStudies: CaseStudy[] = [
       "Marque locale renforcée sur le secteur 72",
     ],
     photos: [{ src: lbdmPhoto, caption: "Rencontre avec les gérants — Janvier 2026" }],
+    videos: [
+      { url: "https://www.youtube.com/shorts/aDHl-oZJ-Uk", format: "9:16", industry: "Menuiseries", label: "Vidéo client - Menuiseries" },
+      { url: "https://youtube.com/shorts/0ik5tpNjrCw", format: "9:16", industry: "Menuiseries", label: "Vidéo client - Menuiseries" },
+      { url: "https://youtube.com/shorts/ABp_30VVboE", format: "9:16", industry: "Pompe à chaleur", label: "Vidéo client - Pompe à chaleur" },
+    ],
   },
   {
     slug: "camille-bas-construction",
     name: "Camille BAS",
     company: "BAS Construction",
-    industries: ["Autre"],
+    industries: ["Photovoltaïque", "B2B"],
     headline: "47% de transformation",
     summary:
       "Sortie de la dépendance au bouche-à-oreille pour construire une acquisition prédictible et rentable.",
@@ -123,6 +136,9 @@ export const caseStudies: CaseStudy[] = [
     photos: [
       { src: basRencontre, caption: "Rencontre avec Camille — Janvier 2025" },
       { src: basEquipe, caption: "Équipe de 10 personnes au total" },
+    ],
+    videos: [
+      { url: "https://youtube.com/shorts/-6EfAAw6_A0", format: "9:16", industry: "B2B", label: "Vidéo client - B2B" },
     ],
   },
   {
@@ -497,6 +513,112 @@ export const caseStudies: CaseStudy[] = [
         "Equipe professionnelle, réactive et de très bon conseil. Nous recommandons tout particulièrement Manon pour son excellent travail, la qualité des qualifications des leads, ainsi que sa sympathie et son écoute.",
     },
     photos: [],
+  },
+  {
+    slug: "climapac",
+    name: "ClimaPAC",
+    company: "ClimaPAC",
+    industries: ["Pompe à chaleur"],
+    headline: "Témoignage vidéo - Pompe à chaleur",
+    summary: "Spécialiste pompe à chaleur : retour terrain sur la collaboration avec Agendac.",
+    mainResult: "Vidéo client tournée sur site",
+    photos: [],
+    videos: [
+      { url: "https://www.youtube.com/shorts/lj1n0VSNT2s", format: "9:16", industry: "Pompe à chaleur", label: "Vidéo client - Pompe à chaleur" },
+    ],
+  },
+  {
+    slug: "ideal-therm",
+    name: "Ideal Therm",
+    company: "Ideal Therm",
+    industries: ["Autre"],
+    headline: "Témoignage vidéo partenaire",
+    summary: "Retour terrain Ideal Therm sur la collaboration avec Agendac.",
+    mainResult: "Vidéo client tournée sur site",
+    photos: [],
+    videos: [
+      { url: "https://www.youtube.com/shorts/o_nC1OQoGCc", format: "9:16", industry: "Autre", label: "Vidéo client - Autre" },
+    ],
+  },
+  {
+    slug: "energie-service-france",
+    name: "Energie Service France",
+    company: "Energie Service France",
+    industries: ["Photovoltaïque"],
+    headline: "Témoignage vidéo - Photovoltaïque",
+    summary: "Spécialiste photovoltaïque : retour terrain sur la collaboration avec Agendac.",
+    mainResult: "Vidéo client tournée sur site",
+    photos: [],
+    videos: [
+      { url: "https://www.youtube.com/shorts/keR0F0VJNsk", format: "9:16", industry: "Photovoltaïque", label: "Vidéo client - Photovoltaïque" },
+    ],
+  },
+  {
+    slug: "solaire-2f",
+    name: "Solaire 2F",
+    company: "Solaire 2F",
+    industries: ["Photovoltaïque"],
+    headline: "Témoignage vidéo - Photovoltaïque",
+    summary: "Spécialiste photovoltaïque : retour terrain sur la collaboration avec Agendac.",
+    mainResult: "Vidéo client tournée sur site",
+    photos: [],
+    videos: [
+      { url: "https://www.youtube.com/shorts/keR0F0VJNsk", format: "9:16", industry: "Photovoltaïque", label: "Vidéo client - Photovoltaïque" },
+    ],
+  },
+  {
+    slug: "maisolia",
+    name: "Maisolia",
+    company: "Maisolia",
+    industries: ["IRVE", "B2B"],
+    headline: "Témoignage vidéo - IRVE & B2B",
+    summary: "Spécialiste IRVE / mobilité électrique : retours terrain sur la collaboration avec Agendac.",
+    mainResult: "Vidéos clients tournées sur site",
+    photos: [],
+    videos: [
+      { url: "https://www.youtube.com/shorts/48gviholwLc", format: "9:16", industry: "IRVE", label: "Vidéo client - IRVE" },
+      { url: "https://youtube.com/shorts/zskLiLCaaDc", format: "9:16", industry: "B2B", label: "Vidéo client - B2B" },
+    ],
+  },
+  {
+    slug: "pergola-4-saison",
+    name: "Pergola 4 Saison",
+    company: "Pergola 4 Saison",
+    industries: ["Menuiseries"],
+    headline: "Témoignage vidéo - Menuiseries / Pergolas",
+    summary: "Spécialiste pergolas et menuiseries extérieures : retour terrain sur la collaboration avec Agendac.",
+    mainResult: "Vidéo client tournée sur site",
+    photos: [],
+    videos: [
+      { url: "https://www.youtube.com/shorts/jtxqj3Mm4WM", format: "9:16", industry: "Menuiseries", label: "Vidéo client - Menuiseries" },
+    ],
+  },
+  {
+    slug: "cuisine-references",
+    name: "Cuisine Références",
+    company: "Cuisine Références",
+    industries: ["Cuisine"],
+    headline: "Témoignage vidéo - Cuisine",
+    summary: "Cuisiniste : retour terrain sur la collaboration avec Agendac.",
+    mainResult: "Vidéo client tournée sur site",
+    photos: [],
+    videos: [
+      { url: "https://youtube.com/shorts/sc6NEY9I84Q", format: "9:16", industry: "Cuisine", label: "Vidéo client - Cuisine" },
+    ],
+  },
+  {
+    slug: "asch-pool",
+    name: "ASCH POOL",
+    company: "ASCH POOL",
+    industries: ["Piscine"],
+    headline: "Témoignage vidéo - Piscine",
+    summary: "Pisciniste : retours terrain sur la collaboration avec Agendac.",
+    mainResult: "Vidéos clients tournées sur site",
+    photos: [],
+    videos: [
+      { url: "https://youtube.com/shorts/8ME7lZ1QcHE", format: "9:16", industry: "Piscine", label: "Vidéo client - Piscine" },
+      { url: "https://youtube.com/shorts/_-n1jSy-Ps4", format: "9:16", industry: "Piscine", label: "Vidéo client - Piscine" },
+    ],
   },
 ];
 
