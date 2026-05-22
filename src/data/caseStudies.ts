@@ -32,6 +32,7 @@ export interface CaseStudyVideo {
   url: string;
   format?: "9:16" | "16:9";
   industry?: Industry;
+  industries?: Industry[];
   label?: string;
 }
 
