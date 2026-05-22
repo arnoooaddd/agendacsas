@@ -365,6 +365,140 @@ export const caseStudies: CaseStudy[] = [
     },
     photos: [{ src: dorianPhoto, caption: "Rencontre avec Dorian — Avril 2024" }],
   },
+  {
+    slug: "benjamin-berkovicz-reva-energie",
+    name: "Benjamin Berkovicz",
+    company: "Reva Energie",
+    industries: ["Climatisation"],
+    headline: "Essayer c'est l'adopter",
+    summary:
+      "Spécialiste climatisation : adoption d'Agendac comme partenaire d'acquisition après les premiers résultats.",
+    mainResult: "Partenariat reconduit après essai",
+    website: "https://revaenergie.com/",
+    googleReview: {
+      author: "Benjamin Berkovicz",
+      initials: "BB",
+      date: "il y a 8 mois",
+      rating: 5,
+      text: "Essayer c'est l'adopter",
+    },
+    photos: [],
+  },
+  {
+    slug: "bastien-enr",
+    name: "Bastien ENR",
+    company: "Bastien ENR",
+    industries: ["Photovoltaïque"],
+    headline: "Le partenaire d'acquisition tant attendu",
+    summary:
+      "Photovoltaïque : sortie des engagements mensuels d'agences de com pour un modèle 100% orienté résultats.",
+    mainResult: "Partenariat 100% orienté résultats",
+    googleReview: {
+      author: "Bastien ENR",
+      initials: "BE",
+      date: "il y a un an",
+      rating: 5,
+      text:
+        "Quel chance d'avoir rencontré Arnaud et ces équipes ! Après avoir tester beaucoups d'agence de com.. j'ai enfin trouver le partenaire dont j'ai toujours rêver ! A l'écoute jeune dynamique, beaucoups de solutions, de conseils et surtout d'écoute ! Notre buisness tourne autour des résultats et de comment les faire évoluer/améliorer plus d'autour de mensualitées/engagement etc.. Nous sommes écouté et cela se ressent sur les résultats. Merci Arnaud pour ta disponibilitée et les engagements que tiens à notre égard, vraiment top 💪👌",
+    },
+    photos: [],
+  },
+  {
+    slug: "france-habitat-enr",
+    name: "Steev OTK",
+    company: "France Habitat ENR",
+    industries: ["Menuiseries", "Photovoltaïque"],
+    headline: "Système d'acquisition bien huilé",
+    summary:
+      "Menuiseries et photovoltaïque : un process Agendac structuré et des RDV avec un réel intérêt.",
+    mainResult: "RDV qualifiés avec intérêt confirmé",
+    googleReview: {
+      author: "Steev OTK",
+      initials: "SO",
+      date: "il y a 2 semaines",
+      rating: 5,
+      text:
+        "On a à faire à de vrais Pros sincèrement. Leur système est bien huilé ; Arnaud Utille au Top et Sophia Laleg également RDV avec un réel intérêt et nous attendent de pied ferme.",
+    },
+    photos: [],
+  },
+  {
+    slug: "atmos-energie",
+    name: "Atmos Énergie",
+    company: "Atmos Énergie",
+    industries: ["Photovoltaïque", "Climatisation"],
+    headline: "Prise de RDV précise et efficace",
+    summary:
+      "Photovoltaïque et climatisation : excellent ciblage des besoins et zéro déplacement inutile grâce à la qualification Agendac.",
+    mainResult: "Ciblage précis, zéro déplacement inutile",
+    googleReview: {
+      author: "Atmos Énergie",
+      initials: "AÉ",
+      date: "il y a une semaine",
+      rating: 5,
+      text:
+        "Super équipe, réactive et professionnelle. J'ai régulièrement Manon au téléphone pour la prise de rendez-vous : elle gère les demandes avec précision et efficacité, ce qui permet un excellent ciblage des besoins et évite les déplacements inutiles. Merci à Arnaud et à toute son équipe pour leur sérieux et leur organisation.",
+    },
+    photos: [],
+  },
+  {
+    slug: "ncen-jacques-passerat",
+    name: "Jacques Passerat",
+    company: "NCEN",
+    industries: ["Climatisation", "Pompe à chaleur", "Plomberie"],
+    headline: "Enfin un partenaire fiable et performant",
+    summary:
+      "CVC / plomberie : gestion à taille humaine, réactive, et qualification de leads de qualité.",
+    mainResult: "Qualification de leads de réelle qualité",
+    googleReview: {
+      author: "Jacques Passerat",
+      initials: "JP",
+      date: "il y a 4 jours",
+      rating: 5,
+      text:
+        "Non contents d'être très agréables humainement, l'ensemble de l'équipe est réellement professionnelle et aux petits soins. La gestion est à taille humaine et réactive. Nous avons enfin trouvé un partenaire fiable et performant. Une mention toute particulière pour MANON dont le sourire transparaît dans le voix, chaleureuse jeune femme cultivée prenant à cœur le retour d'expérience. Merci enfin à toute l'équipe pour la qualité du travail accompli dans une qualification de leads de réelle qualité. Je recommande très fortement. Jacques, gérant de NCEN.",
+    },
+    photos: [],
+  },
+  {
+    slug: "zc-clim",
+    name: "ZC CLIM",
+    company: "ZC CLIM",
+    industries: ["Climatisation", "Pompe à chaleur"],
+    headline: "Une agence qui répond aux besoins des TPE en CVC",
+    summary:
+      "Climatisation / PAC : leads très qualifiés grâce au travail en amont d'Agendac sur la qualification.",
+    mainResult: "Leads très qualifiés, travail en amont visible",
+    googleReview: {
+      author: "ZC CLIM",
+      initials: "ZC",
+      date: "il y a 3 jours",
+      rating: 5,
+      text:
+        "Merci pour cette belle collaboration, Enfin une Agence qui as su répondre aux besoins d'une Tpe dans le CVC, Lead très qualifié, ont ressent le travail en amont qu'il y a avant que cela arrive chez Nous. Bravo et Merci à Arnaud, Kerim et Sophia qui font un travail remarquable et tout le reste de l'équipe. ps / Sophia que nous avons régulièrement en ligne, fait un travail de qualité (Acceuil patience et persévérance au standard) afin de bien qualifier et replanifier les rdv ! Merci 🙏 Je recommande +++++++ N'hésitez plus Passez chez AGENDAC ! 🚀",
+    },
+    photos: [],
+  },
+  {
+    slug: "mickael-racine",
+    name: "Mickael Racine",
+    company: "Mickael Racine",
+    industries: ["Piscine", "Plomberie", "Salle de bain"],
+    headline: "Qualification de leads et écoute remarquables",
+    summary:
+      "Piscine, plomberie et salle de bain : qualité de qualifications et accompagnement humain au quotidien.",
+    mainResult: "Qualité de qualifications saluée",
+    googleReview: {
+      author: "mikael Racine",
+      initials: "MR",
+      date: "il y a un jour",
+      rating: 5,
+      text:
+        "Equipe professionnelle, réactive et de très bon conseil. Nous recommandons tout particulièrement Manon pour son excellent travail, la qualité des qualifications des leads, ainsi que sa sympathie et son écoute.",
+    },
+    photos: [],
+  },
+];
 ];
 
 export const getCaseStudyBySlug = (slug: string) =>
