@@ -577,19 +577,6 @@ export const caseStudies: CaseStudy[] = [
     ],
   },
   {
-    slug: "solaire-2f",
-    name: "Solaire 2F",
-    company: "Solaire 2F",
-    industries: ["Photovoltaïque"],
-    headline: "Témoignage vidéo - Photovoltaïque",
-    summary: "Spécialiste photovoltaïque : retour terrain sur la collaboration avec Agendac.",
-    mainResult: "Vidéo client tournée sur site",
-    photos: [],
-    videos: [
-      { url: "https://www.youtube.com/shorts/keR0F0VJNsk", format: "9:16", industry: "Photovoltaïque", label: "Vidéo client - Photovoltaïque" },
-    ],
-  },
-  {
     slug: "maisolia",
     name: "Maisolia",
     company: "Maisolia",

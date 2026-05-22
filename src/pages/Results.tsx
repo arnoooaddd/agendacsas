@@ -482,7 +482,7 @@ const CaseStudyBlock = ({ study, isLast, onIndustryClick, selectedIndustry }: Ca
 
         {videos.length > 0 && (
           <div className="mt-8 pt-6 border-t border-border/40">
-            <div className="flex items-baseline justify-between flex-wrap gap-2 mb-4">
+            <div className="text-center mb-4">
               <h4 className="text-lg sm:text-xl font-bold text-foreground tracking-tight">
                 Vidéos tournées avec {study.company}
               </h4>
