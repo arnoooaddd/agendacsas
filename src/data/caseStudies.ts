@@ -439,7 +439,7 @@ export const caseStudies: CaseStudy[] = [
   },
   {
     slug: "france-habitat-enr",
-    name: "Steev OTK",
+    name: "Steve Miranda",
     company: "France Habitat ENR",
     industries: ["Menuiseries", "Photovoltaïque"],
     headline: "Système d'acquisition bien huilé",
@@ -447,8 +447,8 @@ export const caseStudies: CaseStudy[] = [
       "Menuiseries et photovoltaïque : un process Agendac structuré et des RDV avec un réel intérêt.",
     mainResult: "RDV qualifiés avec intérêt confirmé",
     googleReview: {
-      author: "Steev OTK",
-      initials: "SO",
+      author: "Steve Miranda",
+      initials: "SM",
       date: "il y a 2 semaines",
       rating: 5,
       text:
@@ -474,6 +474,10 @@ export const caseStudies: CaseStudy[] = [
         "Super équipe, réactive et professionnelle. J'ai régulièrement Manon au téléphone pour la prise de rendez-vous : elle gère les demandes avec précision et efficacité, ce qui permet un excellent ciblage des besoins et évite les déplacements inutiles. Merci à Arnaud et à toute son équipe pour leur sérieux et leur organisation.",
     },
     photos: [],
+    videos: [
+      { url: "https://youtube.com/shorts/V0ao7ZeP2Kw", format: "9:16", industry: "Photovoltaïque", label: "Interview client - Photovoltaïque" },
+      { url: "https://youtu.be/NxF3Dxcdiao", format: "9:16", industry: "Photovoltaïque", label: "Interview client - Photovoltaïque" },
+    ],
   },
   {
     slug: "ncen-jacques-passerat",
