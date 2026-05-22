@@ -1,13 +1,12 @@
 import { useEffect, useMemo, useState } from "react";
-import { Link } from "react-router-dom";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import AnimatedSection from "@/components/AnimatedSection";
 import SectionCTA from "@/components/SectionCTA";
 import RelatedArticles from "@/components/RelatedArticles";
-import { TrendingUp, Star, Camera, Trophy, Play, ArrowRight, CheckCircle2 } from "lucide-react";
+import { Star, Camera, Trophy, Play, ArrowRight, CheckCircle2, Filter, ExternalLink, Building2 } from "lucide-react";
 import { usePageTitle, useMetaDescription, useCanonical } from "@/hooks/usePageTitle";
-import { caseStudies, INDUSTRIES, type Industry } from "@/data/caseStudies";
+import { caseStudies, INDUSTRIES, type Industry, type CaseStudy } from "@/data/caseStudies";
 import ReviewsBands from "@/components/ReviewsBands";
 
 const Results = () => {
@@ -34,6 +33,17 @@ const Results = () => {
         : caseStudies.filter((c) => c.industries.includes(selectedIndustry)),
     [selectedIndustry]
   );
+
+  const handleIndustryChange = (ind: Industry) => {
+    setSelectedIndustry(ind);
+    if (typeof window !== "undefined") {
+      const el = document.getElementById("etudes-de-cas");
+      if (el) {
+        const top = el.getBoundingClientRect().top + window.scrollY - 100;
+        window.scrollTo({ top, behavior: "smooth" });
+      }
+    }
+  };
 
   return (
     <div className="min-h-screen bg-background">
@@ -89,34 +99,73 @@ const Results = () => {
         </section>
 
         {/* Industry filter */}
-        <section className="py-8 sticky top-16 z-30 bg-background/85 backdrop-blur-md border-y border-border/40">
+        {/* Prominent industry selector */}
+        <section className="py-14 sm:py-16 relative bg-gradient-to-b from-background to-primary/5 border-y border-border/40">
           <div className="container mx-auto px-4">
             <div className="max-w-6xl mx-auto">
-              <p className="text-xs uppercase tracking-wider text-muted-foreground mb-3 text-center lg:text-left font-medium">
-                Filtrer par industrie
-              </p>
-              <div className="flex flex-wrap gap-2 justify-center lg:justify-start">
-                {INDUSTRIES.map((ind) => {
-                  const active = ind === selectedIndustry;
-                  return (
-                    <button
-                      key={ind}
-                      type="button"
-                      onClick={() => setSelectedIndustry(ind)}
-                      className={`px-4 py-2 rounded-full text-sm font-medium border transition-all duration-200 ${
-                        active
-                          ? "bg-primary text-primary-foreground border-primary shadow-md scale-[1.02]"
-                          : "bg-background text-foreground/70 border-border hover:border-primary/40 hover:text-foreground"
-                      }`}
-                    >
-                      {ind}
-                    </button>
-                  );
-                })}
-              </div>
+              <AnimatedSection>
+                <div className="text-center mb-8">
+                  <div className="inline-flex items-center gap-2 glass-card px-4 py-2 mb-5">
+                    <Filter size={16} className="text-primary" />
+                    <span className="text-sm font-medium text-foreground/80">Filtrer par industrie</span>
+                  </div>
+                  <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-foreground tracking-tight mb-3">
+                    Choisissez votre <span className="text-gradient">secteur d'activité</span>
+                  </h2>
+                  <p className="text-muted-foreground text-base sm:text-lg max-w-2xl mx-auto">
+                    Voyez uniquement les études de cas et avis Google pertinents pour votre métier.
+                  </p>
+                </div>
+              </AnimatedSection>
+              <AnimatedSection delay={0.1}>
+                <div className="flex gap-3 overflow-x-auto pb-2 -mx-4 px-4 sm:mx-0 sm:px-0 sm:flex-wrap sm:justify-center sm:overflow-visible scrollbar-none">
+                  {INDUSTRIES.map((ind) => {
+                    const active = ind === selectedIndustry;
+                    return (
+                      <button
+                        key={ind}
+                        type="button"
+                        onClick={() => handleIndustryChange(ind)}
+                        className={`flex-shrink-0 px-5 py-3 rounded-full text-sm sm:text-base font-semibold border-2 transition-all duration-200 ${
+                          active
+                            ? "bg-primary text-primary-foreground border-primary shadow-lg shadow-primary/30 scale-105"
+                            : "bg-background text-foreground border-border hover:border-primary hover:text-primary hover:scale-105"
+                        }`}
+                      >
+                        {ind}
+                      </button>
+                    );
+                  })}
+                </div>
+              </AnimatedSection>
             </div>
           </div>
         </section>
+
+        {/* Sticky compact filter */}
+        <div className="sticky top-16 z-30 bg-background/90 backdrop-blur-md border-b border-border/40 py-3">
+          <div className="container mx-auto px-4">
+            <div className="max-w-6xl mx-auto flex gap-2 overflow-x-auto scrollbar-none">
+              {INDUSTRIES.map((ind) => {
+                const active = ind === selectedIndustry;
+                return (
+                  <button
+                    key={ind}
+                    type="button"
+                    onClick={() => handleIndustryChange(ind)}
+                    className={`flex-shrink-0 px-3.5 py-1.5 rounded-full text-xs font-medium border transition-all ${
+                      active
+                        ? "bg-primary text-primary-foreground border-primary"
+                        : "bg-background text-foreground/70 border-border hover:border-primary/40"
+                    }`}
+                  >
+                    {ind}
+                  </button>
+                );
+              })}
+            </div>
+          </div>
+        </div>
 
         {/* Logo showcase */}
         <section className="py-12 bg-muted/20 border-y border-border/20">
@@ -129,15 +178,15 @@ const Results = () => {
           </div>
         </section>
 
-        {/* Case Studies grid (filtered) */}
-        <section className="py-16 sm:py-20 relative overflow-hidden bg-background">
+        {/* Case Studies — long-form blocks */}
+        <section id="etudes-de-cas" className="py-16 sm:py-20 relative overflow-hidden bg-background">
           <div className="container mx-auto px-4 relative z-10">
             <div className="max-w-6xl mx-auto">
               <AnimatedSection>
-                <div className="flex items-baseline justify-between mb-8 gap-4 flex-wrap">
+                <div className="flex items-baseline justify-between mb-10 gap-4 flex-wrap">
                   <h2 className="text-2xl sm:text-3xl font-bold text-foreground tracking-tight">
                     {selectedIndustry === "Toutes"
-                      ? "Toutes les études de cas"
+                      ? "Toutes les études de cas partenaires"
                       : `Études de cas · ${selectedIndustry}`}
                   </h2>
                   <span className="text-sm text-muted-foreground">
@@ -151,70 +200,14 @@ const Results = () => {
                   Aucune étude de cas pour cette industrie pour le moment.
                 </div>
               ) : (
-                <div
-                  key={selectedIndustry}
-                  className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 animate-in fade-in duration-500"
-                >
-                  {filtered.map((study) => (
-                    <Link
+                <div key={selectedIndustry} className="space-y-12 animate-in fade-in duration-500">
+                  {filtered.map((study, idx) => (
+                    <CaseStudyBlock
                       key={study.slug}
-                      to={`/resultats-clients-agendac/${study.slug}`}
-                      className="group glass-card border border-border/40 rounded-2xl overflow-hidden flex flex-col bg-background hover:shadow-xl hover:-translate-y-1 transition-all duration-300"
-                    >
-                      {/* Thumbnail video */}
-                      <div className="relative aspect-video bg-muted overflow-hidden">
-                        {study.youtubeEmbedUrl ? (
-                          <iframe
-                            src={study.youtubeEmbedUrl}
-                            loading="lazy"
-                            allowFullScreen
-                            title={study.name}
-                            className="absolute inset-0 w-full h-full"
-                          />
-                        ) : study.loomId ? (
-                          <iframe
-                            src={`https://www.loom.com/embed/${study.loomId}`}
-                            loading="lazy"
-                            allowFullScreen
-                            title={study.name}
-                            className="absolute inset-0 w-full h-full"
-                          />
-                        ) : study.photos[0] ? (
-                          <img src={study.photos[0].src} alt={study.name} className="w-full h-full object-cover" loading="lazy" />
-                        ) : (
-                          <div className="w-full h-full flex items-center justify-center text-muted-foreground">
-                            <Play size={32} />
-                          </div>
-                        )}
-                      </div>
-
-                      <div className="p-5 flex flex-col flex-1">
-                        <div className="flex flex-wrap gap-1.5 mb-3">
-                          {study.industries.map((ind) => (
-                            <span
-                              key={ind}
-                              className="text-[10px] font-semibold uppercase tracking-wider px-2 py-1 rounded-full bg-primary/10 text-primary"
-                            >
-                              {ind}
-                            </span>
-                          ))}
-                        </div>
-                        <h3 className="text-lg font-bold text-foreground mb-1 leading-tight">
-                          {study.name}
-                        </h3>
-                        <p className="text-xs text-muted-foreground mb-3">{study.company}</p>
-                        <p className="text-sm text-foreground/80 mb-4 line-clamp-3 flex-1">
-                          {study.summary}
-                        </p>
-                        <div className="rounded-lg bg-gradient-to-r from-primary/5 to-secondary/5 border border-primary/10 px-3 py-2 mb-4">
-                          <p className="text-[10px] uppercase tracking-wider text-muted-foreground font-semibold">Résultat clé</p>
-                          <p className="text-sm font-bold text-gradient">{study.mainResult}</p>
-                        </div>
-                        <span className="inline-flex items-center gap-1 text-sm font-semibold text-primary group-hover:gap-2 transition-all">
-                          Voir l'étude de cas <ArrowRight size={14} />
-                        </span>
-                      </div>
-                    </Link>
+                      study={study}
+                      isLast={idx === filtered.length - 1}
+                      onIndustryClick={handleIndustryChange}
+                    />
                   ))}
                 </div>
               )}
