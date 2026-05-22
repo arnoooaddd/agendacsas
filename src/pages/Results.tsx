@@ -291,12 +291,21 @@ interface CaseStudyBlockProps {
   study: CaseStudy;
   isLast: boolean;
   onIndustryClick: (ind: Industry) => void;
+  selectedIndustry: Industry;
 }
 
-const CaseStudyBlock = ({ study, isLast, onIndustryClick }: CaseStudyBlockProps) => {
+const CaseStudyBlock = ({ study, isLast, onIndustryClick, selectedIndustry }: CaseStudyBlockProps) => {
   const review = study.googleReview ?? study.manualReview;
-  const hasMedia = !!(study.youtubeEmbedUrl || study.loomId || study.photos[0]);
-  const videos = study.videos ?? [];
+  const hasInterview = !!(study.youtubeEmbedUrl || study.loomId);
+  const hasPhoto = study.photos.length > 0;
+  const allVideos = study.videos ?? [];
+  const videos =
+    selectedIndustry === "Toutes"
+      ? allVideos
+      : allVideos.filter((v) => {
+          if (v.industries && v.industries.length > 0) return v.industries.includes(selectedIndustry);
+          return v.industry === selectedIndustry;
+        });
   const scrollToContact = () => {
     const el = document.getElementById("contact");
     if (el) el.scrollIntoView({ behavior: "smooth" });
@@ -350,9 +359,8 @@ const CaseStudyBlock = ({ study, isLast, onIndustryClick }: CaseStudyBlockProps)
           </div>
         </header>
 
-        {/* Body — 2 cols */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
-          {/* Left: context + results + review */}
+        {/* Row 1: explanation + photo */}
+        <div className={`grid grid-cols-1 ${hasPhoto ? "lg:grid-cols-2" : ""} gap-8 items-start`}>
           <div className="space-y-5">
             {study.summary && (
               <p className="text-foreground/80 leading-relaxed">{study.summary}</p>
@@ -382,7 +390,29 @@ const CaseStudyBlock = ({ study, isLast, onIndustryClick }: CaseStudyBlockProps)
                 </ul>
               </div>
             )}
+          </div>
+          {hasPhoto && (
+            <figure className="rounded-2xl overflow-hidden border border-border/40 shadow-md bg-muted">
+              <div className="relative aspect-video">
+                <img
+                  src={study.photos[0].src}
+                  alt={study.photos[0].caption}
+                  loading="lazy"
+                  className="absolute inset-0 w-full h-full object-cover"
+                />
+              </div>
+              {study.photos[0].caption && (
+                <figcaption className="px-4 py-2 text-xs text-muted-foreground bg-background/80">
+                  {study.photos[0].caption}
+                </figcaption>
+              )}
+            </figure>
+          )}
+        </div>
 
+        {/* Row 2: review + interview */}
+        {(review || hasInterview) && (
+          <div className={`mt-8 grid grid-cols-1 ${review && hasInterview ? "lg:grid-cols-2" : ""} gap-8 items-start`}>
             {review && (
               <div className="rounded-2xl border border-border/60 bg-white/80 p-4 shadow-sm">
                 <div className="flex items-center gap-3 mb-2">
@@ -420,12 +450,12 @@ const CaseStudyBlock = ({ study, isLast, onIndustryClick }: CaseStudyBlockProps)
                 )}
               </div>
             )}
-          </div>
-
-          {/* Right: media */}
-          <div className="space-y-4">
-            {hasMedia ? (
-              <>
+            {hasInterview && (
+              <div>
+                <div className="flex items-center gap-2 mb-2 text-xs font-semibold uppercase tracking-wider text-muted-foreground">
+                  <Play size={12} className="text-primary" />
+                  <span>Interview en visio du confrère</span>
+                </div>
                 <div className="relative aspect-video rounded-2xl overflow-hidden bg-muted shadow-md border border-border/40">
                   {study.youtubeEmbedUrl ? (
                     <iframe
@@ -435,7 +465,7 @@ const CaseStudyBlock = ({ study, isLast, onIndustryClick }: CaseStudyBlockProps)
                       title={study.name}
                       className="absolute inset-0 w-full h-full"
                     />
-                  ) : study.loomId ? (
+                  ) : (
                     <iframe
                       src={`https://www.loom.com/embed/${study.loomId}`}
                       loading="lazy"
@@ -443,34 +473,12 @@ const CaseStudyBlock = ({ study, isLast, onIndustryClick }: CaseStudyBlockProps)
                       title={study.name}
                       className="absolute inset-0 w-full h-full"
                     />
-                  ) : (
-                    <img
-                      src={study.photos[0].src}
-                      alt={study.name}
-                      loading="lazy"
-                      className="w-full h-full object-cover"
-                    />
                   )}
                 </div>
-                {study.photos.length > 0 && (study.youtubeEmbedUrl || study.loomId) && (
-                  <div className="grid grid-cols-2 gap-3">
-                    {study.photos.slice(0, 2).map((p) => (
-                      <figure key={p.src} className="rounded-xl overflow-hidden border border-border/40">
-                        <img src={p.src} alt={p.caption} loading="lazy" className="w-full h-32 object-cover" />
-                      </figure>
-                    ))}
-                  </div>
-                )}
-              </>
-            ) : (
-              <div className="aspect-video rounded-2xl border-2 border-dashed border-border/60 bg-muted/30 flex flex-col items-center justify-center text-muted-foreground gap-2">
-                <Camera size={28} />
-                <p className="text-sm font-medium">Média à ajouter</p>
-                <p className="text-xs">Interview vidéo / photos bientôt disponibles</p>
               </div>
             )}
           </div>
-        </div>
+        )}
 
         {videos.length > 0 && (
           <div className="mt-8 pt-6 border-t border-border/40">
