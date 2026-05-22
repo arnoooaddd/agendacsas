@@ -280,3 +280,223 @@ const Results = () => {
 };
 
 export default Results;
+
+interface CaseStudyBlockProps {
+  study: CaseStudy;
+  isLast: boolean;
+  onIndustryClick: (ind: Industry) => void;
+}
+
+const CaseStudyBlock = ({ study, isLast, onIndustryClick }: CaseStudyBlockProps) => {
+  const review = study.googleReview ?? study.manualReview;
+  const hasMedia = !!(study.youtubeEmbedUrl || study.loomId || study.photos[0]);
+  const scrollToContact = () => {
+    const el = document.getElementById("contact");
+    if (el) el.scrollIntoView({ behavior: "smooth" });
+  };
+  return (
+    <article className="relative">
+      <div className="glass-card border border-border/50 rounded-3xl p-6 sm:p-8 lg:p-10 bg-gradient-to-br from-background to-primary/[0.03] shadow-sm">
+        {/* Header */}
+        <header className="mb-6 pb-6 border-b border-border/40">
+          <div className="flex flex-wrap items-center gap-2 mb-3">
+            {study.industries.map((ind) => (
+              <button
+                key={ind}
+                type="button"
+                onClick={() => onIndustryClick(ind)}
+                className="text-[10px] font-semibold uppercase tracking-wider px-2.5 py-1 rounded-full bg-primary/10 text-primary hover:bg-primary hover:text-primary-foreground transition-colors"
+              >
+                {ind}
+              </button>
+            ))}
+          </div>
+          <div className="flex items-start justify-between gap-4 flex-wrap">
+            <div>
+              <div className="flex items-center gap-2 text-xs text-muted-foreground mb-1">
+                <Building2 size={14} />
+                <span>{study.company}</span>
+                {study.website && (
+                  <a
+                    href={study.website}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-1 text-primary hover:underline"
+                  >
+                    <ExternalLink size={11} /> site
+                  </a>
+                )}
+              </div>
+              <h3 className="text-2xl sm:text-3xl font-bold text-foreground tracking-tight">
+                {study.name}
+              </h3>
+              {study.headline && (
+                <p className="text-base sm:text-lg text-foreground/80 mt-2 max-w-2xl">
+                  {study.headline}
+                </p>
+              )}
+            </div>
+            <div className="rounded-xl bg-gradient-to-r from-primary/10 to-secondary/10 border border-primary/20 px-4 py-3">
+              <p className="text-[10px] uppercase tracking-wider text-muted-foreground font-semibold">Résultat clé</p>
+              <p className="text-base sm:text-lg font-bold text-gradient">{study.mainResult}</p>
+            </div>
+          </div>
+        </header>
+
+        {/* Body — 2 cols */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
+          {/* Left: context + results + review */}
+          <div className="space-y-5">
+            {study.summary && (
+              <p className="text-foreground/80 leading-relaxed">{study.summary}</p>
+            )}
+            {study.problem && (
+              <div>
+                <p className="text-xs font-semibold uppercase tracking-wider text-muted-foreground mb-1">Problème</p>
+                <p className="text-sm text-foreground/80">{study.problem}</p>
+              </div>
+            )}
+            {study.solution && (
+              <div>
+                <p className="text-xs font-semibold uppercase tracking-wider text-muted-foreground mb-1">Solution Agendac</p>
+                <p className="text-sm text-foreground/80">{study.solution}</p>
+              </div>
+            )}
+            {study.results && study.results.length > 0 && (
+              <div>
+                <p className="text-xs font-semibold uppercase tracking-wider text-muted-foreground mb-2">Résultats</p>
+                <ul className="space-y-1.5">
+                  {study.results.map((r) => (
+                    <li key={r} className="flex items-start gap-2 text-sm text-foreground/85">
+                      <CheckCircle2 size={16} className="text-primary mt-0.5 flex-shrink-0" />
+                      <span>{r}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            )}
+
+            {review && (
+              <div className="rounded-2xl border border-border/60 bg-white/80 p-4 shadow-sm">
+                <div className="flex items-center gap-3 mb-2">
+                  <div className="w-9 h-9 rounded-full bg-primary text-primary-foreground flex items-center justify-center text-xs font-bold">
+                    {review.initials}
+                  </div>
+                  <div className="min-w-0 flex-1">
+                    <p className="text-sm font-semibold text-foreground truncate">{review.author}</p>
+                    {review.date && (
+                      <p className="text-xs text-muted-foreground truncate">{review.date}</p>
+                    )}
+                  </div>
+                  <img
+                    src="https://www.gstatic.com/images/branding/product/1x/googleg_48dp.png"
+                    alt="Google"
+                    className="w-5 h-5"
+                    loading="lazy"
+                  />
+                </div>
+                <div className="flex items-center gap-0.5 mb-2">
+                  {Array.from({ length: review.rating ?? 5 }).map((_, i) => (
+                    <Star key={i} size={14} className="fill-yellow-500 text-yellow-500" />
+                  ))}
+                </div>
+                <p className="text-sm text-foreground/85 leading-relaxed">{review.text}</p>
+                {study.googleReviewLink && (
+                  <a
+                    href={study.googleReviewLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-1 mt-3 text-xs font-medium text-primary hover:underline"
+                  >
+                    <ExternalLink size={12} /> Voir sur Google
+                  </a>
+                )}
+              </div>
+            )}
+          </div>
+
+          {/* Right: media */}
+          <div className="space-y-4">
+            {hasMedia ? (
+              <>
+                <div className="relative aspect-video rounded-2xl overflow-hidden bg-muted shadow-md border border-border/40">
+                  {study.youtubeEmbedUrl ? (
+                    <iframe
+                      src={study.youtubeEmbedUrl}
+                      loading="lazy"
+                      allowFullScreen
+                      title={study.name}
+                      className="absolute inset-0 w-full h-full"
+                    />
+                  ) : study.loomId ? (
+                    <iframe
+                      src={`https://www.loom.com/embed/${study.loomId}`}
+                      loading="lazy"
+                      allowFullScreen
+                      title={study.name}
+                      className="absolute inset-0 w-full h-full"
+                    />
+                  ) : (
+                    <img
+                      src={study.photos[0].src}
+                      alt={study.name}
+                      loading="lazy"
+                      className="w-full h-full object-cover"
+                    />
+                  )}
+                </div>
+                {study.photos.length > 0 && (study.youtubeEmbedUrl || study.loomId) && (
+                  <div className="grid grid-cols-2 gap-3">
+                    {study.photos.slice(0, 2).map((p) => (
+                      <figure key={p.src} className="rounded-xl overflow-hidden border border-border/40">
+                        <img src={p.src} alt={p.caption} loading="lazy" className="w-full h-32 object-cover" />
+                      </figure>
+                    ))}
+                  </div>
+                )}
+              </>
+            ) : (
+              <div className="aspect-video rounded-2xl border-2 border-dashed border-border/60 bg-muted/30 flex flex-col items-center justify-center text-muted-foreground gap-2">
+                <Camera size={28} />
+                <p className="text-sm font-medium">Média à ajouter</p>
+                <p className="text-xs">Interview vidéo / photos bientôt disponibles</p>
+              </div>
+            )}
+          </div>
+        </div>
+
+        {/* Footer: cross-filter + CTA */}
+        <div className="mt-8 pt-6 border-t border-border/40 flex flex-wrap items-center justify-between gap-4">
+          <div className="flex flex-wrap items-center gap-2 text-sm">
+            {study.industries.filter((i) => i !== "Autre").slice(0, 3).map((ind) => (
+              <button
+                key={ind}
+                type="button"
+                onClick={() => onIndustryClick(ind)}
+                className="inline-flex items-center gap-1 text-xs font-medium text-primary hover:underline"
+              >
+                <ArrowRight size={12} /> Voir d'autres résultats en {ind}
+              </button>
+            ))}
+          </div>
+          <button
+            type="button"
+            onClick={scrollToContact}
+            className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary text-primary-foreground text-sm font-semibold shadow-md hover:shadow-lg hover:scale-[1.02] transition-all"
+          >
+            Voir comment Agendac peut faire pareil pour vous
+            <ArrowRight size={14} />
+          </button>
+        </div>
+      </div>
+
+      {!isLast && (
+        <div className="flex items-center justify-center py-6">
+          <div className="h-px w-24 bg-gradient-to-r from-transparent via-border to-transparent" />
+          <Trophy size={16} className="mx-4 text-primary/40" />
+          <div className="h-px w-24 bg-gradient-to-r from-transparent via-border to-transparent" />
+        </div>
+      )}
+    </article>
+  );
+};
