@@ -183,7 +183,7 @@ export const caseStudies: CaseStudy[] = [
     },
     photos: [{ src: lynergiePhoto, caption: "Rencontre avec Stéphane — Janvier 2025" }],
     videos: [
-      { url: "https://youtu.be/ANGX3NSQXog", format: "9:16", industry: "Pompe à chaleur", label: "Interview client - Pompe à chaleur" },
+      { url: "https://www.loom.com/embed/8958364dbf554d5b91a52ff3c208f9e7", format: "9:16", industry: "Pompe à chaleur", label: "Interview client - Pompe à chaleur" },
       { url: "https://youtu.be/HljnI1oC9Sc", format: "9:16", industries: ["Pompe à chaleur", "Photovoltaïque"], label: "Interview client - PAC & Photovoltaïque" },
       { url: "https://youtube.com/shorts/Jnfp0iIXNM8", format: "9:16", industries: ["Photovoltaïque", "Pompe à chaleur", "Climatisation", "IRVE"], label: "Interview client - Multi-énergie" },
     ],

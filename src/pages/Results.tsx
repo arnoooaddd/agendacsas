@@ -491,6 +491,15 @@ const CaseStudyBlock = ({ study, isLast, onIndustryClick, selectedIndustry }: Ca
                           title={v.label || `${study.name} vidéo ${i + 1}`}
                           className="absolute inset-0 w-full h-full"
                         />
+                      ) : v.url.includes("loom.com/embed") ? (
+                        <iframe
+                          src={v.url}
+                          frameBorder="0"
+                          loading="lazy"
+                          allowFullScreen
+                          title={v.label || `${study.name} vidéo ${i + 1}`}
+                          className="absolute inset-0 w-full h-full"
+                        />
                       ) : null}
                     </div>
                     {tags.length > 0 && (
