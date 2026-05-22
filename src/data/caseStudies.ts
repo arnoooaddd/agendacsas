@@ -113,6 +113,13 @@ export const caseStudies: CaseStudy[] = [
       rating: 5,
       text: "Une équipe au top, fiable et à l'écoute. Je recommande vivement !",
     },
+    googleReview: {
+      author: "Camille BAS",
+      initials: "CB",
+      date: "il y a 6 mois",
+      rating: 5,
+      text: "Une équipe au top, fiable et à l'écoute. Je recommande vivement !",
+    },
     photos: [
       { src: basRencontre, caption: "Rencontre avec Camille — Janvier 2025" },
       { src: basEquipe, caption: "Équipe de 10 personnes au total" },
@@ -149,6 +156,14 @@ export const caseStudies: CaseStudy[] = [
       text:
         "Une expérience de plusieurs mois déjà et les résultats sont excellents sur les campagnes Google, Facebook, site internet… Arnaud et son équipe sont hyper réactifs et disponibles. Ils m'accompagnent dans mon développement (1 embauche pour ma part après 3 mois de collaboration) et le meilleur est à venir. Je recommande fortement !",
     },
+    googleReview: {
+      author: "Stephane Viard",
+      initials: "SV",
+      date: "il y a 2 ans",
+      rating: 5,
+      text:
+        "Une experience de plusieurs mois déjà et les résultats sont excellents sur les campagnes google, facebook, site internet… Arnaud et son equipe, sont hyper reactifs et disponibles. Ils m'accompagnent dans mon dévellopement (1 embauche pour ma part après 3 mois de collaboration) et le meilleur est a venir. Je recommande fortement !",
+    },
     photos: [{ src: lynergiePhoto, caption: "Rencontre avec Stéphane — Janvier 2025" }],
   },
   {
@@ -182,6 +197,14 @@ export const caseStudies: CaseStudy[] = [
       text:
         "Une équipe au top, de vrais professionnels. Ça fait longtemps que je me procurais les services de gens incompétents — des sommes astronomiques dépensées. Je recommande vivement Agendac. Je ne suis qu'au 3ème mois mais j'ai déjà une forte hausse du chiffre d'affaires.",
     },
+    googleReview: {
+      author: "Olivier Tubeuf",
+      initials: "OT",
+      date: "il y a 5 mois",
+      rating: 5,
+      text:
+        "Une équipe au top, de vrai professionnels, ca fait longtemps que je me procurais les services de gens incompétent. Des sommes astronomique dépensées. Je recommande vivement Agendac. Je ne suis qu au 3 eme mois mais j ai deja une forte hausse du chiffre d affaire.",
+    },
     photos: [],
   },
   {
@@ -214,6 +237,14 @@ export const caseStudies: CaseStudy[] = [
       text:
         "J'ai actuellement le plaisir de pouvoir collaborer avec Agendac et je ne peux que mettre en avant leur travail exceptionnel. Dès le premier contact, l'ambiance s'est révélée à la fois dynamique et conviviale. Leurs compétences ont été cruciales pour donner vie à mes demandes : ils allient créativité, rigueur et une vraie expertise stratégique. Je remercie Arnaud, Kérim, Omar et tout particulièrement Manon. Je recommande cette agence les yeux fermés.",
     },
+    googleReview: {
+      author: "Anthony PROPERZIO",
+      initials: "AP",
+      date: "il y a 2 semaines",
+      rating: 5,
+      text:
+        "J'ai actuellement le plaisir de pouvoir collaborer avec Agendac et je ne peux que mettre en avant leur travail exceptionnel. L'identité de cette agence de communication se repose sur des bases saines et solides. Dès le premier contact, l'ambiance s'est révélée à la fois dynamique et conviviale, ce qui rend chaque échange agréable. Leurs compétences ont été cruciales pour donner vie à mes demandes : ils allient créativité, rigueur et une vraie expertise stratégique. Le suivi est irréprochable : ils prennent le temps de comprendre chaque besoin, restent disponibles et assurent une proximité rassurante. Je remercie Arnaud, Kérim, Omar et tout particulièrement Manon, qui, avec moi, passe du temps à sans cesse améliorer les différents points importants de notre collaboration pour booster le rendement de l'entreprise. Je recommande donc cette agence les yeux fermés à quiconque cherche un partenaire fiable, créatif et à l'écoute.",
+    },
     photos: [],
   },
   {
@@ -244,6 +275,14 @@ export const caseStudies: CaseStudy[] = [
       rating: 5,
       text:
         "Nous étions en pleine réflexion pour savoir comment obtenir du prospect de qualité, nous avons tout essayé : fichiers commandés, data à traiter, etc. Un de mes collaborateurs m'a mis en relation avec Agendac et ça a été un second souffle pour l'entreprise : du RDV 100% qualifié tout en respectant notre cahier des charges. J'ai une confiance totale avec Agendac et aujourd'hui c'est un partenariat essentiel pour notre structure.",
+    },
+    googleReview: {
+      author: "Avenir Energie",
+      initials: "AE",
+      date: "il y a un an",
+      rating: 5,
+      text:
+        "Nous étions en pleine réflexion pour savoir comment obtenir du prospect de qualité, nous avons tout essayé ! les fichiers commandés, du data à traiter etc... Un de mes collaborateurs ma mis en relation avec Agendac et ca été un second souffle pour l'entreprise du rdv 100% qualifié tout en respectant notre cahier décharge. Aucune mauvaises surprises, une équipe plus qu'à l'écoute avec le respect du client ! J'ai une confiance total avec Agendac et aujourd'hui c'est un partenariat essentiel pour notre structure. Je recommande à 100% leurs services un grand merci encore à cette équipe jeune et dynamique qui travail sans relâche dans le but d'obtenir de très bon résultats.",
     },
     photos: [],
   },
@@ -276,6 +315,14 @@ export const caseStudies: CaseStudy[] = [
       text:
         "Je suis très content de travailler avec Arno, je suis très satisfait. Franchement il fait du bon boulot.",
     },
+    googleReview: {
+      author: "unalan burhan",
+      initials: "UB",
+      date: "il y a un an",
+      rating: 5,
+      text:
+        "Je suis très content de travailler avec Arno, je suis très satisfait. Franchement il fait du bon boulot. Je suis très content de travailler avec lui.",
+    },
     photos: [{ src: plainePhoto, caption: "Rencontre avec M. Unalan à Veauche — Août 2025" }],
   },
   {
@@ -307,6 +354,14 @@ export const caseStudies: CaseStudy[] = [
       rating: 5,
       text:
         "Super accueil, conseil et très sympathique. Arnaud a su comprendre ma demande et la traite avec efficacité. En l'espace de seulement 15 jours, je me suis retrouvé propulsé en première place de Maps. Allez-y les yeux fermés !",
+    },
+    googleReview: {
+      author: "Climeco Plomberie",
+      initials: "CP",
+      date: "il y a 2 ans",
+      rating: 5,
+      text:
+        "Super accueil, conseil et très sympathique. Arnaud a su comprendre ma demande et la traite avec efficacité. J'ai souvent été sollicité par des entreprises de référencement vendant monts et merveilles, mais surtout un contrat qui ne donne rien du tout et qui nous engage pendant plusieurs années. Il est conscient de l'importance du marché et connaît très bien son travail. Que ce soit pour du référencement Google SEO ou Google Ads, mais aussi pour le positionnement de notre site Internet, Google Maps, Google Local Service, pour avoir des appels ou des conversions via notre site… En l'espace de seulement 15 jours, je me suis retrouvé propulsé en première place de Maps. Dès que je peux, je lui fais de la bonne publicité et je recommande vivement car avec lui et son suivi hebdomadaire tout semble plus facile et évident. Allez y les yeux fermés!",
     },
     photos: [{ src: dorianPhoto, caption: "Rencontre avec Dorian — Avril 2024" }],
   },
