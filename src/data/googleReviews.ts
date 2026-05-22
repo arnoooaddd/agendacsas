@@ -134,6 +134,31 @@ export const googleReviews: GoogleReview[] = [
     text:
       "Super équipe, réactive et professionnelle. J'ai régulièrement Manon au téléphone pour la prise de rendez-vous : elle gère les demandes avec précision et efficacité, ce qui permet un excellent ciblage des besoins et évite les déplacements inutiles. Merci à Arnaud et à toute son équipe pour leur sérieux et leur organisation.",
   },
+  {
+    author: "Jacques Passerat",
+    initials: "JP",
+    company: "NCEN",
+    rating: 5,
+    date: "Mai 2026",
+    text:
+      "Non contents d'être très agréables humainement, l'ensemble de l'équipe est réellement professionnelle et aux petits soins. La gestion est à taille humaine et réactive. Nous avons enfin trouvé un partenaire fiable et performant. Mention particulière pour Manon. Je recommande très fortement. Jacques, gérant de NCEN.",
+  },
+  {
+    author: "ZC CLIM",
+    initials: "ZC",
+    rating: 5,
+    date: "Mai 2026",
+    text:
+      "Merci pour cette belle collaboration. Enfin une agence qui a su répondre aux besoins d'une TPE dans le CVC : leads très qualifiés, on ressent le travail en amont. Bravo à Arnaud, Kerim et Sophia. Je recommande, n'hésitez plus, passez chez Agendac ! 🚀",
+  },
+  {
+    author: "Mikael Racine",
+    initials: "MR",
+    rating: 5,
+    date: "Mai 2026",
+    text:
+      "Équipe professionnelle, réactive et de très bon conseil. Nous recommandons tout particulièrement Manon pour son excellent travail, la qualité des qualifications des leads, ainsi que sa sympathie et son écoute.",
+  },
   // Retours partenaires (cas clients) sans avis Google déposé
   {
     author: "La Boutique du Menuisier",
