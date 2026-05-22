@@ -117,35 +117,14 @@ const Results = () => {
                   </p>
                 </div>
               </AnimatedSection>
-              <AnimatedSection delay={0.1}>
-                <div className="flex gap-3 overflow-x-auto pb-2 -mx-4 px-4 sm:mx-0 sm:px-0 sm:flex-wrap sm:justify-center sm:overflow-visible scrollbar-none">
-                  {INDUSTRIES.map((ind) => {
-                    const active = ind === selectedIndustry;
-                    return (
-                      <button
-                        key={ind}
-                        type="button"
-                        onClick={() => handleIndustryChange(ind)}
-                        className={`flex-shrink-0 px-5 py-3 rounded-full text-sm sm:text-base font-semibold border-2 transition-all duration-200 ${
-                          active
-                            ? "bg-primary text-primary-foreground border-primary shadow-lg shadow-primary/30 scale-105"
-                            : "bg-background text-foreground border-border hover:border-primary hover:text-primary hover:scale-105"
-                        }`}
-                      >
-                        {ind}
-                      </button>
-                    );
-                  })}
-                </div>
-              </AnimatedSection>
             </div>
           </div>
         </section>
 
-        {/* Sticky compact filter */}
-        <div className="sticky top-16 z-30 bg-background/90 backdrop-blur-md border-b border-border/40 py-3">
+        {/* Unique filter bar — sticky on desktop only, wraps on mobile */}
+        <div className="md:sticky md:top-16 z-30 bg-background/95 backdrop-blur-md border-b border-border/40 py-3 sm:py-4">
           <div className="container mx-auto px-4">
-            <div className="max-w-6xl mx-auto flex gap-2 overflow-x-auto scrollbar-none">
+            <div className="max-w-6xl mx-auto flex flex-wrap justify-center gap-2 sm:gap-3">
               {INDUSTRIES.map((ind) => {
                 const active = ind === selectedIndustry;
                 return (
@@ -153,10 +132,10 @@ const Results = () => {
                     key={ind}
                     type="button"
                     onClick={() => handleIndustryChange(ind)}
-                    className={`flex-shrink-0 px-3.5 py-1.5 rounded-full text-xs font-medium border transition-all ${
+                    className={`px-3.5 py-1.5 sm:px-5 sm:py-2.5 rounded-full text-xs sm:text-sm font-semibold border-2 transition-all duration-200 ${
                       active
-                        ? "bg-primary text-primary-foreground border-primary"
-                        : "bg-background text-foreground/70 border-border hover:border-primary/40"
+                        ? "bg-primary text-primary-foreground border-primary shadow-md shadow-primary/30"
+                        : "bg-background text-foreground border-border hover:border-primary hover:text-primary"
                     }`}
                   >
                     {ind}
