@@ -12,10 +12,11 @@ export const INDUSTRIES = [
   "Photovoltaïque",
   "Pompe à chaleur",
   "Climatisation",
-  "Cuisine",
+  "Plomberie",
   "Piscine",
   "Salle de bain",
   "IRVE",
+  "Cuisine",
   "B2B",
   "Autre",
 ] as const;
@@ -54,6 +55,7 @@ export interface CaseStudy {
   youtubeEmbedUrl?: string;
   googleReviewLink?: string;
   manualReview?: CaseStudyReview;
+  googleReview?: CaseStudyReview;
   photos: CaseStudyPhoto[];
 }
 
