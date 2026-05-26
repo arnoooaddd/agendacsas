@@ -1537,4 +1537,25 @@ export const blogArticles: BlogArticle[] = [
       "contenu audio BTP"
     ],
   },
+  {
+    slug: "inbound-marketing-btp-cycles-longs",
+    title: "Inbound marketing BTP : pourquoi cette stratégie est taillée pour les cycles de vente longs",
+    metaDescription: "Découvrez pourquoi l'inbound marketing est la stratégie la plus adaptée aux cycles de vente longs du BTP et comment structurer une approche inbound qui attire, qualifie et convertit les prospects du bâtiment.",
+    excerpt: "L'inbound marketing BTP permet d'attirer les bons prospects avec du contenu utile, de les accompagner pendant les mois d'arbitrage et de se positionner comme le partenaire de confiance au moment de la décision.",
+    coverImage: "inbound-marketing-btp-cycles-longs",
+    author: "Kerim JAKUPOVIC",
+    date: "2026-05-26",
+    readTime: "7 min",
+    featured: false,
+    tags: ["Stratégie marketing", "BTP", "Acquisition", "Inbound marketing"],
+    keywords: [
+      "inbound marketing BTP",
+      "stratégie marketing BTP",
+      "génération de leads BTP",
+      "acquisition clients BTP",
+      "marketing digital bâtiment",
+      "structurer acquisition client BTP",
+      "inbound marketing cycles longs"
+    ],
+  },
 ];
