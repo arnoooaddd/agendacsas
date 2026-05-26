@@ -282,6 +282,10 @@ const articleToService: Record<string, { service: ServiceKey; intro?: string }> 
     service: "gestion-communication",
     intro: "Le podcast est un format de contenu qui permet de démontrer votre expertise et de créer une relation durable avec les prescripteurs du bâtiment. Intégrez-le à votre communication digitale.",
   },
+  "inbound-marketing-btp-cycles-longs": {
+    service: "gestion-communication",
+    intro: "L'inbound marketing BTP est la méthode la plus adaptée aux cycles de vente longs. Structurer une stratégie de contenu et de nurturing transforme la visibilité en opportunités commerciales qualifiées.",
+  },
 };
 
 const articleComponents: Record<string, React.ComponentType> = {
@@ -354,6 +358,7 @@ const articleComponents: Record<string, React.ComponentType> = {
   "creer-site-macon-valorise-savoir-faire-2026": lazy(() => import("@/components/blog/ArticleCreerSiteMaconValoriseSavoirFaire2026")),
   "influenceurs-btp-createurs-contenu-2026": lazy(() => import("@/components/blog/ArticleInfluenceursBtpCreateursContenu2026")),
   "podcasts-btp-communication-notoriete-2026": lazy(() => import("@/components/blog/ArticlePodcastsBtpCommunicationNotoriete2026")),
+  "inbound-marketing-btp-cycles-longs": lazy(() => import("@/components/blog/ArticleInboundMarketingBtpCyclesLongs")),
 };
 
 // Redirects from old blog slugs to new SEO-optimized URLs
