@@ -2,6 +2,19 @@ import { useEffect, useState } from "react";
 
 const ALLOWED = ["FR", "BE", "CH", "LU"];
 const STORAGE_KEY = "agendac_geo_check_v1";
+const GTM_ID = "GTM-KH65F94J";
+
+const loadGTM = () => {
+  const w = window as any;
+  if (w.__gtmLoaded) return;
+  w.__gtmLoaded = true;
+  w.dataLayer = w.dataLayer || [];
+  w.dataLayer.push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
+  const s = document.createElement("script");
+  s.async = true;
+  s.src = `https://www.googletagmanager.com/gtm.js?id=${GTM_ID}`;
+  document.head.appendChild(s);
+};
 
 // User-agents de bots à toujours laisser passer (SEO critique)
 const BOT_REGEX = /bot|crawler|spider|crawling|googlebot|bingbot|slurp|duckduckbot|baiduspider|yandex|facebookexternalhit|facebot|twitterbot|linkedinbot|whatsapp|telegrambot|applebot|ahrefsbot|semrushbot|mj12bot|petalbot|gptbot|chatgpt|claudebot|perplexitybot|lighthouse|pagespeed|headlesschrome|prerender/i;
@@ -11,7 +24,7 @@ const GeoGuard = ({ children }: { children: React.ReactNode }) => {
   const [checked, setChecked] = useState(false);
 
   useEffect(() => {
-    // 1) Bots : on laisse passer sans appel API
+    // 1) Bots : on laisse passer sans appel API (et SANS charger GTM, pas de pollution GA4)
     if (BOT_REGEX.test(navigator.userAgent)) {
       setChecked(true);
       return;
@@ -19,7 +32,7 @@ const GeoGuard = ({ children }: { children: React.ReactNode }) => {
 
     // 2) Cache local pour éviter de rappeler l'API à chaque visite
     const cached = sessionStorage.getItem(STORAGE_KEY);
-    if (cached === "ok") { setChecked(true); return; }
+    if (cached === "ok") { loadGTM(); setChecked(true); return; }
     if (cached === "blocked") { setBlocked(true); setChecked(true); return; }
 
     // 3) Appel géoloc IP (fail-open si erreur)
@@ -35,9 +48,14 @@ const GeoGuard = ({ children }: { children: React.ReactNode }) => {
           setBlocked(true);
         } else {
           sessionStorage.setItem(STORAGE_KEY, "ok");
+          loadGTM();
         }
       })
-      .catch(() => { /* fail-open : on n'empêche pas l'accès si l'API tombe */ })
+      .catch(() => {
+        // fail-open : on n'empêche pas l'accès si l'API tombe,
+        // et on charge GTM pour ne pas perdre tout le tracking en cas de panne
+        loadGTM();
+      })
       .finally(() => { clearTimeout(timeout); setChecked(true); });
 
     return () => { clearTimeout(timeout); ctrl.abort(); };
