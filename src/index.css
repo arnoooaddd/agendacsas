@@ -494,3 +494,26 @@
     animation: none !important;
   }
 }
+
+/* Mobile reviews single-slide carousel */
+.reviews-slider-wrapper {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+  width: 100%;
+}
+.reviews-slider-wrapper::-webkit-scrollbar {
+  display: none;
+}
+.reviews-slider-track {
+  display: flex;
+  gap: 14px;
+  padding: 8px 16px;
+  width: max-content;
+}
+.reviews-slide-card {
+  flex: 0 0 calc(100vw - 64px);
+  max-width: 380px;
+  scroll-snap-align: center;
+}
