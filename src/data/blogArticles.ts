@@ -1558,4 +1558,23 @@ export const blogArticles: BlogArticle[] = [
       "inbound marketing cycles longs"
     ],
   },
+  {
+    slug: "design-site-web-identite-visuelle-btp-2026",
+    title: "Design site web et identité visuelle : comment une entreprise de rénovation construit une marque forte en 2026",
+    metaDescription: "Découvrez comment le design de votre site web et votre identité visuelle transforment la perception de votre entreprise de rénovation et renforcent votre stratégie marketing BTP en 2026.",
+    excerpt: "Dans le BTP, un design cohérent et une identité visuelle soignée créent la confiance dès le premier regard. Guide pratique pour structurer votre image de marque en rénovation.",
+    coverImage: "design-site-web-identite-visuelle-btp-2026",
+    author: "Rachad AIT HAMOU",
+    date: "2026-05-28",
+    readTime: "8 min",
+    featured: false,
+    tags: ["Design", "Site web", "BTP", "Identité visuelle"],
+    keywords: [
+      "design site web BTP",
+      "identité visuelle rénovation",
+      "marque BTP",
+      "stratégie marketing rénovation",
+      "marketing digital bâtiment"
+    ],
+  },
 ];
