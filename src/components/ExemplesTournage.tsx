@@ -9,10 +9,13 @@ const exemplesVideos = [
   { url: "https://www.youtube.com/embed/aDHl-oZJ-Uk?rel=0&modestbranding=1", title: "La Boutique du Menuisier 72 | Agendac Exemple", isShort: true },
   { url: "https://www.youtube.com/embed/MDHWvOjH0Ac?rel=0&modestbranding=1", title: "Interview client | Exemple Agendac", isShort: true },
   { url: "https://www.youtube.com/embed/keR0F0VJNsk?rel=0&modestbranding=1", title: "ESF | Exemple Agendac", isShort: false },
-  { url: "https://www.youtube.com/embed/hJmqIx0JmM8?rel=0&modestbranding=1", title: "Solaire 2F | Exemple Agendac", isShort: true },
   { url: "https://www.youtube.com/embed/48gviholwLc?rel=0&modestbranding=1", title: "Maisolia | Exemple Agendac", isShort: true },
   { url: "https://www.youtube.com/embed/5DVM6h5Nkaw?rel=0&modestbranding=1", title: "Exemple Agendac", isShort: true },
   { url: "https://www.youtube.com/embed/o_nC1OQoGCc?rel=0&modestbranding=1", title: "Exemple Agendac", isShort: true },
+  { url: "https://www.youtube.com/embed/_nk7KDhOVlg?rel=0&modestbranding=1", title: "Exemple Agendac", isShort: true },
+  { url: "https://www.youtube.com/embed/_-n1jSy-Ps4?rel=0&modestbranding=1", title: "Exemple Agendac", isShort: true },
+  { url: "https://www.youtube.com/embed/LLzJBh9n21E?rel=0&modestbranding=1", title: "Exemple Agendac", isShort: true },
+  { url: "https://www.youtube.com/embed/wx8sK6T6J0o?rel=0&modestbranding=1", title: "Exemple Agendac", isShort: true },
 ];
 
 interface ExemplesTournageProps {
