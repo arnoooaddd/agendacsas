@@ -2,6 +2,8 @@ import { useState } from "react";
 import { Lightbulb, Youtube } from "lucide-react";
 import AnimatedSection from "./AnimatedSection";
 import { Button } from "./ui/button";
+import { useMobileAutoCarousel } from "@/hooks/useMobileAutoCarousel";
+import MobileCarouselControls from "./MobileCarouselControls";
 
 const shortsVideos = [
   { url: "https://www.youtube.com/embed/Y_oZiyaFC-E?rel=0&modestbranding=1", title: "Conseil Agendac 1" },
@@ -13,6 +15,9 @@ const shortsVideos = [
 
 const YouTubeShorts = () => {
   const [isPaused, setIsPaused] = useState(false);
+  const { wrapperRef, progress, scrollByDir } = useMobileAutoCarousel<HTMLDivElement>({
+    itemSelector: ".shorts-slide",
+  });
 
   return (
     <section className="py-24 relative overflow-hidden bg-background">
@@ -40,26 +45,34 @@ const YouTubeShorts = () => {
         </div>
 
         <AnimatedSection delay={0.4} direction="up">
-          <div
-            className="infinite-slider-wrapper"
-            onMouseEnter={() => setIsPaused(true)}
-            onMouseLeave={() => setIsPaused(false)}
-          >
+          <div className="relative">
             <div
-              className="infinite-slider-track"
-              style={{ animationPlayState: isPaused ? "paused" : "running" }}
+              ref={wrapperRef}
+              className="infinite-slider-wrapper"
+              onMouseEnter={() => setIsPaused(true)}
+              onMouseLeave={() => setIsPaused(false)}
             >
-              {shortsVideos.map((video, index) => (
-                <div key={`a-${index}`} className="shorts-slide">
-                  <iframe src={video.url} loading="lazy" allowFullScreen title={video.title} />
-                </div>
-              ))}
-              {shortsVideos.map((video, index) => (
-                <div key={`b-${index}`} className="shorts-slide">
-                  <iframe src={video.url} loading="lazy" allowFullScreen title={video.title} />
-                </div>
-              ))}
+              <div
+                className="infinite-slider-track"
+                style={{ animationPlayState: isPaused ? "paused" : "running" }}
+              >
+                {shortsVideos.map((video, index) => (
+                  <div key={`a-${index}`} className="shorts-slide">
+                    <iframe src={video.url} loading="lazy" allowFullScreen title={video.title} />
+                  </div>
+                ))}
+                {shortsVideos.map((video, index) => (
+                  <div key={`b-${index}`} className="shorts-slide">
+                    <iframe src={video.url} loading="lazy" allowFullScreen title={video.title} />
+                  </div>
+                ))}
+              </div>
             </div>
+            <MobileCarouselControls
+              progress={progress}
+              onPrev={() => scrollByDir(-1)}
+              onNext={() => scrollByDir(1)}
+            />
           </div>
 
           <div className="flex justify-center mt-10">

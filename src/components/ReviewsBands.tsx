@@ -1,5 +1,7 @@
 import { Star, ExternalLink } from "lucide-react";
 import { googleReviews, type GoogleReview } from "@/data/googleReviews";
+import { useMobileAutoCarousel } from "@/hooks/useMobileAutoCarousel";
+import MobileCarouselControls from "./MobileCarouselControls";
 
 const GOOGLE_REVIEWS_URL = "https://maps.app.goo.gl/TNdbPMnYo7pMY9e18";
 
@@ -36,13 +38,23 @@ const ReviewCard = ({ review }: { review: GoogleReview }) => (
 
 const Band = ({ reviews, reverse = false }: { reviews: GoogleReview[]; reverse?: boolean }) => {
   const items = [...reviews, ...reviews];
+  const { wrapperRef, progress, scrollByDir } = useMobileAutoCarousel<HTMLDivElement>({
+    itemSelector: ".reviews-band-card",
+  });
   return (
-    <div className="reviews-band-wrapper">
-      <div className={`reviews-band-track ${reverse ? "reverse" : ""}`}>
-        {items.map((r, i) => (
-          <ReviewCard key={`${r.author}-${i}`} review={r} />
-        ))}
+    <div>
+      <div ref={wrapperRef} className="reviews-band-wrapper">
+        <div className={`reviews-band-track ${reverse ? "reverse" : ""}`}>
+          {items.map((r, i) => (
+            <ReviewCard key={`${r.author}-${i}`} review={r} />
+          ))}
+        </div>
       </div>
+      <MobileCarouselControls
+        progress={progress}
+        onPrev={() => scrollByDir(-1)}
+        onNext={() => scrollByDir(1)}
+      />
     </div>
   );
 };
