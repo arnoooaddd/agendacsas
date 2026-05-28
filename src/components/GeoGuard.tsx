@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-const ALLOWED = ["FR", "BE", "CH", "LU"];
+const ALLOWED = ["FR", "BE", "CH", "LU", "AD", "MC", "US"];
 const STORAGE_KEY = "agendac_geo_check_v1";
 const GTM_ID = "GTM-KH65F94J";
 
