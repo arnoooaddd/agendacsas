@@ -22,6 +22,7 @@ import Presentation from "./pages/Presentation";
 import Confirmation from "./pages/Confirmation";
 import VisibiliteMax from "./pages/VisibiliteMax";
 import GestionSeo from "./pages/GestionSeo";
+import GestionSeoLanding from "./pages/GestionSeoLanding";
 import PhoneWebhookTrigger from "./components/PhoneWebhookTrigger";
 import SeoPageRoute from "./pages/seo/SeoPageRoute";
 import GeoGuard from "./components/GeoGuard";
@@ -57,6 +58,7 @@ const App = () => (
           <Route path="/visibilite-max" element={<Navigate to="/gestion-communication" replace />} />
           <Route path="/gestion-seo" element={<GestionSeo />} />
           <Route path="/seo" element={<GestionSeo />} />
+          <Route path="/offre-gestion-seo" element={<GestionSeoLanding />} />
           <Route path="/prise-rendez-vous" element={<PriseRendezVous />} />
           <Route path="/equipe-agendac" element={<EquipeAgendac />} />
           <Route path="/presentation" element={<Presentation />} />
