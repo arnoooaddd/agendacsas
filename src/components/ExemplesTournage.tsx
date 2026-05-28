@@ -62,6 +62,9 @@ const ExemplesTournage = ({ ctaMode = "tournage" }: ExemplesTournageProps) => {
         </div>
 
         <AnimatedSection delay={0.4} direction="up">
+          <p className="md:hidden text-center text-xs text-muted-foreground mb-3">
+            👆 Cliquez sur une vidéo pour la lancer · swipez pour faire défiler
+          </p>
           <div
             className="infinite-slider-wrapper"
             onMouseEnter={() => setIsPaused(true)}
@@ -86,10 +89,11 @@ const ExemplesTournage = ({ ctaMode = "tournage" }: ExemplesTournageProps) => {
         <AnimatedSection delay={0.5}>
           <div className="flex justify-center mt-10">
             {ctaMode === "tournage" ? (
-              <Button asChild variant="secondary" size="lg" className="group glow-secondary">
-                <a href="/tournage" className="flex items-center gap-2">
-                  Découvrir notre service de tournage professionnel
-                  <ArrowRight className="group-hover:translate-x-1 transition-transform w-4 h-4" />
+              <Button asChild variant="secondary" size="lg" className="group glow-secondary max-w-full">
+                <a href="/tournage" className="flex items-center gap-2 whitespace-normal text-center text-sm sm:text-base px-4 sm:px-8">
+                  <span className="sm:hidden">Découvrir notre service tournage</span>
+                  <span className="hidden sm:inline">Découvrir notre service de tournage professionnel</span>
+                  <ArrowRight className="group-hover:translate-x-1 transition-transform w-4 h-4 shrink-0" />
                 </a>
               </Button>
             ) : (
