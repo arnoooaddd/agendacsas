@@ -72,7 +72,7 @@ const GeoGuard = ({ children }: { children: React.ReactNode }) => {
           </h1>
           <p className="text-muted-foreground mb-2">
             Agendac accompagne uniquement les entreprises situées en
-            France, Belgique, Suisse et Luxembourg.
+            France, Belgique, Suisse, Luxembourg, Andorre et Monaco.
           </p>
           <p className="text-sm text-muted-foreground/80 mt-6">
             Service unavailable in your country.
