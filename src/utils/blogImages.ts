@@ -61,6 +61,7 @@ import influenceursbtpcreateurscontenu2026 from "@/assets/blog/influenceurs-btp-
 import podcastsbtpcommunicationnotoriete2026 from "@/assets/blog/podcasts-btp-communication-notoriete-2026.png";
 import clubprobtpfidelisationprescription2026 from "@/assets/blog/club-pro-btp-fidelisation-prescription-2026.png";
 import inboundmarketingbtpcycleslongs from "@/assets/blog/inbound-marketing-btp-cycles-longs.png";
+import designsitewebidentitevisuellebtp2026 from "@/assets/blog/design-site-web-identite-visuelle-btp-2026.png";
 
 const coverImages: Record<string, string> = {
   // Anciennes clés (compat)
@@ -146,6 +147,7 @@ const coverImages: Record<string, string> = {
   "podcasts-btp-communication-notoriete-2026": podcastsbtpcommunicationnotoriete2026,
   "club-pro-btp-fidelisation-prescription-2026": clubprobtpfidelisationprescription2026,
   "inbound-marketing-btp-cycles-longs": inboundmarketingbtpcycleslongs,
+  "design-site-web-identite-visuelle-btp-2026": designsitewebidentitevisuellebtp2026,
 };
 
 export const getCoverImage = (key: string): string => {

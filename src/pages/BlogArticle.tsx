@@ -286,6 +286,10 @@ const articleToService: Record<string, { service: ServiceKey; intro?: string }> 
     service: "gestion-communication",
     intro: "L'inbound marketing BTP est la méthode la plus adaptée aux cycles de vente longs. Structurer une stratégie de contenu et de nurturing transforme la visibilité en opportunités commerciales qualifiées.",
   },
+  "design-site-web-identite-visuelle-btp-2026": {
+    service: "creation-site-internet",
+    intro: "Un site au design cohérent et une identité visuelle forte transforment vos visiteurs en prospects plus confiants. Agendac vous accompagne dans la création de votre site internet BTP.",
+  },
 };
 
 const articleComponents: Record<string, React.ComponentType> = {
@@ -359,6 +363,7 @@ const articleComponents: Record<string, React.ComponentType> = {
   "influenceurs-btp-createurs-contenu-2026": lazy(() => import("@/components/blog/ArticleInfluenceursBtpCreateursContenu2026")),
   "podcasts-btp-communication-notoriete-2026": lazy(() => import("@/components/blog/ArticlePodcastsBtpCommunicationNotoriete2026")),
   "inbound-marketing-btp-cycles-longs": lazy(() => import("@/components/blog/ArticleInboundMarketingBtpCyclesLongs")),
+  "design-site-web-identite-visuelle-btp-2026": lazy(() => import("@/components/blog/ArticleDesignSiteWebIdentiteVisuelleBtp2026")),
 };
 
 // Redirects from old blog slugs to new SEO-optimized URLs
