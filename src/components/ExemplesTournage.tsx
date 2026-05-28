@@ -1,5 +1,5 @@
-import { useRef, useState } from "react";
-import { Camera, ArrowRight } from "lucide-react";
+import { useEffect, useRef, useState } from "react";
+import { Camera, ArrowRight, ChevronLeft, ChevronRight } from "lucide-react";
 import AnimatedSection from "./AnimatedSection";
 import { Button } from "./ui/button";
 
@@ -33,10 +33,63 @@ const VideoSlide = ({ video }: { video: typeof exemplesVideos[0] }) => (
 
 const ExemplesTournage = ({ ctaMode = "tournage" }: ExemplesTournageProps) => {
   const [isPaused, setIsPaused] = useState(false);
+  const wrapperRef = useRef<HTMLDivElement>(null);
+  const [progress, setProgress] = useState(0);
+  const userInteractedAtRef = useRef<number>(0);
 
   const scrollToContact = () => {
     const footer = document.getElementById("contact");
     if (footer) footer.scrollIntoView({ behavior: "smooth" });
+  };
+
+  // Mobile: auto-advance every 5s + progress tracking
+  useEffect(() => {
+    const wrapper = wrapperRef.current;
+    if (!wrapper) return;
+    const isMobile = () => window.matchMedia("(max-width: 768px)").matches;
+    if (!isMobile()) return;
+
+    const updateProgress = () => {
+      const max = wrapper.scrollWidth - wrapper.clientWidth;
+      setProgress(max > 0 ? wrapper.scrollLeft / max : 0);
+    };
+
+    const markInteraction = () => {
+      userInteractedAtRef.current = Date.now();
+    };
+
+    wrapper.addEventListener("scroll", updateProgress, { passive: true });
+    wrapper.addEventListener("touchstart", markInteraction, { passive: true });
+    wrapper.addEventListener("pointerdown", markInteraction, { passive: true });
+    updateProgress();
+
+    const interval = setInterval(() => {
+      if (!wrapperRef.current) return;
+      // Pause auto-advance 8s after a user interaction
+      if (Date.now() - userInteractedAtRef.current < 8000) return;
+      const w = wrapperRef.current;
+      const slide = w.querySelector(".shorts-slide") as HTMLElement | null;
+      const step = slide ? slide.getBoundingClientRect().width + 20 : w.clientWidth * 0.8;
+      const max = w.scrollWidth - w.clientWidth;
+      const nextLeft = w.scrollLeft + step >= max - 4 ? 0 : w.scrollLeft + step;
+      w.scrollTo({ left: nextLeft, behavior: "smooth" });
+    }, 5000);
+
+    return () => {
+      clearInterval(interval);
+      wrapper.removeEventListener("scroll", updateProgress);
+      wrapper.removeEventListener("touchstart", markInteraction);
+      wrapper.removeEventListener("pointerdown", markInteraction);
+    };
+  }, []);
+
+  const scrollByDir = (dir: 1 | -1) => {
+    const w = wrapperRef.current;
+    if (!w) return;
+    userInteractedAtRef.current = Date.now();
+    const slide = w.querySelector(".shorts-slide") as HTMLElement | null;
+    const step = slide ? slide.getBoundingClientRect().width + 20 : w.clientWidth * 0.8;
+    w.scrollBy({ left: dir * step, behavior: "smooth" });
   };
 
   return (
@@ -68,11 +121,13 @@ const ExemplesTournage = ({ ctaMode = "tournage" }: ExemplesTournageProps) => {
           <p className="md:hidden text-center text-xs text-muted-foreground mb-3">
             👆 Cliquez sur une vidéo pour la lancer · swipez pour faire défiler
           </p>
-          <div
-            className="infinite-slider-wrapper"
-            onMouseEnter={() => setIsPaused(true)}
-            onMouseLeave={() => setIsPaused(false)}
-          >
+          <div className="relative">
+            <div
+              ref={wrapperRef}
+              className="infinite-slider-wrapper"
+              onMouseEnter={() => setIsPaused(true)}
+              onMouseLeave={() => setIsPaused(false)}
+            >
             <div
               className="infinite-slider-track"
               style={{ animationPlayState: isPaused ? "paused" : "running" }}
@@ -85,6 +140,33 @@ const ExemplesTournage = ({ ctaMode = "tournage" }: ExemplesTournageProps) => {
               {exemplesVideos.map((video, index) => (
                 <VideoSlide key={`b-${index}`} video={video} />
               ))}
+            </div>
+            </div>
+
+            {/* Mobile controls: arrows + progress bar */}
+            <div className="md:hidden mt-4 flex items-center gap-3 px-4">
+              <button
+                type="button"
+                aria-label="Vidéo précédente"
+                onClick={() => scrollByDir(-1)}
+                className="shrink-0 w-10 h-10 rounded-full bg-secondary text-secondary-foreground shadow-md flex items-center justify-center active:scale-95 transition"
+              >
+                <ChevronLeft className="w-5 h-5" />
+              </button>
+              <div className="flex-1 h-1.5 rounded-full bg-muted overflow-hidden">
+                <div
+                  className="h-full bg-secondary rounded-full transition-[width] duration-300"
+                  style={{ width: `${Math.max(8, progress * 100)}%` }}
+                />
+              </div>
+              <button
+                type="button"
+                aria-label="Vidéo suivante"
+                onClick={() => scrollByDir(1)}
+                className="shrink-0 w-10 h-10 rounded-full bg-secondary text-secondary-foreground shadow-md flex items-center justify-center active:scale-95 transition"
+              >
+                <ChevronRight className="w-5 h-5" />
+              </button>
             </div>
           </div>
         </AnimatedSection>
