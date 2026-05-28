@@ -398,14 +398,30 @@
   .infinite-slider-track {
     animation-duration: 44s;
   }
+  /* Allow finger swipe on mobile - disable auto animation, enable native scroll */
+  .infinite-slider-wrapper {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scroll-snap-type: x mandatory;
+    mask-image: none;
+    -webkit-mask-image: none;
+    scrollbar-width: none;
+  }
+  .infinite-slider-wrapper::-webkit-scrollbar {
+    display: none;
+  }
+  .infinite-slider-track {
+    animation: none !important;
+    padding: 10px 16px;
+  }
+  .shorts-slide {
+    scroll-snap-align: center;
+  }
 }
 
 @media (max-width: 480px) {
   .shorts-slide {
     flex: 0 0 160px;
-  }
-  .infinite-slider-track {
-    animation-duration: 36s;
   }
 }
 
