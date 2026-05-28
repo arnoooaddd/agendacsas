@@ -24,6 +24,7 @@ import VisibiliteMax from "./pages/VisibiliteMax";
 import GestionSeo from "./pages/GestionSeo";
 import PhoneWebhookTrigger from "./components/PhoneWebhookTrigger";
 import SeoPageRoute from "./pages/seo/SeoPageRoute";
+import GeoGuard from "./components/GeoGuard";
 
 const queryClient = new QueryClient();
 
@@ -34,6 +35,7 @@ const App = () => (
       <Sonner />
       <BrowserRouter>
         <PhoneWebhookTrigger />
+        <GeoGuard>
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/accueil" element={<Navigate to="/" replace />} />
@@ -78,6 +80,7 @@ const App = () => (
           <Route path="/merci" element={<NotFound />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
+        </GeoGuard>
       </BrowserRouter>
     </TooltipProvider>
   </QueryClientProvider>
