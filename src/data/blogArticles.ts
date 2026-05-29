@@ -1598,4 +1598,24 @@ export const blogArticles: BlogArticle[] = [
       "communiquer dans le BTP"
     ],
   },
+  {
+    slug: "acheter-leads-plateformes-devis-btp-2026",
+    title: "Acheter des leads sur les plateformes de devis BTP : pièges, coûts réels et alternatives",
+    metaDescription: "Plateformes de devis BTP : coût réel des leads, pièges de la dépendance et alternatives durables pour les entreprises de rénovation en 2026.",
+    excerpt: "Les plateformes de devis promettent des leads faciles, mais le vrai coût est souvent masqué. Comment évaluer leur rentabilité et construire des alternatives durables pour votre entreprise de rénovation.",
+    coverImage: "acheter-leads-plateformes-devis-btp-2026",
+    author: "Omar TROUSSI",
+    date: "2026-05-29",
+    readTime: "7 min",
+    featured: false,
+    tags: ["Acquisition", "Leads", "Plateformes de devis", "BTP", "Rénovation"],
+    keywords: [
+      "achat leads rénovation",
+      "plateformes de devis BTP",
+      "génération de leads BTP",
+      "coût lead rénovation",
+      "acquisition clients BTP",
+      "trouver des clients BTP"
+    ],
+  },
 ];

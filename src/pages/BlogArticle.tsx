@@ -294,6 +294,10 @@ const articleToService: Record<string, { service: ServiceKey; intro?: string }> 
     service: "gestion-communication",
     intro: "Structurez votre image de marque et votre communication dans le BTP pour exister durablement et attirer des clients en phase avec vos valeurs.",
   },
+  "acheter-leads-plateformes-devis-btp-2026": {
+    service: "prise-rendez-vous",
+    intro: "Remplacer les plateformes de devis par un vrai système d'acquisition client : la solution pour reprendre le contrôle de votre génération de leads.",
+  },
 };
 
 const articleComponents: Record<string, React.ComponentType> = {
@@ -369,6 +373,7 @@ const articleComponents: Record<string, React.ComponentType> = {
   "inbound-marketing-btp-cycles-longs": lazy(() => import("@/components/blog/ArticleInboundMarketingBtpCyclesLongs")),
   "design-site-web-identite-visuelle-btp-2026": lazy(() => import("@/components/blog/ArticleDesignSiteWebIdentiteVisuelleBtp2026")),
   "marketing-marque-btp-notoriete-2026": lazy(() => import("@/components/blog/ArticleMarketingMarqueBtpNotoriete2026")),
+  "acheter-leads-plateformes-devis-btp-2026": lazy(() => import("@/components/blog/ArticleAcheterLeadsPlateformesDevisBtp2026")),
 };
 
 // Redirects from old blog slugs to new SEO-optimized URLs

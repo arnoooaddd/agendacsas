@@ -63,6 +63,7 @@ import clubprobtpfidelisationprescription2026 from "@/assets/blog/club-pro-btp-f
 import inboundmarketingbtpcycleslongs from "@/assets/blog/inbound-marketing-btp-cycles-longs.png";
 import designsitewebidentitevisuellebtp2026 from "@/assets/blog/design-site-web-identite-visuelle-btp-2026.png";
 import marketingmarquebtpnotoriete2026 from "@/assets/blog/marketing-marque-btp-notoriete-2026.png";
+import acheterleadsplateformesdevisbtp2026 from "@/assets/blog/acheter-leads-plateformes-devis-btp-2026.png";
 
 const coverImages: Record<string, string> = {
   // Anciennes clés (compat)
@@ -150,6 +151,7 @@ const coverImages: Record<string, string> = {
   "inbound-marketing-btp-cycles-longs": inboundmarketingbtpcycleslongs,
   "design-site-web-identite-visuelle-btp-2026": designsitewebidentitevisuellebtp2026,
   "marketing-marque-btp-notoriete-2026": marketingmarquebtpnotoriete2026,
+  "acheter-leads-plateformes-devis-btp-2026": acheterleadsplateformesdevisbtp2026,
 };
 
 export const getCoverImage = (key: string): string => {
