@@ -1577,4 +1577,25 @@ export const blogArticles: BlogArticle[] = [
       "marketing digital bâtiment"
     ],
   },
+  {
+    slug: "marketing-marque-btp-notoriete-2026",
+    title: "Marketing de marque dans le BTP : construire une notoriété qui attire les bons clients",
+    metaDescription: "Découvrez pourquoi et comment construire le marketing de marque de votre entreprise du BTP pour gagner en notoriété, attirer des clients qualifiés et justifier vos prix en 2026.",
+    excerpt: "Dans un marché concurrentiel, le marketing de marque BTP est le levier qui permet de sortir de la guerre des prix et d'attirer des clients en phase avec vos valeurs. Guide pratique.",
+    coverImage: "marketing-marque-btp-notoriete-2026",
+    author: "Kerim JAKUPOVIC",
+    date: "2026-05-29",
+    readTime: "8 min",
+    featured: false,
+    tags: ["Marketing de marque", "Branding", "BTP", "Notoriété", "Stratégie"],
+    keywords: [
+      "marketing de marque BTP",
+      "branding BTP",
+      "notoriété de marque BTP",
+      "stratégie marketing BTP",
+      "acquisition clients BTP",
+      "marketing digital bâtiment",
+      "communiquer dans le BTP"
+    ],
+  },
 ];

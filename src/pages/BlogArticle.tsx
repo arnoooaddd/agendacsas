@@ -290,6 +290,10 @@ const articleToService: Record<string, { service: ServiceKey; intro?: string }> 
     service: "creation-site-internet",
     intro: "Un site au design cohérent et une identité visuelle forte transforment vos visiteurs en prospects plus confiants. Agendac vous accompagne dans la création de votre site internet BTP.",
   },
+  "marketing-marque-btp-notoriete-2026": {
+    service: "gestion-communication",
+    intro: "Structurez votre image de marque et votre communication dans le BTP pour exister durablement et attirer des clients en phase avec vos valeurs.",
+  },
 };
 
 const articleComponents: Record<string, React.ComponentType> = {
@@ -364,6 +368,7 @@ const articleComponents: Record<string, React.ComponentType> = {
   "podcasts-btp-communication-notoriete-2026": lazy(() => import("@/components/blog/ArticlePodcastsBtpCommunicationNotoriete2026")),
   "inbound-marketing-btp-cycles-longs": lazy(() => import("@/components/blog/ArticleInboundMarketingBtpCyclesLongs")),
   "design-site-web-identite-visuelle-btp-2026": lazy(() => import("@/components/blog/ArticleDesignSiteWebIdentiteVisuelleBtp2026")),
+  "marketing-marque-btp-notoriete-2026": lazy(() => import("@/components/blog/ArticleMarketingMarqueBtpNotoriete2026")),
 };
 
 // Redirects from old blog slugs to new SEO-optimized URLs
