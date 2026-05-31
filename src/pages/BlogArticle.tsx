@@ -298,6 +298,10 @@ const articleToService: Record<string, { service: ServiceKey; intro?: string }> 
     service: "prise-rendez-vous",
     intro: "Remplacer les plateformes de devis par un vrai système d'acquisition client : la solution pour reprendre le contrôle de votre génération de leads.",
   },
+  "tendances-recherche-locale-google-2026-btp": {
+    service: "gestion-seo",
+    intro: "Maîtrisez les tendances de la recherche locale Google pour capter plus de demandes de devis. Agendac vous accompagne dans votre stratégie SEO et visibilité locale.",
+  },
 };
 
 const articleComponents: Record<string, React.ComponentType> = {
@@ -374,6 +378,7 @@ const articleComponents: Record<string, React.ComponentType> = {
   "design-site-web-identite-visuelle-btp-2026": lazy(() => import("@/components/blog/ArticleDesignSiteWebIdentiteVisuelleBtp2026")),
   "marketing-marque-btp-notoriete-2026": lazy(() => import("@/components/blog/ArticleMarketingMarqueBtpNotoriete2026")),
   "acheter-leads-plateformes-devis-btp-2026": lazy(() => import("@/components/blog/ArticleAcheterLeadsPlateformesDevisBtp2026")),
+  "tendances-recherche-locale-google-2026-btp": lazy(() => import("@/components/blog/ArticleTendancesRechercheLocaleGoogle2026Btp")),
 };
 
 // Redirects from old blog slugs to new SEO-optimized URLs
