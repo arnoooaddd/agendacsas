@@ -1618,4 +1618,25 @@ export const blogArticles: BlogArticle[] = [
       "trouver des clients BTP"
     ],
   },
+  {
+    slug: "tendances-recherche-locale-google-2026-btp",
+    title: "Tendances recherche locale Google 2026 : comment capter plus de demandes de devis dans le BTP",
+    metaDescription: "Découvrez les 4 tendances de la recherche locale Google en 2026 pour les entreprises du BTP : SGE, notoriété de marque, avis Google et vérification téléphonique.",
+    excerpt: "Google affine ses critères de recherche locale. SGE, avis, vérification et notoriété : comment les entreprises de rénovation et du BTP peuvent transformer ces évolutions en flux de demandes qualifiées.",
+    coverImage: "tendances-recherche-locale-google-2026-btp",
+    author: "Arnaud UTILLE",
+    date: "2026-05-31",
+    readTime: "7 min",
+    featured: false,
+    tags: ["Recherche locale", "Google", "BTP", "SEO local", "Acquisition"],
+    keywords: [
+      "recherche locale Google BTP",
+      "référencement local entreprise bâtiment",
+      "génération de leads BTP",
+      "acquisition clients BTP",
+      "stratégie marketing BTP",
+      "avis Google BTP",
+      "Local Pack Google"
+    ],
+  },
 ];
