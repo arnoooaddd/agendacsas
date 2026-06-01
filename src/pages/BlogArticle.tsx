@@ -302,6 +302,10 @@ const articleToService: Record<string, { service: ServiceKey; intro?: string }> 
     service: "gestion-seo",
     intro: "Maîtrisez les tendances de la recherche locale Google pour capter plus de demandes de devis. Agendac vous accompagne dans votre stratégie SEO et visibilité locale.",
   },
+  "contenu-evergreen-actualite-marketing-btp-2026": {
+    service: "gestion-seo",
+    intro: "Vous avez besoin d'une stratégie de contenu équilibrée pour générer des leads qualifiés durablement ? Agendac vous aide à structurer votre calendrier éditorial et à produire des articles qui convertissent.",
+  },
 };
 
 const articleComponents: Record<string, React.ComponentType> = {
@@ -379,6 +383,7 @@ const articleComponents: Record<string, React.ComponentType> = {
   "marketing-marque-btp-notoriete-2026": lazy(() => import("@/components/blog/ArticleMarketingMarqueBtpNotoriete2026")),
   "acheter-leads-plateformes-devis-btp-2026": lazy(() => import("@/components/blog/ArticleAcheterLeadsPlateformesDevisBtp2026")),
   "tendances-recherche-locale-google-2026-btp": lazy(() => import("@/components/blog/ArticleTendancesRechercheLocaleGoogle2026Btp")),
+  "contenu-evergreen-actualite-marketing-btp-2026": lazy(() => import("@/components/blog/ArticleContenuEvergreenActualiteMarketingBtp2026")),
 };
 
 // Redirects from old blog slugs to new SEO-optimized URLs

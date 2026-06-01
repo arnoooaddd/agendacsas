@@ -1639,4 +1639,25 @@ export const blogArticles: BlogArticle[] = [
       "Local Pack Google"
     ],
   },
+  {
+    slug: "contenu-evergreen-actualite-marketing-btp-2026",
+    title: "Contenu evergreen et contenu d'actualité : le bon équilibre pour votre stratégie marketing BTP en 2026",
+    metaDescription: "Découvrez comment équilibrer contenu evergreen et contenu d'actualité dans votre stratégie marketing BTP. La règle des 80/20 pour attirer et convertir vos prospects en 2026.",
+    excerpt: "Contenu evergreen ou contenu d'actualité&nbsp;? Trouver le bon équilibre est essentiel pour générer du trafic durable et capter l'attention immédiate de vos prospects. La règle des 80/20 expliquée pour les entreprises du BTP.",
+    coverImage: "contenu-evergreen-actualite-marketing-btp-2026",
+    author: "Kerim JAKUPOVIC",
+    date: "2026-06-01",
+    readTime: "7 min",
+    featured: false,
+    tags: ["Stratégie de contenu", "Marketing BTP", "SEO", "Contenu evergreen", "Acquisition"],
+    keywords: [
+      "stratégie marketing BTP",
+      "marketing digital bâtiment",
+      "génération de leads BTP",
+      "acquisition clients rénovation",
+      "contenu evergreen BTP",
+      "calendrier éditorial BTP",
+      "acquisition clients BTP"
+    ],
+  },
 ];
