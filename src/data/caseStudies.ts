@@ -79,8 +79,7 @@ export const caseStudies: CaseStudy[] = [
     mainResult: "+2 commerciaux embauchés en 90 jours",
     siren: "811662766",
     website: "https://laboutiquedumenuisier.fr",
-    loomId: "c16266ef4214491eae19d087e0e02eea",
-    youtubeEmbedUrl: "https://www.youtube.com/embed/aDHl-oZJ-Uk?rel=0&modestbranding=1",
+    loomId: "c62dc9c3f6394a5c896c8234c396ae6a",
     problem:
       "Difficulté à générer un volume constant de demandes qualifiées pour alimenter l'équipe commerciale dans un secteur menuiseries très concurrentiel.",
     solution:
