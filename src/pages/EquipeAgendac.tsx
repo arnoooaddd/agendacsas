@@ -18,7 +18,7 @@ import omarImg from "@/assets/team/omar-troussi.webp";
 import gabrielImg from "@/assets/team/gabriel-ageron.webp";
 import mickaelImg from "@/assets/team/mickael-berjaz.webp";
 import yasmineImg from "@/assets/team/yasmine-lale.webp";
-import timouniImg from "@/assets/team/timouni-mohamed-ali.webp";
+
 
 const leaders = [
   { name: "Arnaud UTILLE", role: "Président", image: arnaudImg },
@@ -35,7 +35,7 @@ const teamMembers = [
   { name: "Gabriel AGERON", role: "Designer site internet", image: gabrielImg },
   { name: "Mickael BERJAZ", role: "Monteur et designer", image: mickaelImg },
   { name: "Sophia LALEG", role: "Responsable qualité", image: yasmineImg },
-  { name: "Timouni MOHAMED ALI", role: "Coordinateur des opérations", image: timouniImg },
+  
 ];
 
 const EquipeAgendac = () => {

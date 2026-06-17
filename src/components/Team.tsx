@@ -13,7 +13,7 @@ import omarImg from "@/assets/team/omar-troussi.webp";
 import gabrielImg from "@/assets/team/gabriel-ageron.webp";
 import mickaelImg from "@/assets/team/mickael-berjaz.webp";
 import yasmineImg from "@/assets/team/yasmine-lale.webp";
-import timouniImg from "@/assets/team/timouni-mohamed-ali.webp";
+
 
 const leaders = [
   { name: "Arnaud UTILLE", role: "Président", image: arnaudImg },
@@ -30,7 +30,7 @@ const otherMembers = [
   { name: "Gabriel AGERON", image: gabrielImg },
   { name: "Mickael BERJAZ", image: mickaelImg },
   { name: "Sophia LALEG", image: yasmineImg },
-  { name: "Timouni MOHAMED ALI", image: timouniImg },
+  
 ];
 
 const Team = () => {
