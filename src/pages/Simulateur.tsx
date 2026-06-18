@@ -355,7 +355,7 @@ const Simulateur = () => {
                   label="Budget publicitaire mensuel"
                   help="Budget investi directement en publicité (hors frais Agendac)."
                   value={budget}
-                  min={1500}
+                  min={2000}
                   max={10000}
                   step={100}
                   suffix="€"
@@ -392,9 +392,9 @@ const Simulateur = () => {
 
                 <Field
                   label="Ticket moyen d'un chantier signé"
-                  help="Montant moyen d'un chantier signé. Fourchette indicative : 3 500 € à 12 000 €."
+                  help="Montant moyen d'un chantier signé. Fourchette indicative : 4 000 € à 12 000 €."
                   value={ticket}
-                  min={3500}
+                  min={4000}
                   max={12000}
                   step={500}
                   suffix="€"
@@ -405,7 +405,7 @@ const Simulateur = () => {
                   label="Marge brute moyenne"
                   help="Exemple : avec 30 % de marge brute, 10 000 € de CA signé représentent 3 000 € de marge brute."
                   value={margin}
-                  min={10}
+                  min={25}
                   max={70}
                   step={1}
                   suffix="%"
