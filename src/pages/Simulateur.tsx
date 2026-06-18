@@ -3,10 +3,10 @@ import { Link } from "react-router-dom";
 import {
   AreaChart,
   Area,
-  LineChart,
-  Line,
   BarChart,
   Bar,
+  LineChart,
+  Line,
   PieChart,
   Pie,
   Cell,
@@ -27,6 +27,8 @@ import {
   ArrowRight,
   Phone,
   Info,
+  Download,
+  Star,
 } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -38,9 +40,23 @@ import YouTubeShorts from "@/components/YouTubeShorts";
 import { Slider } from "@/components/ui/slider";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
+import { Switch } from "@/components/ui/switch";
+import anthonyProperzioPhoto from "@/assets/anthony-properzio.png";
 import { usePageTitle, useMetaDescription, useCanonical } from "@/hooks/usePageTitle";
 
 const BRAND = "#0074D4";
+
+// Constantes Agendac (non modifiables côté utilisateur)
+const GESTION_PUB = 1500;       // €/mois — frais de gestion publicitaire Agendac
+const FEE_RDV = 59;             // € HT — frais secrétariat / prise de rendez-vous
+const SIGN_RATE = 0.35;         // 35 % — taux de signature moyen des partenaires Agendac
+const CPA_LOW = 110;            // € — coût publicitaire bas par RDV
+const CPA_HIGH = 170;           // € — coût publicitaire haut par RDV
+const SETUP_TOURNAGE = 1000;    // € — frais de tournage au démarrage (one-shot)
+const SEO_FEE = 250;            // €/mois — option SEO Agendac
+const SEO_RDV_LOW = 1;          // RDV supplémentaires bas avec SEO activé
+const SEO_RDV_HIGH = 2;         // RDV supplémentaires haut avec SEO activé
+const SIGN_DELAY_DAYS = 21;     // ~3 semaines de réflexion entre un RDV et la signature
 
 const eur = (n: number) =>
   new Intl.NumberFormat("fr-FR", { maximumFractionDigits: 0 }).format(Math.round(n)) + " €";
@@ -48,6 +64,8 @@ const pct = (n: number) =>
   new Intl.NumberFormat("fr-FR", { maximumFractionDigits: 1 }).format(n) + " %";
 const num1 = (n: number) =>
   new Intl.NumberFormat("fr-FR", { maximumFractionDigits: 1 }).format(n);
+const range = (a: number, b: number, fn: (n: number) => string) =>
+  Math.round(a) === Math.round(b) ? fn(a) : `${fn(a)} – ${fn(b)}`;
 
 type FieldProps = {
   label: string;
@@ -58,10 +76,9 @@ type FieldProps = {
   step?: number;
   suffix?: string;
   onChange: (v: number) => void;
-  locked?: boolean;
 };
 
-const Field = ({ label, help, value, min, max, step = 1, suffix, onChange, locked }: FieldProps) => (
+const Field = ({ label, help, value, min, max, step = 1, suffix, onChange }: FieldProps) => (
   <div className="space-y-2">
     <div className="flex items-center justify-between gap-3">
       <label className="text-sm font-medium text-foreground">{label}</label>
@@ -88,7 +105,6 @@ const Field = ({ label, help, value, min, max, step = 1, suffix, onChange, locke
       step={step}
       onValueChange={(v) => onChange(v[0])}
       className="[&_[role=slider]]:border-[#0074D4] [&_[role=slider]]:bg-white [&>span:first-child>span]:bg-[#0074D4]"
-      disabled={locked}
     />
     {help && <p className="text-xs text-muted-foreground leading-relaxed">{help}</p>}
   </div>
@@ -99,17 +115,19 @@ const ResultCard = ({
   label,
   value,
   sub,
+  formula,
   highlight,
 }: {
   icon?: React.ReactNode;
   label: string;
   value: string;
   sub?: string;
+  formula?: string;
   highlight?: boolean;
 }) => (
   <Card
     className={
-      "p-5 rounded-2xl border-border/60 bg-white shadow-[0_4px_24px_-12px_rgba(0,116,212,0.18)] " +
+      "p-5 rounded-2xl border-border/60 bg-white shadow-[0_4px_24px_-12px_rgba(0,116,212,0.18)] flex flex-col " +
       (highlight ? "ring-2 ring-[#0074D4] bg-gradient-to-br from-white to-[#EAF4FF]" : "")
     }
   >
@@ -117,10 +135,15 @@ const ResultCard = ({
       {icon}
       <span>{label}</span>
     </div>
-    <div className={"text-2xl font-bold " + (highlight ? "text-[#0074D4]" : "text-foreground")}>
+    <div className={"text-xl md:text-2xl font-bold " + (highlight ? "text-[#0074D4]" : "text-foreground")}>
       {value}
     </div>
     {sub && <div className="text-xs text-muted-foreground mt-1">{sub}</div>}
+    {formula && (
+      <div className="text-[11px] text-muted-foreground mt-2 pt-2 border-t border-border/40 leading-relaxed">
+        {formula}
+      </div>
+    )}
   </Card>
 );
 
@@ -131,113 +154,137 @@ const Simulateur = () => {
   );
   useCanonical("/simulateur");
 
-  // Paramètres
+  // Variables ajustables uniquement
   const [budget, setBudget] = useState(3000);
   const [duration, setDuration] = useState(6);
-  const [gestion, setGestion] = useState(1500);
-  const [cpa, setCpa] = useState(120);
-  const [feeRdv, setFeeRdv] = useState(59);
-  const [signRate, setSignRate] = useState(33);
-  const [ticketLow, setTicketLow] = useState(4000);
-  const [ticketHigh, setTicketHigh] = useState(8000);
+  const [ticket, setTicket] = useState(6000);
   const [margin, setMargin] = useState(30);
+  const [seo, setSeo] = useState(false);
 
-  const meta = budget / 2;
-  const google = budget / 2;
+  // Répartition pub : 100 % Meta < 2500 €, sinon 50/50
+  const meta = budget < 2500 ? budget : budget / 2;
+  const google = budget < 2500 ? 0 : budget / 2;
+  const splitLabel = budget < 2500 ? "100 % Meta Ads" : "50 % Meta / 50 % Google";
 
   const m = useMemo(() => {
-    const rdvMois = budget / cpa;
-    const rdvTotal = rdvMois * duration;
-    const signRatio = signRate / 100;
+    const pubRdvHigh = budget / CPA_LOW;   // CPA bas => plus de RDV
+    const pubRdvLow = budget / CPA_HIGH;
+    const seoRdvLow = seo ? SEO_RDV_LOW : 0;
+    const seoRdvHigh = seo ? SEO_RDV_HIGH : 0;
+    const rdvMoisLow = pubRdvLow + seoRdvLow;
+    const rdvMoisHigh = pubRdvHigh + seoRdvHigh;
+    const rdvTotalLow = rdvMoisLow * duration;
+    const rdvTotalHigh = rdvMoisHigh * duration;
+
+    const chantiersLow = rdvTotalLow * SIGN_RATE;
+    const chantiersHigh = rdvTotalHigh * SIGN_RATE;
+
+    const fraisRdvMoisLow = rdvMoisLow * FEE_RDV;
+    const fraisRdvMoisHigh = rdvMoisHigh * FEE_RDV;
+    const seoMonthly = seo ? SEO_FEE : 0;
+
+    const investMoisLow = budget + GESTION_PUB + fraisRdvMoisLow + seoMonthly;
+    const investMoisHigh = budget + GESTION_PUB + fraisRdvMoisHigh + seoMonthly;
+    const investTotalLow = investMoisLow * duration + SETUP_TOURNAGE;
+    const investTotalHigh = investMoisHigh * duration + SETUP_TOURNAGE;
+
+    const caLow = chantiersLow * ticket;
+    const caHigh = chantiersHigh * ticket;
     const marginRatio = margin / 100;
-    const chantiers = rdvTotal * signRatio;
-    const fraisRdvMois = rdvMois * feeRdv;
-    const investMois = budget + gestion + fraisRdvMois;
-    const investTotal = investMois * duration;
-    const caLow = chantiers * ticketLow;
-    const caHigh = chantiers * ticketHigh;
     const margeLow = caLow * marginRatio;
     const margeHigh = caHigh * marginRatio;
-    const roiCaLow = ((caLow - investTotal) / investTotal) * 100;
-    const roiCaHigh = ((caHigh - investTotal) / investTotal) * 100;
-    const roiMargeLow = ((margeLow - investTotal) / investTotal) * 100;
-    const roiMargeHigh = ((margeHigh - investTotal) / investTotal) * 100;
+
+    const roiMargeLow = ((margeLow - investTotalHigh) / investTotalHigh) * 100;
+    const roiMargeHigh = ((margeHigh - investTotalLow) / investTotalLow) * 100;
 
     return {
-      rdvMois,
-      rdvTotal,
-      chantiers,
-      fraisRdvMois,
-      investMois,
-      investTotal,
-      caLow,
-      caHigh,
-      margeLow,
-      margeHigh,
-      roiCaLow,
-      roiCaHigh,
-      roiMargeLow,
-      roiMargeHigh,
+      pubRdvLow, pubRdvHigh, seoRdvLow, seoRdvHigh,
+      rdvMoisLow, rdvMoisHigh, rdvTotalLow, rdvTotalHigh,
+      chantiersLow, chantiersHigh,
+      fraisRdvMoisLow, fraisRdvMoisHigh, seoMonthly,
+      investMoisLow, investMoisHigh, investTotalLow, investTotalHigh,
+      caLow, caHigh, margeLow, margeHigh,
+      roiMargeLow, roiMargeHigh,
     };
-  }, [budget, cpa, duration, gestion, feeRdv, signRate, ticketLow, ticketHigh, margin]);
+  }, [budget, duration, ticket, margin, seo]);
 
-  // Données mensuelles
+  // Vue mensuelle (pour le tableau de détail et le graphique marge)
   const monthly = useMemo(() => {
-    const rows = [] as any[];
+    const rows: any[] = [];
     let invCum = 0,
-      caLowCum = 0,
-      caHighCum = 0,
       margeLowCum = 0,
       margeHighCum = 0;
     for (let i = 1; i <= duration; i++) {
-      const rdv = budget / cpa;
-      const fraisRdv = rdv * feeRdv;
-      const inv = budget + gestion + fraisRdv;
-      const chantiers = rdv * (signRate / 100);
-      const caL = chantiers * ticketLow;
-      const caH = chantiers * ticketHigh;
+      const inv = (m.investMoisLow + m.investMoisHigh) / 2 + (i === 1 ? SETUP_TOURNAGE : 0);
+      const chantiersL = m.rdvMoisLow * SIGN_RATE;
+      const chantiersH = m.rdvMoisHigh * SIGN_RATE;
+      const caL = chantiersL * ticket;
+      const caH = chantiersH * ticket;
       const mL = caL * (margin / 100);
       const mH = caH * (margin / 100);
       invCum += inv;
-      caLowCum += caL;
-      caHighCum += caH;
       margeLowCum += mL;
       margeHighCum += mH;
       rows.push({
         mois: `M${i}`,
-        moisLabel: i,
-        budget,
-        gestion,
-        rdv,
-        fraisRdv,
-        inv,
-        chantiers,
-        caL,
-        caH,
-        mL,
-        mH,
-        invCum,
-        caLowCum,
-        caHighCum,
-        margeLowCum,
-        margeHighCum,
-        roiCaLow: ((caLowCum - invCum) / invCum) * 100,
-        roiCaHigh: ((caHighCum - invCum) / invCum) * 100,
-        roiMargeLow: ((margeLowCum - invCum) / invCum) * 100,
-        roiMargeHigh: ((margeHighCum - invCum) / invCum) * 100,
+        rdvL: m.rdvMoisLow,
+        rdvH: m.rdvMoisHigh,
+        invMoyen: inv,
+        chantiersL,
+        chantiersH,
+        caL, caH, mL, mH,
+        invCum, margeLowCum, margeHighCum,
       });
     }
     return rows;
-  }, [budget, cpa, duration, gestion, feeRdv, signRate, ticketLow, ticketHigh, margin]);
+  }, [m, duration, ticket, margin]);
+
+  // Courbe de trésorerie quotidienne (variable, réaliste)
+  const cashflow = useMemo(() => {
+    const days = duration * 30;
+    const rows: { jour: number; tresorerie: number }[] = [];
+    const rdvParJourMoyen = ((m.rdvMoisLow + m.rdvMoisHigh) / 2) / 30;
+    let cash = 0;
+    const wiggle = (i: number) => {
+      const s = Math.sin(i * 12.9898) * 43758.5453;
+      return s - Math.floor(s);
+    };
+    for (let d = 1; d <= days; d++) {
+      const jourDuMois = ((d - 1) % 30) + 1;
+      if (d === 1) cash -= SETUP_TOURNAGE;
+      if (jourDuMois === 1) {
+        cash -= GESTION_PUB;
+        if (seo) cash -= SEO_FEE;
+      }
+      // Pub étalée avec variabilité ±25 %
+      cash -= (budget / 30) * (0.75 + 0.5 * wiggle(d + 7));
+      // Frais secrétariat pour les RDV pris dans la journée
+      const rdvJour = rdvParJourMoyen * (0.6 + 0.8 * wiggle(d + 31));
+      cash -= rdvJour * FEE_RDV;
+      // Encaissements décalés de 3 semaines
+      const dRdv = d - SIGN_DELAY_DAYS;
+      if (dRdv >= 1) {
+        const rdvSource = rdvParJourMoyen * (0.6 + 0.8 * wiggle(dRdv + 31));
+        const chantiers = rdvSource * SIGN_RATE;
+        cash += chantiers * ticket * (margin / 100);
+      }
+      rows.push({ jour: d, tresorerie: cash });
+    }
+    return rows;
+  }, [budget, duration, ticket, margin, seo, m.rdvMoisLow, m.rdvMoisHigh]);
 
   const repartition = [
     { name: "Publicité", value: budget * duration, color: BRAND },
-    { name: "Gestion Agendac", value: gestion * duration, color: "#5BA8E8" },
-    { name: "Frais RDV Agendac", value: m.fraisRdvMois * duration, color: "#B5DAF6" },
+    { name: "Gestion publicitaire Agendac", value: GESTION_PUB * duration, color: "#5BA8E8" },
+    { name: "Frais secrétariat (RDV)", value: ((m.fraisRdvMoisLow + m.fraisRdvMoisHigh) / 2) * duration, color: "#B5DAF6" },
+    { name: "Tournage (one-shot)", value: SETUP_TOURNAGE, color: "#003F75" },
+    ...(seo ? [{ name: "Option SEO Agendac", value: SEO_FEE * duration, color: "#83C0EF" }] : []),
   ];
 
+  const handlePrint = () => window.print();
+
   return (
-    <div className="min-h-screen bg-[#F6FAFE]">
+    <div className="min-h-screen bg-[#F6FAFE] print:bg-white">
       <Header />
       <main className="pt-24 pb-12">
         <div className="container mx-auto px-4">
@@ -262,6 +309,16 @@ const Simulateur = () => {
                 votre panier moyen et la concurrence locale.
               </p>
             </div>
+            <div className="mt-4 flex justify-center print:hidden">
+              <Button
+                variant="outline"
+                onClick={handlePrint}
+                className="border-[#0074D4]/30 text-[#0074D4] hover:bg-[#0074D4]/5"
+              >
+                <Download size={16} className="mr-2" />
+                Télécharger la simulation en PDF
+              </Button>
+            </div>
           </div>
 
           {/* Layout */}
@@ -277,7 +334,7 @@ const Simulateur = () => {
               <div className="space-y-6">
                 <Field
                   label="Budget publicitaire mensuel"
-                  help="Budget investi directement en publicité, hors frais de gestion Agendac."
+                  help="Budget investi directement en publicité (hors frais Agendac)."
                   value={budget}
                   min={1500}
                   max={10000}
@@ -287,7 +344,7 @@ const Simulateur = () => {
                 />
                 <div className="rounded-xl bg-[#F6FAFE] border border-border/50 p-4">
                   <div className="text-xs uppercase tracking-wide text-muted-foreground mb-2">
-                    Répartition publicitaire (50 / 50)
+                    Répartition publicitaire — {splitLabel}
                   </div>
                   <div className="grid grid-cols-2 gap-3">
                     <div className="rounded-lg bg-white border border-border/60 p-3">
@@ -300,10 +357,10 @@ const Simulateur = () => {
                     </div>
                   </div>
                   <p className="text-xs text-muted-foreground mt-2">
-                    Par défaut, le simulateur répartit le budget à 50 % sur Meta Ads et 50 % sur Google
-                    Ads. Cette répartition peut être ajustée.
+                    En dessous de 2 500 € de budget mensuel, 100 % est alloué à Meta Ads. Au-delà, le budget est réparti à 50 / 50 entre Meta Ads et Google Ads.
                   </p>
                 </div>
+
                 <Field
                   label="Durée de projection"
                   value={duration}
@@ -313,76 +370,21 @@ const Simulateur = () => {
                   suffix="mois"
                   onChange={setDuration}
                 />
+
                 <Field
-                  label="Frais de gestion Agendac"
-                  help="Ces frais couvrent la gestion, l'optimisation, le suivi et le pilotage des campagnes."
-                  value={gestion}
-                  min={0}
-                  max={5000}
-                  step={100}
-                  suffix="€ HT/mois"
-                  onChange={setGestion}
-                />
-                <Field
-                  label="Coût publicitaire moyen par rendez-vous"
-                  help="Le coût publicitaire d'un rendez-vous varie généralement entre 90 € et 150 € selon le marché, la zone géographique, la concurrence et l'offre."
-                  value={cpa}
-                  min={90}
-                  max={150}
-                  step={5}
+                  label="Ticket moyen d'un chantier signé"
+                  help="Montant moyen d'un chantier signé. Fourchette indicative : 3 500 € à 12 000 €."
+                  value={ticket}
+                  min={3500}
+                  max={12000}
+                  step={500}
                   suffix="€"
-                  onChange={setCpa}
+                  onChange={setTicket}
                 />
-                <Field
-                  label="Frais Agendac par rendez-vous (standard)"
-                  help="Agendac facture 59 € HT par rendez-vous qualifié menant à un devis envoyé par l'entreprise."
-                  value={feeRdv}
-                  min={0}
-                  max={150}
-                  step={1}
-                  suffix="€ HT/RDV"
-                  onChange={setFeeRdv}
-                />
-                <Field
-                  label="Taux de signature des rendez-vous"
-                  help="Par défaut, la simulation considère qu'en moyenne 1 rendez-vous sur 3 est signé."
-                  value={signRate}
-                  min={10}
-                  max={70}
-                  step={1}
-                  suffix="%"
-                  onChange={setSignRate}
-                />
-                <div className="rounded-xl bg-[#F6FAFE] border border-border/50 p-4 space-y-4">
-                  <div className="text-xs uppercase tracking-wide text-muted-foreground">
-                    Ticket moyen d'un chantier signé
-                  </div>
-                  <Field
-                    label="Ticket moyen bas"
-                    value={ticketLow}
-                    min={1000}
-                    max={20000}
-                    step={500}
-                    suffix="€"
-                    onChange={setTicketLow}
-                  />
-                  <Field
-                    label="Ticket moyen haut"
-                    value={ticketHigh}
-                    min={1000}
-                    max={30000}
-                    step={500}
-                    onChange={setTicketHigh}
-                    suffix="€"
-                  />
-                  <p className="text-xs text-muted-foreground">
-                    Le simulateur calcule une fourchette de chiffre d'affaires avec un chantier moyen
-                    compris entre 4 000 € et 8 000 €.
-                  </p>
-                </div>
+
                 <Field
                   label="Marge brute moyenne"
-                  help="Exemple : si votre marge brute est de 30 %, alors 10 000 € de chiffre d'affaires signé représentent environ 3 000 € de marge brute."
+                  help="Exemple : avec 30 % de marge brute, 10 000 € de CA signé représentent 3 000 € de marge brute."
                   value={margin}
                   min={10}
                   max={70}
@@ -390,6 +392,34 @@ const Simulateur = () => {
                   suffix="%"
                   onChange={setMargin}
                 />
+
+                {/* Option SEO */}
+                <div className="rounded-xl bg-[#F6FAFE] border border-border/50 p-4">
+                  <div className="flex items-center justify-between gap-3">
+                    <div>
+                      <div className="text-sm font-semibold text-foreground">Option SEO Agendac</div>
+                      <div className="text-xs text-muted-foreground mt-0.5">
+                        +250 € HT/mois — ajoute en moyenne 1 à 2 rendez-vous supplémentaires par mois en complément des rendez-vous générés par la publicité.
+                      </div>
+                    </div>
+                    <Switch checked={seo} onCheckedChange={setSeo} />
+                  </div>
+                </div>
+
+                {/* Constantes Agendac */}
+                <div className="rounded-xl bg-white border border-dashed border-[#0074D4]/30 p-4">
+                  <div className="text-xs uppercase tracking-wide text-[#0074D4] font-semibold mb-2">
+                    Constantes Agendac (non modifiables)
+                  </div>
+                  <ul className="text-xs text-foreground/80 space-y-1.5">
+                    <li>• <strong>Gestion publicitaire</strong> : 1 500 € HT / mois</li>
+                    <li>• <strong>Frais secrétariat (prise de RDV)</strong> : 59 € HT / RDV</li>
+                    <li>• <strong>Coût publicitaire par RDV</strong> : 110 € à 170 € (fourchette)</li>
+                    <li>• <strong>Taux de signature moyen partenaires</strong> : 35 %</li>
+                    <li>• <strong>Tournage initial</strong> : 1 000 € (one-shot, au démarrage)</li>
+                    <li>• <strong>Délai moyen de réflexion</strong> : ~ 3 semaines entre RDV et signature</li>
+                  </ul>
+                </div>
               </div>
             </Card>
 
@@ -399,45 +429,47 @@ const Simulateur = () => {
                 <ResultCard
                   icon={<Calendar size={14} className="text-[#0074D4]" />}
                   label="RDV / mois"
-                  value={num1(m.rdvMois)}
+                  value={range(m.rdvMoisLow, m.rdvMoisHigh, num1)}
+                  sub={seo ? `dont +${SEO_RDV_LOW}–${SEO_RDV_HIGH} via SEO` : "issus de la publicité"}
+                  formula={`Budget pub ÷ coût par RDV (${CPA_LOW}–${CPA_HIGH} €)${seo ? ` + ${SEO_RDV_LOW}–${SEO_RDV_HIGH} RDV SEO` : ""}`}
                 />
                 <ResultCard
                   icon={<Calendar size={14} className="text-[#0074D4]" />}
                   label={`RDV sur ${duration} mois`}
-                  value={num1(m.rdvTotal)}
+                  value={range(m.rdvTotalLow, m.rdvTotalHigh, num1)}
+                  formula={`RDV mensuels × ${duration} mois`}
                 />
                 <ResultCard
                   icon={<Target size={14} className="text-[#0074D4]" />}
                   label="Chantiers signés"
-                  value={num1(m.chantiers)}
+                  value={range(m.chantiersLow, m.chantiersHigh, num1)}
+                  formula={`Total RDV × ${Math.round(SIGN_RATE * 100)} % de signature`}
                 />
                 <ResultCard
                   icon={<Wallet size={14} className="text-[#0074D4]" />}
                   label="Investissement total"
-                  value={eur(m.investTotal)}
-                  sub={`Soit ${eur(m.investMois)} / mois`}
+                  value={range(m.investTotalLow, m.investTotalHigh, eur)}
+                  sub={`Tournage ${eur(SETUP_TOURNAGE)} + ~${eur((m.investMoisLow + m.investMoisHigh) / 2)} / mois`}
+                  formula={`Pub + gestion (${eur(GESTION_PUB)}) + secrétariat${seo ? ` + SEO (${eur(SEO_FEE)})` : ""} + tournage`}
                 />
                 <ResultCard
                   icon={<TrendingUp size={14} className="text-[#0074D4]" />}
                   label="CA potentiel"
-                  value={`${eur(m.caLow)} – ${eur(m.caHigh)}`}
+                  value={range(m.caLow, m.caHigh, eur)}
+                  formula={`Chantiers signés × ticket moyen (${eur(ticket)})`}
                 />
                 <ResultCard
                   icon={<TrendingUp size={14} className="text-[#0074D4]" />}
                   label="Marge brute potentielle"
-                  value={`${eur(m.margeLow)} – ${eur(m.margeHigh)}`}
+                  value={range(m.margeLow, m.margeHigh, eur)}
+                  formula={`CA potentiel × ${margin} % de marge brute`}
                 />
                 <ResultCard
-                  icon={<PieIcon size={14} className="text-[#0074D4]" />}
-                  label="ROI sur CA"
-                  value={`${pct(m.roiCaLow)} – ${pct(m.roiCaHigh)}`}
-                  sub="Estimation indicative"
-                />
-                <ResultCard
-                  icon={<TrendingUp size={14} className="text-white" />}
+                  icon={<PieIcon size={14} className="text-white" />}
                   label="ROI sur marge brute"
-                  value={`${pct(m.roiMargeLow)} – ${pct(m.roiMargeHigh)}`}
+                  value={range(m.roiMargeLow, m.roiMargeHigh, pct)}
                   sub="Indicateur le plus réaliste"
+                  formula="(Marge brute − investissement) ÷ investissement"
                   highlight
                 />
               </div>
@@ -447,22 +479,60 @@ const Simulateur = () => {
                 <h3 className="text-base font-semibold text-foreground mb-3">Résumé de la simulation</h3>
                 <p className="text-sm text-foreground/80 leading-relaxed">
                   Avec un budget publicitaire mensuel de <strong>{eur(budget)}</strong>, une durée de
-                  projection de <strong>{duration} mois</strong>, un coût moyen de{" "}
-                  <strong>{eur(cpa)}</strong> par rendez-vous et un taux de signature de{" "}
-                  <strong>{pct(signRate)}</strong>, vous pourriez générer environ{" "}
-                  <strong>{num1(m.rdvMois)} rendez-vous par mois</strong>, soit{" "}
-                  <strong>{num1(m.rdvTotal)} rendez-vous sur la période</strong>. Cela représenterait
-                  environ <strong>{num1(m.chantiers)} chantiers signés</strong>, pour un chiffre
+                  projection de <strong>{duration} mois</strong>, un coût publicitaire compris entre{" "}
+                  <strong>{eur(CPA_LOW)}</strong> et <strong>{eur(CPA_HIGH)}</strong> par rendez-vous et un taux de signature moyen partenaires de{" "}
+                  <strong>{pct(SIGN_RATE * 100)}</strong>, vous pourriez générer entre{" "}
+                  <strong>{num1(m.rdvMoisLow)}</strong> et <strong>{num1(m.rdvMoisHigh)} rendez-vous par mois</strong>
+                  {seo ? ` (dont ${SEO_RDV_LOW} à ${SEO_RDV_HIGH} issus de l'option SEO)` : ""}, soit{" "}
+                  <strong>{num1(m.rdvTotalLow)} à {num1(m.rdvTotalHigh)} rendez-vous sur la période</strong>. Cela représenterait{" "}
+                  <strong>{num1(m.chantiersLow)} à {num1(m.chantiersHigh)} chantiers signés</strong>, pour un chiffre
                   d'affaires potentiel compris entre <strong>{eur(m.caLow)}</strong> et{" "}
                   <strong>{eur(m.caHigh)}</strong>. Avec une marge brute de{" "}
                   <strong>{pct(margin)}</strong>, la marge brute potentielle serait comprise entre{" "}
                   <strong>{eur(m.margeLow)}</strong> et <strong>{eur(m.margeHigh)}</strong>, à comparer
-                  avec un investissement total estimé de <strong>{eur(m.investTotal)}</strong>.
+                  avec un investissement total estimé entre <strong>{eur(m.investTotalLow)}</strong> et{" "}
+                  <strong>{eur(m.investTotalHigh)}</strong>.
                 </p>
                 <p className="text-sm text-foreground/80 leading-relaxed mt-3">
                   Le <strong>ROI estimé sur marge brute</strong> serait compris entre{" "}
                   <strong style={{ color: BRAND }}>{pct(m.roiMargeLow)}</strong> et{" "}
                   <strong style={{ color: BRAND }}>{pct(m.roiMargeHigh)}</strong>.
+                </p>
+                <p className="text-xs text-muted-foreground mt-3">
+                  Note : un délai moyen d'environ 3 semaines est appliqué entre un rendez-vous pris et la signature effective. Les encaissements apparaissent donc avec ce décalage sur la courbe de trésorerie.
+                </p>
+              </Card>
+
+              {/* Avis Anthony PROPERZIO (desktop) */}
+              <Card className="hidden lg:block p-6 rounded-2xl bg-white border-border/60 shadow-[0_4px_24px_-12px_rgba(0,116,212,0.18)]">
+                <div className="flex items-center gap-2 mb-4">
+                  <Star size={14} className="text-yellow-500 fill-yellow-500" />
+                  <span className="text-xs font-medium text-muted-foreground">Avis Google vérifié</span>
+                </div>
+                <div className="flex items-center gap-3 mb-3">
+                  <img
+                    src={anthonyProperzioPhoto}
+                    alt="Anthony PROPERZIO"
+                    className="w-12 h-12 rounded-full object-cover flex-shrink-0"
+                    loading="lazy"
+                  />
+                  <div className="min-w-0 flex-1">
+                    <p className="text-sm font-semibold text-foreground truncate">Anthony PROPERZIO</p>
+                    <p className="text-xs text-muted-foreground">Stores et Fenêtres du Golfe · Mai 2026</p>
+                  </div>
+                  <img
+                    src="https://www.gstatic.com/images/branding/product/1x/googleg_48dp.png"
+                    alt="Google"
+                    className="w-5 h-5 flex-shrink-0"
+                  />
+                </div>
+                <div className="flex items-center gap-1 mb-3">
+                  {Array.from({ length: 5 }).map((_, i) => (
+                    <Star key={i} size={14} className="fill-yellow-500 text-yellow-500" />
+                  ))}
+                </div>
+                <p className="text-sm text-foreground/85 leading-relaxed">
+                  J'ai actuellement le plaisir de pouvoir collaborer avec Agendac et je ne peux que mettre en avant leur travail exceptionnel. L'identité de cette agence de communication se repose sur des bases saines et solides. Dès le premier contact, l'ambiance s'est révélée à la fois dynamique et conviviale, ce qui rend chaque échange agréable. Leurs compétences ont été cruciales pour donner vie à mes demandes : ils allient créativité, rigueur et une vraie expertise stratégique. Le suivi est irréprochable : ils prennent le temps de comprendre chaque besoin, restent disponibles et assurent une proximité rassurante. Je remercie Arnaud, Kérim, Omar et tout particulièrement Manon, qui, avec moi, passe du temps à sans cesse améliorer les différents points importants de notre collaboration pour booster le rendement de l'entreprise. Je recommande donc cette agence les yeux fermés à quiconque cherche un partenaire fiable, créatif et à l'écoute.
                 </p>
               </Card>
             </div>
@@ -470,59 +540,51 @@ const Simulateur = () => {
 
           {/* Graphiques */}
           <div className="mt-8 grid grid-cols-1 lg:grid-cols-2 gap-6">
-            <Card className="p-5 rounded-2xl bg-white border-border/60 shadow-[0_4px_24px_-12px_rgba(0,116,212,0.18)]">
+            {/* Courbe de trésorerie variable */}
+            <Card className="lg:col-span-2 p-5 rounded-2xl bg-white border-border/60 shadow-[0_4px_24px_-12px_rgba(0,116,212,0.18)]">
               <h3 className="text-base font-semibold text-foreground mb-1">
-                Investissement vs CA signé (cumulé)
+                Évolution de la trésorerie (jour par jour)
               </h3>
               <p className="text-xs text-muted-foreground mb-4">
-                À partir de quel mois le CA potentiel dépasse l'investissement.
+                Au démarrage, la trésorerie passe immédiatement dans le rouge : tournage ({eur(SETUP_TOURNAGE)}) + frais de gestion Agendac ({eur(GESTION_PUB)}){seo ? ` + option SEO (${eur(SEO_FEE)})` : ""}. La publicité et les frais de rendez-vous se répartissent ensuite au fil du mois. Les premiers chantiers signés génèrent du chiffre d'affaires avec environ 3 semaines de décalage, ce qui inverse progressivement la courbe.
               </p>
-              <ResponsiveContainer width="100%" height={280}>
-                <AreaChart data={monthly}>
+              <ResponsiveContainer width="100%" height={320}>
+                <AreaChart data={cashflow}>
                   <defs>
-                    <linearGradient id="gInv" x1="0" y1="0" x2="0" y2="1">
-                      <stop offset="0%" stopColor="#94A3B8" stopOpacity={0.4} />
-                      <stop offset="100%" stopColor="#94A3B8" stopOpacity={0} />
-                    </linearGradient>
-                    <linearGradient id="gCa" x1="0" y1="0" x2="0" y2="1">
+                    <linearGradient id="gCash" x1="0" y1="0" x2="0" y2="1">
                       <stop offset="0%" stopColor={BRAND} stopOpacity={0.4} />
                       <stop offset="100%" stopColor={BRAND} stopOpacity={0} />
                     </linearGradient>
                   </defs>
                   <CartesianGrid strokeDasharray="3 3" stroke="#E2E8F0" />
-                  <XAxis dataKey="mois" stroke="#64748B" fontSize={12} />
-                  <YAxis stroke="#64748B" fontSize={12} tickFormatter={(v) => `${Math.round(v / 1000)}k`} />
-                  <Tooltip formatter={(v: number) => eur(v)} />
-                  <Legend />
-                  <Area type="monotone" dataKey="invCum" name="Investi cumulé" stroke="#94A3B8" fill="url(#gInv)" />
-                  <Area type="monotone" dataKey="caLowCum" name="CA bas cumulé" stroke={BRAND} fill="url(#gCa)" />
-                  <Area type="monotone" dataKey="caHighCum" name="CA haut cumulé" stroke="#003F75" fill="none" strokeDasharray="4 4" />
+                  <XAxis
+                    dataKey="jour"
+                    stroke="#64748B"
+                    fontSize={11}
+                    tickFormatter={(v) => `J${v}`}
+                    interval={Math.max(1, Math.floor(cashflow.length / 12))}
+                  />
+                  <YAxis stroke="#64748B" fontSize={11} tickFormatter={(v) => `${Math.round(v / 1000)}k`} />
+                  <Tooltip
+                    formatter={(v: number) => eur(v)}
+                    labelFormatter={(v) => `Jour ${v}`}
+                  />
+                  <Area
+                    type="monotone"
+                    dataKey="tresorerie"
+                    name="Trésorerie cumulée"
+                    stroke={BRAND}
+                    strokeWidth={2}
+                    fill="url(#gCash)"
+                  />
                 </AreaChart>
-              </ResponsiveContainer>
-            </Card>
-
-            <Card className="p-5 rounded-2xl bg-white border-border/60 shadow-[0_4px_24px_-12px_rgba(0,116,212,0.18)]">
-              <h3 className="text-base font-semibold text-foreground mb-1">Évolution du ROI</h3>
-              <p className="text-xs text-muted-foreground mb-4">ROI cumulé mois après mois.</p>
-              <ResponsiveContainer width="100%" height={280}>
-                <LineChart data={monthly}>
-                  <CartesianGrid strokeDasharray="3 3" stroke="#E2E8F0" />
-                  <XAxis dataKey="mois" stroke="#64748B" fontSize={12} />
-                  <YAxis stroke="#64748B" fontSize={12} tickFormatter={(v) => `${Math.round(v)}%`} />
-                  <Tooltip formatter={(v: number) => pct(v)} />
-                  <Legend />
-                  <Line type="monotone" dataKey="roiCaLow" name="ROI CA bas" stroke="#94A3B8" strokeWidth={2} dot={false} />
-                  <Line type="monotone" dataKey="roiCaHigh" name="ROI CA haut" stroke="#64748B" strokeWidth={2} dot={false} />
-                  <Line type="monotone" dataKey="roiMargeLow" name="ROI marge basse" stroke={BRAND} strokeWidth={2.5} dot={false} />
-                  <Line type="monotone" dataKey="roiMargeHigh" name="ROI marge haute" stroke="#003F75" strokeWidth={2.5} dot={false} />
-                </LineChart>
               </ResponsiveContainer>
             </Card>
 
             <Card className="p-5 rounded-2xl bg-white border-border/60 shadow-[0_4px_24px_-12px_rgba(0,116,212,0.18)]">
               <h3 className="text-base font-semibold text-foreground mb-1">Marge brute potentielle (cumulée)</h3>
               <p className="text-xs text-muted-foreground mb-4">
-                Rentabilité estimée en tenant compte de votre marge réelle.
+                Rentabilité estimée mois après mois en tenant compte de votre marge brute.
               </p>
               <ResponsiveContainer width="100%" height={280}>
                 <BarChart data={monthly}>
@@ -540,19 +602,10 @@ const Simulateur = () => {
 
             <Card className="p-5 rounded-2xl bg-white border-border/60 shadow-[0_4px_24px_-12px_rgba(0,116,212,0.18)]">
               <h3 className="text-base font-semibold text-foreground mb-1">Répartition des dépenses</h3>
-              <p className="text-xs text-muted-foreground mb-4">
-                Sur l'ensemble de la période ({duration} mois).
-              </p>
+              <p className="text-xs text-muted-foreground mb-4">Sur l'ensemble de la période ({duration} mois).</p>
               <ResponsiveContainer width="100%" height={280}>
                 <PieChart>
-                  <Pie
-                    data={repartition}
-                    dataKey="value"
-                    nameKey="name"
-                    innerRadius={60}
-                    outerRadius={100}
-                    paddingAngle={2}
-                  >
+                  <Pie data={repartition} dataKey="value" nameKey="name" innerRadius={60} outerRadius={100} paddingAngle={2}>
                     {repartition.map((r) => (
                       <Cell key={r.name} fill={r.color} />
                     ))}
@@ -572,66 +625,35 @@ const Simulateur = () => {
                 <thead>
                   <tr className="text-left text-xs uppercase tracking-wide text-muted-foreground border-b border-border/60">
                     <th className="py-2 pr-3">Mois</th>
-                    <th className="py-2 pr-3">Budget pub</th>
-                    <th className="py-2 pr-3">Gestion</th>
-                    <th className="py-2 pr-3">RDV</th>
-                    <th className="py-2 pr-3">Frais RDV</th>
+                    <th className="py-2 pr-3">RDV (bas)</th>
+                    <th className="py-2 pr-3">RDV (haut)</th>
                     <th className="py-2 pr-3">Invest. mois</th>
                     <th className="py-2 pr-3">Chantiers</th>
                     <th className="py-2 pr-3">CA bas</th>
                     <th className="py-2 pr-3">CA haut</th>
                     <th className="py-2 pr-3">Marge basse</th>
                     <th className="py-2 pr-3">Marge haute</th>
-                    <th className="py-2 pr-3">ROI marge bas</th>
-                    <th className="py-2 pr-3">ROI marge haut</th>
                   </tr>
                 </thead>
                 <tbody>
                   {monthly.map((r) => (
                     <tr key={r.mois} className="border-b border-border/40 hover:bg-[#F6FAFE]">
                       <td className="py-2 pr-3 font-medium text-foreground">{r.mois}</td>
-                      <td className="py-2 pr-3 text-foreground/80">{eur(r.budget)}</td>
-                      <td className="py-2 pr-3 text-foreground/80">{eur(r.gestion)}</td>
-                      <td className="py-2 pr-3 text-foreground/80">{num1(r.rdv)}</td>
-                      <td className="py-2 pr-3 text-foreground/80">{eur(r.fraisRdv)}</td>
-                      <td className="py-2 pr-3 font-medium text-foreground">{eur(r.inv)}</td>
-                      <td className="py-2 pr-3 text-foreground/80">{num1(r.chantiers)}</td>
+                      <td className="py-2 pr-3 text-foreground/80">{num1(r.rdvL)}</td>
+                      <td className="py-2 pr-3 text-foreground/80">{num1(r.rdvH)}</td>
+                      <td className="py-2 pr-3 font-medium text-foreground">{eur(r.invMoyen)}</td>
+                      <td className="py-2 pr-3 text-foreground/80">
+                        {num1(r.chantiersL)} – {num1(r.chantiersH)}
+                      </td>
                       <td className="py-2 pr-3 text-foreground/80">{eur(r.caL)}</td>
                       <td className="py-2 pr-3 text-foreground/80">{eur(r.caH)}</td>
                       <td className="py-2 pr-3 text-foreground/80">{eur(r.mL)}</td>
                       <td className="py-2 pr-3 text-foreground/80">{eur(r.mH)}</td>
-                      <td className="py-2 pr-3 font-semibold" style={{ color: BRAND }}>{pct(r.roiMargeLow)}</td>
-                      <td className="py-2 pr-3 font-semibold" style={{ color: BRAND }}>{pct(r.roiMargeHigh)}</td>
                     </tr>
                   ))}
                 </tbody>
               </table>
             </div>
-          </Card>
-
-          {/* Détails des calculs */}
-          <Card className="mt-8 p-6 rounded-2xl bg-white border-border/60 shadow-[0_4px_24px_-12px_rgba(0,116,212,0.18)]">
-            <h3 className="text-lg font-semibold text-foreground mb-4">Comment sont calculés les résultats ?</h3>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-3 text-sm">
-              {[
-                ["Nombre de rendez-vous", "Budget pub mensuel ÷ coût moyen par RDV = RDV mensuels"],
-                ["Coût total des rendez-vous", "Nombre de RDV × 59 € HT = frais RDV Agendac"],
-                ["Dépense totale", "Budget pub + frais de gestion + frais RDV Agendac = dépense totale"],
-                ["Chantiers signés", "Nombre de RDV × taux de signature = chantiers signés"],
-                ["Chiffre d'affaires potentiel", "Chantiers signés × ticket moyen = CA potentiel"],
-                ["Marge brute", "CA potentiel × taux de marge = marge brute potentielle"],
-                ["ROI sur marge brute", "(Marge brute − investissement) ÷ investissement × 100 = ROI réel estimé"],
-              ].map(([t, f]) => (
-                <div key={t} className="rounded-xl bg-[#F6FAFE] border border-border/50 p-3">
-                  <div className="text-xs uppercase tracking-wide text-[#0074D4] font-semibold">{t}</div>
-                  <div className="text-foreground/80 mt-1">{f}</div>
-                </div>
-              ))}
-            </div>
-            <p className="text-xs text-muted-foreground mt-4">
-              Le ROI sur marge brute permet d'estimer la rentabilité réelle après prise en compte de la marge
-              moyenne de votre entreprise.
-            </p>
           </Card>
 
           {/* Disclaimer */}
@@ -641,7 +663,7 @@ const Simulateur = () => {
           </p>
 
           {/* CTA */}
-          <div className="mt-10 rounded-3xl bg-gradient-to-br from-[#0074D4] to-[#003F75] p-8 md:p-12 text-center text-white shadow-[0_20px_60px_-20px_rgba(0,116,212,0.5)]">
+          <div className="mt-10 rounded-3xl bg-gradient-to-br from-[#0074D4] to-[#003F75] p-8 md:p-12 text-center text-white shadow-[0_20px_60px_-20px_rgba(0,116,212,0.5)] print:hidden">
             <h3 className="text-2xl md:text-3xl font-bold mb-3">
               Vous voulez une projection adaptée à votre entreprise ?
             </h3>
@@ -670,13 +692,15 @@ const Simulateur = () => {
         </div>
 
         {/* Preuves sociales */}
-        <div className="mt-16">
+        <div className="mt-16 print:hidden">
           <GoogleReviews />
         </div>
-        <ReviewsBands />
-        <CaseStudy />
-        <ExemplesTournage />
-        <YouTubeShorts />
+        <div className="print:hidden">
+          <ReviewsBands />
+          <CaseStudy />
+          <ExemplesTournage />
+          <YouTubeShorts />
+        </div>
       </main>
       <Footer />
     </div>
