@@ -448,45 +448,60 @@ const Simulateur = () => {
                 <ResultCard
                   icon={<Calendar size={14} className="text-[#0074D4]" />}
                   label="RDV / mois"
-                  value={range(m.rdvMoisLow, m.rdvMoisHigh, num1)}
+                  rangeLow={num1(m.rdvMoisLow)}
+                  rangeHigh={num1(m.rdvMoisHigh)}
                   sub={seo ? `dont +${SEO_RDV_LOW}–${SEO_RDV_HIGH} via SEO` : "issus de la publicité"}
                   formula={`Budget pub ÷ coût par RDV (${CPA_LOW}–${CPA_HIGH} €)${seo ? ` + ${SEO_RDV_LOW}–${SEO_RDV_HIGH} RDV SEO` : ""}`}
                 />
                 <ResultCard
                   icon={<Calendar size={14} className="text-[#0074D4]" />}
                   label={`RDV sur ${duration} mois`}
-                  value={range(m.rdvTotalLow, m.rdvTotalHigh, num1)}
+                  rangeLow={num1(m.rdvTotalLow)}
+                  rangeHigh={num1(m.rdvTotalHigh)}
                   formula={`RDV mensuels × ${duration} mois`}
                 />
                 <ResultCard
                   icon={<Target size={14} className="text-[#0074D4]" />}
                   label="Chantiers signés"
-                  value={range(m.chantiersLow, m.chantiersHigh, num1)}
+                  rangeLow={num1(m.chantiersLow)}
+                  rangeHigh={num1(m.chantiersHigh)}
                   formula={`Total RDV × ${Math.round(SIGN_RATE * 100)} % de signature`}
                 />
                 <ResultCard
                   icon={<Wallet size={14} className="text-[#0074D4]" />}
                   label="Investissement total"
-                  value={range(m.investTotalLow, m.investTotalHigh, eur)}
+                  rangeLow={eur(m.investTotalLow)}
+                  rangeHigh={eur(m.investTotalHigh)}
                   sub={`Tournage ${eur(SETUP_TOURNAGE)} + ~${eur((m.investMoisLow + m.investMoisHigh) / 2)} / mois`}
                   formula={`Pub + gestion (${eur(GESTION_PUB)}) + secrétariat${seo ? ` + SEO (${eur(SEO_FEE)})` : ""} + tournage`}
                 />
                 <ResultCard
                   icon={<TrendingUp size={14} className="text-[#0074D4]" />}
                   label="CA potentiel"
-                  value={range(m.caLow, m.caHigh, eur)}
+                  rangeLow={eur(m.caLow)}
+                  rangeHigh={eur(m.caHigh)}
                   formula={`Chantiers signés × ticket moyen (${eur(ticket)})`}
                 />
                 <ResultCard
                   icon={<TrendingUp size={14} className="text-[#0074D4]" />}
                   label="Marge brute potentielle"
-                  value={range(m.margeLow, m.margeHigh, eur)}
+                  rangeLow={eur(m.margeLow)}
+                  rangeHigh={eur(m.margeHigh)}
                   formula={`CA potentiel × ${margin} % de marge brute`}
+                />
+                <ResultCard
+                  icon={<Wallet size={14} className="text-[#0074D4]" />}
+                  label="Gain net estimé"
+                  rangeLow={eur(m.gainNetLow)}
+                  rangeHigh={eur(m.gainNetHigh)}
+                  sub="Marge brute − investissement total"
+                  formula={`Marge brute − (pub + gestion + secrétariat + tournage${seo ? ` + SEO` : ""})`}
                 />
                 <ResultCard
                   icon={<PieIcon size={14} className="text-white" />}
                   label="ROI sur marge brute"
-                  value={range(m.roiMargeLow, m.roiMargeHigh, pct)}
+                  rangeLow={pct(m.roiMargeLow)}
+                  rangeHigh={pct(m.roiMargeHigh)}
                   sub="Indicateur le plus réaliste"
                   formula="(Marge brute − investissement) ÷ investissement"
                   highlight
