@@ -114,13 +114,17 @@ const ResultCard = ({
   icon,
   label,
   value,
+  rangeLow,
+  rangeHigh,
   sub,
   formula,
   highlight,
 }: {
   icon?: React.ReactNode;
   label: string;
-  value: string;
+  value?: string;
+  rangeLow?: string;
+  rangeHigh?: string;
   sub?: string;
   formula?: string;
   highlight?: boolean;
@@ -135,9 +139,20 @@ const ResultCard = ({
       {icon}
       <span>{label}</span>
     </div>
-    <div className={"text-xl md:text-2xl font-bold " + (highlight ? "text-[#0074D4]" : "text-foreground")}>
-      {value}
-    </div>
+    {rangeLow && rangeHigh ? (
+      <div className="space-y-0.5">
+        <div className={"text-base md:text-lg font-bold " + (highlight ? "text-[#0074D4]" : "text-foreground")}>
+          max. : {rangeHigh}
+        </div>
+        <div className="text-sm font-medium text-muted-foreground">
+          min. : {rangeLow}
+        </div>
+      </div>
+    ) : (
+      <div className={"text-xl md:text-2xl font-bold " + (highlight ? "text-[#0074D4]" : "text-foreground")}>
+        {value}
+      </div>
+    )}
     {sub && <div className="text-xs text-muted-foreground mt-1">{sub}</div>}
     {formula && (
       <div className="text-[11px] text-muted-foreground mt-2 pt-2 border-t border-border/40 leading-relaxed">
@@ -194,6 +209,9 @@ const Simulateur = () => {
     const margeLow = caLow * marginRatio;
     const margeHigh = caHigh * marginRatio;
 
+    const gainNetLow = margeLow - investTotalHigh;
+    const gainNetHigh = margeHigh - investTotalLow;
+
     const roiMargeLow = ((margeLow - investTotalHigh) / investTotalHigh) * 100;
     const roiMargeHigh = ((margeHigh - investTotalLow) / investTotalLow) * 100;
 
@@ -204,6 +222,7 @@ const Simulateur = () => {
       fraisRdvMoisLow, fraisRdvMoisHigh, seoMonthly,
       investMoisLow, investMoisHigh, investTotalLow, investTotalHigh,
       caLow, caHigh, margeLow, margeHigh,
+      gainNetLow, gainNetHigh,
       roiMargeLow, roiMargeHigh,
     };
   }, [budget, duration, ticket, margin, seo]);
