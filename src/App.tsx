@@ -26,6 +26,9 @@ import GestionSeoLanding from "./pages/GestionSeoLanding";
 import PhoneWebhookTrigger from "./components/PhoneWebhookTrigger";
 import SeoPageRoute from "./pages/seo/SeoPageRoute";
 import GeoGuard from "./components/GeoGuard";
+import PrivacyPolicy from "./pages/legal/PrivacyPolicy";
+import Eula from "./pages/legal/Eula";
+import OpenclawIndex from "./pages/legal/OpenclawIndex";
 
 const queryClient = new QueryClient();
 
@@ -39,6 +42,9 @@ const App = () => (
         <GeoGuard>
         <Routes>
           <Route path="/" element={<Index />} />
+          <Route path="/openclaw" element={<OpenclawIndex />} />
+          <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+          <Route path="/eula" element={<Eula />} />
           <Route path="/accueil" element={<Navigate to="/" replace />} />
           <Route path="/com" element={<Navigate to="/gestion-communication" replace />} />
           <Route path="/resultats-clients-agendac" element={<Results />} />
