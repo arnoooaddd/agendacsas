@@ -17,7 +17,7 @@ import yasmineImg from "@/assets/team/yasmine-lale.webp";
 
 const leaders = [
   { name: "Arnaud UTILLE", role: "Président", image: arnaudImg },
-  { name: "Kerim JAKUPOVIC", role: "Directeur général", image: kerimImg },
+  { name: "Kerim JAKUPOVIC", role: "CFO", image: kerimImg },
 ];
 
 const otherMembers = [
